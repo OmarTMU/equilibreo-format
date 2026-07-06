@@ -17,15 +17,22 @@ body {
             width: 20%;
             display: flex;
             flex-direction: column;
-            background-color:rgb(220,220,220);
+            background-color:rgb(200, 200, 200);
         }
 
             #card-view {
                 display: flex;
-                flex-direction: row;
+                flex-direction: column;
                 height:60%;
                 width:100%;
             }
+                #display-card {
+                    height:50%;
+                }
+
+                #card-description {
+                    font-size:1vs;
+                }
 
             #deck-buttons {
                 display: flex;
@@ -37,9 +44,14 @@ body {
                     width: 48%;
                     margin:1%;
                     padding:2%;
-                    background-color: rgb(190, 190, 190);
+                    background-color: white;
                     border-style: solid;
                     border-color: rgb(100,100,100);
+                }
+
+                .deck-constructor-button:hover {
+                    background-color: rgb(200,200,200);
+                    cursor: pointer;
                 }
 
                 #select-deck {
@@ -271,7 +283,17 @@ body {
                 }
 
                 #search-button {
-                    width:50%;
+                    width:40%;
+                    margin-left:0.3vw;
+                }
+                
+                #prev-page , #next-page {
+                    width: 12%;
+                }
+
+                #search-button:hover , #prev-page:hover , #next-page:hover{
+                    background-color: rgb(200,200,200);
+                    cursor: pointer;
                 }
 
             .search-grid {

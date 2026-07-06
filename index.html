@@ -14,7 +14,8 @@
 
     <div id="left-side">
         <div id="card-view"> <!-- card image + text of card description -->
-
+            <div id="display-card"></div>
+            <p id="card-description">abc</p>    
         </div>
         <div id="deck-buttons"> <!-- import, export, clear deck, set as default, deck select, new deck, rename, save, delete deck -->
             <button class="deck-constructor-button" id="import">Import</button>
@@ -49,7 +50,7 @@
                 <button class="auth-btn" id="register-btn">Register</button>
             </div>
 
-            <div id="error-msg">Log in or register!</div> <!--incorrect user/password / user already exists-->
+            <div id="error-msg">Log in or register!</div> <!--incorrect user/password / user already exists / account created-->
         </div>
 
     </div>
@@ -266,11 +267,14 @@
             <div id="limit-and-search-box">
                 <label for="limit-select" class="label limit-label">Limit:</label>
                 <select class="limit-box" id="limit-select" disabled>
+                    <option value=""></option>
                     <option value="three">3</option>
                     <option value="two">2</option>
                     <option value="one">1</option>
                 </select>
                 <button id="search-button">Search</button>
+                <button id="prev-page">←</button>
+                <button id="next-page">→</button>
             </div>
 
         </div>
