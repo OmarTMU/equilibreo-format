@@ -26,12 +26,25 @@ body {
                 height:60%;
                 width:100%;
             }
-                #display-card {
-                    height:50%;
+            
+                #card-display-pic {
+                    width:100%;
                 }
 
-                #card-description {
-                    font-size:1vs;
+                #card-desc {
+                    margin-top:0;
+                    margin-bottom:0;
+                    font-size:1vw;
+                    padding-left:0.2vw;
+                    display:flex;
+                    overflow: scroll;
+                }
+
+                .card-pic {
+                    width:100%;
+                    aspect-ratio: 20/29;
+                    object-fit: cover;
+                    display: block;
                 }
 
             #deck-buttons {

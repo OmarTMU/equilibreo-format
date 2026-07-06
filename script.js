@@ -145,7 +145,8 @@ const searchResults = [
         level: 8,
         atk: 3000,
         def: 2500,
-        description: ""
+        description: "",
+        image: "card-pics/blue-eyes.jpg"
     },
     {
         name: "Dark Magician",
@@ -156,7 +157,8 @@ const searchResults = [
         level: 7,
         atk: 2500,
         def: 2100,
-        description: ""
+        description: "daisdhsai dhasidh dsgadgsaydasgdusagduiasgd agsdi ausdgaiu dgauid gaui dgauis dgauis dgaiu dgaiu dgiua sdg iaudgaiusd guais dgaisu dgiaus dgiuasd gis adgai dgsaiud gsiudfgdsiuf gdsiufgsiduf saidha sdhais dhais dhasi dahis dhasi dhsai dhsaoi dshad sahdo sadhosa dhaso idaho dahod",
+        image: "card-pics/dark-magician.jpg"
     },
     {
         name: "Jinzo",
@@ -337,29 +339,43 @@ function renderPage() {
         if (!slots[index]) return;
 
         slots[index].innerHTML = `
-            <div class="card-ui">
-                <strong>${card.name}</strong><br>
+            <div class="card-ui"
+                 data-name="${card.name}"
+                 data-image="${card.image ?? ""}"
+                 data-type="${card.cardType}"
+                 data-subtype="${card.subtype}"
+                 data-attribute="${card.attribute ?? ""}"
+                 data-level="${card.level ?? ""}"
+                 data-atk="${card.atk ?? ""}"
+                 data-def="${card.def ?? ""}"
+                 data-desc="${card.description ?? ""}">
 
-                ${card.cardType === "monster" ? `                
-                    Level: ${card.level ?? "-"}<br>
-                    Attribute: ${card.attribute ?? "-"}<br>
-                    ATK: ${card.atk ?? "-"} / DEF: ${card.def ?? "-"}<br>
-                ` : ""}
+                <img class="card-pic" src="${card.image}" alt="${card.name}">
 
-                <em>${card.subtype}</em><br>
+                <div class="card-text">
+                    <strong>${card.name}</strong><br>
+
+                    ${card.cardType === "monster" ? `                
+                        Level: ${card.level ?? "-"}<br>
+                        Attribute: ${card.attribute ?? "-"}<br>
+                        ATK: ${card.atk ?? "-"} / DEF: ${card.def ?? "-"}<br>
+                    ` : ""}
+
+                    <em>${card.subtype}</em>
+                </div>
 
                 ${card.description ? `
                     <div class="card-desc">
                         ${card.description}
                     </div>
                 ` : ""}
+
             </div>
         `;
     });
 
     updatePageButtons();
 }
-
 //next page button
 nextBtn.addEventListener("click", () => {
     const maxPage = Math.ceil(filteredCards.length / pageSize);
@@ -376,4 +392,29 @@ prevBtn.addEventListener("click", () => {
         currentPage--;
         renderPage();
     }
+});
+
+
+// hover on card to display
+document.addEventListener("mouseover", (e) => {
+
+    const slot = e.target.closest(".card-slot");
+    if (!slot) return;
+
+    const cardUI = slot.querySelector(".card-ui");
+    if (!cardUI) return;
+
+    const name = cardUI.querySelector("strong")?.innerText ?? "";
+    const desc = cardUI.querySelector(".card-desc")?.innerText ?? "";
+    const img = cardUI.dataset.image ?? "";
+
+    // IMAGE
+    const display = document.getElementById("display-card");
+
+    display.innerHTML = `
+        <img id="card-display-pic" src="${img}" alt="${name}">
+    `;
+
+    // DESCRIPTION
+    document.getElementById("card-desc").innerText = desc;
 });
