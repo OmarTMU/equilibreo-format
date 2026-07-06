@@ -1,21 +1,90 @@
 const cardType = document.getElementById("card-type");
 
 const monsterType = document.getElementById("monster-type");
-const monsterSubtype = document.getElementById("monster-subtype");
+const cardSubtype = document.getElementById("card-subtype");
 const monsterMechanic = document.getElementById("monster-mechanic");
 
-function monster_check() {
+const attributeSelect = document.getElementById("attribute-select");
+
+const levelMin = document.getElementById("level-min");
+const levelMax = document.getElementById("level-max");
+
+const atkMin = document.getElementById("atk-min");
+const atkMax = document.getElementById("atk-max");
+
+const defMin = document.getElementById("def-min");
+const defMax = document.getElementById("def-max");
+
+const limitSelect = document.getElementById("limit-select");
+
+const monsterSubtypes = ["", "warrior", "spellcaster",
+    "dragon", "fiend", "machine", "beast", "zombie", "fairy",
+    "aqua", "pyro", "rock", "winged-beast", "insect", "reptile",
+    "sea-serpent", "thunder", "dinosaur", "fish", "psychic", "wyrm"
+];
+const spellSubtypes = ["", "normal", "continuous", "quick-play", "field", "equip", "ritual"];
+const trapSubtypes = ["", "normal", "continuous", "counter"];
+
+const filterList = [
+    monsterType,
+    cardSubtype, // s/t
+    monsterMechanic,
+    attributeSelect,
+    levelMin,
+    levelMax,
+    atkMin,
+    atkMax,
+    defMin,
+    defMax,
+    limitSelect
+];
+
+function updateSubtype() {
+
     if (cardType.value === "monster") {
-        monsterType.disabled = false;
-        monsterSubtype.disabled = false;
-        monsterMechanic.disabled = false;
-    } else {
-        monsterType.disabled = true;
-        monsterType.value = "";
-        monsterSubtype.disabled = true;
-        monsterSubtype.value = "";
-        monsterMechanic.disabled = true;
-        monsterMechanic.value = "";
+        for (let i = 0; i < filterList.length; i++) {
+            filterList[i].disabled = false;
+        }
+        cardSubtype.innerHTML = "";
+        for (let i = 0; i < monsterSubtypes.length; i++) {
+            const option = document.createElement("option");
+            option.value = monsterSubtypes[i];
+            option.textContent = monsterSubtypes[i];
+            cardSubtype.appendChild(option);
+        }
+    } else if (cardType.value === "spell") {
+        for (let i = 0; i < filterList.length; i++) {
+            filterList[i].disabled = true;
+            filterList[i].value = "";
+        }
+        filterList[1].disabled = false;
+        cardSubtype.innerHTML = "";
+        for (let i = 0; i < spellSubtypes.length; i++) {
+            const option = document.createElement("option");
+            option.value = spellSubtypes[i];
+            option.textContent = spellSubtypes[i];
+            cardSubtype.appendChild(option);
+        }
+    } else if (cardType.value === "trap") {
+        for (let i = 0; i < filterList.length; i++) {
+            filterList[i].disabled = true;
+            filterList[i].value = "";
+        }
+        filterList[1].disabled = false;
+        cardSubtype.innerHTML = "";
+        for (let i = 0; i < trapSubtypes.length; i++) {
+            const option = document.createElement("option");
+            option.value = trapSubtypes[i];
+            option.textContent = trapSubtypes[i];
+            cardSubtype.appendChild(option);
+          }
     }
+
 }
-cardType.addEventListener("change", monster_check);
+
+cardType.addEventListener("change", updateSubtype);
+
+
+
+
+
