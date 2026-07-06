@@ -124,10 +124,98 @@ body {
                 display:flex;
                 flex-direction: column;
                 width:100%;
-                border: dotted;
                 display: inline;
+                padding-top:0.2vw;
+                padding-bottom:0.2vw;
+                padding-left: 0.3vw;
             }
 
             .filter-box {
-                
+                width:20%;
             }
+
+                .name-label {
+                    font-size:1.2vw;
+                }
+
+                .name-box {
+                    width:74%;
+                }
+
+                .desc-label {
+                    font-size:1.2vw;
+                }
+
+                .desc-box {
+                    width:58%;
+                }
+
+                .card-type-label {
+                    width:20%;
+                    font-size:1.2vw;
+                }
+
+                .card-type-box {
+                    width: 38%;
+                }
+
+                .card-subtype-label {
+                    font-size:1.2vw;
+                }
+
+                .card-subtype-box {
+                    width: 38%;
+                }
+
+                .card-mechanic-box {
+                    width:38%;
+                }
+
+                .att-select-label {
+                    font-size:1.2vw;
+                }
+
+                .att-select-box {
+                    width: 19%;
+                }
+
+                .level-label {
+                    font-size:1.2vw;
+                }
+
+                .level-box {
+                    width: 10%;
+                }
+
+                .atk-label {
+                    font-size:1.2vw;
+                }
+
+                .atk-box {
+                    width:35%;
+                }
+
+                .def-label {
+                    font-size:1.2vw;
+                }
+
+                .def-box {
+                    width:35%;
+                }
+
+                .limit-label {
+                    font-size:1.2vw;
+                }
+
+                #limit-and-search-box {
+                    padding-top:0.2vw;
+                    padding-left:0.3vw;
+                    width:100%;
+                }
+
+                #search-button {
+                    width:60%;
+                    padding:0.3vw;
+                    justify-content: center;
+
+                }
