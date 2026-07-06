@@ -22,7 +22,7 @@
             <button class="deck-constructor-button" id="clear-deck">Clear Deck</button>
             <button class="deck-constructor-button" id="set-as-default">Set as default</button>
             <Select class="deck-constructor-button" id="select-deck">
-                <option value=""> -- Select Deck -- </option>
+                <option value="deck1">Deck 1</option>
             </Select>
         
             <button class="deck-constructor-button" id="new-deck">New Deck</button>
@@ -31,13 +31,34 @@
             <button class="deck-constructor-button" id="delete">Delete</button>
         </div>
 
+        <div id="auth-container">
+            <h3>Login/Register</h3>
+        
+            <div class="auth-row">
+                <label class="auth-label" for="username">Username</label>
+                <input class="auth-box" type="text" id="username" />
+            </div>
+        
+            <div class="auth-row">
+                <label class="auth-label" for="password">Password</label>
+                <input class="auth-box" type="password" id="password" />
+            </div>
+        
+            <div class="auth-buttons">
+                <button class="auth-btn" id="login-btn">Login</button>
+                <button class="auth-btn" id="register-btn">Register</button>
+            </div>
+
+            <div id="error-msg">incorrect password</div> <!--incorrect user/password / user already exists-->
+        </div>
+
     </div>
     
     <div id="deck-list"> <!-- main/side/extra -->
 
         <div id="main-deck-section">
 
-            <div class="title-main-deck">Main Deck (60)</div> <!--left sidebar-->
+            <div class="title-main-deck">Main Deck (40-60)</div> <!--left sidebar-->
         
             <div class="main-deck-grid" class="deck-grid" id="main-deck">
                 <div class="card-slot" id="card-slot1"></div>
@@ -112,9 +133,9 @@
         <!-- EXTRA DECK -->
         <div id="extra-deck-section">
 
-            <div class="title-extra-deck">Extra Deck (15)</div>
+            <div class="title-extra-deck">Extra Deck (0-15)</div>
         
-            <div class="side-deck-grid" class="deck-grid" id="extra-deck-grid">
+            <div class="extra-deck-grid" class="deck-grid" id="extra-deck-grid">
                 <div class="card-slot" id="card-slot1"></div>
                 <div class="card-slot" id="card-slot2"></div>
                 <div class="card-slot" id="card-slot3"></div>
@@ -137,7 +158,7 @@
         <!-- SIDE DECK -->
         <div id="side-deck-section">
 
-            <div class="title-side-deck">Side Deck (15)</div>
+            <div class="title-side-deck">Side Deck (0-15)</div>
         
             <div class="side-deck-grid" class="deck-grid" id="side-deck-grid">
                 <div class="card-slot" id="card-slot1"></div>
@@ -227,7 +248,7 @@
                     <option value="wind">WIND</option>
                 </select>
             
-                <label for="level-min" class="label level-label">Lvl:</label>
+                <label for="level-min" class="label level-label">Level:</label>
                 <input class="level-box" type="text" id="level-min" placeholder="min" disabled>
                 <input class="level-box" type="text" id="level-max" placeholder="max" disabled>
             </div>
@@ -254,7 +275,7 @@
 
         </div>
 
-        <div class="deck-grid" class="search-grid">
+        <div class="deck-grid search-grid">
             <div class="card-slot" id="card-slot1"></div>
             <div class="card-slot" id="card-slot2"></div>
             <div class="card-slot" id="card-slot3"></div>
@@ -275,10 +296,6 @@
             <div class="card-slot" id="card-slot18"></div>
             <div class="card-slot" id="card-slot19"></div>
             <div class="card-slot" id="card-slot20"></div>
-            <div class="card-slot" id="card-slot21"></div>
-            <div class="card-slot" id="card-slot22"></div>
-            <div class="card-slot" id="card-slot23"></div>
-            <div class="card-slot" id="card-slot24"></div>
         </div>
 
     </div>

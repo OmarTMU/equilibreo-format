@@ -91,5 +91,60 @@ searchButton.addEventListener("click", function () {
 });
 
 
+// search-live as user types name/desc
+const cardName = document.getElementById("card-name");
+const cardDescription = document.getElementById("card-description");
 
+function searchCards() {
+    console.log(cardName.value);
+    console.log(cardDescription.value);
+
+    // Search your Firebase/database here
+}
+
+cardName.addEventListener("input", searchCards);
+cardDescription.addEventListener("input", searchCards);
+
+
+// create deck , delete deck
+const selectDeck = document.getElementById("select-deck");
+const newDeckBtn = document.getElementById("new-deck");
+const deleteDeckBtn = document.getElementById("delete");
+
+newDeckBtn.addEventListener("click", function () {
+
+    const deckName = prompt("Enter deck name:");
+
+    if (!deckName) return; // cancel or empty
+
+    const option = document.createElement("option");
+    option.value = deckName;
+    option.textContent = deckName;
+
+    selectDeck.appendChild(option);
+
+    selectDeck.value = deckName;
+});
+
+deleteDeckBtn.addEventListener("click", function () {
+
+    const selectedDeck = selectDeck.value;
+
+    if (!selectedDeck) return;
+
+    const confirmDelete = confirm("Are you sure you want to delete this deck?");
+
+    if (!confirmDelete) return;
+
+    const options = selectDeck.options;
+
+    for (let i = 0; i < options.length; i++) {
+        if (options[i].value === selectedDeck) {
+            selectDeck.remove(i);
+            break;
+        }
+    }
+
+    selectDeck.value = "";
+});
 
