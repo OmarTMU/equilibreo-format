@@ -1,121 +1,133 @@
 body {
-    background-color:rgb(260,260,260);
-}
-
-header {
-    height: 6vh;
-    flex-shrink: 0;
-    background-color:rgb(220,200,200);
-}
-
-h1 {
-    font-size: medium;
-    border:solid;
-    text-align: center;
-}
-
-main {
-    height: 94vh; /*  to make it whole page */
     display: flex;
-    overflow: hidden;
-    background-color:rgb(220,220,220);
+    justify-content: center;
 }
 
-#left-side {
-    width: 18%;
-    display: flex;
-    flex-direction: column;
-    background-color:rgb(200,200,180);
-}
+    main {
+        width:80%;
+        height: 98vh; /*  to make it whole page */
+        display: flex;
+        flex-direction: row;
+        overflow: hidden;
+        background-color:rgb(220,220,220);
+        justify-content: center;
+    }
 
-#card-view {
-    display: flex;
-    flex-direction: row;
-    height:60%;
-    width:100%;
-    border:solid;
-}
-#deck-buttons {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-}
+        #left-side {
+            width: 18%;
+            display: flex;
+            flex-direction: column;
+            background-color:rgb(200,200,180);
+        }
 
-.deck-constructor-button {
-    width: 48%;
-    margin:1%;
-    padding:2%;
-    background-color: rgb(220,220,220);
-}
+            #card-view {
+                display: flex;
+                flex-direction: row;
+                height:60%;
+                width:100%;
+                border:solid;
+            }
 
-#select-deck {
-    width:100%;
-    text-align: center;
-    background-color: rgb(220,220,220);
-}
+            #deck-buttons {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+            }
 
-#deck-list {
-    width:56%;
-    display: flex;
-    flex-direction: column;
-    background-color:rgb(180,120,120);
-}
+                .deck-constructor-button {
+                    width: 48%;
+                    margin:1%;
+                    padding:2%;
+                    background-color: rgb(220,220,220);
+                }
 
-#search-section {
-    width:22%;
-    display: flex;
-    flex-direction: column;
-    background-color:rgb(130,130,160);
+                #select-deck {
+                    width:100%;
+                    text-align: center;
+                    background-color: rgb(220,220,220);
+                }
 
-}
-#main-deck-section {
-    height:74%;
-    display: flex;
-    flex-direction: row;
-    overflow: hidden;
-}
+        #deck-list {
+            width:60%;
+            display: flex;
+            flex-direction: column;
+            background-color:rgb(180,120,120);
+        }
 
-#extra-deck-section {
-    height:13%;
-    display: flex;
-    flex-direction: row;
-    overflow: hidden;
-}
 
-#side-deck-section {
-    height:13%;
-    display: flex;
-    flex-direction: row;
-    overflow: hidden;
-}
+            #main-deck-section {
+                height:74%;
+                display: flex;
+                flex-direction: row;
+                overflow: hidden;
+            }
 
-.title-main-deck {
-    /* border:solid; */
-    height:3.5%;
-    width:100%;
-    padding-top:0.3vw;
-    padding-left:0.3vw;
-    margin:0;
-    font-size:1.8vw;
-}
+            #extra-deck-section {
+                height:13%;
+                display: flex;
+                flex-direction: row;
+                overflow: hidden;
+            }
 
-.title-extra-deck {
-    /* border:solid; */
-    height:19%;
-    width:100%;
-    padding-top:0.3vw;
-    padding-left:0.3vw;
-    margin:0;
-    font-size:1.8vw;
-}
+            #side-deck-section {
+                height:13%;
+                display: flex;
+                flex-direction: row;
+                overflow: hidden;
+            }
 
-.title-side-deck {
-    /* border:solid; */
-    height:19%;
-    width:100%;
-    padding-top:0.3vw;
-    padding-left:0.3vw;
-    margin:0;
-    font-size:1.8vw;
-}
+                .title-main-deck {
+                    /* border:solid; */
+                    height:3.5%;
+                    width:100%;
+                    padding-top:0.2vw;
+                    padding-left:0.3vw;
+                    margin:0;
+                    font-size:1.3vw;
+                }
 
+                .title-extra-deck {
+                    /* border:solid; */
+                    height:19%;
+                    width:100%;
+                    padding-top:0.2vw;
+                    padding-left:0.3vw;
+                    margin:0;
+                    font-size:1.3vw;
+                }
+
+                .title-side-deck {
+                    /* border:solid; */
+                    height:19%;
+                    width:100%;
+                    padding-top:0.2vw;
+                    padding-left:0.3vw;
+                    margin:0;
+                    font-size:1.3vw;
+                }
+
+        #search-section {
+            width:22%;
+            display: flex;
+            flex-direction: column;
+            background-color:rgb(130,130,160);
+
+        }
+
+            #filter-rows-box {
+                display:flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+            }
+
+            .filter-row {
+                display:flex;
+                flex-direction: column;
+                width:100%;
+                border: dotted;
+                display: inline;
+            }
+
+            .filter-box {
+                
+            }

@@ -10,13 +10,6 @@
 
 <body>
 
-  <header>
-    <h1>Equilibreo Format</h1>
-    <!--
-        <input type="text" id="search" placeholder="Search cards..." />
-    -->
-  </header>
-
   <main id="deckbuilder"> <!-- whole page apart from title at the top -->
 
     <div id="left-side">
@@ -169,108 +162,97 @@
 
     <!-- SEARCH CARD -->
     <div id="search-section">
-        <div>Search</div> <!-- title -->
 
-        <!-- name input -->
-        <div class="filter-row">
+        <div id="filter-rows-box">
 
-            <label for="card-name">Name: </label>
-
-            <div class="input">
-                <input id="card-name" type="text" />
+            <!-- name input -->
+            <div class="filter-row">
+                <label class="filter-box" for="card-name">Name: </label>
+                <input class="filter-box" id="card-name" type="text" />
             </div>
-
-        </div>
-        
-        <!-- description input -->
-        <div class="filter-row">
-
-            <label for="card-description">Description: </label>
-
-            <div class="input">
-                <input id="card-description" type="text" />
-            </div>
-
-        </div>
-        
-        <!-- card type select-->
-        <div class="filter-row">
-
-            <label for="card-type">Card: </label>
-
-            <div class="input">
-
-                <select id="card-type">
-                    <option value=""></option>
-                    <option value="monster">Monster</option>
-                    <option value="spell">Spell</option>
-                    <option value="trap">Trap</option>
-                </select>
-
-                <select id="monster-type" disabled>
-                    <option value=""></option>
-                    <option value="normal">Normal</option>
-                    <option value="effect">Effect</option>
-                    <option value="ritual">Ritual</option>
-                    <option value="fusion">Fusion</option>
-                </select>
-
-            </div>
-
-        </div>
-
-        <div class="filter-row">
-            <label for="card-subtype" class="label">Type:</label>
-            <select id="card-subtype" disabled>
-            </select>
             
-            <label for="monster-mechanic" class="label"></label>
-            <select id="monster-mechanic" disabled>
-                <option value=""></option>
-                <option value="tuner">Tuner</option>
-                <option value="flip">Flip</option>
-                <option value="gemini">Gemini</option>
-                <option value="union">Union</option>
-                <option value="spirit">Spirit</option>
-                <option value="toon">Toon</option>
-            </select>
+            <!-- description input -->
+            <div class="filter-row">
+                <label class="filter-box" for="card-description">Description: </label>
+                <input class="filter-box" id="card-description" type="text" />
+            </div>
+            
+            <!-- card type select-->
+            <div class="filter-row">
+
+                <label class="filter-box" for="card-type">Card: </label>
+
+                    <select class="filter-box" id="card-type">
+                        <option value=""></option>
+                        <option value="monster">Monster</option>
+                        <option value="spell">Spell</option>
+                        <option value="trap">Trap</option>
+                    </select>
+
+                    <select class="filter-box" id="monster-type" disabled>
+                        <option value=""></option>
+                        <option value="normal">Normal</option>
+                        <option value="effect">Effect</option>
+                        <option value="ritual">Ritual</option>
+                        <option value="fusion">Fusion</option>
+                    </select>
+
+            </div>
+
+            <div class="filter-row">
+                <label for="card-subtype" class="label">Type:</label>
+                <select id="card-subtype" disabled>
+                </select>
+                
+                <label for="monster-mechanic" class="label"></label>
+                <select id="monster-mechanic" disabled>
+                    <option value=""></option>
+                    <option value="tuner">Tuner</option>
+                    <option value="flip">Flip</option>
+                    <option value="gemini">Gemini</option>
+                    <option value="union">Union</option>
+                    <option value="spirit">Spirit</option>
+                    <option value="toon">Toon</option>
+                </select>
+            </div>
+
+            <div class="filter-row">
+                <label for="attribute-select" class="label">Attribute:</label>
+                <select id="attribute-select" disabled>
+                    <option value=""></option>
+                    <option value="dark">DARK</option>
+                    <option value="light">LIGHT</option>
+                    <option value="earth">EARTH</option>
+                    <option value="water">WATER</option>
+                    <option value="fire">FIRE</option>
+                    <option value="wind">WIND</option>
+                </select>
+            
+                <label for="level-min" class="label">Level</label>
+                <input type="number" id="level-min" placeholder="≥" min="1" max="12" disabled>
+                <input type="number" id="level-max" placeholder="≤" min="1" max="12" disabled>
+            </div>
+
+            <div class="filter-row">
+                <label for="atk-min" class="label">ATK</label>
+                <input type="text" id="atk-min" placeholder="≥" disabled>
+                <input type="text" id="atk-max" placeholder="≤" disabled>
+
+                <label for="def-min" class="label">DEF</label>
+                <input type="text" id="def-min" placeholder="≥" disabled>
+                <input type="text" id="def-max" placeholder="≤" disabled>
+
+                <label for="limit-select" class="label">Limit:</label>
+                <select id="limit-select" disabled>
+                    <option value="three">3</option>
+                    <option value="two">2</option>
+                    <option value="one">1</option>
+                </select>
+            </div>
+
+            <button id="search-button">Search</button>
+
         </div>
-
-        <div class="filter-row">
-            <label for="attribute-select" class="label">Attribute:</label>
-            <select id="attribute-select" disabled>
-                <option value=""></option>
-                <option value="dark">DARK</option>
-                <option value="light">LIGHT</option>
-                <option value="earth">EARTH</option>
-                <option value="water">WATER</option>
-                <option value="fire">FIRE</option>
-                <option value="wind">WIND</option>
-            </select>
-        
-            <label for="level-min" class="label">Level Range</label>
-            <input type="number" id="level-min" placeholder="≥" min="1" max="12" disabled>
-            <input type="number" id="level-max" placeholder="≤" min="1" max="12" disabled>
-        </div>
-
-        <div class="filter-row">
-            <label for="atk-min" class="label">ATK</label>
-            <input type="text" id="atk-min" placeholder="≥" disabled>
-            <input type="text" id="atk-max" placeholder="≤" disabled>
-
-            <label for="def-min" class="label">DEF</label>
-            <input type="text" id="def-min" placeholder="≥" disabled>
-            <input type="text" id="def-max" placeholder="≤" disabled>
-
-            <label for="limit-select" class="label">Limit:</label>
-            <select id="limit-select" disabled>
-                <option value="three">3</option>
-                <option value="two">2</option>
-                <option value="one">1</option>
-            </select>
-        </div>
-
-        <button id="search-button">Search</button>
 
         <div class="deck-grid" class="search-grid">
             <div class="card-slot" id="card-slot1"></div>
