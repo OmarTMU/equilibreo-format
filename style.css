@@ -1,6 +1,7 @@
 body {
     display: flex;
     justify-content: center;
+    background-color: black;
 }
 
     main {
@@ -9,7 +10,6 @@ body {
         display: flex;
         flex-direction: row;
         overflow: hidden;
-        background-color:rgb(220,220,220);
         justify-content: center;
     }
 
@@ -17,7 +17,7 @@ body {
             width: 20%;
             display: flex;
             flex-direction: column;
-            background-color:rgb(200,200,180);
+            background-color:rgb(220,220,220);
         }
 
             #card-view {
@@ -25,7 +25,6 @@ body {
                 flex-direction: row;
                 height:60%;
                 width:100%;
-                border:solid;
             }
 
             #deck-buttons {
@@ -38,19 +37,21 @@ body {
                     width: 48%;
                     margin:1%;
                     padding:2%;
-                    background-color: rgb(220,220,220);
+                    background-color: rgb(190, 190, 190);
+                    border-style: solid;
+                    border-color: rgb(100,100,100);
                 }
 
                 #select-deck {
                     width:100%;
                     text-align: center;
-                    background-color: rgb(220,220,220);
+                    background-color: rgb(190,190,190);
                 }
 
             #auth-container {
-                background: #ddd;
                 display: flex;
                 flex-direction: column;
+                padding-left: 0.3vw;
             }
                 h3 {
                     font-size:1vw;
@@ -72,6 +73,7 @@ body {
 
                 .auth-btn {
                     width:40%;
+                    font-size:1vw;
                 }
 
                 #error-msg {
@@ -84,7 +86,7 @@ body {
             width:53%;
             display: flex;
             flex-direction: column;
-            background-color:rgb(180,120,120);
+            background-color:rgb(133, 120, 156);
         }
 
 
@@ -116,7 +118,7 @@ body {
                     width: 100%;
                     aspect-ratio: 20/29;
                     background-color: rgba(0, 0, 0, 0.1);
-                    border: 1px solid #333;
+                    border: 0.1vw solid #333;
                 }
 
             #extra-deck-section {
@@ -124,7 +126,6 @@ body {
             }
 
                 .title-extra-deck {
-                    /* border:solid; */
                     height:10%;
                     width:100%;
                     padding-top:0vw;
@@ -146,7 +147,6 @@ body {
             }
 
                 .title-side-deck {
-                    /* border:solid; */
                     height:10%;
                     width:100%;
                     padding-top:0vw;
