@@ -1,10 +1,10 @@
 const cardType = document.getElementById("card-type");
 
-const monsterType = document.getElementById("monster-type");
+const monsterBackground = document.getElementById("monster-background");
 const cardSubtype = document.getElementById("card-subtype");
 const monsterMechanic = document.getElementById("monster-mechanic");
 
-const attributeSelect = document.getElementById("attribute-select");
+const attribute = document.getElementById("attribute-select");
 
 const levelMin = document.getElementById("level-min");
 const levelMax = document.getElementById("level-max");
@@ -28,10 +28,10 @@ const spellSubtypes = ["", "normal", "continuous", "quick-play", "field", "equip
 const trapSubtypes = ["", "normal", "continuous", "counter"];
 
 const filterList = [
-    monsterType,
+    monsterBackground,
     cardSubtype, // s/t
     monsterMechanic,
-    attributeSelect,
+    attribute,
     levelMin,
     levelMax,
     atkMin,
@@ -87,24 +87,9 @@ function updateSubtype() {
 
 cardType.addEventListener("change", updateSubtype);
 
+// ------------------------------------------------------------------------------------------------------------------------
 
-
-//search
-
-// search-live as user types name/desc
-const cardName = document.getElementById("card-name");
-const cardDescription = document.getElementById("card-description");
-
-function searchCards() {
-    console.log(cardName.value);
-    console.log(cardDescription.value);
-
-    // Search your Firebase/database here
-}
-
-cardName.addEventListener("input", searchCards);
-cardDescription.addEventListener("input", searchCards);
-
+// SEARCH 
 
 // create deck , delete deck
 const selectDeck = document.getElementById("select-deck");
@@ -153,9 +138,10 @@ deleteDeckBtn.addEventListener("click", function () {
 const searchResults = [
     {
         name: "Blue-Eyes White Dragon",
-        type: "monster",
-        subtype: "normal",
-        attribute: "LIGHT",
+        cardType: "monster",
+        monsterBackground: "normal",
+        subtype: "dragon",
+        attribute: "light",
         level: 8,
         atk: 3000,
         def: 2500,
@@ -163,9 +149,10 @@ const searchResults = [
     },
     {
         name: "Dark Magician",
-        type: "monster",
-        subtype: "normal",
-        attribute: "DARK",
+        cardType: "monster",
+        monsterBackground: "normal",
+        subtype: "spellcaster",
+        attribute: "dark",
         level: 7,
         atk: 2500,
         def: 2100,
@@ -173,9 +160,10 @@ const searchResults = [
     },
     {
         name: "Jinzo",
-        type: "monster",
-        subtype: "effect",
-        attribute: "DARK",
+        cardType: "monster",
+        monsterBackground: "effect",
+        subtype: "machine",
+        attribute: "dark",
         level: 6,
         atk: 2400,
         def: 1500,
@@ -183,9 +171,10 @@ const searchResults = [
     },
     {
         name: "Cyber Dragon",
-        type: "monster",
-        subtype: "effect",
-        attribute: "LIGHT",
+        cardType: "monster",
+        monsterBackground: "effect",
+        subtype: "machine",
+        attribute: "light",
         level: 5,
         atk: 2100,
         def: 1600,
@@ -193,9 +182,10 @@ const searchResults = [
     },
     {
         name: "Harpie Lady",
-        type: "monster",
-        subtype: "normal",
-        attribute: "WIND",
+        cardType: "monster",
+        monsterBackground: "effect",
+        subtype: "winged-beast",
+        attribute: "wind",
         level: 4,
         atk: 1300,
         def: 1400,
@@ -203,7 +193,8 @@ const searchResults = [
     },
     {
         name: "Mystical Space Typhoon",
-        type: "spell",
+        cardType: "spell",
+        monsterBackground: null,
         subtype: "quick-play",
         attribute: null,
         level: null,
@@ -213,7 +204,8 @@ const searchResults = [
     },
     {
         name: "Mirror Force",
-        type: "trap",
+        cardType: "trap",
+        monsterBackground: null,
         subtype: "normal",
         attribute: null,
         level: null,
@@ -225,10 +217,7 @@ const searchResults = [
 
 const searchButton = document.getElementById("search-button");
 
-searchButton.addEventListener("click", () => {
-
-    const name = (document.getElementById("card-name")?.value ?? "").trim().toLowerCase();
-    const desc = (document.getElementById("card-description")?.value ?? "").trim().toLowerCase();
+function applyFilters() {
 
     filteredCards = allCards.filter(card => {
 
@@ -243,16 +232,18 @@ searchButton.addEventListener("click", () => {
         const descMatch = desc === "" || cardDesc.includes(desc);
     
         // TYPE FILTERS
-        const monsterType = document.getElementById("card-type")?.value ?? "";
+        const cardType = document.getElementById("card-type")?.value ?? "";
         const cardSubtype = document.getElementById("card-subtype")?.value ?? "";
+        const monsterBackground = document.getElementById("monster-background")?.value ?? "";
         const monsterMechanic = document.getElementById("monster-mechanic")?.value ?? "";
-        const attributeSelect = document.getElementById("attribute-select")?.value ?? "";
+        const attribute = document.getElementById("attribute-select")?.value ?? "";
         const limitSelect = document.getElementById("limit-select")?.value ?? "";
     
-        const typeMatch = monsterType === "" || card.type === monsterType;
+        const typeMatch = cardType === "" || card.cardType === cardType;
         const subtypeMatch = cardSubtype === "" || card.subtype === cardSubtype;
+        const monsterBackgroundMatch = monsterBackground === "" || card.monsterBackground === monsterBackground;
         const mechanicMatch = monsterMechanic === "" || card.mechanic === monsterMechanic;
-        const attributeMatch = attributeSelect === "" || card.attribute === attributeSelect;
+        const attributeMatch = attribute === "" || card.attribute === attribute;
         const limitMatch = limitSelect === "" || card.limit === limitSelect;
     
         // NUMERIC FILTERS
@@ -287,6 +278,7 @@ searchButton.addEventListener("click", () => {
             descMatch &&
             typeMatch &&
             subtypeMatch &&
+            monsterBackgroundMatch &&
             mechanicMatch &&
             attributeMatch &&
             limitMatch &&
@@ -298,7 +290,18 @@ searchButton.addEventListener("click", () => {
 
     currentPage = 1;
     renderPage();
+}
+
+searchButton.addEventListener("click", () => {
+    applyFilters();
 });
+
+document.getElementById("card-name")
+    .addEventListener("input", applyFilters);
+
+document.getElementById("card-description")
+    .addEventListener("input", applyFilters);
+
 
 let currentPage = 1; // UI starts at 1
 const pageSize = 20;
@@ -337,7 +340,7 @@ function renderPage() {
             <div class="card-ui">
                 <strong>${card.name}</strong><br>
 
-                ${card.type === "monster" ? `
+                ${card.cardType === "monster" ? `                
                     Level: ${card.level ?? "-"}<br>
                     Attribute: ${card.attribute ?? "-"}<br>
                     ATK: ${card.atk ?? "-"} / DEF: ${card.def ?? "-"}<br>
