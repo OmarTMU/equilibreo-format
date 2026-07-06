@@ -79,11 +79,16 @@ function updateSubtype() {
             cardSubtype.appendChild(option);
           }
     }
-
 }
 
 cardType.addEventListener("change", updateSubtype);
 
+//search
+const searchButton = document.getElementById("search-button");
+
+searchButton.addEventListener("click", function () {
+    console.log("Search clicked");
+});
 
 
 

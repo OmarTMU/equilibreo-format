@@ -11,143 +11,163 @@
 <body>
 
   <header>
-    <h1>Equilibreo Format d</h1>
+    <h1>Equilibreo Format</h1>
     <!--
         <input type="text" id="search" placeholder="Search cards..." />
     -->
   </header>
 
-  <main id="deckbuilder">
+  <main id="deckbuilder"> <!-- whole page apart from title at the top -->
 
+    <div id="left-side">
+        <div id="card-view"> <!-- card image + text of card description -->
 
-
-    <!-- MAIN DECK -->
-    <div id="main-deck-section">
-
-      <div class="title">Main Deck (60)</div> <!--left sidebar-->
-  
-      <div class="main-deck-grid" class="deck-grid" id="main-deck">
-        <div class="card-slot" id="card-slot1"></div>
-        <div class="card-slot" id="card-slot2"></div>
-        <div class="card-slot" id="card-slot3"></div>
-        <div class="card-slot" id="card-slot4"></div>
-        <div class="card-slot" id="card-slot5"></div>
-        <div class="card-slot" id="card-slot6"></div>
-        <div class="card-slot" id="card-slot7"></div>
-        <div class="card-slot" id="card-slot8"></div>
-        <div class="card-slot" id="card-slot9"></div>
-        <div class="card-slot" id="card-slot10"></div>
+        </div>
+        <div id="deck-buttons"> <!-- import, export, clear deck, set as default, deck select, new deck, rename, save, delete deck -->
+            <button class="deck-constructor-button" id="import">Import</button>
+            <button class="deck-constructor-button" id="export">Export</button>
+            <button class="deck-constructor-button" id="clear-deck">Clear Deck</button>
+            <button class="deck-constructor-button" id="set-as-default">Set as default</button>
+            <Select class="deck-constructor-button" id="select-deck">
+                <option value=""> -- Select Deck -- </option>
+            </Select>
         
-        <div class="card-slot" id="card-slot11"></div>
-        <div class="card-slot" id="card-slot12"></div>
-        <div class="card-slot" id="card-slot13"></div>
-        <div class="card-slot" id="card-slot14"></div>
-        <div class="card-slot" id="card-slot15"></div>
-        <div class="card-slot" id="card-slot16"></div>
-        <div class="card-slot" id="card-slot17"></div>
-        <div class="card-slot" id="card-slot18"></div>
-        <div class="card-slot" id="card-slot19"></div>
-        <div class="card-slot" id="card-slot20"></div>
-        
-        <div class="card-slot" id="card-slot21"></div>
-        <div class="card-slot" id="card-slot22"></div>
-        <div class="card-slot" id="card-slot23"></div>
-        <div class="card-slot" id="card-slot24"></div>
-        <div class="card-slot" id="card-slot25"></div>
-        <div class="card-slot" id="card-slot26"></div>
-        <div class="card-slot" id="card-slot27"></div>
-        <div class="card-slot" id="card-slot28"></div>
-        <div class="card-slot" id="card-slot29"></div>
-        <div class="card-slot" id="card-slot30"></div>
-        
-        <div class="card-slot" id="card-slot31"></div>
-        <div class="card-slot" id="card-slot32"></div>
-        <div class="card-slot" id="card-slot33"></div>
-        <div class="card-slot" id="card-slot34"></div>
-        <div class="card-slot" id="card-slot35"></div>
-        <div class="card-slot" id="card-slot36"></div>
-        <div class="card-slot" id="card-slot37"></div>
-        <div class="card-slot" id="card-slot38"></div>
-        <div class="card-slot" id="card-slot39"></div>
-        <div class="card-slot" id="card-slot40"></div>
-        
-        <div class="card-slot" id="card-slot41"></div>
-        <div class="card-slot" id="card-slot42"></div>
-        <div class="card-slot" id="card-slot43"></div>
-        <div class="card-slot" id="card-slot44"></div>
-        <div class="card-slot" id="card-slot45"></div>
-        <div class="card-slot" id="card-slot46"></div>
-        <div class="card-slot" id="card-slot47"></div>
-        <div class="card-slot" id="card-slot48"></div>
-        <div class="card-slot" id="card-slot49"></div>
-        <div class="card-slot" id="card-slot50"></div>
-        
-        <div class="card-slot" id="card-slot51"></div>
-        <div class="card-slot" id="card-slot52"></div>
-        <div class="card-slot" id="card-slot53"></div>
-        <div class="card-slot" id="card-slot54"></div>
-        <div class="card-slot" id="card-slot55"></div>
-        <div class="card-slot" id="card-slot56"></div>
-        <div class="card-slot" id="card-slot57"></div>
-        <div class="card-slot" id="card-slot58"></div>
-        <div class="card-slot" id="card-slot59"></div>
-        <div class="card-slot" id="card-slot60"></div>
-      </div>
+            <button class="deck-constructor-button" id="new-deck">New Deck</button>
+            <button class="deck-constructor-button" id="rename">Rename</button>
+            <button class="deck-constructor-button" id="save">Save</button>
+            <button class="deck-constructor-button" id="delete">Delete</button>
+        </div>
 
     </div>
-  
-    <!-- EXTRA DECK -->
-    <div id="extra-deck-section">
+    
+    <div id="deck-list"> <!-- main/side/extra -->
 
-      <div class="title">Extra Deck (15)</div>
-  
-      <div class="side-deck-grid" class="deck-grid" id="extra-deck-grid">
-        <div class="card-slot" id="card-slot1"></div>
-        <div class="card-slot" id="card-slot2"></div>
-        <div class="card-slot" id="card-slot3"></div>
-        <div class="card-slot" id="card-slot4"></div>
-        <div class="card-slot" id="card-slot5"></div>
-        <div class="card-slot" id="card-slot6"></div>
-        <div class="card-slot" id="card-slot7"></div>
-        <div class="card-slot" id="card-slot8"></div>
-        <div class="card-slot" id="card-slot9"></div>
-        <div class="card-slot" id="card-slot10"></div>
-        <div class="card-slot" id="card-slot11"></div>
-        <div class="card-slot" id="card-slot12"></div>
-        <div class="card-slot" id="card-slot13"></div>
-        <div class="card-slot" id="card-slot14"></div>
-        <div class="card-slot" id="card-slot15"></div>
-      </div>
+        <div id="main-deck-section">
 
-    </div>
-  
-    <!-- SIDE DECK -->
-    <div id="side-deck-section">
+            <div class="title-main-deck">Main Deck (60)</div> <!--left sidebar-->
+        
+            <div class="main-deck-grid" class="deck-grid" id="main-deck">
+                <div class="card-slot" id="card-slot1"></div>
+                <div class="card-slot" id="card-slot2"></div>
+                <div class="card-slot" id="card-slot3"></div>
+                <div class="card-slot" id="card-slot4"></div>
+                <div class="card-slot" id="card-slot5"></div>
+                <div class="card-slot" id="card-slot6"></div>
+                <div class="card-slot" id="card-slot7"></div>
+                <div class="card-slot" id="card-slot8"></div>
+                <div class="card-slot" id="card-slot9"></div>
+                <div class="card-slot" id="card-slot10"></div>
+                
+                <div class="card-slot" id="card-slot11"></div>
+                <div class="card-slot" id="card-slot12"></div>
+                <div class="card-slot" id="card-slot13"></div>
+                <div class="card-slot" id="card-slot14"></div>
+                <div class="card-slot" id="card-slot15"></div>
+                <div class="card-slot" id="card-slot16"></div>
+                <div class="card-slot" id="card-slot17"></div>
+                <div class="card-slot" id="card-slot18"></div>
+                <div class="card-slot" id="card-slot19"></div>
+                <div class="card-slot" id="card-slot20"></div>
+                
+                <div class="card-slot" id="card-slot21"></div>
+                <div class="card-slot" id="card-slot22"></div>
+                <div class="card-slot" id="card-slot23"></div>
+                <div class="card-slot" id="card-slot24"></div>
+                <div class="card-slot" id="card-slot25"></div>
+                <div class="card-slot" id="card-slot26"></div>
+                <div class="card-slot" id="card-slot27"></div>
+                <div class="card-slot" id="card-slot28"></div>
+                <div class="card-slot" id="card-slot29"></div>
+                <div class="card-slot" id="card-slot30"></div>
+                
+                <div class="card-slot" id="card-slot31"></div>
+                <div class="card-slot" id="card-slot32"></div>
+                <div class="card-slot" id="card-slot33"></div>
+                <div class="card-slot" id="card-slot34"></div>
+                <div class="card-slot" id="card-slot35"></div>
+                <div class="card-slot" id="card-slot36"></div>
+                <div class="card-slot" id="card-slot37"></div>
+                <div class="card-slot" id="card-slot38"></div>
+                <div class="card-slot" id="card-slot39"></div>
+                <div class="card-slot" id="card-slot40"></div>
+                
+                <div class="card-slot" id="card-slot41"></div>
+                <div class="card-slot" id="card-slot42"></div>
+                <div class="card-slot" id="card-slot43"></div>
+                <div class="card-slot" id="card-slot44"></div>
+                <div class="card-slot" id="card-slot45"></div>
+                <div class="card-slot" id="card-slot46"></div>
+                <div class="card-slot" id="card-slot47"></div>
+                <div class="card-slot" id="card-slot48"></div>
+                <div class="card-slot" id="card-slot49"></div>
+                <div class="card-slot" id="card-slot50"></div>
+                
+                <div class="card-slot" id="card-slot51"></div>
+                <div class="card-slot" id="card-slot52"></div>
+                <div class="card-slot" id="card-slot53"></div>
+                <div class="card-slot" id="card-slot54"></div>
+                <div class="card-slot" id="card-slot55"></div>
+                <div class="card-slot" id="card-slot56"></div>
+                <div class="card-slot" id="card-slot57"></div>
+                <div class="card-slot" id="card-slot58"></div>
+                <div class="card-slot" id="card-slot59"></div>
+                <div class="card-slot" id="card-slot60"></div>
+            </div>
 
-      <div class="title">Side Deck (15)</div>
-  
-      <div class="side-deck-grid" class="deck-grid" id="side-deck-grid">
-        <div class="card-slot" id="card-slot1"></div>
-        <div class="card-slot" id="card-slot2"></div>
-        <div class="card-slot" id="card-slot3"></div>
-        <div class="card-slot" id="card-slot4"></div>
-        <div class="card-slot" id="card-slot5"></div>
-        <div class="card-slot" id="card-slot6"></div>
-        <div class="card-slot" id="card-slot7"></div>
-        <div class="card-slot" id="card-slot8"></div>
-        <div class="card-slot" id="card-slot9"></div>
-        <div class="card-slot" id="card-slot10"></div>
-        <div class="card-slot" id="card-slot11"></div>
-        <div class="card-slot" id="card-slot12"></div>
-        <div class="card-slot" id="card-slot13"></div>
-        <div class="card-slot" id="card-slot14"></div>
-        <div class="card-slot" id="card-slot15"></div>
-      </div>
+        </div>
+    
+        <!-- EXTRA DECK -->
+        <div id="extra-deck-section">
 
+            <div class="title-extra-deck">Extra Deck (15)</div>
+        
+            <div class="side-deck-grid" class="deck-grid" id="extra-deck-grid">
+                <div class="card-slot" id="card-slot1"></div>
+                <div class="card-slot" id="card-slot2"></div>
+                <div class="card-slot" id="card-slot3"></div>
+                <div class="card-slot" id="card-slot4"></div>
+                <div class="card-slot" id="card-slot5"></div>
+                <div class="card-slot" id="card-slot6"></div>
+                <div class="card-slot" id="card-slot7"></div>
+                <div class="card-slot" id="card-slot8"></div>
+                <div class="card-slot" id="card-slot9"></div>
+                <div class="card-slot" id="card-slot10"></div>
+                <div class="card-slot" id="card-slot11"></div>
+                <div class="card-slot" id="card-slot12"></div>
+                <div class="card-slot" id="card-slot13"></div>
+                <div class="card-slot" id="card-slot14"></div>
+                <div class="card-slot" id="card-slot15"></div>
+            </div>
+
+        </div>
+    
+        <!-- SIDE DECK -->
+        <div id="side-deck-section">
+
+            <div class="title-side-deck">Side Deck (15)</div>
+        
+            <div class="side-deck-grid" class="deck-grid" id="side-deck-grid">
+                <div class="card-slot" id="card-slot1"></div>
+                <div class="card-slot" id="card-slot2"></div>
+                <div class="card-slot" id="card-slot3"></div>
+                <div class="card-slot" id="card-slot4"></div>
+                <div class="card-slot" id="card-slot5"></div>
+                <div class="card-slot" id="card-slot6"></div>
+                <div class="card-slot" id="card-slot7"></div>
+                <div class="card-slot" id="card-slot8"></div>
+                <div class="card-slot" id="card-slot9"></div>
+                <div class="card-slot" id="card-slot10"></div>
+                <div class="card-slot" id="card-slot11"></div>
+                <div class="card-slot" id="card-slot12"></div>
+                <div class="card-slot" id="card-slot13"></div>
+                <div class="card-slot" id="card-slot14"></div>
+                <div class="card-slot" id="card-slot15"></div>
+            </div>
+
+        </div>
     </div>
 
     <!-- SEARCH CARD -->
-
     <div id="search-section">
         <div>Search</div> <!-- title -->
 
@@ -176,7 +196,7 @@
         <!-- card type select-->
         <div class="filter-row">
 
-            <label for="card-type">Type: </label>
+            <label for="card-type">Card: </label>
 
             <div class="input">
 
@@ -249,6 +269,8 @@
                 <option value="one">1</option>
             </select>
         </div>
+
+        <button id="search-button">Search</button>
 
         <div class="deck-grid" class="search-grid">
             <div class="card-slot" id="card-slot1"></div>
