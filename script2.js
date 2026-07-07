@@ -271,7 +271,7 @@ function applyFilters() {
         const limitSelect = document.getElementById("limit-select")?.value ?? "";
     
         const typeMatch = cardType === "" || card.cardType === cardType;
-        const subtypeMatch = cardSubtype === "" || card.subtype === cardSubtype;
+        const subtypeMatch = cardSubtype === "" || card.subType === cardSubtype;
         const monsterBackgroundMatch = monsterBackground === "" || card.monsterBackground === monsterBackground;
         const mechanicMatch = monsterMechanic === "" || card.monsterMechanic === monsterMechanic;
         const attributeMatch = attribute === "" || card.attribute === attribute;

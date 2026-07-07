@@ -264,7 +264,7 @@
 "atk": 100,
 "def": 2600,
 "limit": 1,
-"image": "card-pics/6524038.jpg"
+"image": "card-pics/65240384.jpg"
 },
 {
 "name": "Black Brachios",
@@ -324,21 +324,21 @@
 },
 {
 "name": "Black Pendant",
-"description": "The equipped monster gains 500 ATK. When this card is sent from the field to the Graveyard: Inflict 500 damage to your opponent.",
+"description": "The equipped monster gains 500 ATK. When this card is sent from the field to the GY: Inflict 500 damage to your opponent.",
 "cardType": "spell",
 "subType": "equip",
 "monsterBackground": "",
 "monsterMechanic": "",
 "attribute": "",
-"level": null,
-"atk": null,
-"def": null,
+"level": 0,
+"atk": 0,
+"def": 0,
 "limit": 3,
-"image": ""
+"image": "card-pics/65169794.jpg"
 },
 {
 "name": "Black Stego",
-"description": "If this Defense Position card is attacked, change it to Attack Position at the end of the Damage Step.",
+"description": "If this face-up Attack Position card is targeted for an attack: Change this card to Defense Position.",
 "cardType": "monster",
 "subType": "dinosaur",
 "monsterBackground": "effect",
@@ -348,11 +348,11 @@
 "atk": 1200,
 "def": 2000,
 "limit": 3,
-"image": ""
+"image": "card-pics/79409334.jpg"
 },
 {
 "name": "Black Veloci",
-"description": "When this card inflicts battle damage to your opponent by a direct attack: Inflict 400 damage to your opponent.",
+"description": "If this card attacks an opponent's monster, it gains 400 ATK during the Damage Step only. If this card is attacked by an opponent's monster, it loses 400 DEF during the Damage Step only.",
 "cardType": "monster",
 "subType": "dinosaur",
 "monsterBackground": "effect",
@@ -362,11 +362,11 @@
 "atk": 1800,
 "def": 300,
 "limit": 3,
-"image": ""
+"image": "card-pics/52319752.jpg"
 },
 {
 "name": "Blade Knight",
-"description": "While you have 1 or less cards in your hand, this card gains 400 ATK. If you have no other monsters on your field, negate the effects of Effect Monsters destroyed by this card in battle.",
+"description": "While you have 1 or less cards in your hand, this card gains 400 ATK. If you control no other monsters, negate the effects of Flip Monsters destroyed by battle with this card.",
 "cardType": "monster",
 "subType": "warrior",
 "monsterBackground": "effect",
@@ -375,12 +375,12 @@
 "level": 4,
 "atk": 1600,
 "def": 1000,
-"limit": 1,
-"image": ""
+"limit": 3,
+"image": "card-pics/39507162.jpg"
 },
 {
 "name": "Blast Magician",
-"description": "Each time a Spell Card is activated, place 1 Spell Counter on this card. You can remove Spell Counters from this card to destroy 1 monster on the field with ATK less than or equal to the number of Spell Counters removed × 700.",
+"description": "Each time a Spell Card is activated, place 1 Spell Counter on this card when that Spell Card resolves. You can remove any number of Spell Counters from this card, then target 1 face-up monster on the field with ATK less than or equal to the number of counters you removed x 700; destroy that target.",
 "cardType": "monster",
 "subType": "spellcaster",
 "monsterBackground": "effect",
@@ -389,26 +389,26 @@
 "level": 4,
 "atk": 1400,
 "def": 1700,
-"limit": 2,
-"image": ""
+"limit": 3,
+"image": "card-pics/21051146.jpg"
 },
 {
 "name": "Block Attack",
-"description": "Target 1 face-up monster your opponent controls; change it to Defense Position. It cannot change its battle position until the end of your opponent's next turn.",
+"description": "Target 1 face-up Attack Position monster your opponent controls; change that target to face-up Defense Position.",
 "cardType": "spell",
 "subType": "normal",
 "monsterBackground": "",
 "monsterMechanic": "",
 "attribute": "",
-"level": null,
-"atk": null,
-"def": null,
+"level": 0,
+"atk": 0,
+"def": 0,
 "limit": 3,
-"image": ""
-},
+"image": "card-pics/25880422.jpg"
+}, 
 {
 "name": "Blue-Eyes Ultimate Dragon",
-"description": "Blue-Eyes White Dragon + Blue-Eyes White Dragon + Blue-Eyes White Dragon",
+"description": "\"Blue-Eyes White Dragon\" + \"Blue-Eyes White Dragon\" + \"Blue-Eyes White Dragon\"",
 "cardType": "monster",
 "subType": "dragon",
 "monsterBackground": "fusion",
@@ -418,7 +418,7 @@
 "atk": 4500,
 "def": 3800,
 "limit": 3,
-"image": ""
+"image": "card-pics/23995346.jpg"
 },
 {
 "name": "Blue-Eyes White Dragon",
@@ -432,39 +432,39 @@
 "atk": 3000,
 "def": 2500,
 "limit": 3,
-"image": "card-pics/blue-eyes.jpg"
+"image": "card-pics/89631139.jpg"
 },
 {
 "name": "Book of Lunar Eclipse",
-"description": "Change all face-up monsters on the field to face-down Defense Position. During the End Phase of this turn, change as many face-down monsters on the field as possible to face-up Defense Position.",
+"description": "Discard 1 card, then target 2 face-up monsters on the field; change them to face-down Defense Position.",
 "cardType": "spell",
 "subType": "quick-play",
 "monsterBackground": "",
 "monsterMechanic": "",
 "attribute": "",
-"level": null,
-"atk": null,
-"def": null,
-"limit": 1,
-"image": ""
+"level": 0,
+"atk": 0,
+"def": 0,
+"limit": 3,
+"image": "card-pics/31834488.jpg"
 },
 {
 "name": "Book of Secret Arts",
-"description": "A Spellcaster-Type monster equipped with this card increases its ATK and DEF by 300 points.",
+"description": "Increase the ATK and DEF of a Spellcaster-Type monster equipped with this card by 300 points.",
 "cardType": "spell",
 "subType": "equip",
 "monsterBackground": "",
 "monsterMechanic": "",
 "attribute": "",
-"level": null,
-"atk": null,
-"def": null,
+"level": 0,
+"atk": 0,
+"def": 0,
 "limit": 3,
-"image": ""
+"image": "card-pics/91595718.jpg"
 },
 {
 "name": "Bowganian",
-"description": "During your Standby Phase, inflict 600 points of damage to your opponent's Life Points.",
+"description": "Once per turn, during your Standby Phase: Inflict 600 damage to your opponent.",
 "cardType": "monster",
 "subType": "machine",
 "monsterBackground": "effect",
@@ -474,11 +474,11 @@
 "atk": 1300,
 "def": 1000,
 "limit": 3,
-"image": ""
+"image": "card-pics/52090844.jpg"
 },
 {
 "name": "Breaker the Magical Warrior",
-"description": "When this card is Normal Summoned, place 1 Spell Counter on it (max. 1). This card gains 300 ATK while it has a Spell Counter. You can remove 1 Spell Counter from this card to destroy 1 Spell/Trap Card on the field.",
+"description": "If this card is Normal Summoned: Place 1 Spell Counter on it (max. 1). Gains 300 ATK for each Spell Counter on it. You can remove 1 Spell Counter from this card, then target 1 Spell/Trap on the field; destroy that target.",
 "cardType": "monster",
 "subType": "spellcaster",
 "monsterBackground": "effect",
@@ -487,12 +487,12 @@
 "level": 4,
 "atk": 1600,
 "def": 1000,
-"limit": 1,
-"image": ""
+"limit": 3,
+"image": "card-pics/71413901.jpg"
 },
 {
 "name": "Bright Star Dragon",
-"description": "A dragon that shines brightly and battles with overwhelming power.",
+"description": "When this card is Normal Summoned: You can target 1 other face-up monster on the field; increase that target's Level by 2 until the end of this turn.",
 "cardType": "monster",
 "subType": "dragon",
 "monsterBackground": "effect",
@@ -501,26 +501,26 @@
 "level": 4,
 "atk": 1900,
 "def": 1000,
-"limit": 1,
-"image": ""
+"limit": 3,
+"image": "card-pics/16719802.jpg"
 },
 {
 "name": "Burst Rebirth",
-"description": "Pay 2000 Life Points, then target 1 monster in your Graveyard; Special Summon it in face-down Defense Position.",
+"description": "Pay 2000 LP, then target 1 monster in your GY; Special Summon that target in face-down Defense Position.",
 "cardType": "trap",
 "subType": "normal",
 "monsterBackground": "",
 "monsterMechanic": "",
 "attribute": "",
-"level": null,
-"atk": null,
-"def": null,
-"limit": 1,
-"image": ""
+"level": 0,
+"atk": 0,
+"def": 0,
+"limit": 3,
+"image": "card-pics/50243722.jpg"
 },
 {
 "name": "Buster Blader",
-"description": "Gains 500 ATK for every Dragon-Type monster on your opponent's field and Graveyard.",
+"description": "Gains 500 ATK for each Dragon monster your opponent controls or is in their GY.",
 "cardType": "monster",
 "subType": "warrior",
 "monsterBackground": "effect",
@@ -529,26 +529,26 @@
 "level": 7,
 "atk": 2600,
 "def": 2300,
-"limit": 1,
-"image": ""
+"limit": 3,
+"image": "card-pics/78193831.jpg"
 },
 {
 "name": "Butterspy Protection",
-"description": "Target 1 face-up monster you control; it gains 300 ATK and DEF, also it cannot be destroyed by battle this turn.",
+"description": "Target 1 face-up Attack Position monster on the field; change it to face-up Defense Position, also any damage you take for the rest of this turn is halved.",
 "cardType": "trap",
 "subType": "normal",
 "monsterBackground": "",
 "monsterMechanic": "",
 "attribute": "",
-"level": null,
-"atk": null,
-"def": null,
+"level": 0,
+"atk": 0,
+"def": 0,
 "limit": 3,
-"image": ""
+"image": "card-pics/63630268.jpg"
 },
 {
 "name": "Byser Shock",
-"description": "When this card is flipped face-up, return all face-down Defense Position monsters on the field to the hand.",
+"description": "If this card is Summoned: Return all Set cards on the field to the hand.",
 "cardType": "monster",
 "subType": "fiend",
 "monsterBackground": "effect",
@@ -556,24 +556,24 @@
 "attribute": "dark",
 "level": 5,
 "atk": 800,
-"def": 1200,
-"limit": 1,
-"image": ""
+"def": 600,
+"limit": 3,
+"image": "card-pics/17597059.jpg"
 },
 {
 "name": "Call of the Haunted",
-"description": "Activate this card by targeting 1 monster in your Graveyard; Special Summon that monster in Attack Position. When this card leaves the field, destroy that monster. When that monster is destroyed, destroy this card.",
+"description": "Activate this card by targeting 1 monster in your GY; Special Summon that target in Attack Position. When this card leaves the field, destroy that monster. When that monster is destroyed, destroy this card.",
 "cardType": "trap",
 "subType": "continuous",
 "monsterBackground": "",
 "monsterMechanic": "",
 "attribute": "",
-"level": null,
-"atk": null,
-"def": null,
-"limit": 1,
-"image": ""
-},
+"level": 0,
+"atk": 0,
+"def": 0,
+"limit": 3,
+"image": "card-pics/97077563.jpg"
+},  
 {
 "name": "Chaos Command Magician",
 "description": "Negate any monster effects that target this 1 card.",
@@ -796,7 +796,7 @@
 "atk": 0,
 "def": 0,
 "limit": 3,
-"image": "card-pics/00674561.jpg"
+"image": "card-pics/674561.jpg"
 },
 {
 "name": "Dark Factory of Mass Production",
@@ -908,7 +908,7 @@
 "atk": 1000,
 "def": 1000,
 "limit": 3,
-"image": "card-pics/01102515.jpg"
+"image": "card-pics/1102515.jpg"
 },
 {
 "name": "Dark Spell Regeneration",
@@ -964,7 +964,7 @@
 "atk": 300,
 "def": 200,
 "limit": 3,
-"image": "card-pics/02732323.jpg"
+"image": "card-pics/2732323.jpg"
 },
 {
 "name": "Defender, the Magical Knight",
@@ -978,7 +978,7 @@
 "atk": 1600,
 "def": 2000,
 "limit": 3,
-"image": "card-pics/02525268.jpg"
+"image": "card-pics/2525268.jpg"
 },
 {
 "name": "Defense Draw",
@@ -1104,7 +1104,7 @@
 "atk": 0,
 "def": 0,
 "limit": 3,
-"image": "card-pics/01435851.jpg"
+"image": "card-pics/1435851.jpg"
 },
 {
 "name": "Dragon's Mirror",
@@ -1146,7 +1146,7 @@
 "atk": 1500,
 "def": 1000,
 "limit": 3,
-"image": "card-pics/03837261.jpg"
+"image": "card-pics/3837261.jpg"
 },
 {
 "name": "Drillago",
@@ -1188,7 +1188,7 @@
 "atk": 0,
 "def": 0,
 "limit": 3,
-"image": "card-pics/00213326.jpg"
+"image": "card-pics/213326.jpg"
 },
 {
 "name": "Electromagnetic Turtle",
@@ -1413,26 +1413,26 @@
 "def": 900,
 "limit": 3,
 "image": "card-pics/41077745.jpg"
-},  
+},
 {
 "name": "Elemental HERO Inferno",
-"description": "\"Elemental HERO Heat\" + \"Elemental HERO Lady Heat\"\nMust be Fusion Summoned. If this card battles a WATER monster, this card gains 1000 ATK during damage calculation only.",
+"description": "\"Elemental HERO Heat\" + \"Elemental HERO Lady Heat\"\nMust be Fusion Summoned. If this card battles a WATER monster, this card gains 1000 ATK during the Damage Step only.",
 "cardType": "monster",
-"subType": "warrior",
+"subType": "pyro",
 "monsterBackground": "fusion",
 "monsterMechanic": "",
 "attribute": "fire",
 "level": 8,
 "atk": 2300,
 "def": 1600,
-"limit": 1,
-"image": ""
+"limit": 3,
+"image": "card-pics/68745629.jpg"
 },
 {
 "name": "Elemental HERO Lady Heat",
-"description": "During your End Phase: Inflict 200 damage to your opponent for each face-up \"Elemental HERO\" monster you control.",
+"description": "During each of your End Phases: Inflict 200 damage to your opponent for each face-up \"Elemental HERO\" monster you control.",
 "cardType": "monster",
-"subType": "warrior",
+"subType": "pyro",
 "monsterBackground": "effect",
 "monsterMechanic": "",
 "attribute": "fire",
@@ -1440,11 +1440,11 @@
 "atk": 1300,
 "def": 1000,
 "limit": 3,
-"image": ""
+"image": "card-pics/95362816.jpg"
 },
 {
 "name": "Elemental HERO Mariner",
-"description": "\"Elemental HERO Bubbleman\" + \"Elemental HERO Avian\"\nMust be Fusion Summoned. If you have any Set cards in your Spell & Trap Zone, this card can attack directly.",
+"description": "\"Elemental HERO Bubbleman\" + \"Elemental HERO Avian\"\nMust be Fusion Summoned. While you have any face-down card(s) in your Spell & Trap Zones, this card can attack your opponent directly.",
 "cardType": "monster",
 "subType": "warrior",
 "monsterBackground": "fusion",
@@ -1453,12 +1453,12 @@
 "level": 5,
 "atk": 1400,
 "def": 1000,
-"limit": 2,
-"image": ""
+"limit": 3,
+"image": "card-pics/14225239.jpg"
 },
 {
 "name": "Elemental HERO Mudballman",
-"description": "\"Elemental HERO Clayman\" + \"Elemental HERO Bubbleman\"\nMust be Fusion Summoned.",
+"description": "\"Elemental HERO Bubbleman\" + \"Elemental HERO Clayman\"\nMust be Fusion Summoned.",
 "cardType": "monster",
 "subType": "warrior",
 "monsterBackground": "fusion",
@@ -1467,12 +1467,12 @@
 "level": 6,
 "atk": 1900,
 "def": 3000,
-"limit": 1,
-"image": ""
+"limit": 3,
+"image": "card-pics/52031567.jpg"
 },
 {
 "name": "Elemental HERO Necroid Shaman",
-"description": "\"Elemental HERO Wildheart\" + \"Elemental HERO Necroshade\"\nMust be Fusion Summoned. When this card is Special Summoned: Target 1 monster your opponent controls; destroy that target, then Special Summon 1 monster from your opponent's GY to their side of the field.",
+"description": "\"Elemental HERO Wildheart\" + \"Elemental HERO Necroshade\"\nMust be Fusion Summoned. If this card is Special Summoned: Target 1 monster your opponent controls; destroy that target, then Special Summon 1 monster from your opponent's GY to their field.",
 "cardType": "monster",
 "subType": "warrior",
 "monsterBackground": "fusion",
@@ -1481,12 +1481,12 @@
 "level": 6,
 "atk": 1900,
 "def": 1800,
-"limit": 1,
-"image": ""
+"limit": 3,
+"image": "card-pics/81003500.jpg"
 },
 {
 "name": "Elemental HERO Necroshade",
-"description": "Once, while this card is in the GY, you can Normal Summon 1 Level 5 or higher \"Elemental HERO\" monster from your hand without Tributing.",
+"description": "Once, while this card is in the GY, you can Normal Summon 1 Level 5 or higher \"Elemental HERO\" monster without Tributing.",
 "cardType": "monster",
 "subType": "warrior",
 "monsterBackground": "effect",
@@ -1495,12 +1495,12 @@
 "level": 5,
 "atk": 1600,
 "def": 1800,
-"limit": 1,
-"image": ""
+"limit": 3,
+"image": "card-pics/89252153.jpg"
 },
 {
 "name": "Elemental HERO Neos",
-"description": "A new Elemental HERO has arrived from Neo-Space! When he initiates a Contact Fusion with a Neo-Spacian, his unknown powers are unleashed.",
+"description": "A new Elemental HERO has arrived from Neo-Space! When he initiates a Contact Fusion with a Neo-Spacian his unknown powers are unleashed.",
 "cardType": "monster",
 "subType": "warrior",
 "monsterBackground": "normal",
@@ -1509,12 +1509,12 @@
 "level": 7,
 "atk": 2500,
 "def": 2000,
-"limit": 1,
-"image": ""
+"limit": 3,
+"image": "card-pics/89943723.jpg"
 },
 {
 "name": "Elemental HERO Neos Alius",
-"description": "This card is treated as a Normal Monster while face-up on the field or in the GY. While this card is a Normal Monster on the field, you can Normal Summon it to have it become an Effect Monster with this effect:\n● This card's name becomes \"Elemental HERO Neos\" while it is face-up on the field.",
+"description": "This card is treated as a Normal Monster while face-up on the field or in the GY. While this card is a Normal Monster on the field, you can Normal Summon it to have it become an Effect Monster with this effect:\n● This card's name becomes \"Elemental HERO Neos\" while on the field.",
 "cardType": "monster",
 "subType": "warrior",
 "monsterBackground": "effect",
@@ -1523,8 +1523,8 @@
 "level": 4,
 "atk": 1900,
 "def": 1300,
-"limit": 1,
-"image": ""
+"limit": 3,
+"image": "card-pics/69884162.jpg"
 },
 {
 "name": "Elemental HERO Ocean",
@@ -1538,8 +1538,8 @@
 "atk": 1500,
 "def": 1200,
 "limit": 3,
-"image": ""
-},
+"image": "card-pics/37195861.jpg"
+},  
 {
 "name": "Elemental HERO Prisma",
 "description": "Once per turn: You can reveal 1 Fusion Monster from your Extra Deck, then send 1 of the Fusion Materials listed on that card from your Main Deck to the GY; this card's name becomes the sent monster's name until the End Phase.",
@@ -1622,7 +1622,7 @@
 "atk": 1000,
 "def": 1500,
 "limit": 3,
-"image": "card-pics/09327502.jpg"
+"image": "card-pics/9327502.jpg"
 },
 {
 "name": "Elemental HERO Wildheart",
@@ -1678,7 +1678,7 @@
 "atk": null,
 "def": null,
 "limit": 1,
-"image": "card-pics/06390406.jpg"
+"image": "card-pics/6390406.jpg"
 },
 {
 "name": "Enemy Controller",
@@ -1734,7 +1734,7 @@
 "atk": 1850,
 "def": 950,
 "limit": 1,
-"image": "card-pics/04058065.jpg"
+"image": "card-pics/4058065.jpg"
 },
 {
 "name": "Felgrand Dragon",
@@ -1748,7 +1748,7 @@
 "atk": 2800,
 "def": 2800,
 "limit": 1,
-"image": "card-pics/03954901.jpg"
+"image": "card-pics/3954901.jpg"
 },
 {
 "name": "Final Attack Orders",
@@ -1832,7 +1832,7 @@
 "atk": 2300,
 "def": 2100,
 "limit": 3,
-"image": "card-pics/06368038.jpg"
+"image": "card-pics/6368038.jpg"
 },
 {
 "name": "Gearfried the Iron Knight",
@@ -1846,7 +1846,7 @@
 "atk": 1800,
 "def": 1600,
 "limit": 3,
-"image": "card-pics/00423705.jpg"
+"image": "card-pics/423705.jpg"
 },
 {
 "name": "General Raiho of the Ice Barrier",
@@ -1986,7 +1986,7 @@
 "atk": 200,
 "def": 2000,
 "limit": 1,
-"image": "card-pics/09666558.jpg"
+"image": "card-pics/9666558.jpg"
 },
 {
 "name": "Graveyard of Wandering Souls",
@@ -2112,7 +2112,7 @@
 "atk": 1500,
 "def": 1200,
 "limit": 1,
-"image": "card-pics/02671330.jpg"
+"image": "card-pics/2671330.jpg"
 },
 {
 "name": "Interdimensional Matter Transporter",
@@ -2210,7 +2210,7 @@
 "atk": 3000,
 "def": 2500,
 "limit": 1,
-"image": "card-pics/00102380.jpg"
+"image": "card-pics/102380.jpg"
 },
 {
 "name": "Legendary Fiend",
@@ -2314,15 +2314,15 @@
 "name": "Magic Planter",
 "description": "Send 1 face-up Continuous Trap you control to the GY; draw 2 cards.",
 "cardType": "spell",
-"subType": "continuous",
+"subType": "normal",
 "monsterBackground": "",
 "monsterMechanic": "",
 "attribute": "",
-"level": null,
-"atk": null,
-"def": null,
+"level": 0,
+"atk": 0,
+"def": 0,
 "limit": 3,
-"image": "card-pics/67795901.jpg"
+"image": "card-pics/1073952.jpg"
 },
 {
 "name": "Magical Dimension",
@@ -2332,10 +2332,10 @@
 "monsterBackground": "",
 "monsterMechanic": "",
 "attribute": "",
-"level": null,
-"atk": null,
-"def": null,
-"limit": 1,
+"level": 0,
+"atk": 0,
+"def": 0,
+"limit": 3,
 "image": "card-pics/28553439.jpg"
 },
 {
@@ -2346,11 +2346,11 @@
 "monsterBackground": "",
 "monsterMechanic": "",
 "attribute": "",
-"level": null,
-"atk": null,
-"def": null,
-"limit": 6,
-"image": "card-pics/98380593.jpg"
+"level": 0,
+"atk": 0,
+"def": 0,
+"limit": 3,
+"image": "card-pics/98494543.jpg"
 },
 {
 "name": "Magical Undertaker",
@@ -2363,7 +2363,7 @@
 "level": 2,
 "atk": 400,
 "def": 400,
-"limit": 1,
+"limit": 3,
 "image": "card-pics/30608985.jpg"
 },
 {
@@ -2377,7 +2377,7 @@
 "level": 1,
 "atk": 300,
 "def": 400,
-"limit": 1,
+"limit": 3,
 "image": "card-pics/31560081.jpg"
 },
 {
@@ -2388,15 +2388,15 @@
 "monsterBackground": "",
 "monsterMechanic": "",
 "attribute": "",
-"level": null,
-"atk": null,
-"def": null,
-"limit": 1,
-"image": "card-pics/00050755.jpg"
+"level": 0,
+"atk": 0,
+"def": 0,
+"limit": 3,
+"image": "card-pics/50755.jpg"
 },
 {
 "name": "Magician's Valkyria",
-"description": "Monsters your opponent controls cannot target face-up Spellcaster monsters for attacks, except this one.",
+"description": "Your opponent cannot select another Spellcaster monster on the field as an attack target.",
 "cardType": "monster",
 "subType": "spellcaster",
 "monsterBackground": "effect",
@@ -2406,11 +2406,11 @@
 "atk": 1600,
 "def": 1800,
 "limit": 3,
-"image": "card-pics/50321796.jpg"
+"image": "card-pics/80304126.jpg"
 },
 {
 "name": "Marauding Captain",
-"description": "Your opponent cannot target other Warrior monsters you control for attacks. When this card is Normal Summoned: You can Special Summon 1 Level 4 or lower monster from your hand.",
+"description": "Your opponent cannot target face-up Warrior monsters for attacks, except this one. When this card is Normal Summoned: You can Special Summon 1 Level 4 or lower monster from your hand.",
 "cardType": "monster",
 "subType": "warrior",
 "monsterBackground": "effect",
@@ -2419,8 +2419,8 @@
 "level": 3,
 "atk": 1200,
 "def": 400,
-"limit": 1,
-"image": "card-pics/02728841.jpg"
+"limit": 3,
+"image": "card-pics/2460565.jpg"
 },
 {
 "name": "Mask of Darkness",
@@ -2432,24 +2432,24 @@
 "attribute": "dark",
 "level": 2,
 "atk": 900,
-"def": 400,
-"limit": 1,
+"def": 900,
+"limit": 3,
 "image": "card-pics/28933734.jpg"
 },
 {
 "name": "Mask of Dispel",
-"description": "Activate this card by targeting 1 face-up Spell Card on the field. During each of your Standby Phases: Inflict 500 damage to the controller of the target. When that target is destroyed, destroy this card.",
+"description": "Select 1 face-up Spell Card on the field. The controller of the Spell Card takes 500 points of damage during each of your Standby Phases. When the selected card is removed from the field, destroy this card.",
 "cardType": "spell",
 "subType": "continuous",
 "monsterBackground": "",
 "monsterMechanic": "",
 "attribute": "",
-"level": null,
-"atk": null,
-"def": null,
+"level": 0,
+"atk": 0,
+"def": 0,
 "limit": 3,
-"image": "card-pics/20744062.jpg"
-},
+"image": "card-pics/20765952.jpg"
+}, 
 {
 "name": "Mask of Weakness",
 "description": "Target 1 attacking monster; that target loses 700 ATK until the end of this turn.",
@@ -2458,15 +2458,15 @@
 "monsterBackground": "",
 "monsterMechanic": "",
 "attribute": "",
-"level": null,
-"atk": null,
-"def": null,
-"limit": 1,
+"level": 0,
+"atk": 0,
+"def": 0,
+"limit": 3,
 "image": "card-pics/57882509.jpg"
 },
 {
 "name": "Masked Dragon",
-"description": "When this card is destroyed by battle and sent to the GY: You can Special Summon 1 Dragon monster with 1500 or less ATK from your Deck in Attack Position.",
+"description": "When this card is destroyed by battle and sent to the GY: You can Special Summon 1 Dragon monster with 1500 or less ATK from your Deck.",
 "cardType": "monster",
 "subType": "dragon",
 "monsterBackground": "effect",
@@ -2476,11 +2476,11 @@
 "atk": 1400,
 "def": 1100,
 "limit": 3,
-"image": "card-pics/39111158.jpg"
+"image": "card-pics/39191307.jpg"
 },
 {
 "name": "Megalosmasher X",
-"description": "With its exceptionally strong jaw and gold-armor-plated shell, this prehistoric predator is completely impervious to fossilization. Foraging near the seaside, it will happily crunch on any metallic scrap it can find—especially the wreckage of unfortunate submarines.",
+"description": "With its sound-baffling armor and gargantuan jaws, this primeval predator's phosphorescence was the only possible pardon for its primitive prey.",
 "cardType": "monster",
 "subType": "dinosaur",
 "monsterBackground": "normal",
@@ -2489,22 +2489,22 @@
 "level": 4,
 "atk": 2000,
 "def": 0,
-"limit": 1,
-"image": "card-pics/48940337.jpg"
+"limit": 3,
+"image": "card-pics/81823360.jpg"
 },
 {
 "name": "Miracle Fusion",
-"description": "Banish from your field or GY the Fusion Materials listed on an \"Elemental HERO\" Fusion Monster, then Special Summon that Fusion Monster from your Extra Deck. (This is treated as a Fusion Summon.)",
+"description": "Fusion Summon 1 \"Elemental HERO\" Fusion Monster from your Extra Deck, by banishing Fusion Materials listed on it from your field or GY.",
 "cardType": "spell",
 "subType": "normal",
 "monsterBackground": "",
 "monsterMechanic": "",
 "attribute": "",
-"level": null,
-"atk": null,
-"def": null,
+"level": 0,
+"atk": 0,
+"def": 0,
 "limit": 3,
-"image": "card-pics/45986638.jpg"
+"image": "card-pics/45906428.jpg"
 },
 {
 "name": "Mirage Dragon",
@@ -2517,26 +2517,26 @@
 "level": 4,
 "atk": 1600,
 "def": 600,
-"limit": 1,
-"image": "card-pics/15926522.jpg"
+"limit": 3,
+"image": "card-pics/15960641.jpg"
 },
 {
 "name": "Mountain",
-"description": "All Dragon, Winged Beast, and Thunder monsters gain 200 ATK/DEF.",
+"description": "All Dragon, Winged Beast, and Thunder monsters on the field gain 200 ATK/DEF.",
 "cardType": "spell",
 "subType": "field",
 "monsterBackground": "",
 "monsterMechanic": "",
 "attribute": "",
-"level": null,
-"atk": null,
-"def": null,
+"level": 0,
+"atk": 0,
+"def": 0,
 "limit": 3,
-"image": "card-pics/50913501.jpg"
+"image": "card-pics/50913601.jpg"
 },
 {
 "name": "Mystic Tomato",
-"description": "When this card is destroyed by battle and sent to the GY: You can Special Summon 1 DARK monster with 1500 or less ATK from your Deck in Attack Position.",
+"description": "When this card is destroyed by battle and sent to the GY: You can Special Summon 1 DARK monster with 1500 or less ATK from your Deck, in face-up Attack Position.",
 "cardType": "monster",
 "subType": "plant",
 "monsterBackground": "effect",
@@ -2546,11 +2546,11 @@
 "atk": 1400,
 "def": 1100,
 "limit": 3,
-"image": "card-pics/83039729.jpg"
+"image": "card-pics/83011278.jpg"
 },
 {
 "name": "Mystical Elf",
-"description": "A delicate elf that lacks offensive power, but has a very strong defense backed by mystical power.",
+"description": "A delicate elf that lacks offense, but has a terrific defense backed by mystical power.",
 "cardType": "monster",
 "subType": "spellcaster",
 "monsterBackground": "normal",
@@ -2570,27 +2570,26 @@
 "monsterBackground": "",
 "monsterMechanic": "",
 "attribute": "",
-"level": null,
-"atk": null,
-"def": null,
-"limit": 1,
+"level": 0,
+"atk": 0,
+"def": 0,
+"limit": 3,
 "image": "card-pics/14315573.jpg"
 },
 {
 "name": "Nightmare Wheel",
-"description": "Activate this card by targeting 1 monster your opponent controls; it cannot attack or change its battle position. During each of your Standby Phases: Inflict 500 damage to your opponent. When that target leaves the field, destroy this card.",
+"description": "Activate this card by targeting 1 monster your opponent controls; it cannot attack or change its battle position. When it leaves the field, destroy this card. Once per turn, during your Standby Phase: Inflict 500 damage to your opponent. That monster must be on the field to activate and to resolve this effect.",
 "cardType": "trap",
 "subType": "continuous",
 "monsterBackground": "",
 "monsterMechanic": "",
 "attribute": "",
-"level": null,
-"atk": null,
-"def": null,
-"limit": 1,
-"image": "card-pics/54736207.jpg"
-},
-{
+"level": 0,
+"atk": 0,
+"def": 0,
+"limit": 3,
+"image": "card-pics/54704216.jpg"
+},  {
 "name": "Nightmare's Steelcage",
 "description": "This card remains on the field for 2 of your opponent's turns. No monsters can attack.",
 "cardType": "spell",
@@ -2598,25 +2597,25 @@
 "monsterBackground": "",
 "monsterMechanic": "",
 "attribute": "",
-"level": null,
-"atk": null,
-"def": null,
-"limit": 2,
-"image": "card-pics/58214771.jpg"
+"level": 0,
+"atk": 0,
+"def": 0,
+"limit": 3,
+"image": "card-pics/58775978.jpg"
 },
 {
 "name": "Nobleman of Extermination",
-"description": "Target 1 face-down Spell/Trap Card on the field; destroy that target, and if you do, banish it, then, if it was a Trap Card, each player looks at their Deck, and banishes all cards with that card's name from their Deck.",
+"description": "Target 1 face-down Spell/Trap Card on the field; destroy that target, and if you do, banish it, then, if it was a Trap Card, each player looks at their main Deck, and banishes all cards with that card's name from their Deck.",
 "cardType": "spell",
 "subType": "normal",
 "monsterBackground": "",
 "monsterMechanic": "",
 "attribute": "",
-"level": null,
-"atk": null,
-"def": null,
-"limit": 1,
-"image": "card-pics/17406076.jpg"
+"level": 0,
+"atk": 0,
+"def": 0,
+"limit": 3,
+"image": "card-pics/17449108.jpg"
 },
 {
 "name": "O - Oversoul",
@@ -2626,24 +2625,24 @@
 "monsterBackground": "",
 "monsterMechanic": "",
 "attribute": "",
-"level": null,
-"atk": null,
-"def": null,
+"level": 0,
+"atk": 0,
+"def": 0,
 "limit": 3,
-"image": "card-pics/43411442.jpg"
+"image": "card-pics/63703130.jpg"
 },
 {
 "name": "Ominous Fortunetelling",
-"description": "Once per turn, during your opponent's Standby Phase: You can randomly choose 1 card in your opponent's hand and guess its type (Monster, Spell, or Trap). If you guess right, inflict 500 damage to your opponent.",
+"description": "Once per turn, during your Standby Phase: Guess 1 card type (Monster, Spell, or Trap) in your opponent's hand. Your opponent shows you their hand, and if you guessed right, inflict 500 damage to your opponent.",
 "cardType": "trap",
 "subType": "continuous",
 "monsterBackground": "",
 "monsterMechanic": "",
 "attribute": "",
-"level": null,
-"atk": null,
-"def": null,
-"limit": 1,
+"level": 0,
+"atk": 0,
+"def": 0,
+"limit": 3,
 "image": "card-pics/56995655.jpg"
 },
 {
@@ -2654,15 +2653,15 @@
 "monsterBackground": "",
 "monsterMechanic": "",
 "attribute": "",
-"level": null,
-"atk": null,
-"def": null,
-"limit": 1,
-"image": "card-pics/33703313.jpg"
+"level": 0,
+"atk": 0,
+"def": 0,
+"limit": 3,
+"image": "card-pics/33782437.jpg"
 },
 {
 "name": "Oxygeddon",
-"description": "If this card is destroyed by battle with a Pyro-Type monster, or if this card destroys a Pyro-Type monster by battle: Both players take 800 damage.",
+"description": "If this card is destroyed by battle with a Pyro monster: Both players take 800 damage.",
 "cardType": "monster",
 "subType": "dinosaur",
 "monsterBackground": "effect",
@@ -2672,13 +2671,13 @@
 "atk": 1800,
 "def": 800,
 "limit": 3,
-"image": "card-pics/58071119.jpg"
+"image": "card-pics/58071123.jpg"
 },
 {
 "name": "Paladin of White Dragon",
-"description": "You can Ritual Summon this card with \"White Dragon Ritual\". Must be Ritual Summoned. At the start of the Damage Step, if this card attacks a face-down Defense Position monster: Destroy that face-down monster. You can Tribute this card; Special Summon 1 \"Blue-Eyes White Dragon\" from your hand or Deck, but it cannot attack this turn.",
+"description": "You can Ritual Summon this card with \"White Dragon Ritual\". At the start of the Damage Step, if this card attacks a face-down Defense Position monster: Destroy that face-down monster. You can Tribute this card; Special Summon 1 \"Blue-Eyes White Dragon\" from your hand or Deck, but it cannot attack this turn.",
 "cardType": "monster",
-"subType": "dragon",
+"subType": "warrior",
 "monsterBackground": "ritual",
 "monsterMechanic": "",
 "attribute": "light",
@@ -2686,20 +2685,20 @@
 "atk": 1900,
 "def": 1200,
 "limit": 3,
-"image": "card-pics/73398031.jpg"
+"image": "card-pics/73398797.jpg"
 },
 {
 "name": "Pitch-Black Power Stone",
-"description": "Activate this card by placing 3 Spell Counters on it. Once per turn, during your turn: You can target 1 other face-up card on the field that you can place a Spell Counter on; remove 1 Spell Counter from this card, and if you do, place 1 Spell Counter on that target. When the last Spell Counter(s) is removed from this card, destroy it.",
+"description": "Activate this card by placing 3 Spell Counters on it. During your turn: You can transfer 1 Spell Counter from this card to another face-up card on the field that you can place a Spell Counter on. When there are no Spell Counters on this card, destroy it.",
 "cardType": "trap",
 "subType": "continuous",
 "monsterBackground": "",
 "monsterMechanic": "",
 "attribute": "",
-"level": null,
-"atk": null,
-"def": null,
-"limit": 1,
+"level": 0,
+"atk": 0,
+"def": 0,
+"limit": 3,
 "image": "card-pics/34029630.jpg"
 },
 {
@@ -2710,9 +2709,9 @@
 "monsterBackground": "",
 "monsterMechanic": "",
 "attribute": "",
-"level": null,
-"atk": null,
-"def": null,
+"level": 0,
+"atk": 0,
+"def": 0,
 "limit": 3,
 "image": "card-pics/24094653.jpg"
 },
@@ -2724,12 +2723,12 @@
 "monsterBackground": "",
 "monsterMechanic": "",
 "attribute": "",
-"level": null,
-"atk": null,
-"def": null,
-"limit": 1,
+"level": 0,
+"atk": 0,
+"def": 0,
+"limit": 3,
 "image": "card-pics/67169062.jpg"
-},
+},  
 {
 "name": "Pot of Duality",
 "description": "Excavate the top 3 cards of your Deck, add 1 of them to your hand, also shuffle the rest back into your Deck. You can only activate 1 \"Pot of Duality\" per turn. You cannot Special Summon during the turn you activate this card.",
@@ -2742,7 +2741,7 @@
 "atk": null,
 "def": null,
 "limit": 1,
-"image": "card-pics/98647072.jpg"
+"image": "card-pics/98645731.jpg"
 },
 {
 "name": "Power Invader",
@@ -2826,7 +2825,7 @@
 "atk": null,
 "def": null,
 "limit": 1,
-"image": "card-pics/19133621.jpg"
+"image": "card-pics/27174286.jpg"
 },
 {
 "name": "Revival Jam",
@@ -2910,7 +2909,7 @@
 "atk": 1500,
 "def": 3000,
 "limit": 1,
-"image": "card-pics/34124316.jpg"
+"image": "card-pics/41753322.jpg"
 },
 {
 "name": "Secret Blast",
@@ -2924,7 +2923,7 @@
 "atk": null,
 "def": null,
 "limit": 1,
-"image": "card-pics/18239909.jpg"
+"image": "card-pics/18252559.jpg"
 },
 {
 "name": "Seven Tools of the Bandit",
@@ -2938,7 +2937,7 @@
 "atk": null,
 "def": null,
 "limit": 1,
-"image": "card-pics/03819470.jpg"
+"image": "card-pics/3819470.jpg"
 },
 {
 "name": "Shield Warrior",
@@ -2952,7 +2951,7 @@
 "atk": 800,
 "def": 1600,
 "limit": 3,
-"image": "card-pics/54101438.jpg"
+"image": "card-pics/95360850.jpg"
 },
 {
 "name": "Skilled Blue Magician",
@@ -2980,7 +2979,7 @@
 "atk": 1900,
 "def": 1700,
 "limit": 1,
-"image": "card-pics/73752103.jpg"
+"image": "card-pics/73752131.jpg"
 },
 {
 "name": "Skyscraper",
@@ -3050,7 +3049,7 @@
 "atk": null,
 "def": null,
 "limit": 1,
-"image": "card-pics/35346268.jpg"
+"image": "card-pics/35346968.jpg"
 },
 {
 "name": "Soul Union",
@@ -3064,7 +3063,7 @@
 "atk": null,
 "def": null,
 "limit": 1,
-"image": "card-pics/14757387.jpg"
+"image": "card-pics/69389481.jpg"
 },
 {
 "name": "Spear Dragon",
@@ -3092,7 +3091,7 @@
 "atk": null,
 "def": null,
 "limit": 1,
-"image": "card-pics/18807108.jpg"
+"image": "card-pics/18807109.jpg"
 },
 {
 "name": "Stamping Destruction",
@@ -3232,7 +3231,7 @@
 "atk": null,
 "def": null,
 "limit": 1,
-"image": "card-pics/00403847.jpg"
+"image": "card-pics/403847.jpg"
 },
 {
 "name": "The Gates of Dark World",
@@ -3470,7 +3469,7 @@
 "atk": 500,
 "def": 1200,
 "limit": 1,
-"image": "card-pics/56043446.jpg"
+"image": "card-pics/56043447.jpg"
 },
 {
 "name": "Waboku",
@@ -3498,7 +3497,7 @@
 "atk": 1100,
 "def": 1200,
 "limit": 1,
-"image": "card-pics/05438492.jpg"
+"image": "card-pics/5438492.jpg"
 },
 {
 "name": "Wasteland",
@@ -3596,7 +3595,7 @@
 "atk": 800,
 "def": 1200,
 "limit": 1,
-"image": "card-pics/06480253.jpg"
+"image": "card-pics/6480253.jpg"
 },
 {
 "name": "Yami",
@@ -3610,7 +3609,7 @@
 "atk": null,
 "def": null,
 "limit": 3,
-"image": "card-pics/71280811.jpg"
+"image": "card-pics/59197169.jpg"
 },
 {
 "name": "Zoa",

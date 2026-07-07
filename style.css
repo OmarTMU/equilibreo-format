@@ -297,13 +297,18 @@ body {
                 }
 
                 #search-button {
-                    width:40%;
-                    margin-left:0.3vw;
+                    width:30%;
+                    margin-left:0vw;
                     font-size:1vw;
                 }
                 
                 #prev-page , #next-page {
                     width: 12%;
+                    font-size: 1vw;
+                }
+
+                #prev-page {
+                    margin-left:1.5vw;
                 }
 
                 #search-button:hover , #prev-page:hover , #next-page:hover{
