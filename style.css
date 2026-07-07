@@ -56,10 +56,11 @@ body {
                 .deck-constructor-button {
                     width: 48%;
                     margin:1%;
-                    padding:2%;
+                    padding:1%;
                     background-color: white;
                     border-style: solid;
                     border-color: rgb(100,100,100);
+                    font-size:1vw;
                 }
 
                 .deck-constructor-button:hover {
@@ -298,6 +299,7 @@ body {
                 #search-button {
                     width:40%;
                     margin-left:0.3vw;
+                    font-size:1vw;
                 }
                 
                 #prev-page , #next-page {

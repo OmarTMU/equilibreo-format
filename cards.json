@@ -1,0 +1,28 @@
+[ {
+    "name": "Dark Magician",
+    "description": "",
+    "cardType": "monster",
+    "subType": "spellcaster",
+    "monsterBackground": "normal",
+    "monsterMechanic": "",
+    "attribute": "dark",
+    "level": 7,
+    "atk": 2500,
+    "def": 2100,
+    "limit": 3,
+    "image": "card-pics/dark-magician.jpg"
+  }, {
+    "name": "dust tornado",
+    "description": "Target 1 Spell/Trap your opponent controls; destroy that target, then you can Set 1 Spell/Trap from your hand.",
+    "cardType": "trap",
+    "subType": "normal",
+    "monsterBackground": "",
+    "monsterMechanic": "",
+    "attribute": "",
+    "level": null,
+    "atk": null,
+    "def": null,
+    "limit": 1,
+    "image": ""
+  }
+]

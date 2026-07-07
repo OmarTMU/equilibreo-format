@@ -1,3 +1,6 @@
+
+
+
 const cardType = document.getElementById("card-type");
 
 const monsterBackground = document.getElementById("monster-background");
@@ -28,9 +31,9 @@ const spellSubtypes = ["", "normal", "continuous", "quick-play", "field", "equip
 const trapSubtypes = ["", "normal", "continuous", "counter"];
 
 const filterList = [
-    monsterBackground,
-    cardSubtype, // s/t
-    monsterMechanic,
+    monsterBackground, // normal, fusion
+    cardSubtype, // dragon, quick-play, counter
+    monsterMechanic, // tuner, gemini
     attribute,
     levelMin,
     levelMax,
@@ -140,7 +143,7 @@ const searchResults = [
         name: "Blue-Eyes White Dragon",
         cardType: "monster",
         monsterBackground: "normal",
-        subtype: "dragon",
+        subType: "dragon",
         attribute: "light",
         level: 8,
         atk: 3000,
@@ -152,7 +155,7 @@ const searchResults = [
         name: "Dark Magician",
         cardType: "monster",
         monsterBackground: "normal",
-        subtype: "spellcaster",
+        subType: "spellcaster",
         attribute: "dark",
         level: 7,
         atk: 2500,
@@ -164,7 +167,7 @@ const searchResults = [
         name: "Jinzo",
         cardType: "monster",
         monsterBackground: "effect",
-        subtype: "machine",
+        subType: "machine",
         attribute: "dark",
         level: 6,
         atk: 2400,
@@ -175,7 +178,7 @@ const searchResults = [
         name: "Cyber Dragon",
         cardType: "monster",
         monsterBackground: "effect",
-        subtype: "machine",
+        subType: "machine",
         attribute: "light",
         level: 5,
         atk: 2100,
@@ -186,7 +189,7 @@ const searchResults = [
         name: "Harpie Lady",
         cardType: "monster",
         monsterBackground: "effect",
-        subtype: "winged-beast",
+        subType: "winged-beast",
         attribute: "wind",
         level: 4,
         atk: 1300,
@@ -197,7 +200,7 @@ const searchResults = [
         name: "Mystical Space Typhoon",
         cardType: "spell",
         monsterBackground: null,
-        subtype: "quick-play",
+        subType: "quick-play",
         attribute: null,
         level: null,
         atk: null,
@@ -208,7 +211,7 @@ const searchResults = [
         name: "Mirror Force",
         cardType: "trap",
         monsterBackground: null,
-        subtype: "normal",
+        subType: "normal",
         attribute: null,
         level: null,
         atk: null,
@@ -217,11 +220,12 @@ const searchResults = [
     }
 ];
 
+
 const searchButton = document.getElementById("search-button");
 
 function applyFilters() {
 
-    filteredCards = allCards.filter(card => {
+    filteredCards = allCards.filter(card => {                       // allCards / filteredCards
 
         // TEXT FILTERS
         const name = (document.getElementById("card-name")?.value ?? "").trim().toLowerCase();
@@ -242,7 +246,7 @@ function applyFilters() {
         const limitSelect = document.getElementById("limit-select")?.value ?? "";
     
         const typeMatch = cardType === "" || card.cardType === cardType;
-        const subtypeMatch = cardSubtype === "" || card.subtype === cardSubtype;
+        const subtypeMatch = cardSubtype === "" || card.subType === cardSubtype;
         const monsterBackgroundMatch = monsterBackground === "" || card.monsterBackground === monsterBackground;
         const mechanicMatch = monsterMechanic === "" || card.mechanic === monsterMechanic;
         const attributeMatch = attribute === "" || card.attribute === attribute;
@@ -307,8 +311,8 @@ document.getElementById("card-description")
 
 let currentPage = 1; // UI starts at 1
 const pageSize = 20;
-const allCards = [...searchResults]; // original database
-let filteredCards = [...searchResults];
+const allCards = [...searchResults];                        // allCards 
+let filteredCards = [...searchResults];                     // filteredCards
 
 // let searchResults = [];
 
@@ -316,7 +320,7 @@ const nextBtn = document.getElementById("next-page");
 const prevBtn = document.getElementById("prev-page");
 
 function updatePageButtons() {
-    const maxPage = Math.ceil(filteredCards.length / pageSize);
+    const maxPage = Math.ceil(filteredCards.length / pageSize);     // fileteredCards
 
     prevBtn.disabled = currentPage === 1;
     nextBtn.disabled = currentPage >= maxPage;
@@ -328,7 +332,7 @@ function renderPage() {
     const start = (currentPage - 1) * pageSize;
     const end = start + pageSize;
 
-    const pageItems = filteredCards.slice(start, end);
+    const pageItems = filteredCards.slice(start, end);      // filteredCards
 
     const slots = document.querySelectorAll(".search-grid .card-slot");
 
@@ -343,7 +347,7 @@ function renderPage() {
                  data-name="${card.name}"
                  data-image="${card.image ?? ""}"
                  data-type="${card.cardType}"
-                 data-subtype="${card.subtype}"
+                 data-subtype="${card.subType}"
                  data-attribute="${card.attribute ?? ""}"
                  data-level="${card.level ?? ""}"
                  data-atk="${card.atk ?? ""}"
@@ -361,7 +365,7 @@ function renderPage() {
                         ATK: ${card.atk ?? "-"} / DEF: ${card.def ?? "-"}<br>
                     ` : ""}
 
-                    <em>${card.subtype}</em>
+                    <em>${card.subType}</em>
                 </div>
 
                 ${card.description ? `
@@ -378,7 +382,7 @@ function renderPage() {
 }
 //next page button
 nextBtn.addEventListener("click", () => {
-    const maxPage = Math.ceil(filteredCards.length / pageSize);
+    const maxPage = Math.ceil(filteredCards.length / pageSize);         // filteredCards    
 
     if (currentPage < maxPage) {
         currentPage++;
