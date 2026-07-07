@@ -1,22 +1,366 @@
 // firebase set up
-import { getFirestore, collection, getDocs } 
+import { 
+    getFirestore, 
+    collection, 
+    getDocs,
+    doc,
+    setDoc,
+    deleteDoc
+}
 from "https://www.gstatic.com/firebasejs/12.15.0/firebase-firestore.js";
 
 import { initializeApp } 
 from "https://www.gstatic.com/firebasejs/12.15.0/firebase-app.js";
 
+import {
+    getAuth,
+    createUserWithEmailAndPassword,
+    signInWithEmailAndPassword,
+    signOut,
+    onAuthStateChanged,
+    deleteUser
+}
+from "https://www.gstatic.com/firebasejs/12.15.0/firebase-auth.js";
+
+
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-    apiKey: "AIzaSyDyG0Sv22MpAL8z4GC8CYj5z0U0oCqB4bqc",
+    apiKey: "AIzaSyDyG0Sv22MpAL8z4GC8CYj5z0UoCqB4bqc",
     authDomain: "equilibreo.firebaseapp.com",
     projectId: "equilibreo",
     storageBucket: "equilibreo.firebasestorage.app",
     messagingSenderId: "661319732393",
     appId: "1:661319732393:web:5ebd35db44e1bc8d87adb8",
     measurementId: "G-15E529WTLQ"
-};
+  };
+
+  function setWebsiteLocked(locked){
+
+    const elements = document.querySelectorAll(
+        "button, input, select"
+    );
+
+    elements.forEach(element => {
+
+        // do not disable login/register/logout
+        if(
+            element.id === "login-btn" ||
+            element.id === "register-btn" ||
+            element.id === "logout-btn" ||
+            element.id === "username" ||
+            element.id === "password"
+        ){
+            return;
+        }
+
+
+        element.disabled = locked;
+
+    });
+
+
+    // disable dragging cards
+    const cards = document.querySelectorAll(
+        ".card-ui, .deck-card"
+    );
+
+    cards.forEach(card=>{
+
+        card.draggable = !locked;
+
+    });
+
+
+    if(locked){
+        errorMsg.innerText = "Please login to use the deck builder.";
+    }
+    else{
+        errorMsg.innerText = "Logged in!";
+    }
+
+}
+
+function clearDeckDisplay(){
+
+    const deckSlots = document.querySelectorAll(
+        ".main-deck-grid .card-slot, .extra-deck-grid .card-slot, .side-deck-grid .card-slot"
+    );
+
+    deckSlots.forEach(slot => {
+        slot.innerHTML = "";
+    });
+
+}
 
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
+const auth = getAuth(app);
+let currentUser = null;
+
+// check login status
+onAuthStateChanged(auth, async (user)=>{
+
+    if(user){
+
+        currentUser = user;
+    
+        console.log("Logged in:", user.uid);
+    
+        setWebsiteLocked(false);
+    
+        updateAuthButtons(true);
+    
+        await loadUserDecks();
+    
+        errorMsg.innerText =
+        "Already logged in as: " + user.email.split("@")[0];
+    
+    }
+    else{
+
+        currentUser = null;
+    
+        console.log("Not logged in");
+    
+        clearDeckDisplay();
+    
+        clearDeckList();
+    
+        setWebsiteLocked(true);
+    
+        updateAuthButtons(false);
+    
+        errorMsg.innerText = "Log in or register!";
+    
+    }
+
+});
+
+// register
+const usernameInput = document.getElementById("username");
+const passwordInput = document.getElementById("password");
+
+const registerBtn = document.getElementById("register-btn");
+const loginBtn = document.getElementById("login-btn");
+
+const errorMsg = document.getElementById("error-msg");
+
+registerBtn.addEventListener("click", async () => {
+
+    const username = usernameInput.value.trim();
+    const password = passwordInput.value;
+
+
+    if(username === "" || password === ""){
+
+        errorMsg.innerText = 
+        "Please enter a username and password.";
+
+        return;
+    }
+
+
+    const email = username + "@equilibreo.com";
+
+
+    try{
+
+        const userCredential = await createUserWithEmailAndPassword(
+            auth,
+            email,
+            password
+        );
+
+        const user = userCredential.user;
+
+        // create default deck
+        await setDoc(
+            doc(db, "users", user.uid, "decks", "deck1"),
+            {
+                name: "Deck 1",
+
+                main: [],
+                extra: [],
+                side: []
+            }
+        );
+
+        console.log("Deck created for:", user.uid);
+        errorMsg.innerText =
+        "Account created successfully!";
+
+    }
+
+    catch(error){
+
+        errorMsg.innerText = error.message;
+
+    }
+
+});
+
+// login
+loginBtn.addEventListener("click", async () => {
+
+
+    if(auth.currentUser){
+
+        errorMsg.innerText =
+        "Already logged in as: " + auth.currentUser.email.split("@")[0];
+
+        return;
+    }
+
+
+    const username = usernameInput.value.trim();
+    const password = passwordInput.value;
+
+    if(username === "" || password === ""){
+        errorMsg.innerText = "Please enter a username and password.";
+        return;
+    }
+
+    const email = username + "@equilibreo.com";
+
+    try {
+
+        await signInWithEmailAndPassword(
+            auth,
+            email,
+            password
+        );
+
+        errorMsg.innerText = "Logged in successfully!";
+
+        console.log("Logged in:", auth.currentUser.uid);
+
+    }
+
+    catch(error){
+
+        errorMsg.innerText = error.message;
+
+    }
+
+});
+
+const logoutBtn = document.getElementById("logout-btn");
+
+logoutBtn.addEventListener("click", async () => {
+
+    try {
+
+        await signOut(auth);
+
+        errorMsg.innerText = "Logged out successfully!";
+
+    }
+
+    catch(error){
+
+        errorMsg.innerText = error.message;
+
+    }
+
+});
+
+const deleteAccountBtn = document.getElementById("delete-account-btn");
+
+
+deleteAccountBtn.addEventListener("click", async ()=>{
+
+    if(!currentUser){
+        alert("You must be logged in.");
+        return;
+    }
+
+
+    const firstConfirm = confirm(
+        "Are you sure you want to delete your account?\n\nThis will permanently delete all your decks."
+    );
+    
+    if(!firstConfirm){
+        return;
+    }
+    
+    const secondConfirm = confirm(
+        "FINAL WARNING:\n\nYour account and all saved decks will be permanently deleted.\n\nContinue?"
+    );
+    
+    if(!secondConfirm){
+        return;
+    }
+
+
+    try{
+
+        const uid = currentUser.uid;
+
+
+        // delete all decks
+        const decksSnapshot = await getDocs(
+            collection(db, "users", uid, "decks")
+        );
+
+
+        for(const deckDoc of decksSnapshot.docs){
+
+            await deleteDoc(deckDoc.ref);
+
+        }
+
+
+        // delete user document
+        await deleteDoc(
+            doc(db, "users", uid)
+        );
+
+
+        // delete authentication account
+        await deleteUser(currentUser);
+
+
+        alert("Account deleted.");
+
+    }
+
+    catch(error){
+
+        console.log(error);
+        errorMsg.innerText = error.message;
+
+    }
+
+});
+
+function updateAuthButtons(loggedIn){
+
+    const loginBtn = document.getElementById("login-btn");
+    const registerBtn = document.getElementById("register-btn");
+    const logoutBtn = document.getElementById("logout-btn");
+    const deleteBtn = document.getElementById("delete-account-btn");
+
+
+    if(loggedIn){
+
+        loginBtn.disabled = true;
+        registerBtn.disabled = true;
+
+        logoutBtn.disabled = false;
+        deleteBtn.disabled = false;
+
+    }
+    else{
+
+        loginBtn.disabled = false;
+        registerBtn.disabled = false;
+
+        logoutBtn.disabled = true;
+        deleteBtn.disabled = true;
+
+    }
+
+}
 //
 
 const cardType = document.getElementById("card-type");
@@ -118,43 +462,298 @@ cardType.addEventListener("change", updateSubtype);
 const selectDeck = document.getElementById("select-deck");
 const newDeckBtn = document.getElementById("new-deck");
 const deleteDeckBtn = document.getElementById("delete");
+const saveDeckBtn = document.getElementById("save");
 
-newDeckBtn.addEventListener("click", function () {
+selectDeck.addEventListener("change", async ()=>{
+
+    clearDeckDisplay();
+
+    await loadSelectedDeck();
+
+});
+
+function getCardsFromGrid(gridID){
+
+    const cards = [];
+
+    const grid = document.getElementById(gridID);
+
+    const deckCards = grid.querySelectorAll(".deck-card");
+
+
+    deckCards.forEach(card=>{
+
+        cards.push({
+
+            name: card.dataset.name,
+            image: card.dataset.image,
+            cardType: card.dataset.type,
+            subType: card.dataset.subtype,
+            monsterBackground: card.dataset.background,
+            monsterMechanic: card.dataset.mechanic,
+            attribute: card.dataset.attribute,
+            level: card.dataset.level,
+            atk: card.dataset.atk,
+            def: card.dataset.def,
+            description: card.dataset.desc,
+            limit: card.dataset.limit
+
+        });
+
+    });
+
+
+    return cards;
+
+}
+
+function clearDeckList(){
+
+    selectDeck.innerHTML = "";
+
+}
+
+async function loadUserDecks(){
+
+    if(!currentUser){
+        return;
+    }
+
+
+    const deckSelect = document.getElementById("select-deck");
+
+    // clear current dropdown
+    deckSelect.innerHTML = "";
+
+
+    const decksSnapshot = await getDocs(
+        collection(
+            db,
+            "users",
+            currentUser.uid,
+            "decks"
+        )
+    );
+
+
+    decksSnapshot.forEach((deckDoc)=>{
+
+        const deckData = deckDoc.data();
+
+        const option = document.createElement("option");
+
+        option.value = deckDoc.id;
+        option.textContent = deckData.name;
+
+        deckSelect.appendChild(option);
+
+    });
+
+
+    // automatically select first deck
+
+    if(deckSelect.options.length > 0){
+
+        deckSelect.selectedIndex = 0;
+    
+        await loadSelectedDeck();
+    
+    }
+}
+
+async function loadSelectedDeck(){
+
+    if(!currentUser){
+        return;
+    }
+
+
+    const deckID = selectDeck.value;
+
+    if(!deckID){
+        return;
+    }
+
+
+    const deckSnapshot = await getDocs(
+        collection(
+            db,
+            "users",
+            currentUser.uid,
+            "decks"
+        )
+    );
+
+
+    let selectedDeckData = null;
+
+
+    deckSnapshot.forEach(deckDoc=>{
+
+        if(deckDoc.id === deckID){
+
+            selectedDeckData = deckDoc.data();
+
+        }
+
+    });
+
+
+    if(!selectedDeckData){
+        return;
+    }
+
+
+    // clear old cards first
+    clearDeckDisplay();
+
+
+    selectedDeckData.main.forEach(card=>{
+
+        addCardToDeck(card,"main-deck-grid");
+
+    });
+
+
+    selectedDeckData.extra.forEach(card=>{
+
+        addCardToDeck(card,"extra-deck-grid");
+
+    });
+
+
+    selectedDeckData.side.forEach(card=>{
+
+        addCardToDeck(card,"side-deck-grid");
+
+    });
+
+}
+
+
+newDeckBtn.addEventListener("click", async function () {
+
+    if(!currentUser){
+        alert("Login first.");
+        return;
+    }
+
 
     const deckName = prompt("Enter deck name:");
 
-    if (!deckName) return; // cancel or empty
+    if (!deckName) return;
 
+
+    // create Firebase deck
+    await setDoc(
+        doc(
+            db,
+            "users",
+            currentUser.uid,
+            "decks",
+            deckName
+        ),
+        {
+            name: deckName,
+            main: [],
+            extra: [],
+            side: []
+        }
+    );
+
+
+    // add it to dropdown
     const option = document.createElement("option");
+
     option.value = deckName;
     option.textContent = deckName;
 
     selectDeck.appendChild(option);
 
+
+    // select new deck
     selectDeck.value = deckName;
+
+
+    // clear current cards because new deck is empty
+    clearDeckDisplay();
+
+
+    alert("Deck created!");
+
 });
 
 deleteDeckBtn.addEventListener("click", function () {
+
+    // cannot delete last deck
+    if(selectDeck.options.length <= 1){
+        alert("You must have at least one deck.");
+        return;
+    }
 
     const selectedDeck = selectDeck.value;
 
     if (!selectedDeck) return;
 
-    const confirmDelete = confirm("Are you sure you want to delete this deck?");
+    const confirmDelete = confirm(
+        "Are you sure you want to delete this deck?"
+    );
 
     if (!confirmDelete) return;
 
     const options = selectDeck.options;
 
-    for (let i = 0; i < options.length; i++) {
-        if (options[i].value === selectedDeck) {
+    for(let i = 0; i < options.length; i++){
+        if(options[i].value === selectedDeck){
             selectDeck.remove(i);
             break;
         }
     }
 
-    selectDeck.value = "";
+    selectDeck.selectedIndex = 0;
+
 });
+
+saveDeckBtn.addEventListener("click", async ()=>{
+
+    if(!currentUser){
+        alert("Login first.");
+        return;
+    }
+
+
+    const deckID = selectDeck.value;
+
+
+    if(!deckID){
+        alert("No deck selected.");
+        return;
+    }
+
+
+    await setDoc(
+
+        doc(db, "users", currentUser.uid, "decks", deckID),
+
+        {
+
+            main: getCardsFromGrid("main-deck-grid"),
+            extra: getCardsFromGrid("extra-deck-grid"),
+            side: getCardsFromGrid("side-deck-grid")
+
+        },
+
+        {
+            merge:true
+        }
+
+    );
+
+
+    alert("Deck saved!");
+
+});
+
 
 // online search
 let searchResults = [];
@@ -454,20 +1053,6 @@ deckAreas.forEach(area=>{
 
 });
 
-const sideDeck = document.getElementById("side-deck-grid");
-    sideDeck.addEventListener("dragover", e=>{
-        e.preventDefault();
-    });
-    sideDeck.addEventListener("drop", e=>{
-
-        e.preventDefault();
-        const card = JSON.parse(
-            e.dataTransfer.getData("card")
-        );
-        addCardToSideDeck(card);
-});
-
-
 
 function applyFilters() {
 
@@ -600,6 +1185,12 @@ document.addEventListener("mouseover", (e)=>{
 // deck-grid drag and drop
 
 function addCardToDeck(card, deck){
+
+        if(!currentUser){
+            alert("Login first.");
+            return;
+        }
+    
 
     const currentCount = getCardCountInDecks(card.name);
     const limit = Number(card.limit ?? 1);

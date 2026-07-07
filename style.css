@@ -25,6 +25,7 @@ body {
                 flex-direction: column;
                 height:60%;
                 width:100%;
+                overflow:hidden;
             }
             
                 #card-display-pic {
