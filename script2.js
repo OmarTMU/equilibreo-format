@@ -276,7 +276,7 @@ deleteAccountBtn.addEventListener("click", async ()=>{
 
 
     const firstConfirm = confirm(
-        "Are you sure you want to delete your account?\n\nThis will permanently delete all your decks."
+        "Are you sure you want to delete your account?\n\nThis will also permanently delete all your decks."
     );
     
     if(!firstConfirm){
@@ -463,12 +463,63 @@ const selectDeck = document.getElementById("select-deck");
 const newDeckBtn = document.getElementById("new-deck");
 const deleteDeckBtn = document.getElementById("delete");
 const saveDeckBtn = document.getElementById("save");
+const clearDeckBtn = document.getElementById("clear-deck");
+const exportBtn = document.getElementById("export");
+const importBtn = document.getElementById("import");
+const importFile = document.getElementById("import-file");
+let deckChanged = false;
+let previousDeck = null;
+let loadingDeck = false;
+
+clearDeckBtn.addEventListener("click", ()=>{
+
+    if(!currentUser){
+        alert("Login first.");
+        return;
+    }
+
+
+    const confirmClear = confirm(
+        "Are you sure you want to clear this deck?"
+    );
+
+
+    if(!confirmClear){
+        return;
+    }
+
+
+    clearDeckDisplay();
+    deckChanged = true;
+
+});
 
 selectDeck.addEventListener("change", async ()=>{
+
+
+    if(deckChanged){
+
+        const save = confirm(
+            "You have UNSAVED changes.\n\nPress OK to save before switching decks.\nPress Cancel to discard changes."
+        );
+
+
+        if(save){
+
+            await saveCurrentDeck();
+
+        }
+
+    }
+
 
     clearDeckDisplay();
 
     await loadSelectedDeck();
+
+    previousDeck = selectDeck.value;
+    deckChanged = false;
+
 
 });
 
@@ -485,6 +536,7 @@ function getCardsFromGrid(gridID){
 
         cards.push({
 
+            id: getCardIDFromImage(card.dataset.image),
             name: card.dataset.name,
             image: card.dataset.image,
             cardType: card.dataset.type,
@@ -506,6 +558,91 @@ function getCardsFromGrid(gridID){
     return cards;
 
 }
+
+
+function getCardIDFromImage(imagePath){
+
+    const filename = imagePath.split("/").pop();
+
+    const id = filename.replace(".jpg","");
+
+    return id;
+
+}
+
+function exportYDK(){
+
+    let ydk = "#created by ...\n\n";
+
+
+    ydk += "#main\n";
+
+    const mainCards = getCardsFromGrid("main-deck-grid");
+
+    mainCards.forEach(card=>{
+
+        ydk += card.id + "\n";
+
+    });
+
+
+
+    ydk += "#extra\n";
+
+    const extraCards = getCardsFromGrid("extra-deck-grid");
+
+    extraCards.forEach(card=>{
+
+        ydk += card.id + "\n";
+
+    });
+
+
+
+    ydk += "!side\n";
+
+    const sideCards = getCardsFromGrid("side-deck-grid");
+
+    sideCards.forEach(card=>{
+
+        ydk += card.id + "\n";
+
+    });
+
+
+    downloadYDK(ydk);
+
+}
+
+function downloadYDK(content){
+
+    const blob = new Blob(
+        [content],
+        {type:"application/octet-stream"}
+    );
+
+
+    const url = URL.createObjectURL(blob);
+
+
+    const a = document.createElement("a");
+
+    a.href = url;
+
+    a.download = "deck.ydk";
+
+    a.click();
+
+
+    URL.revokeObjectURL(url);
+
+}
+
+exportBtn.addEventListener("click", ()=>{
+
+    exportYDK();
+
+});
 
 function clearDeckList(){
 
@@ -607,6 +744,8 @@ async function loadSelectedDeck(){
     // clear old cards first
     clearDeckDisplay();
 
+    loadingDeck = true;
+
 
     selectedDeckData.main.forEach(card=>{
 
@@ -628,6 +767,10 @@ async function loadSelectedDeck(){
 
     });
 
+previousDeck = deckID;
+deckChanged = false;
+loadingDeck = false;
+
 }
 
 
@@ -636,6 +779,21 @@ newDeckBtn.addEventListener("click", async function () {
     if(!currentUser){
         alert("Login first.");
         return;
+    }
+
+    if(deckChanged){
+
+        const save = confirm(
+            "You have UNSAVED changes.\n\nOK = Save before creating new deck.\nCancel = discard changes before creating new deck."
+        );
+    
+    
+        if(save){
+    
+            await saveCurrentDeck();
+    
+        }
+    
     }
 
 
@@ -678,12 +836,20 @@ newDeckBtn.addEventListener("click", async function () {
     // clear current cards because new deck is empty
     clearDeckDisplay();
 
+    previousDeck = deckName;
+    deckChanged = false;
 
     alert("Deck created!");
 
 });
 
-deleteDeckBtn.addEventListener("click", function () {
+deleteDeckBtn.addEventListener("click", async function () {
+
+    if(!currentUser){
+        alert("Login first.");
+        return;
+    }
+
 
     // cannot delete last deck
     if(selectDeck.options.length <= 1){
@@ -691,30 +857,115 @@ deleteDeckBtn.addEventListener("click", function () {
         return;
     }
 
-    const selectedDeck = selectDeck.value;
 
-    if (!selectedDeck) return;
+    const deckID = selectDeck.value;
+
+    previousDeck = deckID;
+    deckChanged = false;
+
+    if(!deckID){
+        return;
+    }
+
 
     const confirmDelete = confirm(
         "Are you sure you want to delete this deck?"
     );
 
-    if (!confirmDelete) return;
 
-    const options = selectDeck.options;
-
-    for(let i = 0; i < options.length; i++){
-        if(options[i].value === selectedDeck){
-            selectDeck.remove(i);
-            break;
-        }
+    if(!confirmDelete){
+        return;
     }
 
-    selectDeck.selectedIndex = 0;
+
+    try{
+
+        // delete from Firebase
+        await deleteDoc(
+            doc(
+                db,
+                "users",
+                currentUser.uid,
+                "decks",
+                deckID
+            )
+        );
+
+
+        // remove from dropdown
+        const selectedOption = selectDeck.selectedIndex;
+
+        selectDeck.remove(selectedOption);
+
+
+        // select first remaining deck
+        selectDeck.selectedIndex = 0;
+
+
+        // load the new selected deck
+        clearDeckDisplay();
+
+        await loadSelectedDeck();
+
+
+        alert("Deck deleted!");
+
+    }
+
+    catch(error){
+
+        console.log(error);
+        alert(error.message);
+
+    }
 
 });
 
+async function saveCurrentDeck(){
+
+    if(!currentUser){
+        return;
+    }
+
+    const deckID = previousDeck ?? selectDeck.value;
+
+    if(!deckID){
+        return;
+    }
+
+
+    await setDoc(
+
+        doc(db, "users", currentUser.uid, "decks", deckID),
+
+        {
+            main: getCardsFromGrid("main-deck-grid"),
+            extra: getCardsFromGrid("extra-deck-grid"),
+            side: getCardsFromGrid("side-deck-grid")
+        },
+
+        {
+            merge:true
+        }
+
+    );
+
+    deckChanged = false;
+
+}
+
 saveDeckBtn.addEventListener("click", async ()=>{
+
+    await saveCurrentDeck();
+
+    alert("Deck saved!");
+
+});
+
+const renameDeckBtn = document.getElementById("rename");
+
+
+renameDeckBtn.addEventListener("click", async ()=>{
 
     if(!currentUser){
         alert("Login first.");
@@ -731,16 +982,35 @@ saveDeckBtn.addEventListener("click", async ()=>{
     }
 
 
+    const currentName = 
+        selectDeck.options[selectDeck.selectedIndex].textContent;
+
+
+    const newName = prompt(
+        "Enter new deck name:",
+        currentName
+    );
+
+
+    if(!newName || newName.trim() === ""){
+        return;
+    }
+
+
+    // update Firebase
+
     await setDoc(
 
-        doc(db, "users", currentUser.uid, "decks", deckID),
+        doc(
+            db,
+            "users",
+            currentUser.uid,
+            "decks",
+            deckID
+        ),
 
         {
-
-            main: getCardsFromGrid("main-deck-grid"),
-            extra: getCardsFromGrid("extra-deck-grid"),
-            side: getCardsFromGrid("side-deck-grid")
-
+            name: newName.trim()
         },
 
         {
@@ -750,7 +1020,14 @@ saveDeckBtn.addEventListener("click", async ()=>{
     );
 
 
-    alert("Deck saved!");
+    // update dropdown
+
+    selectDeck.options[
+        selectDeck.selectedIndex
+    ].textContent = newName.trim();
+
+
+    alert("Deck renamed!");
 
 });
 
@@ -765,14 +1042,25 @@ const pageSize = 20;
 
 const nextBtn = document.getElementById("next-page");
 const prevBtn = document.getElementById("prev-page");
+const pageNumber = document.getElementById("page-number");
 
 const searchButton = document.getElementById("search-button");
 
 function updatePageButtons() {
-    const maxPage = Math.ceil(filteredCards.length / pageSize);     // fileteredCards
+
+    const maxPage = Math.max(
+        1,
+        Math.ceil(filteredCards.length / pageSize)
+    );
+
 
     prevBtn.disabled = currentPage === 1;
     nextBtn.disabled = currentPage >= maxPage;
+
+
+    pageNumber.innerText =
+        currentPage + "/" + maxPage;
+
 }
 
 // render page function
@@ -793,6 +1081,7 @@ function renderPage() {
 
         slots[index].innerHTML = `
             <div class="card-ui" draggable="true"
+                 data-id="${card.id ?? getCardIDFromImage(card.image)}"
                  data-name="${card.name}"
                  data-image="${card.image ?? ""}"
                  data-type="${card.cardType}"
@@ -983,6 +1272,7 @@ function addCardToGrid(card, area){
 
             <div class="deck-card"
                  draggable="true"
+                 data-id="${card.id ?? getCardIDFromImage(card.image)}"
                  data-name="${card.name}"
                  data-image="${card.image ?? ""}"
                  data-type="${card.cardType}"
@@ -1219,6 +1509,7 @@ function addCardToDeck(card, deck){
 
     emptySlot.innerHTML = `
     <div class="deck-card"
+         data-id="${card.id ?? getCardIDFromImage(card.image)}"
          data-name="${card.name}"
          data-image="${card.image ?? ""}"
          data-type="${card.cardType}"
@@ -1236,6 +1527,9 @@ function addCardToDeck(card, deck){
 
     </div>
 `;
+    if(!loadingDeck){
+        deckChanged = true;
+    }
 }
 
 const decks = document.querySelectorAll(".deck-grid");
@@ -1316,6 +1610,7 @@ document.addEventListener("contextmenu", e => {
 
     // remove the card
     card.parentElement.innerHTML = "";
+    deckChanged = true;
 
 
     // get all remaining cards

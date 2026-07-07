@@ -21,6 +21,12 @@
         <div id="deck-buttons"> <!-- import, export, clear deck, set as default, deck select, new deck, rename, save, delete deck -->
             <button class="deck-constructor-button" id="import">Import</button>
             <button class="deck-constructor-button" id="export">Export</button>
+            <input 
+                type="file" 
+                id="import-file" 
+                accept=".ydk" 
+                style="display:none;"
+            >
             <button class="deck-constructor-button" id="clear-deck">Clear Deck</button>
             <button class="deck-constructor-button" id="set-as-default">Set as default</button>
             <Select class="deck-constructor-button" id="select-deck">
@@ -281,6 +287,7 @@
                 <button id="search-button">Search</button>
                 
                 <button id="next-page">→</button>
+                <div id="page-number"></div>
             </div>
 
         </div>
