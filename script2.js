@@ -101,6 +101,12 @@ function updateSubtype() {
             option.textContent = trapSubtypes[i];
             cardSubtype.appendChild(option);
           }
+    } else if (cardType.value === "") {
+        for (let i = 0; i < filterList.length; i++) {
+            filterList[i].disabled = true;
+            filterList[i].value = "";
+        }
+        filterList[filterList.length - 1].disabled = false;
     }
 }
 
@@ -198,6 +204,12 @@ function renderPage() {
                  data-def="${card.def ?? ""}"
                  data-desc="${card.description ?? ""}">
 
+                 ${card.limit < 3 ? `
+                    <div class="limit-badge">
+                        ${card.limit}
+                    </div>
+                ` : ""}
+
                 <img class="card-pic" src="${card.image}" alt="${card.name}">
 
                 <div class="card-text">
@@ -275,7 +287,7 @@ function applyFilters() {
         const monsterBackgroundMatch = monsterBackground === "" || card.monsterBackground === monsterBackground;
         const mechanicMatch = monsterMechanic === "" || card.monsterMechanic === monsterMechanic;
         const attributeMatch = attribute === "" || card.attribute === attribute;
-        const limitMatch = limitSelect === "" || card.limit === limitSelect;
+        const limitMatch = limitSelect === "" ||  Number(card.limit) === Number(limitSelect);
     
         // NUMERIC FILTERS
         const levelMin = parseInt(document.getElementById("level-min")?.value);

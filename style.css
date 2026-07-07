@@ -336,3 +336,35 @@ body {
             .search-grid .card-slot .card-ui {
                 font-size: 0.8vw;
             }
+
+            .card-ui {
+                position: relative;
+            }
+            
+            
+            .limit-badge {
+                position: absolute;
+                top: 0.1vw;
+                left: 0.1vw;
+            
+                width: 1vw;
+                height: 1vw;
+            
+                background: rgb(200,20,20);
+                color: white;
+                border:solid;
+                border-color:black;
+                border-width: 0.2vw;;
+            
+                border-radius: 50%;
+            
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            
+                font-style: normal;
+                font-weight: normal;
+                font-size: 1vw;
+            
+                z-index: 2;
+            }
