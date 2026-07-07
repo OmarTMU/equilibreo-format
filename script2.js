@@ -182,7 +182,7 @@ function renderPage() {
     const start = (currentPage - 1) * pageSize;
     const end = start + pageSize;
 
-    const pageItems = filteredCards.slice(start, end);      // filteredCards
+    const pageItems = filteredCards.slice(start, end);
 
     const slots = document.querySelectorAll(".search-grid .card-slot");
 
@@ -193,22 +193,24 @@ function renderPage() {
         if (!slots[index]) return;
 
         slots[index].innerHTML = `
-            <div class="card-ui"
+            <div class="card-ui" draggable="true"
                  data-name="${card.name}"
                  data-image="${card.image ?? ""}"
                  data-type="${card.cardType}"
-                 data-subtype="${card.subtype}"
+                 data-subtype="${card.subType}"
+                 data-background="${card.monsterBackground ?? ""}"
                  data-attribute="${card.attribute ?? ""}"
                  data-level="${card.level ?? ""}"
                  data-atk="${card.atk ?? ""}"
                  data-def="${card.def ?? ""}"
-                 data-desc="${card.description ?? ""}">
+                 data-desc="${card.description ?? ""}"
+                 data-limit="${card.limit ?? 1}">
 
                  ${card.limit < 3 ? `
                     <div class="limit-badge">
                         ${card.limit}
                     </div>
-                ` : ""}
+                 ` : ""}
 
                 <img class="card-pic" src="${card.image}" alt="${card.name}">
 
@@ -221,7 +223,7 @@ function renderPage() {
                         ATK: ${card.atk ?? "-"} / DEF: ${card.def ?? "-"}<br>
                     ` : ""}
 
-                    <em>${card.subtype}</em>
+                    <em>${card.subType}</em>
                 </div>
 
                 ${card.description ? `
@@ -232,10 +234,44 @@ function renderPage() {
 
             </div>
         `;
+
     });
 
     updatePageButtons();
 }
+
+// CLICK SEARCH CARD TO ADD TO DECK
+
+document.addEventListener("click", (e) => {
+
+    const cardUI = e.target.closest(".card-ui, .deck-card");
+
+    if (!cardUI) return;
+
+    const card = {
+        name: cardUI.dataset.name,
+        image: cardUI.dataset.image,
+        cardType: cardUI.dataset.type,
+        subType: cardUI.dataset.subtype,
+        attribute: cardUI.dataset.attribute,
+        level: cardUI.dataset.level,
+        atk: cardUI.dataset.atk,
+        def: cardUI.dataset.def,
+        description: cardUI.dataset.desc,
+        monsterBackground: cardUI.dataset.background,
+        limit: cardUI.dataset.limit
+    };
+
+
+    // Fusion goes extra deck
+    if(card.monsterBackground === "fusion"){
+        addCardToDeck(card, "extra-deck-grid");
+    }
+    else{
+        addCardToDeck(card, "main-deck-grid");
+    }
+
+});
 
 async function loadCards() {
 
@@ -259,6 +295,179 @@ async function loadCards() {
 
     renderPage();
 }
+
+let draggedSlot = null;
+
+document.addEventListener("dragstart", e => {
+
+    const card = e.target.closest(".deck-card, .card-ui");
+
+    if(!card) return;
+
+
+    const cardData = {
+        name: card.dataset.name,
+        image: card.dataset.image,
+        cardType: card.dataset.type,
+        subType: card.dataset.subtype,
+        monsterBackground: card.dataset.background,
+        monsterMechanic: card.dataset.mechanic,
+        attribute: card.dataset.attribute,
+        level: card.dataset.level,
+        atk: card.dataset.atk,
+        def: card.dataset.def,
+        description: card.dataset.desc,
+        limit: card.dataset.limit
+    };
+
+
+    e.dataTransfer.setData(
+        "card",
+        JSON.stringify(cardData)
+    );
+
+
+    // if it is already inside a deck, remember its slot
+    if(card.classList.contains("deck-card")){
+
+        draggedSlot = card.parentElement;
+    
+        e.dataTransfer.setData(
+            "moving",
+            "true"
+        );
+    
+    }
+    else{
+    
+        draggedSlot = null;
+    
+        e.dataTransfer.setData(
+            "moving",
+            "false"
+        );
+    
+    }
+
+});
+
+function getCardCountInDecks(cardName){
+
+    let count = 0;
+
+
+    const allDeckCards = document.querySelectorAll(".deck-card");
+
+
+    allDeckCards.forEach(card => {
+
+        if(card.dataset.name === cardName){
+            count++;
+        }
+
+    });
+
+
+    return count;
+
+}
+
+function addCardToGrid(card, area){
+
+    const slots = area.querySelectorAll(".card-slot");
+
+    for(let slot of slots){
+
+        if(slot.innerHTML === ""){
+
+            slot.innerHTML = `
+
+            <div class="deck-card"
+                 draggable="true"
+                 data-name="${card.name}"
+                 data-image="${card.image ?? ""}"
+                 data-type="${card.cardType}"
+                 data-subtype="${card.subType}"
+                 data-background="${card.monsterBackground ?? ""}"
+                 data-mechanic="${card.monsterMechanic ?? ""}"
+                 data-attribute="${card.attribute ?? ""}"
+                 data-level="${card.level ?? ""}"
+                 data-atk="${card.atk ?? ""}"
+                 data-def="${card.def ?? ""}"
+                 data-desc="${card.description ?? ""}"
+                 data-limit="${card.limit ?? 1}">
+                 <img src="${card.image}" class="deck-card-image">
+                </div>
+            `;
+            break;
+        }
+    }
+
+}
+
+const deckAreas = document.querySelectorAll(
+    ".main-deck-grid, .extra-deck-grid, .side-deck-grid"
+);
+
+deckAreas.forEach(area=>{
+
+    area.addEventListener("dragover", e=>{
+        e.preventDefault();
+    });
+
+    area.addEventListener("drop", e=>{
+
+        e.preventDefault();
+
+        const card = JSON.parse(
+            e.dataTransfer.getData("card")
+        );
+
+        const destination = area.id;
+
+        // restrictions
+
+        if(
+            destination === "main-deck-grid" &&
+            card.monsterBackground === "fusion"
+        ){
+            return;
+        }
+
+
+        if(
+            destination === "extra-deck-grid" &&
+            card.monsterBackground !== "fusion"
+        ){
+            return;
+        }
+
+        const currentCount = getCardCountInDecks(card.name);
+
+        if(currentCount >= Number(card.limit)){
+            return;
+        }
+
+        addCardToGrid(card, area);
+
+    });
+
+});
+
+const sideDeck = document.getElementById("side-deck-grid");
+    sideDeck.addEventListener("dragover", e=>{
+        e.preventDefault();
+    });
+    sideDeck.addEventListener("drop", e=>{
+
+        e.preventDefault();
+        const card = JSON.parse(
+            e.dataTransfer.getData("card")
+        );
+        addCardToSideDeck(card);
+});
+
+
 
 function applyFilters() {
 
@@ -365,27 +574,186 @@ prevBtn.addEventListener("click", () => {
 });
 
 // hover on card to display
-document.addEventListener("mouseover", (e) => {
+document.addEventListener("mouseover", (e)=>{
 
-    const slot = e.target.closest(".card-slot");
-    if (!slot) return;
+    const card = e.target.closest(".card-ui, .deck-card");
 
-    const cardUI = slot.querySelector(".card-ui");
-    if (!cardUI) return;
+    if(!card) return;
 
-    const name = cardUI.querySelector("strong")?.innerText ?? "";
-    const desc = cardUI.querySelector(".card-desc")?.innerText ?? "";
-    const img = cardUI.dataset.image ?? "";
 
-    // IMAGE
+    const name = card.dataset.name ?? "";
+    const desc = card.dataset.desc ?? "";
+    const img = card.dataset.image ?? "";
+
+
     const display = document.getElementById("display-card");
 
     display.innerHTML = `
         <img id="card-display-pic" src="${img}" alt="${name}">
     `;
 
-    // DESCRIPTION
+
     document.getElementById("card-desc").innerText = desc;
+
+});
+
+// deck-grid drag and drop
+
+function addCardToDeck(card, deck){
+
+    const currentCount = getCardCountInDecks(card.name);
+    const limit = Number(card.limit ?? 1);
+
+    if(currentCount >= limit){
+        return;
+    }
+    
+    const area = document.getElementById(deck);
+
+    // find first empty slot
+    const slots = area.querySelectorAll(".card-slot");
+
+    let emptySlot = null;
+
+    for (let slot of slots){
+        if(slot.innerHTML.trim() === ""){
+            emptySlot = slot;
+            break;
+        }
+    }
+
+    if(!emptySlot){
+        return;
+    }
+
+    emptySlot.innerHTML = `
+    <div class="deck-card"
+         data-name="${card.name}"
+         data-image="${card.image ?? ""}"
+         data-type="${card.cardType}"
+         data-subtype="${card.subType}"
+         data-background="${card.monsterBackground ?? ""}"
+         data-mechanic="${card.monsterMechanic ?? ""}"
+         data-attribute="${card.attribute ?? ""}"
+         data-level="${card.level ?? ""}"
+         data-atk="${card.atk ?? ""}"
+         data-def="${card.def ?? ""}"
+         data-desc="${card.description ?? ""}"
+         data-limit="${card.limit ?? 1}">
+
+        <img src="${card.image}" class="deck-card-image">
+
+    </div>
+`;
+}
+
+const decks = document.querySelectorAll(".deck-grid");
+
+
+decks.forEach(deck => {
+
+    deck.addEventListener("dragover", e=>{
+        e.preventDefault();
+    });
+
+    deck.addEventListener("drop", e=>{
+
+        console.log("DROP FIRED ON:", deck.id);
+
+        e.preventDefault();
+
+        const card = JSON.parse(
+            e.dataTransfer.getData("card")
+        );
+
+        const destination = deck.id;
+
+        // Fusion restriction
+        if(
+            destination === "main-deck-grid" &&
+            card.background === "fusion"
+        ){
+            return;
+        }
+
+        // normal monster restriction
+        if(
+            destination === "extra-deck-grid" &&
+            card.background !== "fusion"
+        ){
+            return;
+        }
+        const moving = e.dataTransfer.getData("moving");
+
+
+        // If moving an existing card, remove the old one first
+        if(moving === "true"){
+        
+            if(draggedSlot){
+        
+                draggedSlot.innerHTML = "";
+        
+            }
+        
+        }
+        
+        // Now check limit after removal
+        const currentCount = getCardCountInDecks(card.name);
+        
+        if(currentCount >= Number(card.limit)){
+            return;
+        }
+
+        // Add card to new location
+        addCardToDeck(card,destination);
+        });
+});
+
+document.addEventListener("contextmenu", e => {
+
+    const card = e.target.closest(".deck-card");
+
+    if(!card) return;
+
+    e.preventDefault();
+
+
+    const deckGrid = card.closest(
+        ".main-deck-grid, .extra-deck-grid, .side-deck-grid"
+    );
+
+
+    // remove the card
+    card.parentElement.innerHTML = "";
+
+
+    // get all remaining cards
+    const cards = Array.from(
+        deckGrid.querySelectorAll(".deck-card")
+    );
+
+
+    // get all slots
+    const slots = deckGrid.querySelectorAll(".card-slot");
+
+
+    // clear slots
+    slots.forEach(slot => {
+        slot.innerHTML = "";
+    });
+
+
+    // refill slots in order
+    cards.forEach((card, index)=>{
+
+        if(slots[index]){
+
+            slots[index].appendChild(card);
+
+        }
+
+    });
+
 });
 
 loadCards();

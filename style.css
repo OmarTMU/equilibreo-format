@@ -140,6 +140,11 @@ body {
                     margin-left:0.25vw;
                 }
 
+                    .deck-card-image {
+                        width:100%;
+                        display: block;
+                    }
+
                 .card-slot {
                     width: 100%;
                     aspect-ratio: 20/29;
