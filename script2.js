@@ -1037,6 +1037,8 @@ let searchResults = [];
 let allCards = [];
 let filteredCards = [];
 
+const imageCache = new Map();
+
 let currentPage = 1;
 const pageSize = 20;
 
@@ -1066,14 +1068,17 @@ function updatePageButtons() {
 // render page function
 function renderPage() {
 
+    const slots = document.querySelectorAll(".search-grid .card-slot");
+
+
     const start = (currentPage - 1) * pageSize;
     const end = start + pageSize;
 
     const pageItems = filteredCards.slice(start, end);
 
-    const slots = document.querySelectorAll(".search-grid .card-slot");
 
     slots.forEach(slot => slot.innerHTML = "");
+
 
     pageItems.forEach((card, index) => {
 
@@ -1094,31 +1099,7 @@ function renderPage() {
                  data-desc="${card.description ?? ""}"
                  data-limit="${card.limit ?? 1}">
 
-                 ${card.limit < 3 ? `
-                    <div class="limit-badge">
-                        ${card.limit}
-                    </div>
-                 ` : ""}
-
-                <img class="card-pic" src="${card.image}" alt="${card.name}">
-
-                <div class="card-text">
-                    <strong>${card.name}</strong><br>
-
-                    ${card.cardType === "monster" ? `                
-                        Level: ${card.level ?? "-"}<br>
-                        Attribute: ${card.attribute ?? "-"}<br>
-                        ATK: ${card.atk ?? "-"} / DEF: ${card.def ?? "-"}<br>
-                    ` : ""}
-
-                    <em>${card.subType}</em>
-                </div>
-
-                ${card.description ? `
-                    <div class="card-desc">
-                        ${card.description}
-                    </div>
-                ` : ""}
+                 <img class="card-pic" src="${imageCache.get(card.image)?.src ?? card.image}" alt="${card.name}">
 
             </div>
         `;
@@ -1163,25 +1144,41 @@ document.addEventListener("click", (e) => {
 
 async function loadCards() {
 
-    const cardsSnapshot = await getDocs(collection(db, "cards"));
+    const response = await fetch("cards.json");
 
-    searchResults = [];
+    const cards = await response.json();
 
-    cardsSnapshot.forEach((doc) => {
+    allCards = cards;
+    filteredCards = [...cards];
 
-        searchResults.push({
-            id: doc.id,
-            ...doc.data()
-        });
+    console.log("JSON cards loaded:", cards.length);
+
+    preloadCardImages(cards);
+
+    renderPage();
+}
+
+
+function preloadCardImages(cards){
+
+    console.log("Preloading card images...");
+
+    cards.forEach(card=>{
+
+        if(imageCache.has(card.image)){
+            return;
+        }
+
+        const img = new Image();
+
+        img.src = card.image;
+
+        imageCache.set(card.image, img);
 
     });
 
-    allCards = [...searchResults];
-    filteredCards = [...allCards];
+    console.log("Images stored:", imageCache.size);
 
-    console.log("Firebase cards:", searchResults);
-
-    renderPage();
 }
 
 let draggedSlot = null;
@@ -1464,8 +1461,8 @@ document.addEventListener("mouseover", (e)=>{
     const display = document.getElementById("display-card");
 
     display.innerHTML = `
-        <img id="card-display-pic" src="${img}" alt="${name}">
-    `;
+    <img id="card-display-pic" src="${imageCache.get(img)?.src ?? img}" alt="${name}">
+`;
 
 
     document.getElementById("card-desc").innerText = desc;
