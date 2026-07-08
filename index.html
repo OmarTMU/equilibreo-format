@@ -20,7 +20,10 @@
             <p id="card-desc"></p>    
         </div>
         <div id="deck-buttons"> <!-- import, export, clear deck, set as default, deck select, new deck, rename, save, delete deck -->
-            <button class="deck-constructor-button" id="import">Import</button>
+            <!--
+                <button class="deck-constructor-button" id="import">Import</button>
+            -->
+            <button class="deck-constructor-button" id="clear-deck">Clear Deck</button>
             <button class="deck-constructor-button" id="export">Export</button>
             <input 
                 type="file" 
@@ -28,8 +31,9 @@
                 accept=".ydk" 
                 style="display:none;"
             >
-            <button class="deck-constructor-button" id="clear-deck">Clear Deck</button>
-            <button class="deck-constructor-button" id="set-as-default">Set as default</button>
+            <!--
+                 <button class="deck-constructor-button" id="set-as-default">Set as default</button>
+            -->
             <Select class="deck-constructor-button" id="select-deck">
                <!--<option value="deck1">Deck 1</option>--> 
             </Select>
@@ -49,7 +53,7 @@
             </div>
         
             <div class="auth-row">
-                <label class="auth-label" for="password">Password</label>
+                <label class="auth-label" for="password">Password.</label>
                 <input class="auth-box" type="password" id="password" />
             </div>
         

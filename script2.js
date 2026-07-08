@@ -113,7 +113,7 @@ onAuthStateChanged(auth, async (user)=>{
         await loadUserDecks();
     
         errorMsg.innerText =
-        "Already logged in as: " + user.email.split("@")[0];
+        "Logged in as: " + user.email.split("@")[0];
     
     }
     else{
@@ -797,9 +797,11 @@ newDeckBtn.addEventListener("click", async function () {
     }
 
 
-    const deckName = prompt("Enter deck name:");
+    let deckName = prompt("Enter deck name:");
 
     if (!deckName) return;
+
+    deckName = getUniqueDeckName(deckName);
 
 
     // create Firebase deck
@@ -842,6 +844,40 @@ newDeckBtn.addEventListener("click", async function () {
     alert("Deck created!");
 
 });
+
+function getUniqueDeckName(name, ignoreDeckID = null){
+
+    let newName = name.trim();
+
+    while(true){
+
+        let exists = false;
+
+        const options = Array.from(selectDeck.options);
+
+        for(const option of options){
+
+            // ignore the current deck when renaming
+            if(option.value === ignoreDeckID){
+                continue;
+            }
+
+            if(option.textContent === newName){
+                exists = true;
+                break;
+            }
+        }
+
+
+        if(!exists){
+            return newName;
+        }
+
+
+        newName += " (1)";
+    }
+
+}
 
 deleteDeckBtn.addEventListener("click", async function () {
 
@@ -964,7 +1000,6 @@ saveDeckBtn.addEventListener("click", async ()=>{
 
 const renameDeckBtn = document.getElementById("rename");
 
-
 renameDeckBtn.addEventListener("click", async ()=>{
 
     if(!currentUser){
@@ -986,7 +1021,7 @@ renameDeckBtn.addEventListener("click", async ()=>{
         selectDeck.options[selectDeck.selectedIndex].textContent;
 
 
-    const newName = prompt(
+    let newName = prompt(
         "Enter new deck name:",
         currentName
     );
@@ -997,7 +1032,8 @@ renameDeckBtn.addEventListener("click", async ()=>{
     }
 
 
-    // update Firebase
+    newName = getUniqueDeckName(newName, deckID);
+
 
     await setDoc(
 
@@ -1010,7 +1046,7 @@ renameDeckBtn.addEventListener("click", async ()=>{
         ),
 
         {
-            name: newName.trim()
+            name: newName
         },
 
         {
@@ -1020,11 +1056,9 @@ renameDeckBtn.addEventListener("click", async ()=>{
     );
 
 
-    // update dropdown
-
     selectDeck.options[
         selectDeck.selectedIndex
-    ].textContent = newName.trim();
+    ].textContent = newName;
 
 
     alert("Deck renamed!");
@@ -1100,9 +1134,15 @@ function renderPage() {
                  data-limit="${card.limit ?? 1}">
 
                  <img class="card-pic" src="${imageCache.get(card.image)?.src ?? card.image}" alt="${card.name}">
-
-            </div>
-        `;
+            ${
+                card.limit == 1 
+                ? `<div class="limit-badge">1</div>`
+                : card.limit == 2
+                ? `<div class="limit-badge">2</div>`
+                : ""
+            }
+                        </div>
+                    `;
 
     });
 
@@ -1282,8 +1322,18 @@ function addCardToGrid(card, area){
                  data-def="${card.def ?? ""}"
                  data-desc="${card.description ?? ""}"
                  data-limit="${card.limit ?? 1}">
-                 <img src="${card.image}" class="deck-card-image">
-                </div>
+                 <img src="${imageCache.get(card.image)?.src ?? card.image}" class="deck-card-image">
+                
+
+                 ${
+                    card.limit == 1 
+                    ? `<div class="limit-badge">1</div>`
+                    : card.limit == 2
+                    ? `<div class="limit-badge">2</div>`
+                    : ""
+                }
+
+            </div>
             `;
             break;
         }
@@ -1520,8 +1570,15 @@ function addCardToDeck(card, deck){
          data-desc="${card.description ?? ""}"
          data-limit="${card.limit ?? 1}">
 
-        <img src="${card.image}" class="deck-card-image">
+         <img src="${imageCache.get(card.image)?.src ?? card.image}" class="deck-card-image">
 
+         ${
+            card.limit == 1 
+            ? `<div class="limit-badge">1</div>`
+            : card.limit == 2
+            ? `<div class="limit-badge">2</div>`
+            : ""
+        }
     </div>
 `;
     if(!loadingDeck){

@@ -36,7 +36,9 @@ body {
                     margin-top:0;
                     margin-bottom:0;
                     font-size:1vw;
-                    padding-left:0.2vw;
+                    padding-left:0.4vw;
+                    padding-right:0.8vw;
+                    text-align: justify;
                     display:flex;
                     overflow: scroll;
                 }
@@ -52,10 +54,12 @@ body {
                 display: flex;
                 flex-direction: row;
                 flex-wrap: wrap;
+                height:18.1%;
             }
 
                 .deck-constructor-button {
                     width: 48%;
+                    height: auto;
                     margin:1%;
                     padding:1%;
                     background-color: white;
@@ -72,7 +76,8 @@ body {
                 #select-deck {
                     width:100%;
                     text-align: center;
-                    background-color: rgb(190,190,190);
+                    border:solid;
+                    border-width:0.15vw;
                 }
 
             #auth-container {
@@ -93,19 +98,39 @@ body {
                 }
 
                 .auth-box {
-                    width:60%;
+                    width:65%;
                     font-size:1vw;
                     margin-bottom:0.2vw;
                 }
 
+                h3 {
+                    color:rgb(0, 0, 220);
+                    text-align:center;
+                }
+
                 .auth-btn {
                     width:40%;
+                    margin-top:0.2vw;
+                    margin-bottom: 0.2vw;
                     font-size:1vw;
                 }
 
+                #register-btn {
+                    width:55%;
+                }
+
+                #delete-account-btn {
+                    width: 55%;
+                }
+
                 #error-msg {
-                    font-size: 1vw;
-                    color:red;
+                    font-size: 0.9vw;
+                    color:rgb(200,0,0);
+                    font-weight: bold;
+                }
+
+                .auth-buttons {
+                    width:100%;
                 }
 
 
@@ -113,7 +138,7 @@ body {
             width:53%;
             display: flex;
             flex-direction: column;
-            background-color:rgb(133, 120, 156);
+            background-color:rgb(120, 120, 165);
         }
 
 
@@ -130,7 +155,7 @@ body {
                     padding-left:0.3vw;
                     margin-bottom: 0.2vw;
                     margin-top:0.2vw;
-                    font-size:1svw;
+                    font-size:1.1vw;
                 }
 
                 .main-deck-grid {
@@ -144,6 +169,10 @@ body {
                     .deck-card-image {
                         width:100%;
                         display: block;
+                    }
+
+                    .deck-card, .card-ui {
+                        position: relative;
                     }
 
                 .card-slot {
@@ -356,11 +385,11 @@ body {
                 width: 1vw;
                 height: 1vw;
             
-                background: rgb(200,20,20);
+                background: black;
                 color: white;
                 border:solid;
-                border-color:black;
-                border-width: 0.2vw;;
+                border-color:red;
+                border-width: 0.15vw;;
             
                 border-radius: 50%;
             
