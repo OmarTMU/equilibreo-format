@@ -3655,7 +3655,7 @@
 },
 {
 "name": "Ocean of Regeneration",
-"description": "During each of your Standby Phases, Special Summon 1 Level 4 or lower WATER monster from your Graveyard in Defense Position.",
+"description": "You can target 1 WATER monster with 1000 or less ATK in your GY; Special Summon it, but destroy it during the End Phase. You can only use this effect of \"Ocean of Regeneration\" once per turn",
 "cardType": "spell",
 "subType": "continuous",
 "monsterBackground": "",
