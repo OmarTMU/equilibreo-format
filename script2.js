@@ -382,7 +382,7 @@ const defMax = document.getElementById("def-max");
 
 const limitSelect = document.getElementById("limit-select");
 
-const monsterSubtypes = [ "", "aqua", "beast", "dinosaur", "dragon",
+const monsterSubtypes = [ "", "aqua", "beast", "beast-warrior", "dinosaur", "dragon",
     "fairy", "fiend", "fish", "insect", "machine", "psychic",
     "pyro", "reptile", "rock", "sea-serpent", "spellcaster",
     "thunder", "warrior", "winged-beast", "wyrm", "zombie"
@@ -547,7 +547,7 @@ function getCardsFromGrid(gridID){
             level: card.dataset.level,
             atk: card.dataset.atk,
             def: card.dataset.def,
-            description: card.dataset.desc,
+            description: decodeURIComponent(card.dataset.desc ?? ""),
             limit: card.dataset.limit
 
         });
@@ -1130,7 +1130,7 @@ function renderPage() {
                  data-level="${card.level ?? ""}"
                  data-atk="${card.atk ?? ""}"
                  data-def="${card.def ?? ""}"
-                 data-desc="${card.description ?? ""}"
+                 data-desc="${encodeURIComponent(card.description ?? "")}"
                  data-limit="${card.limit ?? 1}">
 
                  <img class="card-pic" src="${imageCache.get(card.image)?.src ?? card.image}" alt="${card.name}">
@@ -1166,7 +1166,7 @@ document.addEventListener("click", (e) => {
         level: cardUI.dataset.level,
         atk: cardUI.dataset.atk,
         def: cardUI.dataset.def,
-        description: cardUI.dataset.desc,
+        description: decodeURIComponent(cardUI.dataset.desc ?? ""),
         monsterBackground: cardUI.dataset.background,
         limit: cardUI.dataset.limit
     };
@@ -1241,7 +1241,7 @@ document.addEventListener("dragstart", e => {
         level: card.dataset.level,
         atk: card.dataset.atk,
         def: card.dataset.def,
-        description: card.dataset.desc,
+        description: decodeURIComponent(card.dataset.desc ?? ""),
         limit: card.dataset.limit
     };
 
@@ -1320,7 +1320,7 @@ function addCardToGrid(card, area){
                  data-level="${card.level ?? ""}"
                  data-atk="${card.atk ?? ""}"
                  data-def="${card.def ?? ""}"
-                 data-desc="${card.description ?? ""}"
+                 data-desc="${encodeURIComponent(card.description ?? "")}"
                  data-limit="${card.limit ?? 1}">
                  <img src="${imageCache.get(card.image)?.src ?? card.image}" class="deck-card-image">
                 
@@ -1503,8 +1503,8 @@ document.addEventListener("mouseover", (e)=>{
     if(!card) return;
 
 
-    const name = card.dataset.name ?? "";
-    const desc = card.dataset.desc ?? "";
+    const name = decodeURIComponent(card.dataset.name ?? "");
+    const desc = decodeURIComponent(card.dataset.desc ?? "");
     const img = card.dataset.image ?? "";
 
 
@@ -1567,7 +1567,7 @@ function addCardToDeck(card, deck){
          data-level="${card.level ?? ""}"
          data-atk="${card.atk ?? ""}"
          data-def="${card.def ?? ""}"
-         data-desc="${card.description ?? ""}"
+         data-desc="${encodeURIComponent(card.description ?? "")}"
          data-limit="${card.limit ?? 1}">
 
          <img src="${imageCache.get(card.image)?.src ?? card.image}" class="deck-card-image">
