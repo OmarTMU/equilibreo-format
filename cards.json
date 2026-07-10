@@ -4509,5 +4509,19 @@
 "def": 1000,
 "limit": 3,
 "image": "card-pics/45985838.jpg"
+},
+{
+"name": "The Eye of Timaeus",
+"description": "(This card is also always treated as \"Legendary Dragon Timaeus\".)\nTarget 1 \"Dark Magician\" monster you control; Fusion Summon 1 Fusion Monster from your Extra Deck that lists that monster on the field as Fusion Material, using it as the Fusion Material. You can only activate 1 \"The Eye of Timaeus\" per turn.",
+"cardType": "spell",
+"subType": "normal",
+"monsterBackground": "",
+"monsterMechanic": "",
+"attribute": "",
+"level": null,
+"atk": null,
+"def": null,
+"limit": 1,
+"image": "card-pics/1784686.jpg"
 }
 ]
