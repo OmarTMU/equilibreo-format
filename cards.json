@@ -3528,20 +3528,6 @@
 "image": "card-pics/51282878.jpg"
 },
 {
-"name": "Gale Lizard",
-"description": "FLIP: Target 1 monster your opponent controls; return that target to the top of the owner's Deck.",
-"cardType": "monster",
-"subType": "reptile",
-"monsterBackground": "effect",
-"monsterMechanic": "flip",
-"attribute": "water",
-"level": 4,
-"atk": 1400,
-"def": 1200,
-"limit": 1,
-"image": "card-pics/77491079.jpg"
-},
-{
 "name": "Garura, Wings of Resonant Life",
 "description": "2 monsters with the same Type and Attribute but different names",
 "cardType": "monster",
