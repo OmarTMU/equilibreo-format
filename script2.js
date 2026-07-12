@@ -1496,6 +1496,27 @@ prevBtn.addEventListener("click", () => {
 });
 
 // hover on card to display
+let cardHoverTimer = null;
+let lastMouseX = 0;
+let lastMouseY = 0;
+let mouseSpeed = 0;
+
+
+document.addEventListener("mousemove", e => {
+
+    const distance = Math.sqrt(
+        Math.pow(e.clientX - lastMouseX, 2) +
+        Math.pow(e.clientY - lastMouseY, 2)
+    );
+
+    mouseSpeed = distance;
+
+    lastMouseX = e.clientX;
+    lastMouseY = e.clientY;
+
+});
+
+
 document.addEventListener("mouseover", (e)=>{
 
     const card = e.target.closest(".card-ui, .deck-card");
@@ -1503,19 +1524,36 @@ document.addEventListener("mouseover", (e)=>{
     if(!card) return;
 
 
-    const name = decodeURIComponent(card.dataset.name ?? "");
-    const desc = decodeURIComponent(card.dataset.desc ?? "");
-    const img = card.dataset.image ?? "";
+    clearTimeout(cardHoverTimer);
 
 
-    const display = document.getElementById("display-card");
-
-    display.innerHTML = `
-    <img id="card-display-pic" src="${imageCache.get(img)?.src ?? img}" alt="${name}">
-`;
+    cardHoverTimer = setTimeout(()=>{
 
 
-    document.getElementById("card-desc").innerText = desc;
+        // ignore cards while mouse is moving fast
+        if(mouseSpeed > 20){
+            return;
+        }
+
+
+        const name = decodeURIComponent(card.dataset.name ?? "");
+        const desc = decodeURIComponent(card.dataset.desc ?? "");
+        const img = card.dataset.image ?? "";
+
+
+        const display = document.getElementById("display-card");
+        const display_card_desc = document.getElementById("card-desc");
+
+        display.innerHTML = `
+        <img id="card-display-pic" src="${imageCache.get(img)?.src ?? img}" alt="${name}">
+        `;
+
+
+        document.getElementById("card-desc").innerText = desc;
+        display_card_desc.style.backgroundColor = "white"
+
+
+    }, 50);
 
 });
 
