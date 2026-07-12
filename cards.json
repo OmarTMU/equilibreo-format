@@ -884,7 +884,7 @@
 },
 {
 "name": "Dash Warrior",
-"description": "During the Damage Step of your turn, if this card attacks: You can make its ATK become 2400 until the end of the Damage Step. This effect can only be used once.",
+"description": "If this card attacks: it gains 1200 ATK during the Damage Step only.",
 "cardType": "monster",
 "subType": "warrior",
 "monsterBackground": "effect",

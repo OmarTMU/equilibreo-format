@@ -343,20 +343,20 @@ function updateAuthButtons(loggedIn){
 
     if(loggedIn){
 
-        loginBtn.disabled = true;
-        registerBtn.disabled = true;
+        loginBtn.style.display = "none";
+        registerBtn.style.display = "none";
 
-        logoutBtn.disabled = false;
-        deleteBtn.disabled = false;
+        logoutBtn.style.display = "inline";
+        deleteBtn.style.display = "inline";
 
     }
     else{
 
-        loginBtn.disabled = false;
-        registerBtn.disabled = false;
+        loginBtn.style.display = "inline";
+        registerBtn.style.display = "inline";
 
-        logoutBtn.disabled = true;
-        deleteBtn.disabled = true;
+        logoutBtn.style.display = "none";
+        deleteBtn.style.display = "none";
 
     }
 
@@ -463,6 +463,7 @@ const selectDeck = document.getElementById("select-deck");
 const newDeckBtn = document.getElementById("new-deck");
 const deleteDeckBtn = document.getElementById("delete");
 const saveDeckBtn = document.getElementById("save");
+const saveAsBtn = document.getElementById("save-as");
 const clearDeckBtn = document.getElementById("clear-deck");
 const exportBtn = document.getElementById("export");
 const importBtn = document.getElementById("import");
@@ -641,6 +642,33 @@ function downloadYDK(content){
 exportBtn.addEventListener("click", ()=>{
 
     exportYDK();
+
+});
+
+importBtn.addEventListener("click", ()=>{
+
+    importFile.click();
+
+});
+
+
+importFile.addEventListener("change", async ()=>{
+
+    const file = importFile.files[0];
+
+    if(!file){
+        return;
+    }
+
+
+    const ydk = await file.text();
+
+
+    await importYDK(ydk);
+
+
+    // reset so importing same file again works
+    importFile.value = "";
 
 });
 
@@ -842,6 +870,68 @@ newDeckBtn.addEventListener("click", async function () {
     deckChanged = false;
 
     alert("Deck created!");
+
+});
+
+saveAsBtn.addEventListener("click", async ()=>{
+
+    if(!currentUser){
+        alert("Login first.");
+        return;
+    }
+
+    if(deckChanged){
+        const save = confirm(
+            "You have UNSAVED changes.\n\nOK = Save changes before Save As.\nCancel = Continue without saving."
+        );
+    
+        if(save){
+    
+            await saveCurrentDeck();
+    
+        }
+    }
+
+    let deckName = prompt("Save deck as:");
+
+    if(!deckName){
+        return;
+    }
+
+    deckName = getUniqueDeckName(deckName);
+
+    await setDoc(
+
+        doc(
+            db,
+            "users",
+            currentUser.uid,
+            "decks",
+            deckName
+        ),
+
+        {
+            name: deckName,
+            main: getCardsFromGrid("main-deck-grid"),
+            extra: getCardsFromGrid("extra-deck-grid"),
+            side: getCardsFromGrid("side-deck-grid")
+        }
+
+    );
+
+    const option = document.createElement("option");
+
+    option.value = deckName;
+    option.textContent = deckName;
+
+    selectDeck.appendChild(option);
+
+    selectDeck.value = deckName;
+
+    previousDeck = deckName;
+    deckChanged = false;
+
+    alert("Deck saved as '" + deckName + "'!");
 
 });
 
@@ -1064,6 +1154,172 @@ renameDeckBtn.addEventListener("click", async ()=>{
     alert("Deck renamed!");
 
 });
+
+async function importYDK(ydk){
+
+    if(!currentUser){
+        alert("Login first.");
+        return;
+    }
+
+
+    let deckName = prompt(
+        "Enter imported deck name:"
+    );
+
+
+    if(!deckName){
+        return;
+    }
+
+
+    deckName = getUniqueDeckName(deckName);
+
+
+
+    let section = "";
+
+
+    const main = [];
+    const extra = [];
+    const side = [];
+
+
+    const lines = ydk.split(/\r?\n/);
+
+
+    for(let line of lines){
+
+        line = line.trim();
+
+
+        if(line === "#main"){
+
+            section = "main";
+            continue;
+
+        }
+
+
+        if(line === "#extra"){
+
+            section = "extra";
+            continue;
+
+        }
+
+
+        if(line === "!side"){
+
+            section = "side";
+            continue;
+
+        }
+
+
+        if(
+            line === "" ||
+            line.startsWith("#")
+        ){
+            continue;
+        }
+
+
+
+        const card = findCardByID(line);
+
+
+
+        if(!card){
+
+            console.log(
+                "Card not found:",
+                line
+            );
+
+            continue;
+
+        }
+
+
+
+        if(section === "main"){
+
+            main.push(card);
+
+        }
+
+        else if(section === "extra"){
+
+            extra.push(card);
+
+        }
+
+        else if(section === "side"){
+
+            side.push(card);
+
+        }
+
+    }
+
+
+
+    // create new Firebase deck
+
+    await setDoc(
+
+        doc(
+            db,
+            "users",
+            currentUser.uid,
+            "decks",
+            deckName
+        ),
+
+        {
+
+            name: deckName,
+            main: main,
+            extra: extra,
+            side: side
+
+        }
+
+    );
+
+
+
+    // add new deck to dropdown
+
+    const option = document.createElement("option");
+
+    option.value = deckName;
+    option.textContent = deckName;
+
+
+    selectDeck.appendChild(option);
+
+
+
+    // automatically switch to imported deck
+
+    selectDeck.value = deckName;
+
+
+    clearDeckDisplay();
+
+
+    await loadSelectedDeck();
+
+
+
+    deckChanged = false;
+
+
+    alert("Deck imported!");
+
+}
 
 
 // online search
@@ -1624,6 +1880,101 @@ function addCardToDeck(card, deck){
     }
 }
 
+function insertCardIntoSlot(card, targetSlot){
+
+    const grid = targetSlot.closest(
+        ".main-deck-grid, .extra-deck-grid, .side-deck-grid"
+    );
+
+    const slots = Array.from(
+        grid.querySelectorAll(".card-slot")
+    );
+
+
+    const targetIndex = slots.indexOf(targetSlot);
+
+
+    // collect existing cards
+    let cards = Array.from(
+        grid.querySelectorAll(".deck-card")
+    );
+
+
+    // if moving an existing card, remove it from its old position
+    if(draggedSlot){
+
+        const draggedCard = draggedSlot.querySelector(".deck-card");
+
+        if(draggedCard){
+
+            cards = cards.filter(c => c !== draggedCard);
+
+        }
+
+    }
+
+
+    // create new card element
+    const temp = document.createElement("div");
+
+    temp.innerHTML = `
+    <div class="deck-card"
+         data-name="${card.name}"
+         data-image="${card.image ?? ""}"
+         data-type="${card.cardType}"
+         data-subtype="${card.subType}"
+         data-background="${card.monsterBackground ?? ""}"
+         data-mechanic="${card.monsterMechanic ?? ""}"
+         data-attribute="${card.attribute ?? ""}"
+         data-level="${card.level ?? ""}"
+         data-atk="${card.atk ?? ""}"
+         data-def="${card.def ?? ""}"
+         data-desc="${encodeURIComponent(card.description ?? "")}"
+         data-limit="${card.limit ?? 1}">
+
+         <img src="${imageCache.get(card.image)?.src ?? card.image}" class="deck-card-image">
+         ${
+            card.limit == 1 
+            ? `<div class="limit-badge">1</div>`
+            : card.limit == 2
+            ? `<div class="limit-badge">2</div>`
+            : ""
+        }
+    </div>
+    `;
+
+
+    const newCard = temp.firstElementChild;
+
+
+    // insert at exact position
+    cards.splice(targetIndex, 0, newCard);
+
+
+    // clear grid
+    slots.forEach(slot=>{
+        slot.innerHTML = "";
+    });
+
+
+    // refill slots
+    cards.forEach((cardElement,index)=>{
+
+        if(slots[index]){
+
+            slots[index].appendChild(cardElement);
+
+        }
+
+    });
+
+
+    draggedSlot = null;
+
+    deckChanged = true;
+
+}
+
 const decks = document.querySelectorAll(".deck-grid");
 
 
@@ -1646,7 +1997,7 @@ decks.forEach(deck => {
         const destination = deck.id;
 
         console.log(card);
-console.log(card.monsterBackground);
+        console.log(card.monsterBackground);
 
         // Fusion restriction
         if(
@@ -1685,7 +2036,14 @@ console.log(card.monsterBackground);
         }
 
         // Add card to new location
-        addCardToDeck(card,destination);
+        const targetSlot = e.target.closest(".card-slot");
+
+        if(!targetSlot){
+            return;
+        }
+
+        insertCardIntoSlot(card, targetSlot);
+
         });
 });
 
@@ -1738,3 +2096,18 @@ document.addEventListener("contextmenu", e => {
 });
 
 loadCards();
+
+function findCardByID(id){
+
+    return allCards.find(card => {
+
+        const filename = card.image
+            .split("/")
+            .pop()
+            .replace(".jpg","");
+
+        return filename === String(id);
+
+    });
+
+}

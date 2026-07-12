@@ -22,11 +22,17 @@
             <!--
                 <button class="deck-constructor-button" id="import">Import</button>
             -->
-            <button class="deck-constructor-button" id="clear-deck">Clear Deck</button>
+            <button class="deck-constructor-button" id="import">Import</button>
+            <input 
+                id="import-file" 
+                type="file" 
+                accept=".ydk" 
+                hidden
+            >
             <button class="deck-constructor-button" id="export">Export</button>
             <input 
                 type="file" 
-                id="import-file" 
+                id="export-file" 
                 accept=".ydk" 
                 style="display:none;"
             >
@@ -37,15 +43,20 @@
                <!--<option value="deck1">Deck 1</option>--> 
             </Select>
         
+            <button class="deck-constructor-button" id="clear-deck">Clear Deck</button>
             <button class="deck-constructor-button" id="new-deck">New Deck</button>
             <button class="deck-constructor-button" id="rename">Rename</button>
             <button class="deck-constructor-button" id="save">Save</button>
             <button class="deck-constructor-button" id="delete">Delete</button>
+            <button class="deck-constructor-button" id="save-as">Save As</button>
         </div>
 
         <div id="auth-container">
+            <!--
+                <button id="light-dark-mode">dark mode</button>
+            -->
             <h3>Login/Register</h3>
-        
+
             <div class="auth-row">
                 <label class="auth-label" for="username">Username</label>
                 <input class="auth-box" type="text" id="username" />
@@ -70,6 +81,8 @@
 
     </div>
     
+    <div id="column-gap">.</div>
+
     <div id="deck-list"> <!-- main/side/extra -->
 
         <div id="main-deck-section">
@@ -197,6 +210,8 @@
         </div>
     </div>
 
+    <div id="column-gap">.</div>
+
     <!-- SEARCH CARD -->
     <div id="search-section">
 
@@ -279,7 +294,13 @@
                 <input class="def-box" type="text" id="def-max" placeholder="max" disabled>
             </div>
 
-            <div id="limit-and-search-box">
+            <div id="limit-and-search-box-1">
+                <button id="prev-page">←</button>
+                <button id="search-button">Search</button>
+                <button id="next-page">→</button>
+            </div>
+
+            <div id="limit-and-search-box-2">
                 <label for="limit-select" class="label limit-label">Limit:</label>
                 <select class="limit-box" id="limit-select" disabled>
                     <option value=""></option>
@@ -287,12 +308,9 @@
                     <option value="2">2</option>
                     <option value="1">1</option>
                 </select>
-                <button id="prev-page">←</button>
-                <button id="search-button">Search</button>
-                
-                <button id="next-page">→</button>
                 <div id="page-number"></div>
             </div>
+
 
         </div>
 
