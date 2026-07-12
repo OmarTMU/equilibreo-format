@@ -284,10 +284,12 @@ body {
 
             .filter-box {
                 width:20%;
+                padding-left: 0.0vw;
             }
 
                 .name-label {
                     font-size:1.2vw;
+                    padding-left:0.1vw;
                 }
 
                 .name-box {
@@ -297,6 +299,7 @@ body {
 
                 .desc-label {
                     font-size:1.2vw;
+                    padding-left:0.1vw;
                 }
 
                 .desc-box {
@@ -307,6 +310,7 @@ body {
                 .card-type-label {
                     width:20%;
                     font-size:1.2vw;
+                    padding-left:0.1vw;
                 }
 
                 .card-type-box {
@@ -315,6 +319,7 @@ body {
 
                 .card-subtype-label {
                     font-size:1.2vw;
+                    padding-left:0.1vw;
                 }
 
                 .card-subtype-box {
@@ -327,6 +332,7 @@ body {
 
                 .att-select-label {
                     font-size:1.2vw;
+                    padding-left:0.1vw;
                 }
 
                 .att-select-box {
@@ -344,6 +350,7 @@ body {
 
                 .atk-label {
                     font-size:1.2vw;
+                    padding-left:0.1vw;
                 }
 
                 .atk-box {
@@ -354,6 +361,7 @@ body {
 
                 .def-label {
                     font-size:1.2vw;
+                    padding-left:0.1vw;
                 }
 
                 .def-box {
@@ -390,8 +398,9 @@ body {
 
                 #limit-and-search-box-2 {
                     padding-top:0.2vw;
-                    padding-left:0.3vw;
+                    padding-left:0.5vw;
                     width:100%;
+                    
                 }
 
                 .limit-label {
