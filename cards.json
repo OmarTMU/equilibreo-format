@@ -781,7 +781,7 @@
 "level": 0,
 "atk": 0,
 "def": 0,
-"limit": 1,
+"limit": 2,
 "image": "card-pics/16964437.jpg"
 },
 {
@@ -3976,7 +3976,7 @@
 },
 
 {
-"name": "Y-Metal Tank",
+"name": "Z-Metal Tank",
 "description": "Once per turn, you can either: Target 1 \"X-Head Cannon\" or \"Y-Dragon Head\" you control; equip this card to that target, OR: Unequip this card and Special Summon it. A monster equipped with this card gains 600 ATK/DEF, also if the equipped monster would be destroyed by battle or card effect, destroy this card instead.",
 "cardType": "monster",
 "subType": "machine",
@@ -3986,7 +3986,7 @@
 "level": 4,
 "atk": 1500,
 "def": 1300,
-"limit": 3,
+"limit": 2,
 "image": "card-pics/64500000.jpg"
 },
 
@@ -4509,5 +4509,117 @@
 "def": null,
 "limit": 1,
 "image": "card-pics/1784686.jpg"
+},
+{
+"name": "The Fountain in the Sky",
+"description": "When a LIGHT monster is destroyed by battle and sent to your Graveyard, you can remove that monster from play to gain Life Points equal to its ATK.",
+"cardType": "spell",
+"subType": "continuous",
+"monsterBackground": "",
+"monsterMechanic": "",
+"attribute": "",
+"level": null,
+"atk": null,
+"def": null,
+"limit": 3,
+"image": "card-pics/92223641.jpg"
+},
+{
+"name": "Nimble Momonga",
+"description": "When this card is destroyed by battle and sent to the Graveyard: Gain 1000 Life Points, then you can Special Summon any number of \"Nimble Momongas\" from your Deck in face-down Defense Position.",
+"cardType": "monster",
+"subType": "beast",
+"monsterBackground": "effect",
+"monsterMechanic": "",
+"attribute": "earth",
+"level": 2,
+"atk": 1000,
+"def": 100,
+"limit": 3,
+"image": "card-pics/22567609.jpg"
+},
+{
+"name": "Stronghold the Moving Fortress",
+"description": "Special Summon this card in Defense Position as an Effect Monster (Machine/EARTH/Level 4/ATK 0/DEF 2000). (This card is also still a Trap.) While you control \"Green Gadget\", \"Red Gadget\", and \"Yellow Gadget\", this card gains 3000 ATK.",
+"cardType": "trap",
+"subType": "continuous",
+"monsterBackground": "",
+"monsterMechanic": "",
+"attribute": "",
+"level": null,
+"atk": null,
+"def": null,
+"limit": 1,
+"image": "card-pics/13955608.jpg"
+},
+{
+"name": "Abaki",
+"description": "When this card is destroyed and sent to the Graveyard by battle, both players take 500 damage.",
+"cardType": "monster",
+"subType": "fiend",
+"monsterBackground": "effect",
+"monsterMechanic": "",
+"attribute": "fire",
+"level": 4,
+"atk": 1700,
+"def": 1100,
+"limit": 3,
+"image": "card-pics/12694768.jpg"
+},
+{
+"name": "Gear Golem the Moving Fortress",
+"description": "Once per turn, during your Main Phase 1: You can pay 800 Life Points; this card can attack your opponent directly this turn.",
+"cardType": "monster",
+"subType": "machine",
+"monsterBackground": "effect",
+"monsterMechanic": "",
+"attribute": "earth",
+"level": 4,
+"atk": 800,
+"def": 2200,
+"limit": 1,
+"image": "card-pics/30190809.jpg"
+},
+{
+"name": "Spiritualism",
+"description": "Return 1 Spell/Trap Card your opponent controls to the hand. This card's activation and effect cannot be negated.",
+"cardType": "spell",
+"subType": "normal",
+"monsterBackground": "",
+"monsterMechanic": "",
+"attribute": "",
+"level": null,
+"atk": null,
+"def": null,
+"limit": 3,
+"image": "card-pics/15866454.jpg"
+},
+{
+"name": "Bound Wand",
+"description": "Equip only to a Spellcaster monster that has a Level. It gains ATK equal to its Level x 100. If the equipped monster is destroyed by your opponent's card and sent to the GY, and this card is sent to your GY as a result: You can Special Summon that monster.",
+"cardType": "spell",
+"subType": "equip",
+"monsterBackground": "",
+"monsterMechanic": "",
+"attribute": "",
+"level": null,
+"atk": null,
+"def": null,
+"limit": 3,
+"image": "card-pics/53610653.jpg"
+},
+{
+"name": "Swift Scarecrow",
+"description": "When an opponent's monster declares a direct attack (Quick Effect): You can discard this card; negate the attack, then end the Battle Phase.",
+"cardType": "monster",
+"subType": "machine",
+"monsterBackground": "effect",
+"monsterMechanic": "",
+"attribute": "earth",
+"level": 1,
+"atk": 0,
+"def": 0,
+"limit": 3,
+"image": "card-pics/18964575.jpg"
 }
 ]
