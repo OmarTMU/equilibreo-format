@@ -1340,7 +1340,7 @@ function addCardToGrid(card, area){
     }
 
 }
-
+/*
 const deckAreas = document.querySelectorAll(
     ".main-deck-grid, .extra-deck-grid, .side-deck-grid"
 );
@@ -1389,7 +1389,7 @@ deckAreas.forEach(area=>{
     });
 
 });
-
+*/
 
 function applyFilters() {
 
@@ -1607,10 +1607,13 @@ decks.forEach(deck => {
 
         const destination = deck.id;
 
+        console.log(card);
+console.log(card.monsterBackground);
+
         // Fusion restriction
         if(
             destination === "main-deck-grid" &&
-            card.background === "fusion"
+            card.monsterBackground === "fusion"
         ){
             return;
         }
@@ -1618,7 +1621,7 @@ decks.forEach(deck => {
         // normal monster restriction
         if(
             destination === "extra-deck-grid" &&
-            card.background !== "fusion"
+            card.monsterBackground !== "fusion"
         ){
             return;
         }
