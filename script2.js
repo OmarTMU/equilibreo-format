@@ -1,7 +1,8 @@
 // firebase set up
 import { 
     getFirestore, 
-    collection, 
+    collection,
+    getDoc, 
     getDocs,
     doc,
     setDoc,
@@ -460,6 +461,7 @@ cardType.addEventListener("change", updateSubtype);
 
 // create deck , delete deck
 const selectDeck = document.getElementById("select-deck");
+const setDefaultDeckBtn = document.getElementById("set-default-deck");
 const newDeckBtn = document.getElementById("new-deck");
 const deleteDeckBtn = document.getElementById("delete");
 const saveDeckBtn = document.getElementById("save");
@@ -687,7 +689,6 @@ async function loadUserDecks(){
 
     const deckSelect = document.getElementById("select-deck");
 
-    // clear current dropdown
     deckSelect.innerHTML = "";
 
 
@@ -715,15 +716,40 @@ async function loadUserDecks(){
     });
 
 
-    // automatically select first deck
+    // load default deck if it exists
 
-    if(deckSelect.options.length > 0){
+    const userSnapshot = await getDoc(
+        doc(
+            db,
+            "users",
+            currentUser.uid
+        )
+    );
+
+    const userData = userSnapshot.data();
+
+
+    if(
+        userData &&
+        userData.defaultDeck &&
+        document.querySelector(
+            `#select-deck option[value="${userData.defaultDeck}"]`
+        )
+    ){
+
+        deckSelect.value = userData.defaultDeck;
+
+    }
+    else{
 
         deckSelect.selectedIndex = 0;
-    
-        await loadSelectedDeck();
-    
+
     }
+
+
+    await loadSelectedDeck();
+    
+
 }
 
 async function loadSelectedDeck(){
@@ -775,24 +801,51 @@ async function loadSelectedDeck(){
     loadingDeck = true;
 
 
-    selectedDeckData.main.forEach(card=>{
+    selectedDeckData.main.forEach(savedCard=>{
 
-        addCardToDeck(card,"main-deck-grid");
-
+        const latestCard = findCardByID(savedCard.id);
+    
+        if(latestCard){
+    
+            addCardToDeck(
+                latestCard,
+                "main-deck-grid"
+            );
+    
+        }
+    
     });
-
-
-    selectedDeckData.extra.forEach(card=>{
-
-        addCardToDeck(card,"extra-deck-grid");
-
+    
+    
+    selectedDeckData.extra.forEach(savedCard=>{
+    
+        const latestCard = findCardByID(savedCard.id);
+    
+        if(latestCard){
+    
+            addCardToDeck(
+                latestCard,
+                "extra-deck-grid"
+            );
+    
+        }
+    
     });
-
-
-    selectedDeckData.side.forEach(card=>{
-
-        addCardToDeck(card,"side-deck-grid");
-
+    
+    
+    selectedDeckData.side.forEach(savedCard=>{
+    
+        const latestCard = findCardByID(savedCard.id);
+    
+        if(latestCard){
+    
+            addCardToDeck(
+                latestCard,
+                "side-deck-grid"
+            );
+    
+        }
+    
     });
 
 previousDeck = deckID;
@@ -801,6 +854,47 @@ loadingDeck = false;
 
 }
 
+setDefaultDeckBtn.addEventListener("click", async ()=>{
+
+    if(!currentUser){
+        alert("Login first.");
+        return;
+    }
+
+
+    const deckID = selectDeck.value;
+
+
+    if(!deckID){
+        alert("No deck selected.");
+        return;
+    }
+
+
+    await setDoc(
+
+        doc(
+            db,
+            "users",
+            currentUser.uid
+        ),
+
+        {
+            defaultDeck: deckID
+        },
+
+        {
+            merge:true
+        }
+
+    );
+
+    const deckName = selectDeck.options[selectDeck.selectedIndex].textContent;
+
+    alert(deckName + " is now your default deck!");
+
+
+});
 
 newDeckBtn.addEventListener("click", async function () {
 
@@ -1990,6 +2084,12 @@ decks.forEach(deck => {
 
         e.preventDefault();
 
+        const targetSlot = e.target.closest(".card-slot");
+
+if (targetSlot === draggedSlot) {
+    return;
+}
+
         const card = JSON.parse(
             e.dataTransfer.getData("card")
         );
@@ -2036,7 +2136,7 @@ decks.forEach(deck => {
         }
 
         // Add card to new location
-        const targetSlot = e.target.closest(".card-slot");
+
 
         if(!targetSlot){
             return;

@@ -84,13 +84,6 @@ body {
                     cursor: pointer;
                 }
 
-                #select-deck {
-                    width:100%;
-                    text-align: center;
-                    border:solid;
-                    border-width:0.15vw;
-                    border-color:rgb(4, 222, 255);
-                }
 
             #auth-container {
                 display: flex;
