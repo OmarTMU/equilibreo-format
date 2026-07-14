@@ -1271,7 +1271,7 @@
 "level": 10,
 "atk": 2900,
 "def": 2600,
-"limit": 1,
+"limit": 3,
 "image": "card-pics/29343734.jpg"
 },
 {
@@ -1299,7 +1299,7 @@
 "level": 6,
 "atk": 2100,
 "def": 1200,
-"limit": 1,
+"limit": 2,
 "image": "card-pics/35809262.jpg"
 },
 {
@@ -1341,7 +1341,7 @@
 "level": 8,
 "atk": 2300,
 "def": 1600,
-"limit": 1,
+"limit": 3,
 "image": "card-pics/68745629.jpg"
 },
 {
@@ -1369,7 +1369,7 @@
 "level": 5,
 "atk": 1400,
 "def": 1000,
-"limit": 2,
+"limit": 3,
 "image": "card-pics/14225239.jpg"
 },
 {
@@ -1481,7 +1481,7 @@
 "level": 6,
 "atk": 2000,
 "def": 2500,
-"limit": 1,
+"limit": 3,
 "image": "card-pics/47737087.jpg"
 },
 {
@@ -1509,7 +1509,7 @@
 "level": 5,
 "atk": 1800,
 "def": 1000,
-"limit": 1,
+"limit": 3,
 "image": "card-pics/81197327.jpg"
 },
 {
@@ -2349,7 +2349,7 @@
 "level": 0,
 "atk": 0,
 "def": 0,
-"limit": 1,
+"limit": 2,
 "image": "card-pics/14315573.jpg"
 },
 {
@@ -2432,7 +2432,7 @@
 "level": 0,
 "atk": 0,
 "def": 0,
-"limit": 2,
+"limit": 3,
 "image": "card-pics/33782437.jpg"
 },
 {
@@ -2600,7 +2600,7 @@
 "level": 6,
 "atk": 2400,
 "def": 1400,
-"limit": 1,
+"limit": 2,
 "image": "card-pics/28143906.jpg"
 },
 {
@@ -2759,7 +2759,7 @@
 },
 {
 "name": "Soul Union",
-"description": "Target 1 face-up \"Elemental HERO\" monster you control; until the End Phase, it gains 200 ATK for each \"Elemental HERO\" monster in your Graveyard.",
+"description": "Target 1 face-up monster on the field and 1 \"Elemental HERO\" monster in your GY; that target on the field gains ATK equal to the other target's ATK (until the end of this turn), then if you have an \"Elemental HERO\" Normal Monster in your field or GY (except during the Damage Step), you can Fusion Summon 1 \"Elemental HERO\" Fusion Monster from your Extra Deck, by banishing its materials from your GY. You can only activate 1 \"Soul Union\" per turn.",
 "cardType": "trap",
 "subType": "normal",
 "monsterBackground": "",
@@ -3118,7 +3118,7 @@
 "level": null,
 "atk": null,
 "def": null,
-"limit": 1,
+"limit": 2,
 "image": "card-pics/12607053.jpg"
 },
 {
@@ -3216,7 +3216,7 @@
 "level": 3,
 "atk": 800,
 "def": 1200,
-"limit": 1,
+"limit": 2,
 "image": "card-pics/6480253.jpg"
 },
 {
@@ -3356,7 +3356,7 @@
 "level": 6,
 "atk": 2400,
 "def": 1000,
-"limit": 2,
+"limit": 1,
 "image": "card-pics/44702857.jpg"
 },
 {
@@ -3692,7 +3692,7 @@
 "level": 5,
 "atk": 2400,
 "def": 1000,
-"limit": 3,
+"limit": 2,
 "image": "card-pics/78060096.jpg"
 },
 {
@@ -3760,7 +3760,7 @@
 "level": null,
 "atk": null,
 "def": null,
-"limit": 1,
+"limit": 3,
 "image": "card-pics/74848038.jpg"
 }, 
 {
@@ -4073,7 +4073,7 @@
 "level": null,
 "atk": null,
 "def": null,
-"limit": 2,
+"limit": 3,
 "image": "card-pics/4861205.jpg"
 },
 {
@@ -5153,5 +5153,47 @@
 "def": 0,
 "limit": 3,
 "image": "card-pics/1362589.jpg"
+},
+{
+"name": "Elemental HERO Phoenix Enforcer",
+"description": "\"Elemental HERO Avian\" + \"Elemental HERO Burstinatrix\"\nMust be Fusion Summoned and cannot be Special Summoned by other ways. This card cannot be destroyed by battle.",
+"cardType": "monster",
+"subType": "warrior",
+"monsterBackground": "fusion",
+"monsterMechanic": "",
+"attribute": "fire",
+"level": 6,
+"atk": 2100,
+"def": 1200,
+"limit": 1,
+"image": "card-pics/41436536.jpg"
+},
+{
+"name": "Elemental HERO The Shining",
+"description": "1 \"Elemental HERO\" monster + 1 LIGHT monster\nMust be Fusion Summoned and cannot be Special Summoned by other ways. This card gains 300 ATK for each of your banished \"Elemental HERO\" monsters. When this card is sent from the field to the Graveyard: You can target up to 2 of your banished \"Elemental HERO\" monsters; add those targets to your hand.",
+"cardType": "monster",
+"subType": "warrior",
+"monsterBackground": "fusion",
+"monsterMechanic": "",
+"attribute": "light",
+"level": 8,
+"atk": 2600,
+"def": 2100,
+"limit": 1,
+"image": "card-pics/22061412.jpg"
+},
+{
+"name": "Kamui, Hope of Gusto",
+"description": "FLIP: Special Summon 1 \"Gusto\" Tuner monster from your Deck.",
+"cardType": "monster",
+"subType": "psychic",
+"monsterBackground": "effect",
+"monsterMechanic": "",
+"attribute": "wind",
+"level": 2,
+"atk": 200,
+"def": 1000,
+"limit": 3,
+"image": "card-pics/72439556.jpg"
 }
 ]
