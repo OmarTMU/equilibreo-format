@@ -1747,7 +1747,7 @@
 "level": 4,
 "atk": 1400,
 "def": 1450,
-"limit": 3,
+"limit": 2,
 "image": "card-pics/97017120.jpg"
 },
 {
@@ -3160,7 +3160,7 @@
 "level": 4,
 "atk": 1100,
 "def": 1200,
-"limit": 1,
+"limit": 3,
 "image": "card-pics/5438492.jpg"
 },
 {
