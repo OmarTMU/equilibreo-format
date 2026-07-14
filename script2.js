@@ -742,10 +742,47 @@ async function loadUserDecks(){
     }
     else{
 
-        deckSelect.selectedIndex = 0;
+        // select default deck if it exists, otherwise first deck
+
+    const userSnapshot = await getDoc(
+        doc(
+            db,
+            "users",
+            currentUser.uid
+        )
+    );
+
+    const userData = userSnapshot.data();
+
+
+    let defaultFound = false;
+
+
+    if(userData && userData.defaultDeck){
+
+        for(const option of selectDeck.options){
+
+            if(option.value === userData.defaultDeck){
+
+                selectDeck.value = userData.defaultDeck;
+                defaultFound = true;
+                break;
+
+            }
+
+        }
 
     }
 
+
+    if(!defaultFound && selectDeck.options.length > 0){
+
+        selectDeck.selectedIndex = 0;
+
+    }
+
+
+    }
 
     await loadSelectedDeck();
     
@@ -1100,6 +1137,21 @@ deleteDeckBtn.addEventListener("click", async function () {
 
     try{
 
+        const userSnapshot = await getDoc(
+            doc(
+                db,
+                "users",
+                currentUser.uid
+            )
+        );
+        
+        const userData = userSnapshot.data();
+        
+        const wasDefaultDeck = 
+            userData && userData.defaultDeck === deckID;
+            console.log("Deleting:", deckID);
+console.log("Saved default:", userData.defaultDeck);
+console.log("Was default?", wasDefaultDeck);
         // delete from Firebase
         await deleteDoc(
             doc(
@@ -1112,20 +1164,86 @@ deleteDeckBtn.addEventListener("click", async function () {
         );
 
 
+
         // remove from dropdown
         const selectedOption = selectDeck.selectedIndex;
 
         selectDeck.remove(selectedOption);
 
 
-        // select first remaining deck
-        selectDeck.selectedIndex = 0;
+        // automatically set first remaining deck as default
 
+        // only change default if the deleted deck was the default
+
+if(wasDefaultDeck && selectDeck.options.length > 0){
+
+    selectDeck.selectedIndex = 0;
+
+
+    await setDoc(
+
+        doc(
+            db,
+            "users",
+            currentUser.uid
+        ),
+
+        {
+            defaultDeck: selectDeck.value
+        },
+
+        {
+            merge:true
+        }
+
+    );
+
+}
 
         // load the new selected deck
-        clearDeckDisplay();
+// restore selected deck to default
 
-        await loadSelectedDeck();
+const userSnapshot2 = await getDoc(
+    doc(
+        db,
+        "users",
+        currentUser.uid
+    )
+);
+
+const userData2 = userSnapshot2.data();
+
+
+let foundDefault = false;
+
+
+if(userData2 && userData2.defaultDeck){
+
+    for(const option of selectDeck.options){
+
+        if(option.value === userData2.defaultDeck){
+
+            selectDeck.value = userData2.defaultDeck;
+            foundDefault = true;
+            break;
+
+        }
+
+    }
+
+}
+
+
+if(!foundDefault){
+
+    selectDeck.selectedIndex = 0;
+
+}
+
+
+clearDeckDisplay();
+
+await loadSelectedDeck();
 
 
         alert("Deck deleted!");
