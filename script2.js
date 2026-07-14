@@ -2265,6 +2265,7 @@ if (targetSlot === draggedSlot) {
         });
 });
 
+
 document.addEventListener("contextmenu", e => {
 
     const card = e.target.closest(".deck-card");
