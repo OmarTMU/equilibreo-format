@@ -249,7 +249,7 @@
 "level": 4,
 "atk": 100,
 "def": 2600,
-"limit": 1,
+"limit": 2,
 "image": "card-pics/65240384.jpg"
 },
 {
@@ -2031,20 +2031,6 @@
 "image": "card-pics/99747800.jpg"
 },
 {
-"name": "Lightning Blade",
-"description": "Equip only to a Warrior monster. It gains 800 ATK. All WATER monsters on the field lose 500 ATK.",
-"cardType": "spell",
-"subType": "equip",
-"monsterBackground": "",
-"monsterMechanic": "",
-"attribute": "",
-"level": null,
-"atk": null,
-"def": null,
-"limit": 2,
-"image": "card-pics/55226821.jpg"
-},
-{
 "name": "Little-Winguard",
 "description": "Once per turn, during your End Phase: You can change the battle position of this card.",
 "cardType": "monster",
@@ -2924,20 +2910,6 @@
 "def": null,
 "limit": 1,
 "image": "card-pics/72302403.jpg"
-},
-{
-"name": "The A. Forces",
-"description": "All Warrior-Type monsters you control gain 200 ATK for each Warrior-Type and Beast-Warrior-Type monster you control.",
-"cardType": "spell",
-"subType": "continuous",
-"monsterBackground": "",
-"monsterMechanic": "",
-"attribute": "",
-"level": null,
-"atk": null,
-"def": null,
-"limit": 1,
-"image": "card-pics/403847.jpg"
 },
 {
 "name": "The Gates of Dark World",
@@ -4647,7 +4619,7 @@
 "level": 4,
 "atk": 1800,
 "def": 1600,
-"limit": 3,
+"limit": 1,
 "image": "card-pics/50903514.jpg"
 },
 {
