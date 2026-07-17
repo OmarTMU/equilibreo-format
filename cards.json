@@ -659,20 +659,6 @@
 "image": "card-pics/82099401.jpg"
 },
 {
-"name": "Curse of the Masked Beast",
-"description": "This card is used to Ritual Summon \"The Masked Beast\". You must also Tribute monsters from your hand or field whose total Levels equal 8 or more.",
-"cardType": "spell",
-"subType": "ritual",
-"monsterBackground": "",
-"monsterMechanic": "",
-"attribute": "",
-"level": 0,
-"atk": 0,
-"def": 0,
-"limit": 3,
-"image": "card-pics/94377247.jpg"
-}, 
-{
 "name": "DMZ Dragon",
 "description": "Once per turn: You can target 1 Level 4 or lower Dragon monster in your GY and 1 Dragon monster you control; equip that monster in your GY to that monster on the field as an Equip Spell that makes it gain 500 ATK. At the end of the Damage Step, if your monster equipped with an Equip Card attacked: You can banish this card from your GY; destroy as many cards as possible equipped to that monster you control, and if you do, that monster can make a second attack in a row.",
 "cardType": "monster",
@@ -2883,20 +2869,6 @@
 "def": null,
 "limit": 1,
 "image": "card-pics/33017655.jpg"
-},
-{
-"name": "The Masked Beast",
-"description": "You can Ritual Summon this card with \"Curse of the Masked Beast\".",
-"cardType": "monster",
-"subType": "fiend",
-"monsterBackground": "ritual",
-"monsterMechanic": "",
-"attribute": "dark",
-"level": 8,
-"atk": 3200,
-"def": 1800,
-"limit": 3,
-"image": "card-pics/49064413.jpg"
 },
 {
 "name": "The Tricky",
@@ -5904,7 +5876,7 @@
 "level": 4,
 "atk": 1800,
 "def": 1900,
-"limit": 1,
+"limit": 3,
 "image": "card-pics/63749102.jpg"
 },
 {
@@ -6002,7 +5974,7 @@
 "level": null,
 "atk": null,
 "def": null,
-"limit": 1,
+"limit": 3,
 "image": "card-pics/46052429.jpg"
 },
 {
