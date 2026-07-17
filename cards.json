@@ -5962,5 +5962,61 @@
 "def": 600,
 "limit": 3,
 "image": "card-pics/42874792.jpg"
+},
+{
+"name": "Lycanthrope",
+"description": "This card can only be Ritual Summoned with the Ritual Spell Card, \"Synthesis Spell\". When this card inflicts Battle Damage to your opponent, inflict 200 damage to your opponent for each Normal Monster in your Graveyard.",
+"cardType": "monster",
+"subType": "beast-warrior",
+"monsterBackground": "ritual",
+"monsterMechanic": "",
+"attribute": "earth",
+"level": 6,
+"atk": 2400,
+"def": 1800,
+"limit": 3,
+"image": "card-pics/84385264.jpg"
+},
+{
+"name": "Synthesis Spell",
+"description": "This card is used to Ritual Summon \"Lycanthrope\". You must also Tribute monsters whose total Levels equal 6 or more from the field or your hand.",
+"cardType": "spell",
+"subType": "ritual",
+"monsterBackground": "",
+"monsterMechanic": "",
+"attribute": "",
+"level": null,
+"atk": null,
+"def": null,
+"limit": 3,
+"image": "card-pics/72446038.jpg"
+},
+{
+"name": "Advanced Ritual Art",
+"description": "This card is used to Ritual Summon any 1 Ritual Monster. You must also send Normal Monsters from your Deck to the GY whose total Levels equal the Level of that Ritual Monster.",
+"cardType": "spell",
+"subType": "ritual",
+"monsterBackground": "",
+"monsterMechanic": "",
+"attribute": "",
+"level": null,
+"atk": null,
+"def": null,
+"limit": 1,
+"image": "card-pics/46052429.jpg"
+},
+{
+"name": "Preparation of Rites",
+"description": "Add 1 Level 7 or lower Ritual Monster from your Deck to your hand, then you can add 1 Ritual Spell from your GY to your hand.",
+"cardType": "spell",
+"subType": "normal",
+"monsterBackground": "",
+"monsterMechanic": "",
+"attribute": "",
+"level": null,
+"atk": null,
+"def": null,
+"limit": 3,
+"image": "card-pics/96729612.jpg"
 }
 ]
