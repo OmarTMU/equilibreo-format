@@ -10,7 +10,7 @@
 "level": 2,
 "atk": 500,
 "def": 300,
-"limit": 2,
+"limit": 3,
 "image": "card-pics/24140059.jpg"
 },
 {
@@ -165,7 +165,7 @@
 "level": 4,
 "atk": 2000,
 "def": 1200,
-"limit": 2,
+"limit": 3,
 "image": "card-pics/84914462.jpg"
 },
 {
@@ -249,7 +249,7 @@
 "level": 4,
 "atk": 100,
 "def": 2600,
-"limit": 2,
+"limit": 3,
 "image": "card-pics/65240384.jpg"
 },
 {
@@ -473,7 +473,7 @@
 "level": 4,
 "atk": 1900,
 "def": 1000,
-"limit": 1,
+"limit": 3,
 "image": "card-pics/16719802.jpg"
 },
 {
@@ -739,7 +739,7 @@
 "level": 4,
 "atk": 2000,
 "def": 800,
-"limit": 1,
+"limit": 2,
 "image": "card-pics/21417692.jpg"
 },
 {
@@ -1005,7 +1005,7 @@
 "level": 4,
 "atk": 1900,
 "def": 1200,
-"limit": 1,
+"limit": 3,
 "image": "card-pics/47013502.jpg"
 },
 {
@@ -1439,7 +1439,7 @@
 "level": 4,
 "atk": 1900,
 "def": 1300,
-"limit": 1,
+"limit": 3,
 "image": "card-pics/69884162.jpg"
 },
 {
@@ -1467,7 +1467,7 @@
 "level": 4,
 "atk": 1700,
 "def": 1100,
-"limit": 3,
+"limit": 1,
 "image": "card-pics/89312388.jpg"
 },
 {
@@ -1887,22 +1887,8 @@
 "level": null,
 "atk": null,
 "def": null,
-"limit": 1,
+"limit": 2,
 "image": "card-pics/22020907.jpg"
-},
-{
-"name": "Holding Arms",
-"description": "If this card is Normal or Special Summoned: Target 1 face-up monster your opponent controls; while this card is face-up on the field, that face-up monster cannot attack, also its effects are negated. While that face-up monster is on the field, this card cannot be destroyed by battle or card effects.",
-"cardType": "monster",
-"subType": "fiend",
-"monsterBackground": "effect",
-"monsterMechanic": "",
-"attribute": "dark",
-"level": 4,
-"atk": 500,
-"def": 1200,
-"limit": 1,
-"image": "card-pics/43730887.jpg"
 },
 {
 "name": "Humanoid Slime",
@@ -2055,7 +2041,7 @@
 "level": 4,
 "atk": 1900,
 "def": 1600,
-"limit": 1,
+"limit": 3,
 "image": "card-pics/11091375.jpg"
 },
 {
@@ -2349,23 +2335,10 @@
 "level": 0,
 "atk": 0,
 "def": 0,
-"limit": 2,
+"limit": 3,
 "image": "card-pics/14315573.jpg"
 },
 {
-"name": "Nightmare Wheel",
-"description": "Activate this card by targeting 1 monster your opponent controls; it cannot attack or change its battle position. When it leaves the field, destroy this card. Once per turn, during your Standby Phase: Inflict 500 damage to your opponent. That monster must be on the field to activate and to resolve this effect.",
-"cardType": "trap",
-"subType": "continuous",
-"monsterBackground": "",
-"monsterMechanic": "",
-"attribute": "",
-"level": 0,
-"atk": 0,
-"def": 0,
-"limit": 1,
-"image": "card-pics/54704216.jpg"
-},  {
 "name": "Nightmare's Steelcage",
 "description": "This card remains on the field for 2 of your opponent's turns. No monsters can attack.",
 "cardType": "spell",
@@ -2614,7 +2587,7 @@
 "level": 4,
 "atk": 1900,
 "def": 500,
-"limit": 1,
+"limit": 3,
 "image": "card-pics/37265642.jpg"
 },
 {
@@ -2714,20 +2687,6 @@
 "def": null,
 "limit": 1,
 "image": "card-pics/63035430.jpg"
-},
-{
-"name": "Skyscraper 2 - Hero City",
-"description": "Once per turn, during your Main Phase: You can target 1 \"Elemental HERO\" monster in your GY that was destroyed by battle and sent there; Special Summon that target.",
-"cardType": "spell",
-"subType": "field",
-"monsterBackground": "",
-"monsterMechanic": "",
-"attribute": "",
-"level": null,
-"atk": null,
-"def": null,
-"limit": 1,
-"image": "card-pics/47596607.jpg"
 },
 {
 "name": "Sogen",
@@ -3118,7 +3077,7 @@
 "level": null,
 "atk": null,
 "def": null,
-"limit": 2,
+"limit": 3,
 "image": "card-pics/12607053.jpg"
 },
 {
@@ -3258,7 +3217,7 @@
 "level": 4,
 "atk": 2100,
 "def": 500,
-"limit": 1,
+"limit": 2,
 "image": "card-pics/88472456.jpg"
 },
 {
@@ -4199,7 +4158,7 @@
 "level": 4,
 "atk": 1900,
 "def": 1200,
-"limit": 1,
+"limit": 3,
 "image": "card-pics/68670547.jpg"
 },
 {
@@ -5137,7 +5096,7 @@
 "level": 4,
 "atk": 2100,
 "def": 0,
-"limit": 2,
+"limit": 1,
 "image": "card-pics/65367484.jpg"
 },
 {
@@ -5919,5 +5878,89 @@
 "def": 1000,
 "limit": 3,
 "image": "card-pics/77153811.jpg"
+},
+{
+"name": "Airknight Parshath",
+"description": "If this card attacks a Defense Position monster, inflict piercing battle damage. If this card inflicts battle damage to your opponent: Draw 1 card.",
+"cardType": "monster",
+"subType": "fairy",
+"monsterBackground": "effect",
+"monsterMechanic": "",
+"attribute": "light",
+"level": 4,
+"atk": 1900,
+"def": 1400,
+"limit": 1,
+"image": "card-pics/18036057.jpg"
+},
+{
+"name": "Exarion Universe",
+"description": "During your Battle Step, if this card attacks a Defense Position monster: You can make this card lose exactly 400 ATK, and if it does, it will inflict piercing battle damage. These effects last until the end of this turn.",
+"cardType": "monster",
+"subType": "beast-warrior",
+"monsterBackground": "effect",
+"monsterMechanic": "",
+"attribute": "dark",
+"level": 4,
+"atk": 1800,
+"def": 1900,
+"limit": 1,
+"image": "card-pics/63749102.jpg"
+},
+{
+"name": "Evilswarm Hraesvelg",
+"description": "FLIP: Target 1 face-up card your opponent controls; return that target to the hand.",
+"cardType": "monster",
+"subType": "winged-beast",
+"monsterBackground": "effect",
+"monsterMechanic": "",
+"attribute": "dark",
+"level": 4,
+"atk": 1150,
+"def": 1850,
+"limit": 1,
+"image": "card-pics/35209994.jpg"
+},
+{
+"name": "Flamvell Baby",
+"description": "During your Main Phase, you can send this card from your hand to the Graveyard to select 1 face-up FIRE monster you control and have it gain 400 ATK.",
+"cardType": "monster",
+"subType": "pyro",
+"monsterBackground": "effect",
+"monsterMechanic": "",
+"attribute": "fire",
+"level": 1,
+"atk": 800,
+"def": 200,
+"limit": 3,
+"image": "card-pics/13761956.jpg"
+},
+{
+"name": "Bonfire",
+"description": "Add 1 Level 4 or lower Pyro monster from your Deck to your hand. You can only activate 1 \"Bonfire\" per turn",
+"cardType": "spell",
+"subType": "normal",
+"monsterBackground": "",
+"monsterMechanic": "",
+"attribute": "",
+"level": null,
+"atk": null,
+"def": null,
+"limit": 2,
+"image": "card-pics/85106525.jpg"
+},
+{
+"name": "Flamvell Baby",
+"description": "Quick Effect): You can target 1 \"Wind-Up\" monster you control; banish it until your next Standby Phase. This effect can be used only once while this card is face-up on the field.",
+"cardType": "monster",
+"subType": "beast-warrior",
+"monsterBackground": "effect",
+"monsterMechanic": "",
+"attribute": "earth",
+"level": 3,
+"atk": 1400,
+"def": 600,
+"limit": 3,
+"image": "card-pics/42874792.jpg"
 }
 ]
