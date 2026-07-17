@@ -3189,7 +3189,7 @@
 "level": 4,
 "atk": 2100,
 "def": 500,
-"limit": 2,
+"limit": 1,
 "image": "card-pics/88472456.jpg"
 },
 {
@@ -5990,5 +5990,19 @@
 "def": null,
 "limit": 3,
 "image": "card-pics/96729612.jpg"
+},
+{
+"name": "Pre-Preparation of Rites",
+"description": "Add 1 Ritual Spell from your Deck to your hand, and add 1 Ritual Monster from your Deck or GY to your hand whose name is listed on that Ritual Spell. You can only activate 1 \"Pre-Preparation of Rites\" per turn.",
+"cardType": "spell",
+"subType": "ritual",
+"monsterBackground": "",
+"monsterMechanic": "",
+"attribute": "",
+"level": null,
+"atk": null,
+"def": null,
+"limit": 3,
+"image": "card-pics/46052429.jpg"
 }
 ]
