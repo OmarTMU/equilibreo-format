@@ -305,7 +305,7 @@
 "level": 8,
 "atk": 3000,
 "def": 2500,
-"limit": 3,
+"limit": 1,
 "image": "card-pics/5405694.jpg"
 },
 {
@@ -1285,7 +1285,7 @@
 "level": 6,
 "atk": 2100,
 "def": 1200,
-"limit": 2,
+"limit": 1,
 "image": "card-pics/35809262.jpg"
 },
 {
@@ -2419,7 +2419,7 @@
 "level": 4,
 "atk": 1900,
 "def": 1200,
-"limit": 3,
+"limit": 2,
 "image": "card-pics/73398797.jpg"
 },
 {
@@ -4410,7 +4410,7 @@
 "level": null,
 "atk": null,
 "def": null,
-"limit": 1,
+"limit": 2,
 "image": "card-pics/13955608.jpg"
 },
 {
@@ -4550,7 +4550,7 @@
 "level": 4,
 "atk": 1800,
 "def": 1600,
-"limit": 1,
+"limit": 2,
 "image": "card-pics/50903514.jpg"
 },
 {
@@ -5366,6 +5366,48 @@
 "image": "card-pics/15502037.jpg"
 },
 {
+"name": "Delta The Magnet Warrior",
+"description": "If this card is Normal or Special Summoned: You can send 1 Level 4 or lower \"Magnet Warrior\" monster from your Deck to the GY. If this card is sent to the GY: You can banish 3 Level 4 or lower \"Magnet Warrior\" monsters from your GY, except \"Delta The Magnet Warrior\"; Special Summon 1 \"Valkyrion the Magna Warrior\" from your hand or Deck, ignoring its Summoning conditions. You can only use each effect of \"Delta The Magnet Warrior\" once per turn.",
+"cardType": "monster",
+"subType": "rock",
+"monsterBackground": "effect",
+"monsterMechanic": "",
+"attribute": "earth",
+"level": 4,
+"atk": 1600,
+"def": 1400,
+"limit": 3,
+"image": "card-pics/12262393.jpg"
+},
+{
+"name": "Triamid Fortress",
+"description": "All Rock-Type monsters on the field gain 500 DEF. \"Triamid\" monsters on the field cannot be destroyed by card effects. If this face-up card in the Field Zone is sent to the Graveyard: You can target 1 \"Triamid\" monster in your Graveyard; add it to your hand. You can only use this effect of \"Triamid Fortress\" once per turn",
+"cardType": "spell",
+"subType": "field",
+"monsterBackground": "",
+"monsterMechanic": "",
+"attribute": "",
+"level": null,
+"atk": null,
+"def": null,
+"limit": 3,
+"image": "card-pics/9989792.jpg"
+},
+{
+    "name": "Triamid Kingolem",
+    "description": "All Rock-Type monsters on the field gain 500 ATK. If a \"Triamid\" monster you control battles, your opponent's cards and effects cannot be activated until the end of the Damage Step. If this face-up card in the Field Zone is sent to the Graveyard: You can Special Summon 1 \"Triamid\" monster from your hand. You can only use this effect of \"Triamid Kingolem\" once per turn.",
+    "cardType": "spell",
+    "subType": "field",
+    "monsterBackground": "",
+    "monsterMechanic": "",
+    "attribute": "",
+    "level": null,
+    "atk": null,
+    "def": null,
+    "limit": 3,
+    "image": "card-pics/72772445.jpg"
+    },
+{
 "name": "Whirlwind Prodigy",
 "description": "When Tribute Summoning a WIND monster, you can treat this 1 monster as 2 Tributes.",
 "cardType": "monster",
@@ -5508,6 +5550,7 @@
 {
 "name": "Alpha The Magnet Warrior",
 "description": "",
+"cardType": "monster",
 "subType": "rock",
 "monsterBackground": "normal",
 "monsterMechanic": "",
@@ -5521,6 +5564,7 @@
 {
 "name": "Beta The Magnet Warrior",
 "description": "",
+"cardType": "monster",
 "subType": "rock",
 "monsterBackground": "normal",
 "monsterMechanic": "",
@@ -5534,6 +5578,7 @@
 {
 "name": "Gamma the Magnet Warrior",
 "description": "",
+"cardType": "monster",
 "subType": "rock",
 "monsterBackground": "normal",
 "monsterMechanic": "",
@@ -5547,6 +5592,7 @@
 {
 "name": "Valkyrion the Magna Warrior",
 "description": "Cannot be Normal Summoned/Set. Must first be Special Summoned (from your hand) by Tributing 1 \"Alpha The Magnet Warrior\", \"Beta The Magnet Warrior\", and \"Gamma The Magnet Warrior\" from your hand and/or field. You can Tribute this card, then target 1 \"Alpha The Magnet Warrior\", \"Beta The Magnet Warrior\", and \"Gamma The Magnet Warrior\" in your Graveyard; Special Summon them.",
+"cardType": "monster",
 "subType": "rock",
 "monsterBackground": "effect",
 "monsterMechanic": "",
@@ -5568,7 +5614,7 @@
 "level": null,
 "atk": null,
 "def": null,
-"limit": 2,
+"limit": 3,
 "image": "card-pics/54734082.jpg"
 },
 {
@@ -5582,11 +5628,11 @@
 "level": null,
 "atk": null,
 "def": null,
-"limit": 2,
+"limit": 3,
 "image": "card-pics/77133792.jpg"
 },
 {
-"name": "Magnet Conversion",
+"name": "Magnet Warrior Sigma Plus",
 "description": "While you control an EARTH monster, your opponent's monsters that can attack must attack EARTH monsters. While your opponent controls an EARTH monster, you choose the attack targets for your opponent's attacks. If this card is sent to the GY: You can target 1 Level 4 or lower \"Magnet Warrior\" monster in your GY, except \"Magnet Warrior Sigma Plus\"; add it to your hand or Special Summon it. You can only use this effect of \"Magnet Warrior Sigma Plus\" once per turn.",
 "cardType": "monster",
 "subType": "rock",
@@ -5596,7 +5642,7 @@
 "level": 4,
 "atk": 1800,
 "def": 1500,
-"limit": 1,
+"limit": 3,
 "image": "card-pics/51826619.jpg"
 },
 {
@@ -5880,20 +5926,6 @@
 "image": "card-pics/63749102.jpg"
 },
 {
-"name": "Evilswarm Hraesvelg",
-"description": "FLIP: Target 1 face-up card your opponent controls; return that target to the hand.",
-"cardType": "monster",
-"subType": "winged-beast",
-"monsterBackground": "effect",
-"monsterMechanic": "",
-"attribute": "dark",
-"level": 4,
-"atk": 1150,
-"def": 1850,
-"limit": 1,
-"image": "card-pics/35209994.jpg"
-},
-{
 "name": "Flamvell Baby",
 "description": "During your Main Phase, you can send this card from your hand to the Graveyard to select 1 face-up FIRE monster you control and have it gain 400 ATK.",
 "cardType": "monster",
@@ -6004,5 +6036,33 @@
 "def": null,
 "limit": 3,
 "image": "card-pics/13048472.jpg"
+},
+{
+"name": "Machina Armored Unit",
+"description": "Once per turn, when a Machine monster is destroyed by battle and sent to your GY: You can Special Summon 1 Machine monster from your Deck that has the same Attribute and less ATK than that destroyed monster in the GY.",
+"cardType": "spell",
+"subType": "continuous",
+"monsterBackground": "",
+"monsterMechanic": "",
+"attribute": "",
+"level": null,
+"atk": null,
+"def": null,
+"limit": 1,
+"image": "card-pics/31828916.jpg"
+},
+{
+"name": "Iron Draw",
+"description": "If you control exactly 2 Machine Effect Monsters and no other monsters: Draw 2 cards. For the rest of this turn after this card resolves, you can only Special Summon once. You can only activate 1 \"Iron Draw\" per turn.",
+"cardType": "spell",
+"subType": "normal",
+"monsterBackground": "",
+"monsterMechanic": "",
+"attribute": "",
+"level": null,
+"atk": null,
+"def": null,
+"limit": 2,
+"image": "card-pics/34559295.jpg"
 }
 ]
