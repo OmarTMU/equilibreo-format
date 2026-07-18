@@ -324,7 +324,7 @@
 },
 {
 "name": "Black Veloci",
-"description": "If this card attacks an opponent's monster, it gains 400 ATK during the Damage Step only. If this card is attacked by an opponent's monster, it loses 400 DEF during the Damage Step only.",
+"description": "If this card attacks an opponent's monster, it gains 400 ATK during the Damage Step only. If this card is attacked by an opponent's monster, it loses 400 ATK during the Damage Step only.",
 "cardType": "monster",
 "subType": "dinosaur",
 "monsterBackground": "effect",
