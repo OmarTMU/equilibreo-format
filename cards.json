@@ -42,34 +42,6 @@
 "image": "card-pics/98865920.jpg"
 },
 {
-"name": "Alligator's Sword",
-"description": "Ey, dis mighty lissard man can swing his sword so fast, dat it's more dan da speed a sound!",
-"cardType": "monster",
-"subType": "beast",
-"monsterBackground": "normal",
-"monsterMechanic": "",
-"attribute": "earth",
-"level": 4,
-"atk": 1500,
-"def": 1200,
-"limit": 3,
-"image": "card-pics/64428736.jpg"
-},
-{
-"name": "Alligator's Sword Dragon",
-"description": "\"Baby Dragon\" + \"Alligator's Sword\"\nThis card can attack your opponent directly if the only face-up monsters they control are EARTH, WATER, or FIRE.",
-"cardType": "monster",
-"subType": "dragon",
-"monsterBackground": "fusion",
-"monsterMechanic": "",
-"attribute": "wind",
-"level": 5,
-"atk": 1700,
-"def": 1500,
-"limit": 3,
-"image": "card-pics/3366982.jpg"
-},
-{
 "name": "Amazoness Chain Master",
 "description": "When this card is destroyed by battle and sent to the GY: You can pay 1500 LP; look at your opponent's hand, then add 1 monster from their hand to your hand.",
 "cardType": "monster",
@@ -80,7 +52,7 @@
 "level": 4,
 "atk": 1500,
 "def": 1300,
-"limit": 1,
+"limit": 3,
 "image": "card-pics/29654737.jpg"
 },
 {
@@ -151,7 +123,7 @@
 "level": 1,
 "atk": 300,
 "def": 300,
-"limit": 1,
+"limit": 3,
 "image": "card-pics/9076207.jpg"
 },
 {
@@ -167,20 +139,6 @@
 "def": 1200,
 "limit": 3,
 "image": "card-pics/84914462.jpg"
-},
-{
-"name": "Baby Dragon",
-"description": "Much more than just a child, this dragon is gifted with untapped power.",
-"cardType": "monster",
-"subType": "dragon",
-"monsterBackground": "normal",
-"monsterMechanic": "",
-"attribute": "wind",
-"level": 3,
-"atk": 1200,
-"def": 700,
-"limit": 3,
-"image": "card-pics/88819587.jpg"
 },
 {
 "name": "Backfire",
@@ -221,7 +179,7 @@
 "level": null,
 "atk": null,
 "def": null,
-"limit": 1,
+"limit": 2,
 "image": "card-pics/10012614.jpg"
 },
 {
@@ -263,7 +221,7 @@
 "level": 4,
 "atk": 1800,
 "def": 1100,
-"limit": 2,
+"limit": 3,
 "image": "card-pics/50896944.jpg"
 },
 {
@@ -305,7 +263,7 @@
 "level": 8,
 "atk": 3000,
 "def": 2500,
-"limit": 1,
+"limit": 3,
 "image": "card-pics/5405694.jpg"
 },
 {
@@ -473,7 +431,7 @@
 "level": 4,
 "atk": 1900,
 "def": 1000,
-"limit": 3,
+"limit": 0,
 "image": "card-pics/16719802.jpg"
 },
 {
@@ -487,7 +445,7 @@
 "level": 0,
 "atk": 0,
 "def": 0,
-"limit": 1,
+"limit": 3,
 "image": "card-pics/50243722.jpg"
 },
 {
@@ -557,7 +515,7 @@
 "level": 0,
 "atk": 0,
 "def": 0,
-"limit": 3,
+"limit": 0,
 "image": "card-pics/65830223.jpg"
 },
 {
@@ -613,7 +571,7 @@
 "level": 0,
 "atk": 0,
 "def": 0,
-"limit": 1,
+"limit": 0,
 "image": "card-pics/21843307.jpg"
 },
 {
@@ -641,7 +599,7 @@
 "level": 1,
 "atk": 300,
 "def": 300,
-"limit": 1,
+"limit": 3,
 "image": "card-pics/14618326.jpg"
 },
 {
@@ -669,7 +627,7 @@
 "level": 4,
 "atk": 0,
 "def": 2000,
-"limit": 1,
+"limit": 2,
 "image": "card-pics/98371278.jpg"
 },
 {
@@ -725,7 +683,7 @@
 "level": 4,
 "atk": 2000,
 "def": 800,
-"limit": 2,
+"limit": 0,
 "image": "card-pics/21417692.jpg"
 },
 {
@@ -739,7 +697,7 @@
 "level": 0,
 "atk": 0,
 "def": 0,
-"limit": 2,
+"limit": 3,
 "image": "card-pics/674561.jpg"
 },
 {
@@ -809,7 +767,7 @@
 "level": 6,
 "atk": 2000,
 "def": 1700,
-"limit": 1,
+"limit": 3,
 "image": "card-pics/38033121.jpg"
 },
 {
@@ -869,20 +827,6 @@
 "image": "card-pics/12930501.jpg"
 },
 {
-"name": "Dash Warrior",
-"description": "If this card attacks: it gains 1200 ATK during the Damage Step only.",
-"cardType": "monster",
-"subType": "warrior",
-"monsterBackground": "effect",
-"monsterMechanic": "",
-"attribute": "wind",
-"level": 3,
-"atk": 600,
-"def": 1200,
-"limit": 3,
-"image": "card-pics/34257001.jpg"
-},
-{
 "name": "De-Spell",
 "description": "Target 1 face-up Spell, or 1 Set Spell/Trap, on the field; destroy that target if it is a Spell. (If the target is Set, reveal it.)",
 "cardType": "spell",
@@ -907,7 +851,7 @@
 "level": 4,
 "atk": 1600,
 "def": 2000,
-"limit": 2,
+"limit": 1,
 "image": "card-pics/2525268.jpg"
 },
 {
@@ -963,7 +907,7 @@
 "level": 5,
 "atk": 1200,
 "def": 1500,
-"limit": 2,
+"limit": 3,
 "image": "card-pics/50939127.jpg"
 },
 {
@@ -991,7 +935,7 @@
 "level": 4,
 "atk": 1900,
 "def": 1200,
-"limit": 3,
+"limit": 0,
 "image": "card-pics/47013502.jpg"
 },
 {
@@ -1005,7 +949,7 @@
 "level": 0,
 "atk": 0,
 "def": 0,
-"limit": 2,
+"limit": 0,
 "image": "card-pics/24096228.jpg"
 },
 {
@@ -1103,7 +1047,7 @@
 "level": 4,
 "atk": 0,
 "def": 1800,
-"limit": 1,
+"limit": 3,
 "image": "card-pics/34710660.jpg"
 },
 {
@@ -1117,7 +1061,7 @@
 "level": 4,
 "atk": 1500,
 "def": 1200,
-"limit": 3,
+"limit": 0,
 "image": "card-pics/30314994.jpg"
 },
 {
@@ -1131,7 +1075,7 @@
 "level": 4,
 "atk": 1500,
 "def": 1200,
-"limit": 3,
+"limit": 0,
 "image": "card-pics/92755808.jpg"
 },
 {
@@ -1369,7 +1313,7 @@
 "level": 6,
 "atk": 1900,
 "def": 3000,
-"limit": 1,
+"limit": 3,
 "image": "card-pics/52031567.jpg"
 },
 {
@@ -1411,7 +1355,7 @@
 "level": 7,
 "atk": 2500,
 "def": 2000,
-"limit": 1,
+"limit": 0,
 "image": "card-pics/89943723.jpg"
 },
 {
@@ -1425,7 +1369,7 @@
 "level": 4,
 "atk": 1900,
 "def": 1300,
-"limit": 3,
+"limit": 0,
 "image": "card-pics/69884162.jpg"
 },
 {
@@ -1509,22 +1453,8 @@
 "level": 8,
 "atk": 2800,
 "def": 2800,
-"limit": 1,
-"image": "card-pics/83121692.jpg"
-},
-{
-"name": "Elemental HERO Voltic",
-"description": "When this card inflicts battle damage to your opponent: You can target 1 of your banished \"Elemental HERO\" monsters; Special Summon that target.",
-"cardType": "monster",
-"subType": "thunder",
-"monsterBackground": "effect",
-"monsterMechanic": "",
-"attribute": "light",
-"level": 4,
-"atk": 1000,
-"def": 1500,
 "limit": 3,
-"image": "card-pics/9327502.jpg"
+"image": "card-pics/83121692.jpg"
 },
 {
 "name": "Elemental HERO Wildheart",
@@ -1551,7 +1481,7 @@
 "level": 4,
 "atk": 1000,
 "def": 2000,
-"limit": 1,
+"limit": 2,
 "image": "card-pics/75434695.jpg"
 },
 {
@@ -1579,7 +1509,7 @@
 "level": null,
 "atk": null,
 "def": null,
-"limit": 1,
+"limit": 3,
 "image": "card-pics/6390406.jpg"
 },
 {
@@ -1607,7 +1537,7 @@
 "level": 3,
 "atk": 500,
 "def": 1500,
-"limit": 1,
+"limit": 0,
 "image": "card-pics/74364659.jpg"
 },
 {
@@ -1649,7 +1579,7 @@
 "level": 2,
 "atk": 600,
 "def": 1200,
-"limit": 1,
+"limit": 3,
 "image": "card-pics/66288028.jpg"
 },
 {
@@ -1747,7 +1677,7 @@
 "level": 4,
 "atk": 2000,
 "def": 1200,
-"limit": 1,
+"limit": 0,
 "image": "card-pics/80280944.jpg"
 },
 {
@@ -1789,7 +1719,7 @@
 "level": 8,
 "atk": 2600,
 "def": 2000,
-"limit": 1,
+"limit": 0,
 "image": "card-pics/69933858.jpg"
 },
 {
@@ -1919,34 +1849,6 @@
 "image": "card-pics/36261276.jpg"
 },
 {
-"name": "Jam Breeding Machine",
-"description": "During each of your Standby Phases: Special Summon 1 \"Slime Token\" (Aqua-Type/WATER/LEVEL 1/ATK 500/DEF 500) in Attack Position. You cannot Summon any monsters, except \"Slime Tokens\" (but you can Set).",
-"cardType": "spell",
-"subType": "continuous",
-"monsterBackground": "",
-"monsterMechanic": "",
-"attribute": "",
-"level": null,
-"atk": null,
-"def": null,
-"limit": 1,
-"image": "card-pics/21770260.jpg"
-},
-{
-"name": "Junk Barrage",
-"description": "When the equipped monster destroys a monster by battle and sends it to the Graveyard, inflict damage to your opponent equal to half the destroyed monster's ATK in the Graveyard.",
-"cardType": "spell",
-"subType": "equip",
-"monsterBackground": "",
-"monsterMechanic": "",
-"attribute": "",
-"level": null,
-"atk": null,
-"def": null,
-"limit": 1,
-"image": "card-pics/79068663.jpg"
-},
-{
 "name": "Jurassic World",
 "description": "All Dinosaur-Type monsters gain 300 ATK and DEF.",
 "cardType": "spell",
@@ -1971,7 +1873,7 @@
 "level": 4,
 "atk": 1700,
 "def": 1650,
-"limit": 2,
+"limit": 3,
 "image": "card-pics/17444133.jpg"
 },
 {
@@ -1999,23 +1901,9 @@
 "level": 6,
 "atk": 1500,
 "def": 1800,
-"limit": 1,
+"limit": 0,
 "image": "card-pics/99747800.jpg"
 },
-{
-"name": "Little-Winguard",
-"description": "Once per turn, during your End Phase: You can change the battle position of this card.",
-"cardType": "monster",
-"subType": "warrior",
-"monsterBackground": "effect",
-"monsterMechanic": "",
-"attribute": "wind",
-"level": 4,
-"atk": 1400,
-"def": 1800,
-"limit": 3,
-"image": "card-pics/90790253.jpg"
-}, 
 {
 "name": "Luster Dragon",
 "description": "A very beautiful dragon covered with sapphire. It does not like fights, but has incredibly high attack power.",
@@ -2027,7 +1915,7 @@
 "level": 4,
 "atk": 1900,
 "def": 1600,
-"limit": 3,
+"limit": 0,
 "image": "card-pics/11091375.jpg"
 },
 {
@@ -2041,7 +1929,7 @@
 "level": null,
 "atk": null,
 "def": null,
-"limit": 1,
+"limit": 0,
 "image": "card-pics/62279055.jpg"
 },
 {
@@ -2055,7 +1943,7 @@
 "level": null,
 "atk": null,
 "def": null,
-"limit": 2,
+"limit": 3,
 "image": "card-pics/67227834.jpg"
 },
 {
@@ -2069,7 +1957,7 @@
 "level": null,
 "atk": null,
 "def": null,
-"limit": 1,
+"limit": 0,
 "image": "card-pics/77414722.jpg"
 },
 {
@@ -2265,7 +2153,7 @@
 "level": 4,
 "atk": 1600,
 "def": 600,
-"limit": 1,
+"limit": 0,
 "image": "card-pics/15960641.jpg"
 },
 {
@@ -2293,7 +2181,7 @@
 "level": 4,
 "atk": 1400,
 "def": 1100,
-"limit": 3,
+"limit": 2,
 "image": "card-pics/83011278.jpg"
 },
 {
@@ -2307,7 +2195,7 @@
 "level": 4,
 "atk": 800,
 "def": 2000,
-"limit": 3,
+"limit": 0,
 "image": "card-pics/15025844.jpg"
 },
 {
@@ -2363,7 +2251,7 @@
 "level": 0,
 "atk": 0,
 "def": 0,
-"limit": 2,
+"limit": 3,
 "image": "card-pics/63703130.jpg"
 },
 {
@@ -2405,7 +2293,7 @@
 "level": 4,
 "atk": 1800,
 "def": 800,
-"limit": 3,
+"limit": 0,
 "image": "card-pics/58071123.jpg"
 },
 {
@@ -2419,22 +2307,8 @@
 "level": 4,
 "atk": 1900,
 "def": 1200,
-"limit": 2,
+"limit": 3,
 "image": "card-pics/73398797.jpg"
-},
-{
-"name": "Pitch-Black Power Stone",
-"description": "Activate this card by placing 3 Spell Counters on it. During your turn: You can transfer 1 Spell Counter from this card to another face-up card on the field that you can place a Spell Counter on. When there are no Spell Counters on this card, destroy it.",
-"cardType": "trap",
-"subType": "continuous",
-"monsterBackground": "",
-"monsterMechanic": "",
-"attribute": "",
-"level": 0,
-"atk": 0,
-"def": 0,
-"limit": 1,
-"image": "card-pics/34029630.jpg"
 },
 {
 "name": "Polymerization",
@@ -2489,7 +2363,7 @@
 "level": 5,
 "atk": 2200,
 "def": 0,
-"limit": 1,
+"limit": 0,
 "image": "card-pics/18842395.jpg"
 },
 {
@@ -2531,7 +2405,7 @@
 "level": null,
 "atk": null,
 "def": null,
-"limit": 1,
+"limit": 3,
 "image": "card-pics/37507488.jpg"
 },
 {
@@ -2559,7 +2433,7 @@
 "level": 6,
 "atk": 2400,
 "def": 1400,
-"limit": 2,
+"limit": 3,
 "image": "card-pics/28143906.jpg"
 },
 {
@@ -2573,7 +2447,7 @@
 "level": 4,
 "atk": 1900,
 "def": 500,
-"limit": 3,
+"limit": 0,
 "image": "card-pics/37265642.jpg"
 },
 {
@@ -2615,7 +2489,7 @@
 "level": null,
 "atk": null,
 "def": null,
-"limit": 1,
+"limit": 0,
 "image": "card-pics/3819470.jpg"
 },
 {
@@ -2629,7 +2503,7 @@
 "level": 3,
 "atk": 800,
 "def": 1600,
-"limit": 3,
+"limit": 0,
 "image": "card-pics/95360850.jpg"
 },
 {
@@ -2657,7 +2531,7 @@
 "level": 4,
 "atk": 1900,
 "def": 1700,
-"limit": 1,
+"limit": 0,
 "image": "card-pics/73752131.jpg"
 },
 {
@@ -2699,7 +2573,7 @@
 "level": null,
 "atk": null,
 "def": null,
-"limit": 2,
+"limit": 1,
 "image": "card-pics/35346968.jpg"
 },
 {
@@ -2797,7 +2671,7 @@
 "level": 6,
 "atk": 2500,
 "def": 1200,
-"limit": 1,
+"limit": 3,
 "image": "card-pics/70781052.jpg"
 },
 {
@@ -2811,7 +2685,7 @@
 "level": 8,
 "atk": 3300,
 "def": 1400,
-"limit": 1,
+"limit": 3,
 "image": "card-pics/85520851.jpg"
 },
 {
@@ -2825,22 +2699,8 @@
 "level": 4,
 "atk": 1800,
 "def": 1200,
-"limit": 2,
-"image": "card-pics/79972330.jpg"
-},
-{
-"name": "Sword Arm of Dragon",
-"description": "An ancient dinosaur with a huge, sword-like blade growing out of its tail.",
-"cardType": "monster",
-"subType": "dinosaur",
-"monsterBackground": "normal",
-"monsterMechanic": "",
-"attribute": "earth",
-"level": 6,
-"atk": 1750,
-"def": 2030,
 "limit": 3,
-"image": "card-pics/13069066.jpg"
+"image": "card-pics/79972330.jpg"
 },
 {
 "name": "Swords of Revealing Light",
@@ -2867,7 +2727,7 @@
 "level": null,
 "atk": null,
 "def": null,
-"limit": 1,
+"limit": 3,
 "image": "card-pics/33017655.jpg"
 },
 {
@@ -2909,7 +2769,7 @@
 "level": 1,
 "atk": 600,
 "def": 500,
-"limit": 2,
+"limit": 3,
 "image": "card-pics/79814787.jpg"
 },
 {
@@ -2965,7 +2825,7 @@
 "level": 3,
 "atk": 1500,
 "def": 1200,
-"limit": 1,
+"limit": 3,
 "image": "card-pics/43586926.jpg"
 },
 {
@@ -3007,7 +2867,7 @@
 "level": null,
 "atk": null,
 "def": null,
-"limit": 1,
+"limit": 2,
 "image": "card-pics/57470761.jpg"
 },
 {
@@ -3147,7 +3007,7 @@
 "level": 3,
 "atk": 800,
 "def": 1200,
-"limit": 2,
+"limit": 3,
 "image": "card-pics/6480253.jpg"
 },
 {
@@ -3165,20 +3025,6 @@
 "image": "card-pics/59197169.jpg"
 },
 {
-"name": "Zoa",
-"description": "A monster whose full potential can be achieved when outfitted with \"Metalmorph\".",
-"cardType": "monster",
-"subType": "fiend",
-"monsterBackground": "normal",
-"monsterMechanic": "",
-"attribute": "dark",
-"level": 7,
-"atk": 2600,
-"def": 1900,
-"limit": 3,
-"image": "card-pics/24311372.jpg"
-},
-{
 "name": "Zombyra the Dark",
 "description": "This card cannot attack your opponent directly. If this card destroys a monster by battle: This card loses 200 ATK.",
 "cardType": "monster",
@@ -3189,7 +3035,7 @@
 "level": 4,
 "atk": 2100,
 "def": 500,
-"limit": 1,
+"limit": 0,
 "image": "card-pics/88472456.jpg"
 },
 {
@@ -3245,12 +3091,12 @@
 "level": 4,
 "atk": 1800,
 "def": 1300,
-"limit": 1,
+"limit": 0,
 "image": "card-pics/88409165.jpg"
 },
 {
 "name": "Amphibious Bugroth MK-3",
-"description": "As long as \"Umi\" is face-up on the field, this card can attack your opponent directly. If it does using this effect, the battle damage inflicted to your opponent is halved.",
+"description": "As long as \"Umi\" is face-up on the field, this card can attack your opponent directly.",
 "cardType": "monster",
 "subType": "machine",
 "monsterBackground": "effect",
@@ -3273,7 +3119,7 @@
 "level": 4,
 "atk": 1200,
 "def": 2000,
-"limit": 3,
+"limit": 0,
 "image": "card-pics/85639257.jpg"
 },
 {
@@ -3329,7 +3175,7 @@
 "level": 1,
 "atk": 600,
 "def": 100,
-"limit": 3,
+"limit": 0,
 "image": "card-pics/13314457.jpg"
 },
 {
@@ -3385,7 +3231,7 @@
 "level": 2,
 "atk": 200,
 "def": 200,
-"limit": 3,
+"limit": 0,
 "image": "card-pics/51282878.jpg"
 },
 {
@@ -3427,7 +3273,7 @@
 "level": 3,
 "atk": 1000,
 "def": 1000,
-"limit": 3,
+"limit": 0,
 "image": "card-pics/41249545.jpg"
 },
 {
@@ -3441,7 +3287,7 @@
 "level": 4,
 "atk": 1700,
 "def": 1500,
-"limit": 2,
+"limit": 3,
 "image": "card-pics/17201174.jpg"
 },
 {
@@ -3455,7 +3301,7 @@
 "level": 4,
 "atk": 1500,
 "def": 700,
-"limit": 3,
+"limit": 0,
 "image": "card-pics/24435369.jpg"
 },
 {
@@ -3469,7 +3315,7 @@
 "level": 0,
 "atk": 0,
 "def": 0,
-"limit": 2,
+"limit": 3,
 "image": "card-pics/22123627.jpg"
 },
 {
@@ -3539,7 +3385,7 @@
 "level": 4,
 "atk": 1500,
 "def": 500,
-"limit": 1,
+"limit": 3,
 "image": "card-pics/31709826.jpg"
 },
 {
@@ -3623,7 +3469,7 @@
 "level": 5,
 "atk": 2400,
 "def": 1000,
-"limit": 2,
+"limit": 3,
 "image": "card-pics/78060096.jpg"
 },
 {
@@ -3651,7 +3497,7 @@
 "level": 4,
 "atk": 1900,
 "def": 1200,
-"limit": 1,
+"limit": 0,
 "image": "card-pics/43797906.jpg"
 },
 {
@@ -3705,7 +3551,7 @@
 "level": 6,
 "atk": 2400,
 "def": 1400,
-"limit": 2,
+"limit": 3,
 "image": "card-pics/17658803.jpg"
 },
 {
@@ -3832,7 +3678,7 @@
 "level": 4,
 "atk": 1500,
 "def": 1600,
-"limit": 3,
+"limit": 0,
 "image": "card-pics/65622692.jpg"
 },
 
@@ -3847,7 +3693,7 @@
 "level": 4,
 "atk": 1500,
 "def": 1300,
-"limit": 2,
+"limit": 0,
 "image": "card-pics/64500000.jpg"
 },
 
@@ -3862,7 +3708,7 @@
 "level": 4,
 "atk": 1800,
 "def": 1500,
-"limit": 3,
+"limit": 0,
 "image": "card-pics/62651957.jpg"
 },
 
@@ -3962,7 +3808,7 @@
 "level": 6,
 "atk": 2100,
 "def": 2200,
-"limit": 1,
+"limit": 0,
 "image": "card-pics/25119460.jpg"
 },
 {
@@ -3976,7 +3822,7 @@
 "level": 6,
 "atk": 2200,
 "def": 1900,
-"limit": 1,
+"limit": 0,
 "image": "card-pics/2111707.jpg"
 },
 {
@@ -3990,7 +3836,7 @@
 "level": 6,
 "atk": 2400,
 "def": 2100,
-"limit": 1,
+"limit": 0,
 "image": "card-pics/99724761.jpg"
 },
 {
@@ -4074,7 +3920,7 @@
 "level": null,
 "atk": null,
 "def": null,
-"limit": 1,
+"limit": 0,
 "image": "card-pics/79852326.jpg"
 },
 {
@@ -4088,7 +3934,7 @@
 "level": null,
 "atk": null,
 "def": null,
-"limit": 2,
+"limit": 1,
 "image": "card-pics/39033131.jpg"
 },
 {
@@ -4130,7 +3976,7 @@
 "level": 4,
 "atk": 1900,
 "def": 1200,
-"limit": 3,
+"limit": 0,
 "image": "card-pics/68670547.jpg"
 },
 {
@@ -4158,7 +4004,7 @@
 "level": 4,
 "atk": 1800,
 "def": 0,
-"limit": 2,
+"limit": 3,
 "image": "card-pics/17259470.jpg"
 },
 {
@@ -4242,7 +4088,7 @@
 "level": null,
 "atk": null,
 "def": null,
-"limit": 1,
+"limit": 2,
 "image": "card-pics/48976825.jpg"
 },
 {
@@ -4256,7 +4102,7 @@
 "level": null,
 "atk": null,
 "def": null,
-"limit": 1,
+"limit": 3,
 "image": "card-pics/43250041.jpg"
 },
 {
@@ -4354,7 +4200,7 @@
 "level": 4,
 "atk": 1500,
 "def": 1000,
-"limit": 3,
+"limit": 1,
 "image": "card-pics/45985838.jpg"
 },
 {
@@ -4368,7 +4214,7 @@
 "level": null,
 "atk": null,
 "def": null,
-"limit": 1,
+"limit": 3,
 "image": "card-pics/1784686.jpg"
 },
 {
@@ -4438,7 +4284,7 @@
 "level": 4,
 "atk": 800,
 "def": 2200,
-"limit": 1,
+"limit": 0,
 "image": "card-pics/30190809.jpg"
 },
 {
@@ -4606,7 +4452,7 @@
 "level": null,
 "atk": null,
 "def": null,
-"limit": 1,
+"limit": 0,
 "image": "card-pics/37436476.jpg"
 },
 {
@@ -4620,7 +4466,7 @@
 "level": null,
 "atk": null,
 "def": null,
-"limit": 3,
+"limit": 0,
 "image": "card-pics/19384334.jpg"
 },
 {
@@ -4634,7 +4480,7 @@
 "level": 4,
 "atk": 1700,
 "def": 1000,
-"limit": 2,
+"limit": 0,
 "image": "card-pics/13522325.jpg"
 },
 {
@@ -4648,7 +4494,7 @@
 "level": 4,
 "atk": 1700,
 "def": 800,
-"limit": 1,
+"limit": 0,
 "image": "card-pics/89609515.jpg"
 },
 {
@@ -4662,7 +4508,7 @@
 "level": 4,
 "atk": 1800,
 "def": 600,
-"limit": 2,
+"limit": 0,
 "image": "card-pics/89770167.jpg"
 },
 {
@@ -4676,7 +4522,7 @@
 "level": 4,
 "atk": 1700,
 "def": 200,
-"limit": 3,
+"limit": 0,
 "image": "card-pics/46404281.jpg"
 },
 {
@@ -4690,7 +4536,7 @@
 "level": 4,
 "atk": 1600,
 "def": 900,
-"limit": 1,
+"limit": 0,
 "image": "card-pics/38492752.jpg"
 },
 {
@@ -4704,7 +4550,7 @@
 "level": 1,
 "atk": 100,
 "def": 200,
-"limit": 3,
+"limit": 0,
 "image": "card-pics/2407147.jpg"
 },
 {
@@ -4718,7 +4564,7 @@
 "level": 3,
 "atk": 300,
 "def": 400,
-"limit": 1,
+"limit": 0,
 "image": "card-pics/89893715.jpg"
 },
 {
@@ -4732,7 +4578,7 @@
 "level": 2,
 "atk": 1300,
 "def": 700,
-"limit": 3,
+"limit": 0,
 "image": "card-pics/45439263.jpg"
 },
 {
@@ -4830,7 +4676,7 @@
 "level": 2,
 "atk": 300,
 "def": 500,
-"limit": 3,
+"limit": 0,
 "image": "card-pics/23927567.jpg"
 },
 {
@@ -4858,7 +4704,7 @@
 "level": 4,
 "atk": 2000,
 "def": 100,
-"limit": 1,
+"limit": 0,
 "image": "card-pics/93220472.jpg"
 },
 {
@@ -4886,7 +4732,7 @@
 "level": null,
 "atk": null,
 "def": null,
-"limit": 1,
+"limit": 0,
 "image": "card-pics/82422049.jpg"
 },
 {
@@ -4900,7 +4746,7 @@
 "level": null,
 "atk": null,
 "def": null,
-"limit": 3,
+"limit": 0,
 "image": "card-pics/8414337.jpg"
 },
 {
@@ -4914,7 +4760,7 @@
 "level": null,
 "atk": null,
 "def": null,
-"limit": 1,
+"limit": 0,
 "image": "card-pics/91822647.jpg"
 },
 {
@@ -4928,7 +4774,7 @@
 "level": null,
 "atk": null,
 "def": null,
-"limit": 1,
+"limit": 0,
 "image": "card-pics/83544697.jpg"
 },
 {
@@ -4942,7 +4788,7 @@
 "level": null,
 "atk": null,
 "def": null,
-"limit": 3,
+"limit": 0,
 "image": "card-pics/45778932.jpg"
 },
 {
@@ -4956,7 +4802,7 @@
 "level": 6,
 "atk": 2000,
 "def": 1000,
-"limit": 1,
+"limit": 0,
 "image": "card-pics/27944249.jpg"
 },
 {
@@ -4970,7 +4816,7 @@
 "level": 4,
 "atk": 1700,
 "def": 1100,
-"limit": 1,
+"limit": 0,
 "image": "card-pics/91449144.jpg"
 },
 {
@@ -4984,7 +4830,7 @@
 "level": 4,
 "atk": 1800,
 "def": 900,
-"limit": 2,
+"limit": 0,
 "image": "card-pics/9837195.jpg"
 },
 {
@@ -4998,7 +4844,7 @@
 "level": 3,
 "atk": 1000,
 "def": 1500,
-"limit": 2,
+"limit": 0,
 "image": "card-pics/71175527.jpg"
 },
 {
@@ -5012,7 +4858,7 @@
 "level": 1,
 "atk": 200,
 "def": 400,
-"limit": 1,
+"limit": 0,
 "image": "card-pics/91662792.jpg"
 },
 {
@@ -5026,7 +4872,7 @@
 "level": 1,
 "atk": 500,
 "def": 500,
-"limit": 1,
+"limit": 0,
 "image": "card-pics/65277087.jpg"
 },
 {
@@ -5040,7 +4886,7 @@
 "level": 2,
 "atk": 0,
 "def": 1800,
-"limit": 3,
+"limit": 0,
 "image": "card-pics/336369.jpg"
 },
 {
@@ -5054,22 +4900,8 @@
 "level": 2,
 "atk": 800,
 "def": 300,
-"limit": 3,
+"limit": 0,
 "image": "card-pics/42082363.jpg"
-},
-{
-"name": "Photon Thrasher",
-"description": "Cannot be Normal Summoned/Set. Must first be Special Summoned (from your hand) while you control no monsters. Cannot attack if you control another monster.",
-"cardType": "monster",
-"subType": "warrior",
-"monsterBackground": "effect",
-"monsterMechanic": "",
-"attribute": "light",
-"level": 4,
-"atk": 2100,
-"def": 0,
-"limit": 1,
-"image": "card-pics/65367484.jpg"
 },
 {
 "name": "Photon Crusher",
@@ -5124,7 +4956,7 @@
 "level": 2,
 "atk": 200,
 "def": 1000,
-"limit": 3,
+"limit": 0,
 "image": "card-pics/72439556.jpg"
 },
 {
@@ -5180,7 +5012,7 @@
 "level": 8,
 "atk": 2800,
 "def": 2000,
-"limit": 1,
+"limit": 3,
 "image": "card-pics/82556058.jpg"
 },
 {
@@ -5194,7 +5026,7 @@
 "level": 5,
 "atk": 2000,
 "def": 1400,
-"limit": 1,
+"limit": 3,
 "image": "card-pics/65515667.jpg"
 },
 {
@@ -5292,7 +5124,7 @@
 "level": 1,
 "atk": 900,
 "def": 0,
-"limit": 3,
+"limit": 0,
 "image": "card-pics/13582837.jpg"
 },
 {
@@ -5306,7 +5138,7 @@
 "level": 2,
 "atk": 400,
 "def": 200,
-"limit": 1,
+"limit": 3,
 "image": "card-pics/564541.jpg"
 },
 {
@@ -5320,7 +5152,7 @@
 "level": 4,
 "atk": 1700,
 "def": 1650,
-"limit": 2,
+"limit": 3,
 "image": "card-pics/44436472.jpg"
 },
 {
@@ -5334,7 +5166,7 @@
 "level": 4,
 "atk": 1600,
 "def": 1200,
-"limit": 2,
+"limit": 3,
 "image": "card-pics/38479725.jpg"
 },
 {
@@ -5348,7 +5180,7 @@
 "level": 4,
 "atk": 1500,
 "def": 1600,
-"limit": 2,
+"limit": 3,
 "image": "card-pics/41089128.jpg"
 },
 {
@@ -5362,7 +5194,7 @@
 "level": 3,
 "atk": 800,
 "def": 2000,
-"limit": 3,
+"limit": 0,
 "image": "card-pics/15502037.jpg"
 },
 {
@@ -5376,7 +5208,7 @@
 "level": 4,
 "atk": 1600,
 "def": 1400,
-"limit": 3,
+"limit": 0,
 "image": "card-pics/12262393.jpg"
 },
 {
@@ -5390,23 +5222,23 @@
 "level": null,
 "atk": null,
 "def": null,
-"limit": 3,
+"limit": 0,
 "image": "card-pics/9989792.jpg"
 },
 {
-    "name": "Triamid Kingolem",
-    "description": "All Rock-Type monsters on the field gain 500 ATK. If a \"Triamid\" monster you control battles, your opponent's cards and effects cannot be activated until the end of the Damage Step. If this face-up card in the Field Zone is sent to the Graveyard: You can Special Summon 1 \"Triamid\" monster from your hand. You can only use this effect of \"Triamid Kingolem\" once per turn.",
-    "cardType": "spell",
-    "subType": "field",
-    "monsterBackground": "",
-    "monsterMechanic": "",
-    "attribute": "",
-    "level": null,
-    "atk": null,
-    "def": null,
-    "limit": 3,
-    "image": "card-pics/72772445.jpg"
-    },
+"name": "Triamid Kingolem",
+"description": "All Rock-Type monsters on the field gain 500 ATK. If a \"Triamid\" monster you control battles, your opponent's cards and effects cannot be activated until the end of the Damage Step. If this face-up card in the Field Zone is sent to the Graveyard: You can Special Summon 1 \"Triamid\" monster from your hand. You can only use this effect of \"Triamid Kingolem\" once per turn.",
+"cardType": "spell",
+"subType": "field",
+"monsterBackground": "",
+"monsterMechanic": "",
+"attribute": "",
+"level": null,
+"atk": null,
+"def": null,
+"limit": 0,
+"image": "card-pics/72772445.jpg"
+},
 {
 "name": "Whirlwind Prodigy",
 "description": "When Tribute Summoning a WIND monster, you can treat this 1 monster as 2 Tributes.",
@@ -5418,7 +5250,7 @@
 "level": 4,
 "atk": 1500,
 "def": 1600,
-"limit": 2,
+"limit": 3,
 "image": "card-pics/15090429.jpg"
 },
 {
@@ -5432,7 +5264,7 @@
 "level": 3,
 "atk": 1500,
 "def": 700,
-"limit": 2,
+"limit": 3,
 "image": "card-pics/25163248.jpg"
 },
 {
@@ -5446,7 +5278,7 @@
 "level": 4,
 "atk": 1600,
 "def": 1000,
-"limit": 2,
+"limit": 3,
 "image": "card-pics/23087070.jpg"
 },
 {
@@ -5460,7 +5292,7 @@
 "level": 4,
 "atk": 1600,
 "def": 1200,
-"limit": 1,
+"limit": 3,
 "image": "card-pics/50354944.jpg"
 },
 {
@@ -5474,7 +5306,7 @@
 "level": 4,
 "atk": 1300,
 "def": 1500,
-"limit": 1,
+"limit": 3,
 "image": "card-pics/25280974.jpg"
 },
 {
@@ -5488,7 +5320,7 @@
 "level": null,
 "atk": null,
 "def": null,
-"limit": 2,
+"limit": 0,
 "image": "card-pics/38589847.jpg"
 },
 {
@@ -5502,7 +5334,7 @@
 "level": null,
 "atk": null,
 "def": null,
-"limit": 1,
+"limit": 3,
 "image": "card-pics/52112003.jpg"
 },
 {
@@ -5516,7 +5348,7 @@
 "level": null,
 "atk": null,
 "def": null,
-"limit": 1,
+"limit": 3,
 "image": "card-pics/2903036.jpg"
 },
 {
@@ -5530,7 +5362,7 @@
 "level": null,
 "atk": null,
 "def": null,
-"limit": 1,
+"limit": 3,
 "image": "card-pics/82324105.jpg"
 },
 {
@@ -5544,7 +5376,7 @@
 "level": 6,
 "atk": 2200,
 "def": 2500,
-"limit": 1,
+"limit": 3,
 "image": "card-pics/50287060.jpg"
 },
 {
@@ -5558,7 +5390,7 @@
 "level": 4,
 "atk": 1400,
 "def": 1700,
-"limit": 3,
+"limit": 0,
 "image": "card-pics/99785935.jpg"
 },
 {
@@ -5572,7 +5404,7 @@
 "level": 4,
 "atk": 1700,
 "def": 1600,
-"limit": 3,
+"limit": 0,
 "image": "card-pics/39256679.jpg"
 },
 {
@@ -5586,7 +5418,7 @@
 "level": 4,
 "atk": 1500,
 "def": 1800,
-"limit": 3,
+"limit": 0,
 "image": "card-pics/11549357.jpg"
 },
 {
@@ -5600,7 +5432,7 @@
 "level": 8,
 "atk": 3500,
 "def": 3850,
-"limit": 1,
+"limit": 0,
 "image": "card-pics/75347539.jpg"
 },
 {
@@ -5614,7 +5446,7 @@
 "level": null,
 "atk": null,
 "def": null,
-"limit": 3,
+"limit": 0,
 "image": "card-pics/54734082.jpg"
 },
 {
@@ -5628,7 +5460,7 @@
 "level": null,
 "atk": null,
 "def": null,
-"limit": 3,
+"limit": 0,
 "image": "card-pics/77133792.jpg"
 },
 {
@@ -5642,7 +5474,7 @@
 "level": 4,
 "atk": 1800,
 "def": 1500,
-"limit": 3,
+"limit": 0,
 "image": "card-pics/51826619.jpg"
 },
 {
@@ -5656,7 +5488,7 @@
 "level": 4,
 "atk": 1500,
 "def": 1600,
-"limit": 2,
+"limit": 3,
 "image": "card-pics/92084010.jpg"
 },
 {
@@ -5698,7 +5530,7 @@
 "level": 8,
 "atk": 2500,
 "def": 1500,
-"limit": 3,
+"limit": 0,
 "image": "card-pics/62420419.jpg"
 },
 {
@@ -5712,7 +5544,7 @@
 "level": null,
 "atk": null,
 "def": null,
-"limit": 3,
+"limit": 0,
 "image": "card-pics/60369732.jpg"
 },
 {
@@ -5726,7 +5558,7 @@
 "level": 4,
 "atk": 500,
 "def": 1000,
-"limit": 3,
+"limit": 0,
 "image": "card-pics/10789972.jpg"
 },
 {
@@ -5740,7 +5572,7 @@
 "level": null,
 "atk": null,
 "def": null,
-"limit": 3,
+"limit": 0,
 "image": "card-pics/9845733.jpg"
 },
 {
@@ -5754,7 +5586,7 @@
 "level": 6,
 "atk": 1400,
 "def": 1000,
-"limit": 1,
+"limit": 0,
 "image": "card-pics/90027012.jpg"
 },
 {
@@ -5768,7 +5600,7 @@
 "level": 4,
 "atk": 1400,
 "def": 1000,
-"limit": 3,
+"limit": 0,
 "image": "card-pics/23401839.jpg"
 },
 {
@@ -5782,7 +5614,7 @@
 "level": 4,
 "atk": 1400,
 "def": 1000,
-"limit": 3,
+"limit": 0,
 "image": "card-pics/95492061.jpg"
 },
 {
@@ -5796,7 +5628,7 @@
 "level": 4,
 "atk": 1400,
 "def": 1000,
-"limit": 3,
+"limit": 0,
 "image": "card-pics/57617178.jpg"
 },
 {
@@ -5810,7 +5642,7 @@
 "level": 1,
 "atk": 300,
 "def": 300,
-"limit": 3,
+"limit": 0,
 "image": "card-pics/34334692.jpg"
 },
 {
@@ -5824,7 +5656,7 @@
 "level": null,
 "atk": null,
 "def": null,
-"limit": 3,
+"limit": 0,
 "image": "card-pics/37626500.jpg"
 },
 {
@@ -5838,7 +5670,7 @@
 "level": null,
 "atk": null,
 "def": null,
-"limit": 3,
+"limit": 0,
 "image": "card-pics/48206762.jpg"
 },
 {
@@ -5852,7 +5684,7 @@
 "level": null,
 "atk": null,
 "def": null,
-"limit": 3,
+"limit": 0,
 "image": "card-pics/44182827.jpg"
 },
 {
@@ -5866,7 +5698,7 @@
 "level": null,
 "atk": null,
 "def": null,
-"limit": 3,
+"limit": 0,
 "image": "card-pics/65450690.jpg"
 },
 {
@@ -5880,7 +5712,7 @@
 "level": null,
 "atk": null,
 "def": null,
-"limit": 1,
+"limit": 0,
 "image": "card-pics/9145181.jpg"
 },
 {
@@ -5894,7 +5726,7 @@
 "level": 4,
 "atk": 1700,
 "def": 1000,
-"limit": 3,
+"limit": 0,
 "image": "card-pics/77153811.jpg"
 },
 {
@@ -5936,7 +5768,7 @@
 "level": 1,
 "atk": 800,
 "def": 200,
-"limit": 3,
+"limit": 0,
 "image": "card-pics/13761956.jpg"
 },
 {
@@ -5950,12 +5782,12 @@
 "level": null,
 "atk": null,
 "def": null,
-"limit": 2,
+"limit": 0,
 "image": "card-pics/85106525.jpg"
 },
 {
-"name": "Flamvell Baby",
-"description": "Quick Effect): You can target 1 \"Wind-Up\" monster you control; banish it until your next Standby Phase. This effect can be used only once while this card is face-up on the field.",
+"name": "Wind-Up Rabbit",
+"description": "(Quick Effect): You can target 1 \"Wind-Up\" monster you control; banish it until your next Standby Phase. This effect can be used only once while this card is face-up on the field.",
 "cardType": "monster",
 "subType": "beast-warrior",
 "monsterBackground": "effect",
@@ -5978,7 +5810,7 @@
 "level": 6,
 "atk": 2400,
 "def": 1800,
-"limit": 3,
+"limit": 0,
 "image": "card-pics/84385264.jpg"
 },
 {
@@ -5992,7 +5824,7 @@
 "level": null,
 "atk": null,
 "def": null,
-"limit": 3,
+"limit": 0,
 "image": "card-pics/72446038.jpg"
 },
 {
@@ -6006,7 +5838,7 @@
 "level": null,
 "atk": null,
 "def": null,
-"limit": 3,
+"limit": 0,
 "image": "card-pics/46052429.jpg"
 },
 {
@@ -6020,7 +5852,7 @@
 "level": null,
 "atk": null,
 "def": null,
-"limit": 3,
+"limit": 0,
 "image": "card-pics/96729612.jpg"
 },
 {
@@ -6034,7 +5866,7 @@
 "level": null,
 "atk": null,
 "def": null,
-"limit": 3,
+"limit": 0,
 "image": "card-pics/13048472.jpg"
 },
 {
@@ -6062,7 +5894,287 @@
 "level": null,
 "atk": null,
 "def": null,
-"limit": 2,
+"limit": 1,
 "image": "card-pics/34559295.jpg"
+},
+{
+"name": "Magical Exemplar",
+"description": "Each time a Spell Card is activated, place 2 Spell Counters on this card when that Spell resolves. Once per turn: You can remove any number of Spell Counters from this card; Special Summon 1 Spellcaster monster from your hand or GY whose Level is equal to the number of Spell Counters you removed.",
+"cardType": "monster",
+"subType": "spellcaster",
+"monsterBackground": "effect",
+"monsterMechanic": "",
+"attribute": "earth",
+"level": 4,
+"atk": 1700,
+"def": 1400,
+"limit": 1,
+"image": "card-pics/6061630.jpg"
+},
+{
+"name": "Magical Plant Mandragola",
+"description": "FLIP: Place 1 Spell Counter on each face-up card on the field that you can place a Spell Counter on.",
+"cardType": "monster",
+"subType": "spellcaster",
+"monsterBackground": "effect",
+"monsterMechanic": "flip",
+"attribute": "dark",
+"level": 2,
+"atk": 500,
+"def": 200,
+"limit": 3,
+"image": "card-pics/7802006.jpg"
+},
+{
+"name": "Magical Citadel of Endymion",
+"description": "Each time a Spell Card is activated, place 1 Spell Counter on this card when that Spell resolves. If a card with a Spell Counter(s) is destroyed, place its Spell Counters on this card. Once per turn, if you would activate a card effect by removing a Spell Counter(s) from a card you control, you can remove that many Spell Counters from this card instead. If this card would be destroyed, you can remove 1 Spell Counter from this card instead.",
+"cardType": "spell",
+"subType": "field",
+"monsterBackground": "",
+"monsterMechanic": "",
+"attribute": "",
+"level": null,
+"atk": null,
+"def": null,
+"limit": 3,
+"image": "card-pics/39910367.jpg"
+},
+{
+"name": "Des Feral Imp",
+"description": "FLIP: Target 1 card in your Graveyard; shuffle that target into the Deck.",
+"cardType": "monster",
+"subType": "reptile",
+"monsterBackground": "effect",
+"monsterMechanic": "flip",
+"attribute": "dark",
+"level": 4,
+"atk": 1600,
+"def": 1800,
+"limit": 3,
+"image": "card-pics/81985784.jpg"
+},
+{
+"name": "Worm Opera",
+"description": "FLIP: All face-up monsters on the field lose 500 ATK, except Reptile-Type \"Worm\" monsters.",
+"cardType": "monster",
+"subType": "reptile",
+"monsterBackground": "effect",
+"monsterMechanic": "flip",
+"attribute": "light",
+"level": 2,
+"atk": 400,
+"def": 800,
+"limit": 3,
+"image": "card-pics/28465301.jpg"
+},
+{
+"name": "Reptilianne Gorgon",
+"description": "If this card attacks a monster, after damage calculation: The ATK of that monster becomes 0, also it cannot change its battle position.",
+"cardType": "monster",
+"subType": "reptile",
+"monsterBackground": "effect",
+"monsterMechanic": "",
+"attribute": "dark",
+"level": 3,
+"atk": 1400,
+"def": 1400,
+"limit": 3,
+"image": "card-pics/43426903.jpg"
+},
+{
+"name": "Rafflesia Seduction",
+"description": "FLIP: Take control of 1 face-up monster on your opponent's side of the field until the end of this turn.",
+"cardType": "monster",
+"subType": "plant",
+"monsterBackground": "effect",
+"monsterMechanic": "flip",
+"attribute": "earth",
+"level": 2,
+"atk": 300,
+"def": 900,
+"limit": 3,
+"image": "card-pics/31440542.jpg"
+},
+{
+"name": "Windstorm of Etaqua",
+"description": "Change the battle positions of all face-up monsters your opponent controls.",
+"cardType": "trap",
+"subType": "normal",
+"monsterBackground": "",
+"monsterMechanic": "",
+"attribute": "",
+"level": null,
+"atk": null,
+"def": null,
+"limit": 3,
+"image": "card-pics/59744639.jpg"
+},
+{
+"name": "Zero Gravity",
+"description": "Change the battle positions of all face-up monsters on the field.",
+"cardType": "trap",
+"subType": "normal",
+"monsterBackground": "",
+"monsterMechanic": "",
+"attribute": "",
+"level": null,
+"atk": null,
+"def": null,
+"limit": 3,
+"image": "card-pics/83133491.jpg"
+},
+{
+"name": "Cardcar D",
+"description": "Cannot be Special Summoned. During your Main Phase 1, if this card was Normal Summoned this turn: You can Tribute this card; draw 2 cards, then it becomes the End Phase. You cannot Special Summon during the turn you activate this effect.",
+"cardType": "monster",
+"subType": "machine",
+"monsterBackground": "effect",
+"monsterMechanic": "",
+"attribute": "earth",
+"level": 2,
+"atk": 800,
+"def": 400,
+"limit": 1,
+"image": "card-pics/45812361.jpg"
+},
+{
+"name": "Cyber Valley",
+"description": "You can use 1 of these effects.\n● When this card is targeted for an attack by an opponent's monster: You can banish this card; draw 1 card, then end the Battle Phase.\n● You can target 1 face-up monster you control and this card; banish both that target and this card, then draw 2 cards.\n● You can target 1 card in your GY; banish both this card and 1 card from your hand, then place that target on top of the Deck.",
+"cardType": "monster",
+"subType": "machine",
+"monsterBackground": "effect",
+"monsterMechanic": "",
+"attribute": "light",
+"level": 1,
+"atk": 0,
+"def": 0,
+"limit": 3,
+"image": "card-pics/3657444.jpg"
+},
+{
+"name": "Inferno Hammer",
+"description": "When this card destroys your opponent's monster and sends it to the Graveyard as a result of battle, you can select 1 face-up monster on your opponent's side of the field and flip it into face-down Defense Position.",
+"cardType": "monster",
+"subType": "fiend",
+"monsterBackground": "effect",
+"monsterMechanic": "",
+"attribute": "dark",
+"level": 6,
+"atk": 2400,
+"def": 0,
+"limit": 1,
+"image": "card-pics/17185260.jpg"
+},
+{
+"name": "B.E.S. Crystal Core",
+"description": "When this card is Normal Summoned, put 3 counters on it. This card cannot be destroyed by battle. If this card attacks or is attacked, remove 1 counter from this card at the end of the Damage Step. If you cannot, destroy it. Once per turn, during your Main Phase, you can change 1 face-up Attack Position monster your opponent controls to face-up Defense Position",
+"cardType": "monster",
+"subType": "machine",
+"monsterBackground": "effect",
+"monsterMechanic": "",
+"attribute": "water",
+"level": 5,
+"atk": 2100,
+"def": 1000,
+"limit": 3,
+"image": "card-pics/22790789.jpg"
+},
+{
+"name": "Mist Valley Executor",
+"description": "When this card is Normal Summoned, return all face-up Spell and Trap Cards on the field to their owners' hands.",
+"cardType": "monster",
+"subType": "thunder",
+"monsterBackground": "effect",
+"monsterMechanic": "",
+"attribute": "wind",
+"level": 5,
+"atk": 2100,
+"def": 1600,
+"limit": 3,
+"image": "card-pics/41978142.jpg"
+},
+{
+"name": "Spear Cretin",
+"description": "FLIP: When this card is sent to the Graveyard after being flipped, each player selects 1 monster from their Graveyard, and Special Summons it in face-up Attack Position or face-down Defense Position.",
+"cardType": "monster",
+"subType": "fiend",
+"monsterBackground": "effect",
+"monsterMechanic": "",
+"attribute": "dark",
+"level": 2,
+"atk": 500,
+"def": 500,
+"limit": 1,
+"image": "card-pics/58551308.jpg"
+},
+{
+"name": "Cyber Larva",
+"description": "If this card is targeted for an attack: You take no battle damage for the rest of this turn. When this card is destroyed by battle and sent to the GY: You can Special Summon 1 \"Cyber Larva\" from your Deck.",
+"cardType": "monster",
+"subType": "machine",
+"monsterBackground": "effect",
+"monsterMechanic": "",
+"attribute": "light",
+"level": 1,
+"atk": 400,
+"def": 600,
+"limit": 3,
+"image": "card-pics/35050257.jpg"
+},
+{
+"name": "Battle Fader",
+"description": "When an opponent's monster declares a direct attack: You can Special Summon this card from your hand, then end the Battle Phase. If Summoned this way, banish it when it leaves the field.",
+"cardType": "monster",
+"subType": "fiend",
+"monsterBackground": "effect",
+"monsterMechanic": "",
+"attribute": "dark",
+"level": 1,
+"atk": 0,
+"def": 0,
+"limit": 3,
+"image": "card-pics/19665973.jpg"
+},
+{
+"name": "Eclipse Wyvern",
+"description": "If this card is sent to the Graveyard: Banish 1 Level 7 or higher LIGHT or DARK Dragon-Type monster from your Deck. If this card is banished from your Graveyard: You can add the monster banished by this card's effect to your hand.",
+"cardType": "monster",
+"subType": "dragon",
+"monsterBackground": "effect",
+"monsterMechanic": "",
+"attribute": "light",
+"level": 4,
+"atk": 1600,
+"def": 1000,
+"limit": 3,
+"image": "card-pics/51858306.jpg"
+},
+{
+"name": "Dandylion",
+"description": "If this card is sent to the Graveyard: Special Summon 2 \"Fluff Tokens\" (Plant-Type/WIND/Level 1/ATK 0/DEF 0) in Defense Position. These Tokens cannot be Tributed for a Tribute Summon during the turn they are Special Summoned.",
+"cardType": "monster",
+"subType": "plant",
+"monsterBackground": "effect",
+"monsterMechanic": "",
+"attribute": "earth",
+"level": 3,
+"atk": 300,
+"def": 300,
+"limit": 3,
+"image": "card-pics/15341821.jpg"
+},
+{
+"name": "Dragoroar",
+"description": "Banish 1 EARTH, 1 WATER, 1 FIRE, and 1 WIND monster from your Graveyard; shuffle 1 card on the field into the Deck.",
+"cardType": "spell",
+"subType": "quick-play",
+"monsterBackground": "",
+"monsterMechanic": "",
+"attribute": "",
+"level": null,
+"atk": null,
+"def": null,
+"limit": 1,
+"image": "card-pics/34898052.jpg"
 }
 ]

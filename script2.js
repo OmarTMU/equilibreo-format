@@ -842,13 +842,13 @@ async function loadSelectedDeck(){
 
         const latestCard = findCardByID(savedCard.id);
     
-        if(latestCard){
-    
+        if(latestCard && Number(latestCard.limit) > 0){
+
             addCardToDeck(
                 latestCard,
                 "main-deck-grid"
             );
-    
+        
         }
     
     });
@@ -858,13 +858,13 @@ async function loadSelectedDeck(){
     
         const latestCard = findCardByID(savedCard.id);
     
-        if(latestCard){
-    
+        if(latestCard && Number(latestCard.limit) > 0){
+
             addCardToDeck(
                 latestCard,
                 "extra-deck-grid"
             );
-    
+        
         }
     
     });
@@ -874,13 +874,13 @@ async function loadSelectedDeck(){
     
         const latestCard = findCardByID(savedCard.id);
     
-        if(latestCard){
-    
+        if(latestCard && Number(latestCard.limit) > 0){
+
             addCardToDeck(
                 latestCard,
                 "side-deck-grid"
             );
-    
+        
         }
     
     });
@@ -1656,12 +1656,14 @@ async function loadCards() {
 
     const cards = await response.json();
 
-    allCards = cards;
-    filteredCards = [...cards];
+    // Only keep cards that are allowed in the format
+    allCards = cards.filter(card => Number(card.limit) > 0);
 
-    console.log("JSON cards loaded:", cards.length);
+    filteredCards = [...allCards];
 
-    preloadCardImages(cards);
+    console.log("JSON cards loaded:", allCards.length);
+
+    preloadCardImages(allCards);
 
     renderPage();
 }
