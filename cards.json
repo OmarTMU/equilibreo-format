@@ -529,7 +529,7 @@
 "level": 6,
 "atk": 2400,
 "def": 1900,
-"limit": 1,
+"limit": 3,
 "image": "card-pics/72630549.jpg"
 },
 {
@@ -6344,5 +6344,61 @@
 "def": null,
 "limit": 1,
 "image": "card-pics/36045450.jpg"
+},
+{
+"name": "Gear Gigant X",
+"description": "2 Level 4 Machine-Type monsters\nOnce per turn: You can detach 1 Xyz Material from this card; add 1 Level 4 or lower Machine-Type monster from your Deck or Graveyard to your hand. When this card leaves the field: You can target 1 Level 3 or lower \"Geargia\" monster in your Graveyard; Special Summon that target.",
+"cardType": "monster",
+"subType": "machine",
+"monsterBackground": "xyz",
+"monsterMechanic": "",
+"attribute": "earth",
+"level": 4,
+"atk": 2300,
+"def": 1500,
+"limit": 1,
+"image": "card-pics/28912357.jpg"
+},
+{
+"name": "Number 60: Dugares the Timeless",
+"description": "2 Level 4 monsters\nYou can detach 2 materials from this card, then activate 1 of the following effects;\n● Skip your next Draw Phase, also draw 2 cards, then discard 1 card.\n● Skip your next Main Phase 1, also Special Summon 1 monster from your GY in Defense Position.\n● Skip the Battle Phase of your next turn, also double the ATK of 1 monster you control until the end of this turn.\nYou can only use this effect of \"Number 60: Dugares the Timeless\" once per turn.",
+"cardType": "monster",
+"subType": "fiend",
+"monsterBackground": "xyz",
+"monsterMechanic": "",
+"attribute": "fire",
+"level": 4,
+"atk": 1200,
+"def": 1200,
+"limit": 3,
+"image": "card-pics/66011101.jpg"
+},
+{
+"name": "Lavalval Chain",
+"description": "2 Level 4 monsters\nOnce per turn: You can detach 1 Xyz Material from this card to activate 1 of these effects;\n● Send 1 card from your Deck to the Graveyard.\n● Choose 1 monster from your Deck and place it on top of your Deck.",
+"cardType": "monster",
+"subType": "sea serpent",
+"monsterBackground": "xyz",
+"monsterMechanic": "",
+"attribute": "fire",
+"level": 4,
+"atk": 1800,
+"def": 1000,
+"limit": 1,
+"image": "card-pics/34086406.jpg"
+},
+{
+"name": "Baromet the Sacred Sheep Shrub",
+"description": "2+ Level 4 monsters\nYou can detach 1 material from this card, then target 1 Normal Trap in your GY; place it on the bottom of the Deck, then draw 1 card. If a Normal Trap Card is activated (except during the Damage Step): You can detach 1 material from an Xyz Monster you control, and if you do, Special Summon 1 Level 4 monster from your hand. You can only use each effect of \"Baromet the Sacred Sheep Shrub\" once per turn.",
+"cardType": "monster",
+"subType": "plant",
+"monsterBackground": "xyz",
+"monsterMechanic": "",
+"attribute": "earth",
+"level": 4,
+"atk": 1900,
+"def": 2000,
+"limit": 1,
+"image": "card-pics/62967433.jpg"
 }
 ]

@@ -1640,8 +1640,8 @@ document.addEventListener("click", (e) => {
     };
 
 
-    // Fusion goes extra deck
-    if(card.monsterBackground === "fusion"){
+    // fusion / xyz goes extra deck
+    if(card.monsterBackground === "fusion" || card.monsterBackground === "xyz"){
         addCardToDeck(card, "extra-deck-grid");
     }
     else{
@@ -2200,6 +2200,8 @@ decks.forEach(deck => {
 
     deck.addEventListener("drop", e=>{
 
+
+
         console.log("DROP FIRED ON:", deck.id);
 
         e.preventDefault();
@@ -2219,10 +2221,10 @@ if (targetSlot === draggedSlot) {
         console.log(card);
         console.log(card.monsterBackground);
 
-        // Fusion restriction
+        // Fusion / xyz restriction
         if(
             destination === "main-deck-grid" &&
-            card.monsterBackground === "fusion"
+            (card.monsterBackground === "fusion" || card.monsterBackground === "xyz")
         ){
             return;
         }
@@ -2230,7 +2232,7 @@ if (targetSlot === draggedSlot) {
         // normal monster restriction
         if(
             destination === "extra-deck-grid" &&
-            card.monsterBackground !== "fusion"
+            (card.monsterBackground !== "fusion" && card.monsterBackground !== "xyz")
         ){
             return;
         }
