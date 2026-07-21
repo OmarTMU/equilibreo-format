@@ -6316,5 +6316,33 @@
 "def": 100,
 "limit": 3,
 "image": "card-pics/96005454.jpg"
+},
+{
+"name": "Dwimmered Path",
+"description": "Target 1 Spellcaster Effect Monster in your GY; add it to your hand. You can only activate 1 \"Dwimmered Path\" per turn.",
+"cardType": "spell",
+"subType": "normal",
+"monsterBackground": "",
+"monsterMechanic": "",
+"attribute": "",
+"level": null,
+"atk": null,
+"def": null,
+"limit": 1,
+"image": "card-pics/24721709.jpg"
+},
+{
+"name": "Magicians Unite",
+"description": "If you control 2 or more Attack Position Spellcaster monsters: Target 1 of them; its ATK becomes 3000 until the end of this turn, also for the rest of this turn after this card resolves, other Spellcaster monsters you control cannot attack.",
+"cardType": "spell",
+"subType": "normal",
+"monsterBackground": "",
+"monsterMechanic": "",
+"attribute": "",
+"level": null,
+"atk": null,
+"def": null,
+"limit": 1,
+"image": "card-pics/36045450.jpg"
 }
 ]
