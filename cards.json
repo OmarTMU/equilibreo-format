@@ -6414,5 +6414,19 @@
 "def": null,
 "limit": 1,
 "image": "card-pics/83887306.jpg"
+},
+{
+"name": "Machine Assembly Line",
+"description": "All Machine-Type monsters on the field gain 200 ATK. Each time a face-up Machine-Type monster(s) on the field is destroyed by battle or card effect, place 2 Junk Counters on this card. You can send this card to the Graveyard, then target 1 Machine-Type monster in your Graveyard whose Level is less than or equal to the number of Junk Counters that were on this card; Special Summon that target.",
+"cardType": "spell",
+"subType": "continuous",
+"monsterBackground": "",
+"monsterMechanic": "",
+"attribute": "",
+"level": null,
+"atk": null,
+"def": null,
+"limit": 2,
+"image": "card-pics/25518020.jpg"
 }
 ]
