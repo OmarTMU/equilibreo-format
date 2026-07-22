@@ -6456,5 +6456,33 @@
 "def": null,
 "limit": 1,
 "image": "card-pics/12923641.jpg"
+},
+{
+"name": "Magnet Reverse",
+"description": "Target 1 of your Machine or Rock monsters, that is banished or is in your GY, that cannot be Normal Summoned/Set; Special Summon it.",
+"cardType": "spell",
+"subType": "quick-play",
+"monsterBackground": "",
+"monsterMechanic": "",
+"attribute": "",
+"level": null,
+"atk": null,
+"def": null,
+"limit": 1,
+"image": "card-pics/80352158.jpg"
+},
+{
+"name": "Rare Metalmorph",
+"description": "Activate this card by targeting 1 Machine-Type monster on the field; it gains 500 ATK. Once, negate a Spell effect that targets that monster. When that monster leaves the field, destroy this card.",
+"cardType": "trap",
+"subType": "continuous",
+"monsterBackground": "",
+"monsterMechanic": "",
+"attribute": "",
+"level": null,
+"atk": null,
+"def": null,
+"limit": 3,
+"image": "card-pics/12503902.jpg"
 }
 ]
