@@ -6428,5 +6428,33 @@
 "def": null,
 "limit": 2,
 "image": "card-pics/25518020.jpg"
+},
+{
+"name": "Jar of Avarice",
+"description": "Target 5 cards in your GY, except \"Jar of Avarice\"; shuffle all 5 into the Deck, then draw 1 card. You can only activate 1 \"Jar of Avarice\" per turn.",
+"cardType": "trap",
+"subType": "normal",
+"monsterBackground": "",
+"monsterMechanic": "",
+"attribute": "",
+"level": null,
+"atk": null,
+"def": null,
+"limit": 3,
+"image": "card-pics/98954106.jpg"
+},
+{
+"name": "Swords of Concealing Light",
+"description": "Destroy this card during your 2nd Standby Phase after activation. When this card resolves, change all monsters your opponent controls to face-down Defense Position. Monsters your opponent controls cannot change their battle positions.",
+"cardType": "spell",
+"subType": "continuous",
+"monsterBackground": "",
+"monsterMechanic": "",
+"attribute": "",
+"level": null,
+"atk": null,
+"def": null,
+"limit": 1,
+"image": "card-pics/12923641.jpg"
 }
 ]
