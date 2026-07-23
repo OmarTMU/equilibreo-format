@@ -73,10 +73,11 @@ body {
                 padding: 1%;
                 font-size: 1vw;
                 border-radius: 0.0vw;
+                border-color:rgb(0, 221, 255);
             }
             
             .deck-constructor-button:hover:not(:disabled) {
-                background-color: rgb(187, 233, 253);
+                background-color: rgb(159, 238, 254);
                 cursor: pointer;
             }
             
