@@ -48,6 +48,7 @@ function unlocksearch() {
   })
 
     document.getElementById("export").disabled = false;
+    document.getElementById("clear-deck").disabled = false;
 }
 
 
@@ -495,11 +496,12 @@ let loadingDeck = false;
 
 clearDeckBtn.addEventListener("click", ()=>{
 
+    /*
     if(!currentUser){
         alert("Login first.");
         return;
     }
-
+    */
 
     const confirmClear = confirm(
         "Are you sure you want to clear this deck?"
