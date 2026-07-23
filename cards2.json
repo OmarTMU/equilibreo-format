@@ -1,0 +1,16 @@
+[
+    {
+    "name": "Axe Dragonute",
+    "description": "If this card attacks, it is changed to Defense Position at the end of the Damage Step.",
+    "cardType": "monster",
+    "subType": "dragon",
+    "monsterBackground": "effect",
+    "monsterMechanic": "",
+    "attribute": "dark",
+    "level": 4,
+    "atk": 2000,
+    "def": 1200,
+    "limit": 3,
+    "image": "card-pics/84914462.jpg"
+    }
+]

@@ -34,6 +34,50 @@ const firebaseConfig = {
     appId: "1:661319732393:web:5ebd35db44e1bc8d87adb8",
     measurementId: "G-15E529WTLQ"
 };
+//format select
+const formatSelect = document.getElementById("format-select");
+let currentFormat = formatSelect.value;
+
+formatSelect.addEventListener("change", async () => {
+
+    currentFormat = formatSelect.value;
+
+    clearDeckDisplay();   // <-- add this
+    clearDeckList();      // optional, clears dropdown temporarily
+
+    await loadCards();
+    await loadUserDecks();
+
+});
+//
+
+
+function getDeckCollection(){
+
+    console.log("CURRENT FORMAT:", currentFormat);
+
+    if(currentFormat === "cards"){
+        return "decks";
+    }
+
+    if(currentFormat === "cards2"){
+        return "decks2";
+    }
+
+    console.log("INVALID FORMAT!");
+}
+
+function getDefaultDeckField(){
+
+    if(currentFormat === "cards"){
+        return "defaultCardsDeck";
+    }
+
+    if(currentFormat === "cards2"){
+        return "defaultCards2Deck";
+    }
+
+}
 
 function unlocksearch() {
 
@@ -194,17 +238,40 @@ registerBtn.addEventListener("click", async () => {
 
         const user = userCredential.user;
 
-        // create default deck
-        await setDoc(
-            doc(db, "users", user.uid, "decks", "deck1"),
-            {
-                name: "Deck 1",
+        // create default Equilibreo deck
+await setDoc(
+    doc(
+        db,
+        "users",
+        user.uid,
+        "decks",
+        "deck1"
+    ),
+    {
+        name:"Deck 1",
+        main:[],
+        extra:[],
+        side:[]
+    }
+);
 
-                main: [],
-                extra: [],
-                side: []
-            }
-        );
+
+// create default Classic deck
+await setDoc(
+    doc(
+        db,
+        "users",
+        user.uid,
+        "decks2",
+        "deck1"
+    ),
+    {
+        name:"Deck 1",
+        main:[],
+        extra:[],
+        side:[]
+    }
+);
 
         console.log("Deck created for:", user.uid);
         errorMsg.innerText =
@@ -320,7 +387,7 @@ deleteAccountBtn.addEventListener("click", async ()=>{
 
         // delete all decks
         const decksSnapshot = await getDocs(
-            collection(db, "users", uid, "decks")
+            collection(db, "users", uid, getDeckCollection())
         );
 
 
@@ -723,23 +790,53 @@ async function loadUserDecks(){
         return;
     }
 
+    const deckCollection = getDeckCollection();
 
     const deckSelect = document.getElementById("select-deck");
-
+    
     deckSelect.innerHTML = "";
-
-
+    
+    
     const decksSnapshot = await getDocs(
         collection(
             db,
             "users",
             currentUser.uid,
-            "decks"
+            deckCollection
+        )
+    );
+
+    if(decksSnapshot.empty){
+
+        await setDoc(
+            doc(
+                db,
+                "users",
+                currentUser.uid,
+                deckCollection,
+                "deck1"
+            ),
+            {
+                name: "Deck 1",
+                main: [],
+                extra: [],
+                side: []
+            }
+        );
+    
+    }
+
+    const updatedDecksSnapshot = await getDocs(
+        collection(
+            db,
+            "users",
+            currentUser.uid,
+            deckCollection
         )
     );
 
 
-    decksSnapshot.forEach((deckDoc)=>{
+    updatedDecksSnapshot.forEach((deckDoc)=>{
 
         const deckData = deckDoc.data();
 
@@ -768,13 +865,13 @@ async function loadUserDecks(){
 
     if(
         userData &&
-        userData.defaultDeck &&
+        userData[getDefaultDeckField()] &&
         document.querySelector(
-            `#select-deck option[value="${userData.defaultDeck}"]`
+            `#select-deck option[value="${userData[getDefaultDeckField()]}"]`
         )
     ){
 
-        deckSelect.value = userData.defaultDeck;
+        deckSelect.value = userData[getDefaultDeckField()];
 
     }
     else{
@@ -795,13 +892,13 @@ async function loadUserDecks(){
     let defaultFound = false;
 
 
-    if(userData && userData.defaultDeck){
+    if(userData && userData[getDefaultDeckField()]){
 
         for(const option of selectDeck.options){
 
-            if(option.value === userData.defaultDeck){
+            if(option.value === userData[getDefaultDeckField()]){
 
-                selectDeck.value = userData.defaultDeck;
+                selectDeck.value = userData[getDefaultDeckField()];
                 defaultFound = true;
                 break;
 
@@ -845,7 +942,7 @@ async function loadSelectedDeck(){
             db,
             "users",
             currentUser.uid,
-            "decks"
+            getDeckCollection()
         )
     );
 
@@ -944,24 +1041,22 @@ setDefaultDeckBtn.addEventListener("click", async ()=>{
         return;
     }
 
+    const defaultField = getDefaultDeckField();
 
-    await setDoc(
 
-        doc(
-            db,
-            "users",
-            currentUser.uid
-        ),
-
-        {
-            defaultDeck: deckID
-        },
-
-        {
-            merge:true
-        }
-
-    );
+await setDoc(
+    doc(
+        db,
+        "users",
+        currentUser.uid
+    ),
+    {
+        [defaultField]: deckID
+    },
+    {
+        merge:true
+    }
+);
 
     const deckName = selectDeck.options[selectDeck.selectedIndex].textContent;
 
@@ -1006,7 +1101,7 @@ newDeckBtn.addEventListener("click", async function () {
             db,
             "users",
             currentUser.uid,
-            "decks",
+            getDeckCollection(),
             deckName
         ),
         {
@@ -1074,7 +1169,7 @@ saveAsBtn.addEventListener("click", async ()=>{
             db,
             "users",
             currentUser.uid,
-            "decks",
+            getDeckCollection(),
             deckName
         ),
 
@@ -1185,9 +1280,9 @@ deleteDeckBtn.addEventListener("click", async function () {
         const userData = userSnapshot.data();
         
         const wasDefaultDeck = 
-            userData && userData.defaultDeck === deckID;
+            userData && userData[getDefaultDeckField()] === deckID;
             console.log("Deleting:", deckID);
-console.log("Saved default:", userData.defaultDeck);
+console.log("Saved default:", userData[getDefaultDeckField()]);
 console.log("Was default?", wasDefaultDeck);
         // delete from Firebase
         await deleteDoc(
@@ -1195,7 +1290,7 @@ console.log("Was default?", wasDefaultDeck);
                 db,
                 "users",
                 currentUser.uid,
-                "decks",
+                getDeckCollection(),
                 deckID
             )
         );
@@ -1226,7 +1321,7 @@ if(wasDefaultDeck && selectDeck.options.length > 0){
         ),
 
         {
-            defaultDeck: selectDeck.value
+            [getDefaultDeckField()]: selectDeck.value
         },
 
         {
@@ -1254,13 +1349,13 @@ const userData2 = userSnapshot2.data();
 let foundDefault = false;
 
 
-if(userData2 && userData2.defaultDeck){
+if(userData2 && userData2[getDefaultDeckField()]){
 
     for(const option of selectDeck.options){
 
-        if(option.value === userData2.defaultDeck){
+        if(option.value === userData2[getDefaultDeckField()]){
 
-            selectDeck.value = userData2.defaultDeck;
+            selectDeck.value = userData2.getDefaultDeckField();
             foundDefault = true;
             break;
 
@@ -1311,7 +1406,7 @@ async function saveCurrentDeck(){
 
     await setDoc(
 
-        doc(db, "users", currentUser.uid, "decks", deckID),
+        doc(db, "users", currentUser.uid, getDeckCollection(), deckID),
 
         {
             main: getCardsFromGrid("main-deck-grid"),
@@ -1385,7 +1480,7 @@ renameDeckBtn.addEventListener("click", async ()=>{
             db,
             "users",
             currentUser.uid,
-            "decks",
+            getDeckCollection(),
             deckID
         ),
 
@@ -1522,7 +1617,7 @@ async function importYDK(ydk){
             db,
             "users",
             currentUser.uid,
-            "decks",
+            getDeckCollection(),
             deckName
         ),
 
@@ -1687,9 +1782,12 @@ document.addEventListener("click", (e) => {
 
 });
 
+
+
+
 async function loadCards() {
 
-    const response = await fetch("cards.json");
+    const response = await fetch(`${currentFormat}.json`);
 
     const cards = await response.json();
 
@@ -1704,6 +1802,7 @@ async function loadCards() {
 
     renderPage();
 }
+
 
 
 function preloadCardImages(cards){
@@ -2356,6 +2455,7 @@ document.addEventListener("contextmenu", e => {
 
 });
 
+
 loadCards();
 
 function findCardByID(id){
@@ -2372,3 +2472,4 @@ function findCardByID(id){
     });
 
 }
+
