@@ -3920,7 +3920,7 @@
 "level": null,
 "atk": null,
 "def": null,
-"limit": 1,
+"limit": 0,
 "image": "card-pics/2204140.jpg"
 },
 {
@@ -3962,7 +3962,7 @@
 "level": null,
 "atk": null,
 "def": null,
-"limit": 1,
+"limit": 2,
 "image": "card-pics/39033131.jpg"
 },
 {
@@ -6230,7 +6230,7 @@
 "level": 5,
 "atk": 2400,
 "def": 1200,
-"limit": 1,
+"limit": 0,
 "image": "card-pics/25460258.jpg"
 },
 {
@@ -6484,5 +6484,47 @@
 "def": null,
 "limit": 3,
 "image": "card-pics/12503902.jpg"
+},
+{
+"name": "Thunder Dragondark",
+"description": "(Quick Effect): You can discard this card; add 1 \"Thunder Dragondark\" from your Deck to your hand. If this card is banished, or sent from the field to the GY: You can add 1 \"Thunder Dragon\" card from your Deck to your hand, except \"Thunder Dragondark\". You can only use 1 \"Thunder Dragondark\" effect per turn, and only once that turn.",
+"cardType": "monster",
+"subType": "thunder",
+"monsterBackground": "effect",
+"monsterMechanic": "",
+"attribute": "dark",
+"level": 5,
+"atk": 1600,
+"def": 1500,
+"limit": 3,
+"image": "card-pics/56713174.jpg"
+},
+{
+"name": "Thunder Dragonhawk",
+"description": "You can discard this card; Special Summon 1 of your \"Thunder Dragon\" monsters that is banished or in your GY, except \"Thunder Dragonhawk\". If this card is banished, or sent from the field to the GY: You can shuffle any number of cards from your hand into the Deck, then draw the same number of cards. You can only use 1 \"Thunder Dragonhawk\" effect per turn, and only once that turn.",
+"cardType": "monster",
+"subType": "thunder",
+"monsterBackground": "effect",
+"monsterMechanic": "",
+"attribute": "light",
+"level": 6,
+"atk": 1800,
+"def": 2200,
+"limit": 2,
+"image": "card-pics/83107873.jpg"
+},
+{
+"name": "Zombie Reborn",
+"description": "Target 1 Zombie monster in either GY; banish 1 monster with the same name from your Deck or Extra Deck, and if you do, Special Summon the targeted monster to your field. If this card is in your GY: You can shuffle 1 of your banished Zombie monsters into the Deck, and if you do, Set this card, but banish it when it leaves the field. You can only use 1 \"Zombie Reborn\" effect per turn, and only once that turn.",
+"cardType": "spell",
+"subType": "normal",
+"monsterBackground": "",
+"monsterMechanic": "",
+"attribute": "",
+"level": null,
+"atk": null,
+"def": null,
+"limit": 2,
+"image": "card-pics/19942835.jpg"
 }
 ]
