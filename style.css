@@ -66,23 +66,24 @@ body {
                 height:22%;
             }
 
-                .deck-constructor-button {
-                    width: 48%;
-                    height: auto;
-                    margin:1%;
-                    padding:1%;
-                    color:black;
-                    background-color: rgb(255, 255, 255);
-                    border-style: solid;
-                    border-color: rgb(4, 222, 255);
-                    font-size:1vw;
-                    border-radius:0.0vw;
-                }
-
-                .deck-constructor-button:hover {
-                    background-color: rgb(187, 233, 253);
-                    cursor: pointer;
-                }
+            .deck-constructor-button {
+                width: 48%;
+                height: auto;
+                margin: 1%;
+                padding: 1%;
+                font-size: 1vw;
+                border-radius: 0.0vw;
+            }
+            
+            .deck-constructor-button:hover:not(:disabled) {
+                background-color: rgb(187, 233, 253);
+                cursor: pointer;
+            }
+            
+            .deck-constructor-button:disabled {
+                background-color: white;
+            }
+            
 
 
             #auth-container {

@@ -42,6 +42,20 @@
 "image": "card-pics/98865920.jpg"
 },
 {
+"name": "Achacha Chanbara",
+"description": "During either player's turn, when a card or effect is activated that will inflict damage when it resolves: You can Special Summon this card from your hand, and if you do, inflict 400 damage to your opponent.",
+"cardType": "monster",
+"subType": "warrior",
+"monsterBackground": "effect",
+"monsterMechanic": "",
+"attribute": "fire",
+"level": 3,
+"atk": 1400,
+"def": 400,
+"limit": 3,
+"image": "card-pics/62476197.jpg"
+},
+{
 "name": "Amazoness Chain Master",
 "description": "When this card is destroyed by battle and sent to the GY: You can pay 1500 LP; look at your opponent's hand, then add 1 monster from their hand to your hand.",
 "cardType": "monster",
@@ -3091,7 +3105,7 @@
 "level": null,
 "atk": null,
 "def": null,
-"limit": 3,
+"limit": 0,
 "image": "card-pics/295517.jpg"
 },
 {
@@ -3105,7 +3119,7 @@
 "level": 4,
 "atk": 1800,
 "def": 1300,
-"limit": 1,
+"limit": 0,
 "image": "card-pics/18318842.jpg"
 },
 {
@@ -3133,7 +3147,7 @@
 "level": 4,
 "atk": 1500,
 "def": 1300,
-"limit": 3,
+"limit": 0,
 "image": "card-pics/64342551.jpg"
 },
 {
@@ -3175,7 +3189,7 @@
 "level": 4,
 "atk": 1500,
 "def": 800,
-"limit": 3,
+"limit": 0,
 "image": "card-pics/85802526.jpg"
 },
 {
@@ -3217,7 +3231,7 @@
 "level": 5,
 "atk": 1600,
 "def": 1800,
-"limit": 3,
+"limit": 0,
 "image": "card-pics/24128274.jpg"
 },
 {
@@ -3315,7 +3329,7 @@
 "level": 4,
 "atk": 1700,
 "def": 1500,
-"limit": 3,
+"limit": 0,
 "image": "card-pics/17201174.jpg"
 },
 {
@@ -3343,7 +3357,7 @@
 "level": 0,
 "atk": 0,
 "def": 0,
-"limit": 3,
+"limit": 0,
 "image": "card-pics/22123627.jpg"
 },
 {
@@ -3357,7 +3371,7 @@
 "level": 4,
 "atk": 1400,
 "def": 1000,
-"limit": 3,
+"limit": 0,
 "image": "card-pics/57839750.jpg"
 },
 {
@@ -3385,7 +3399,7 @@
 "level": 0,
 "atk": 0,
 "def": 0,
-"limit": 3,
+"limit": 0,
 "image": "card-pics/44728989.jpg"
 },
 {
@@ -3427,7 +3441,7 @@
 "level": 0,
 "atk": 0,
 "def": 0,
-"limit": 3,
+"limit": 0,
 "image": "card-pics/96947648.jpg"
 },
 {
@@ -3469,7 +3483,7 @@
 "level": 0,
 "atk": 0,
 "def": 0,
-"limit": 1,
+"limit": 0,
 "image": "card-pics/58203736.jpg"
 },
 {
@@ -3497,7 +3511,7 @@
 "level": 5,
 "atk": 2400,
 "def": 1000,
-"limit": 3,
+"limit": 0,
 "image": "card-pics/78060096.jpg"
 },
 {
@@ -3511,7 +3525,7 @@
 "level": 0,
 "atk": 0,
 "def": 0,
-"limit": 3,
+"limit": 0,
 "image": "card-pics/22702055.jpg"
 },
 {
@@ -4284,7 +4298,7 @@
 "level": null,
 "atk": null,
 "def": null,
-"limit": 2,
+"limit": 3,
 "image": "card-pics/13955608.jpg"
 },
 {
@@ -6468,7 +6482,7 @@
 "level": null,
 "atk": null,
 "def": null,
-"limit": 1,
+"limit": 3,
 "image": "card-pics/80352158.jpg"
 },
 {
@@ -6482,7 +6496,7 @@
 "level": null,
 "atk": null,
 "def": null,
-"limit": 3,
+"limit": 2,
 "image": "card-pics/12503902.jpg"
 },
 {

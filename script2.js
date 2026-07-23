@@ -33,7 +33,23 @@ const firebaseConfig = {
     messagingSenderId: "661319732393",
     appId: "1:661319732393:web:5ebd35db44e1bc8d87adb8",
     measurementId: "G-15E529WTLQ"
-  };
+};
+
+function unlocksearch() {
+
+    const searchSection = document.getElementById("search-section");
+
+    const elements = searchSection.querySelectorAll(
+        "button, input, select"
+    );
+
+    elements.forEach(element => {
+        element.disabled = false;
+  })
+
+    document.getElementById("export").disabled = false;
+}
+
 
   function setWebsiteLocked(locked){
 
@@ -64,6 +80,7 @@ const firebaseConfig = {
     const cards = document.querySelectorAll(
         ".card-ui, .deck-card"
     );
+
 
     cards.forEach(card=>{
 
@@ -128,10 +145,12 @@ onAuthStateChanged(auth, async (user)=>{
         clearDeckList();
     
         setWebsiteLocked(true);
+
+        unlocksearch();
     
         updateAuthButtons(false);
     
-        errorMsg.innerText = "Log in or register!";
+        errorMsg.innerText = "Log in or register to use all features!";
     
     }
 
@@ -499,6 +518,10 @@ clearDeckBtn.addEventListener("click", ()=>{
 
 selectDeck.addEventListener("change", async ()=>{
 
+    if(!currentUser){
+        alert("Login first.");
+        return;
+    }
 
     if(deckChanged){
 
@@ -643,11 +666,23 @@ function downloadYDK(content){
 
 exportBtn.addEventListener("click", ()=>{
 
+    /*
+    if(!currentUser){
+        alert("Login first.");
+        return;
+    }
+    */
+
     exportYDK();
 
 });
 
 importBtn.addEventListener("click", ()=>{
+
+    if(!currentUser){
+        alert("Login first.");
+        return;
+    }
 
     importFile.click();
 
@@ -1294,6 +1329,11 @@ async function saveCurrentDeck(){
 
 saveDeckBtn.addEventListener("click", async ()=>{
 
+    if(!currentUser){
+        alert("Login first.");
+        return;
+    }
+
     await saveCurrentDeck();
 
     alert("Deck saved!");
@@ -1368,11 +1408,6 @@ renameDeckBtn.addEventListener("click", async ()=>{
 });
 
 async function importYDK(ydk){
-
-    if(!currentUser){
-        alert("Login first.");
-        return;
-    }
 
 
     let deckName = prompt(
@@ -2031,11 +2066,12 @@ document.addEventListener("mouseover", (e)=>{
 
 function addCardToDeck(card, deck){
 
-        if(!currentUser){
+    /*   
+    if(!currentUser){
             alert("Login first.");
             return;
         }
-    
+    */
 
     const currentCount = getCardCountInDecks(card.name);
     const limit = Number(card.limit ?? 1);
