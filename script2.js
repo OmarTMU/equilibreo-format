@@ -78,7 +78,7 @@ function getDefaultDeckField(){
     }
 
 }
-
+/*
 function unlocksearch() {
 
     const searchSection = document.getElementById("search-section");
@@ -95,7 +95,7 @@ function unlocksearch() {
     //document.getElementById("import").disabled = false;
     document.getElementById("clear-deck").disabled = false;
 }
-
+*/
 
   function setWebsiteLocked(locked){
 
@@ -111,7 +111,18 @@ function unlocksearch() {
             element.id === "register-btn" ||
             element.id === "logout-btn" ||
             element.id === "username" ||
-            element.id === "password" //||
+            element.id === "password" ||
+
+            element.id === "export" ||
+            element.id === "clear-deck" ||
+
+            element.id === "card-name" ||
+            element.id === "card-description" ||
+            element.id === "card-type" ||
+            element.id === "prev-page" ||
+            element.id === "next-page" ||
+            element.id === "search-button" ||
+            element.id === "format-select"
             //element.id === "import-file"
         ){
             return;
