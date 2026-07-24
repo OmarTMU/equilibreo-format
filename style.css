@@ -1,7 +1,12 @@
 body {
     display: flex;
     justify-content: center;
-    background-color: black;
+
+
+        background-image: url("background-pic.jpg");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
 }
 
     main {
@@ -17,17 +22,15 @@ body {
             width: 19%;
             display: flex;
             flex-direction: column;
-            background-color:black;
         }
 
             #card-view {
                 display: flex;
                 flex-direction: column;
-                height:60%;
+                height:69%;
                 width:100%;
                 overflow:hidden;
                 margin-bottom:0.2vw;
-                background-color:black;
             }
             
                 #card-display-pic {
@@ -73,51 +76,61 @@ body {
                 padding: 1%;
                 font-size: 1vw;
                 border-radius: 0.0vw;
-                border-color:rgb(0, 221, 255);
-            }
-            
-            .deck-constructor-button:hover:not(:disabled) {
-                background-color: rgb(159, 238, 254);
+                border-color:rgb(255, 255, 255);
+                background-color: white;
                 cursor: pointer;
             }
             
             .deck-constructor-button:disabled {
                 background-color: white;
+                cursor: default;
             }
-            
+
+            .deck-constructor-button:not(:disabled):hover {
+                border-color: rgb(99, 82, 248);
+                background-color: rgb(236, 233, 247);
+            }
 
 
             #auth-container {
                 display: flex;
                 flex-direction: column;
                 padding-left: 0.3vw;
-                background-color: white;
+                background-color: rgba(243, 242, 252, 0.871);
                 margin-top:0.2vw;
                 padding-left:0.5vw;
                 padding-right:0.2vw;
                 border-radius: 0.5vw;;
+                /*                border: 0.1vw solid rgb(0, 0, 0);*/
+                /*box-shadow: 0 0 15px cyan;*/
+                
             }
                 h3 {
                     font-size:1vw;
                     padding:0;
+                    padding-top:0.1vw;
                     margin-bottom:0.4vw;
-                    margin-top:0.6vw;
+                    margin-top:0.3vw;
+                    color:rgb(0, 0, 0);
+                    text-align:center;
                 }
 
                 .auth-label {
                     width:30%;
                     font-size: 1vw;
+                    /*font-weight:bold;*/
+                }
+
+                #pass-label {
+                    margin-right: 0.2vw;
                 }
 
                 .auth-box {
                     width:62%;
                     font-size:1vw;
                     margin-bottom:0.2vw;
-                }
-
-                h3 {
-                    color:rgb(0, 0, 220);
-                    text-align:center;
+                    border-radius: 0.2vw;
+                    border-width: 0.01vw;
                 }
 
                 #light-dark-mode {
@@ -134,6 +147,15 @@ body {
                     margin-top:0.2vw;
                     margin-bottom: 0.2vw;
                     font-size:0.8vw;
+                    background-color: rgb(255, 255, 255);
+                    border-color:rgb(193, 175, 175);
+                    border-radius: 0.3vw;
+                }
+
+                .auth-btn:hover {
+                    background-color: rgb(247, 243, 253);
+                    border-color:rgb(96, 56, 255);
+                    cursor: pointer;
                 }
 
                 #register-btn {
@@ -145,9 +167,10 @@ body {
                 }
 
                 #error-msg {
+                    margin-top:0.1vw;
                     font-size: 0.9vw;
-                    color:rgb(255, 25, 0);
-                    font-weight: bold;
+                    color:rgb(255, 0, 0);
+                    font-weight: normal;
                     padding-bottom:0.23vw;
                 }
 
@@ -160,7 +183,7 @@ body {
             width:55%;
             display: flex;
             flex-direction: column;
-            background-color:rgb(230, 187, 187);
+            background-color:rgb(233, 212, 212);
         }
 
 

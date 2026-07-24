@@ -204,7 +204,7 @@ onAuthStateChanged(auth, async (user)=>{
     
         setWebsiteLocked(true);
 
-        unlocksearch();
+        //unlocksearch();
     
         updateAuthButtons(false);
     
@@ -353,7 +353,7 @@ logoutBtn.addEventListener("click", async () => {
 
         await signOut(auth);
 
-        errorMsg.innerText = "Logged out successfully!";
+        errorMsg.innerText = "Log in or register to use all features!";
 
     }
 
