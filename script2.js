@@ -122,7 +122,8 @@ function unlocksearch() {
             element.id === "prev-page" ||
             element.id === "next-page" ||
             element.id === "search-button" ||
-            element.id === "format-select"
+            element.id === "format-select" ||
+            element.id === "limit-select"
             //element.id === "import-file"
         ){
             return;
