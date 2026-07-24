@@ -411,6 +411,11 @@ body {
                     margin-left:3.5vw;
                 }
 
+                #format-select {
+                    margin-left:5%;
+                    font-size: 1vw;
+                }
+
             .search-grid {
                 display: grid;
                 grid-template-columns: repeat(4,21%);

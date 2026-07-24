@@ -766,14 +766,13 @@ importFile.addEventListener("change", async ()=>{
         return;
     }
 
-
     const ydk = await file.text();
 
+    // console.log("FILE SIZE:", file.size);
+    // console.log("RAW FILE:", JSON.stringify(ydk));
 
     await importYDK(ydk);
 
-
-    // reset so importing same file again works
     importFile.value = "";
 
 });
@@ -1281,9 +1280,9 @@ deleteDeckBtn.addEventListener("click", async function () {
         
         const wasDefaultDeck = 
             userData && userData[getDefaultDeckField()] === deckID;
-            console.log("Deleting:", deckID);
-console.log("Saved default:", userData[getDefaultDeckField()]);
-console.log("Was default?", wasDefaultDeck);
+         //   console.log("Deleting:", deckID);
+    // console.log("Saved default:", userData[getDefaultDeckField()]);
+// console.log("Was default?", wasDefaultDeck);
         // delete from Firebase
         await deleteDoc(
             doc(
@@ -1355,7 +1354,7 @@ if(userData2 && userData2[getDefaultDeckField()]){
 
         if(option.value === userData2[getDefaultDeckField()]){
 
-            selectDeck.value = userData2.getDefaultDeckField();
+            selectDeck.value = userData2[getDefaultDeckField()];
             foundDefault = true;
             break;
 
@@ -1536,6 +1535,8 @@ async function importYDK(ydk){
 
         line = line.trim();
 
+     //   console.log("LINE:", line);
+        
 
         if(line === "#main"){
 
@@ -1572,14 +1573,19 @@ async function importYDK(ydk){
 
         const card = findCardByID(line);
 
+// console.log("SEARCHING:", line);
+// console.log("FOUND:", card);
+
 
 
         if(!card){
 
+            /*
             console.log(
                 "Card not found:",
                 line
             );
+            */
 
             continue;
 
@@ -1589,20 +1595,29 @@ async function importYDK(ydk){
 
         if(section === "main"){
 
-            main.push(card);
-
+            main.push({
+                ...card,
+                id: line
+            });
+        
         }
 
         else if(section === "extra"){
 
-            extra.push(card);
-
+            extra.push({
+                ...card,
+                id: line
+            });
+        
         }
-
+        
         else if(section === "side"){
-
-            side.push(card);
-
+        
+            side.push({
+                ...card,
+                id: line
+            });
+        
         }
 
     }
