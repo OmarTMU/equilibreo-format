@@ -92,6 +92,7 @@ function unlocksearch() {
   })
 
     document.getElementById("export").disabled = false;
+    //document.getElementById("import").disabled = false;
     document.getElementById("clear-deck").disabled = false;
 }
 
@@ -110,7 +111,8 @@ function unlocksearch() {
             element.id === "register-btn" ||
             element.id === "logout-btn" ||
             element.id === "username" ||
-            element.id === "password"
+            element.id === "password" //||
+            //element.id === "import-file"
         ){
             return;
         }
@@ -748,10 +750,15 @@ exportBtn.addEventListener("click", ()=>{
 
 importBtn.addEventListener("click", ()=>{
 
+    /*
     if(!currentUser){
         alert("Login first.");
         return;
     }
+    */
+
+    console.log("IMPORT BUTTON CLICKED");
+    console.log(importFile);
 
     importFile.click();
 
@@ -1093,9 +1100,28 @@ newDeckBtn.addEventListener("click", async function () {
 
     deckName = getUniqueDeckName(deckName);
 
+    if(!currentUser){
+        clearDeckDisplay();
+    
+        main.forEach(card=>{
+            addCardToDeck(card,"main-deck-grid");
+        });
+    
+        extra.forEach(card=>{
+            addCardToDeck(card,"extra-deck-grid");
+        });
+    
+        side.forEach(card=>{
+            addCardToDeck(card,"side-deck-grid");
+        });
+    
+        alert("Deck imported locally. Login to save it.");
+        return;
+    }
 
     // create Firebase deck
     await setDoc(
+        
         doc(
             db,
             "users",
