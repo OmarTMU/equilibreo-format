@@ -6722,5 +6722,33 @@
 "def": 500,
 "limit": 0,
 "image": "card-pics/82946847.jpg"
+},
+{
+"name": "Jurrac Protops",
+"description": "This card gains 100 ATK for each monster your opponent controls.",
+"cardType": "monster",
+"subType": "dinosaur",
+"monsterBackground": "effect",
+"monsterMechanic": "",
+"attribute": "fire",
+"level": 4,
+"atk": 1700,
+"def": 1200,
+"limit": 3,
+"image": "card-pics/23927545.jpg"
+},
+{
+"name": "Jurrac Dino",
+"description": "Once during each player's End Phase, if this card destroyed an opponent's monster by battle this turn, you can Tribute 1 \"Jurrac\" monster to draw 2 cards.",
+"cardType": "monster",
+"subType": "dinosaur",
+"monsterBackground": "effect",
+"monsterMechanic": "",
+"attribute": "fire",
+"level": 4,
+"atk": 1700,
+"def": 800,
+"limit": 3,
+"image": "card-pics/17948378.jpg"
 }
 ]
