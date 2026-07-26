@@ -179,7 +179,7 @@
 "level": 4,
 "atk": 1300,
 "def": 400,
-"limit": 3,
+"limit": 0,
 "image": "card-pics/18905769.jpg"
 },
 {
@@ -711,7 +711,7 @@
 "level": 6,
 "atk": 2400,
 "def": 1500,
-"limit": 1,
+"limit": 0,
 "image": "card-pics/65287621.jpg"
 },
 {
@@ -1397,7 +1397,7 @@
 "level": 7,
 "atk": 2500,
 "def": 2000,
-"limit": 0,
+"limit": 3,
 "image": "card-pics/89943723.jpg"
 },
 {
@@ -1873,7 +1873,7 @@
 "level": 4,
 "atk": 1500,
 "def": 1200,
-"limit": 1,
+"limit": 0,
 "image": "card-pics/2671330.jpg"
 },
 {
@@ -2293,7 +2293,7 @@
 "level": 0,
 "atk": 0,
 "def": 0,
-"limit": 3,
+"limit": 0,
 "image": "card-pics/63703130.jpg"
 },
 {
@@ -2545,7 +2545,7 @@
 "level": 4,
 "atk": 1800,
 "def": 1800,
-"limit": 3,
+"limit": 2,
 "image": "card-pics/88901771.jpg"
 },
 {
@@ -3892,7 +3892,7 @@
 "level": null,
 "atk": null,
 "def": null,
-"limit": 3,
+"limit": 0,
 "image": "card-pics/31467372.jpg"
 },
 {
@@ -5936,7 +5936,7 @@
 "level": 4,
 "atk": 1700,
 "def": 1400,
-"limit": 3,
+"limit": 0,
 "image": "card-pics/6061630.jpg"
 },
 {
@@ -5950,7 +5950,7 @@
 "level": 2,
 "atk": 500,
 "def": 200,
-"limit": 3,
+"limit": 1,
 "image": "card-pics/7802006.jpg"
 },
 {
@@ -6710,20 +6710,6 @@
 "image": "card-pics/36042004.jpg"
 },
 {
-"name": "Petiteranodon",
-"description": "If this card is destroyed by a card effect and sent to the Graveyard: Special Summon 1 Level 4 or higher Dinosaur-Type monster from your Deck, but it cannot attack this turn.",
-"cardType": "monster",
-"subType": "dinosaur",
-"monsterBackground": "effect",
-"monsterMechanic": "",
-"attribute": "earth",
-"level": 2,
-"atk": 500,
-"def": 500,
-"limit": 0,
-"image": "card-pics/82946847.jpg"
-},
-{
 "name": "Jurrac Protops",
 "description": "This card gains 100 ATK for each monster your opponent controls.",
 "cardType": "monster",
@@ -6750,5 +6736,243 @@
 "def": 800,
 "limit": 3,
 "image": "card-pics/17948378.jpg"
+},
+{
+"name": "Petiteranodon",
+"description": "If this card is destroyed by a card effect and sent to the Graveyard: Special Summon 1 Level 4 or higher Dinosaur-Type monster from your Deck, but it cannot attack this turn.",
+"cardType": "monster",
+"subType": "dinosaur",
+"monsterBackground": "effect",
+"monsterMechanic": "",
+"attribute": "earth",
+"level": 2,
+"atk": 500,
+"def": 500,
+"limit": 3,
+"image": "card-pics/82946847.jpg"
+},
+{
+"name": "Elemental HERO Brave Neos",
+"description": "\"Elemental HERO Neos\" + 1 Level 4 or lower Effect Monster\nMust be Fusion Summoned. Gains 100 ATK for each \"Neo-Spacian\" and \"HERO\" monster in your GY. When this card destroys an opponent's monster by battle: You can add 1 Spell/Trap from your Deck to your hand that specifically lists the card \"Elemental HERO Neos\" in its text.",
+"cardType": "monster",
+"subType": "warrior",
+"monsterBackground": "fusion",
+"monsterMechanic": "",
+"attribute": "light",
+"level": 7,
+"atk": 2500,
+"def": 2000,
+"limit": 1,
+"image": "card-pics/64655485.jpg"
+},
+{
+"name": "Miracle Contact",
+"description": "Shuffle into the Deck, from your hand, field, or GY, the Fusion Materials that are listed on an \"Elemental HERO\" Fusion Monster that lists \"Elemental HERO Neos\" as Fusion Material, then Special Summon that Fusion Monster from your Extra Deck, ignoring its Summoning conditions.",
+"cardType": "spell",
+"subType": "normal",
+"monsterBackground": "",
+"monsterMechanic": "",
+"attribute": "",
+"level": null,
+"atk": null,
+"def": null,
+"limit": 3,
+"image": "card-pics/35255456.jpg"
+},
+{
+"name": "Ojama Black",
+"description": "",
+"cardType": "monster",
+"subType": "beast",
+"monsterBackground": "normal",
+"monsterMechanic": "",
+"attribute": "light",
+"level": 2,
+"atk": 0,
+"def": 1000,
+"limit": 3,
+"image": "card-pics/79335209.jpg"
+},
+{
+"name": "Ojama Green",
+"description": "",
+"cardType": "monster",
+"subType": "beast",
+"monsterBackground": "normal",
+"monsterMechanic": "",
+"attribute": "light",
+"level": 2,
+"atk": 0,
+"def": 1000,
+"limit": 3,
+"image": "card-pics/12482652.jpg"
+},
+{
+"name": "Ojama Yellow",
+"description": "",
+"cardType": "monster",
+"subType": "beast",
+"monsterBackground": "normal",
+"monsterMechanic": "",
+"attribute": "light",
+"level": 2,
+"atk": 0,
+"def": 1000,
+"limit": 3,
+"image": "card-pics/42941100.jpg"
+},
+{
+"name": "Ojama Blue",
+"description": "When this card is destroyed by battle and sent to the GY: You can add 2 \"Ojama\" cards from your Deck to your hand.",
+"cardType": "monster",
+"subType": "beast",
+"monsterBackground": "effect",
+"monsterMechanic": "",
+"attribute": "light",
+"level": 2,
+"atk": 0,
+"def": 1000,
+"limit": 3,
+"image": "card-pics/64627453.jpg"
+},
+{
+"name": "Ojama Red",
+"description": "When this card is Normal Summoned: You can Special Summon up to 4 \"Ojama\" monsters from your hand in Attack Position.",
+"cardType": "monster",
+"subType": "beast",
+"monsterBackground": "effect",
+"monsterMechanic": "",
+"attribute": "light",
+"level": 2,
+"atk": 0,
+"def": 1000,
+"limit": 3,
+"image": "card-pics/37132349.jpg"
+},
+{
+"name": "Ojama Country",
+"description": "Once per turn, you can send 1 \"Ojama\" card from your hand to the Graveyard to Special Summon 1 \"Ojama\" monster from your Graveyard. While you control a face-up \"Ojama\" monster, switch the original ATK and DEF of all monsters on the field. (\"Ojama\" can include \"Ojamuscle\".)",
+"cardType": "spell",
+"subType": "field",
+"monsterBackground": "",
+"monsterMechanic": "",
+"attribute": "",
+"level": null,
+"atk": null,
+"def": null,
+"limit": 3,
+"image": "card-pics/90011152.jpg"
+},
+{
+"name": "Ojamagic",
+"description": "If this card is sent from the hand or field to the GY: Add 1 each of \"Ojama Green\", \"Ojama Yellow\" and \"Ojama Black\" from your Deck to your hand.",
+"cardType": "spell",
+"subType": "normal",
+"monsterBackground": "",
+"monsterMechanic": "",
+"attribute": "",
+"level": null,
+"atk": null,
+"def": null,
+"limit": 3,
+"image": "card-pics/24643836.jpg"
+},
+{
+"name": "Tri-Wight",
+"description": "Target 3 Level 2 or lower Normal Monsters in your Graveyard; Special Summon them from the Graveyard.",
+"cardType": "spell",
+"subType": "normal",
+"monsterBackground": "",
+"monsterMechanic": "",
+"attribute": "",
+"level": null,
+"atk": null,
+"def": null,
+"limit": 3,
+"image": "card-pics/96383838.jpg"
+},
+{
+"name": "Mimiclay",
+"description": "If your opponent controls a monster: Target 1 Level 2 or lower Defense Position monster you control; Special Summon from your Deck, in Defense Position, 1 monster with the same name as that monster on the field, but banish it when it leaves the field. You can only activate 1 \"Mimiclay\" per turn.",
+"cardType": "spell",
+"subType": "normal",
+"monsterBackground": "",
+"monsterMechanic": "",
+"attribute": "",
+"level": null,
+"atk": null,
+"def": null,
+"limit": 3,
+"image": "card-pics/5972394.jpg"
+},
+{
+"name": "Fleuret de Fleur",
+"description": "Activate this card by targeting 1 Level 2 or lower monster in your GY; Special Summon it, but negate its effects, also equip it with this card. When this card, equipped by this effect, leaves the field, destroy that monster. The equipped monster gains 700 ATK. If this card is sent from the Spell & Trap Zone to the GY: You can equip this card to 1 Synchro Monster you control. You can only use this effect of \"Fleuret de Fleur\" once per turn. You can only activate 1 \"Fleuret de Fleur\" per turn.",
+"cardType": "spell",
+"subType": "equip",
+"monsterBackground": "",
+"monsterMechanic": "",
+"attribute": "",
+"level": null,
+"atk": null,
+"def": null,
+"limit": 3,
+"image": "card-pics/10204849.jpg"
+},
+{
+"name": "Graceful Revival",
+"description": "Activate this card by targeting 1 Level 2 or lower monster in your Graveyard; Special Summon that target in Attack Position. When this card leaves the field, destroy that monster. When that monster leaves the field, destroy this card.",
+"cardType": "trap",
+"subType": "continuous",
+"monsterBackground": "",
+"monsterMechanic": "",
+"attribute": "",
+"level": null,
+"atk": null,
+"def": null,
+"limit": 3,
+"image": "card-pics/5972394.jpg"
+},
+{
+"name": "Human-Wave Tactics",
+"description": "During the End Phase of each turn, select a number of Level 2 or lower Normal Monsters from your Deck equal to the number of your Level 2 or lower Normal Monsters destroyed as a result of battle during that turn, and Special Summon them to your side of the field. The Deck is then shuffled.",
+"cardType": "trap",
+"subType": "continuous",
+"monsterBackground": "",
+"monsterMechanic": "",
+"attribute": "",
+"level": null,
+"atk": null,
+"def": null,
+"limit": 3,
+"image": "card-pics/30353551.jpg"
+},
+{
+"name": "The League of Uniform Nomenclature",
+"description": "Select 1 face-up Level 2 or lower Normal Monster you control to activate this card. Special Summon as many cards as possible from your Deck with the same name as the selected monster.",
+"cardType": "trap",
+"subType": "normal",
+"monsterBackground": "",
+"monsterMechanic": "",
+"attribute": "",
+"level": null,
+"atk": null,
+"def": null,
+"limit": 3,
+"image": "card-pics/55008284.jpg"
+},
+{
+"name": "Ojama Knight",
+"description": "1 \"Ojama\" monster + 1 \"Ojama\" monster\nSelect up to 2 of your opponent's Monster Card Zones. The selected zones cannot be used.",
+"cardType": "monster",
+"subType": "beast",
+"monsterBackground": "fusion",
+"monsterMechanic": "",
+"attribute": "light",
+"level": 5,
+"atk": 0,
+"def": 2500,
+"limit": 3,
+"image": "card-pics/40391316.jpg"
 }
 ]
