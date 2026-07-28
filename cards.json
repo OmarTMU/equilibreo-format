@@ -6006,7 +6006,7 @@
 "level": 2,
 "atk": 300,
 "def": 900,
-"limit": 3,
+"limit": 1,
 "image": "card-pics/31440542.jpg"
 },
 {
@@ -7213,7 +7213,6 @@
 "limit": 3,
 "image": "card-pics/34813545.jpg"
 },
-
 {
 "name": "Bird of Roses",
 "description": "When this face-up Attack Position card is destroyed by battle with an opponent's attacking monster and sent to the Graveyard, you can Special Summon 2 Plant-Type Tuner monsters from your Deck in face-up Defense Position.",
@@ -7269,5 +7268,61 @@
 "def": 1600,
 "limit": 1,
 "image": "card-pics/51351302.jpg"
+},
+{
+"name": "Acid Trap Hole",
+"description": "Target 1 face-down Defense Position monster on the field; flip it face-up, then destroy it if its DEF is 2000 or less, or return it face-down if its DEF is more than 2000.",
+"cardType": "trap",
+"subType": "normal",
+"monsterBackground": "",
+"monsterMechanic": "",
+"attribute": "",
+"level": null,
+"atk": null,
+"def": null,
+"limit": 1,
+"image": "card-pics/41356845.jpg"
+},
+{
+"name": "Chorus of Sanctuary",
+"description": "Increase the DEF of all Defense Position monsters by 500 points.",
+"cardType": "spell",
+"subType": "field",
+"monsterBackground": "",
+"monsterMechanic": "",
+"attribute": "",
+"level": null,
+"atk": null,
+"def": null,
+"limit": 3,
+"image": "card-pics/81380218.jpg"
+},
+{
+"name": "Stumbling",
+"description": "Any monster that is Normal Summoned, Flip Summoned or Special Summoned is changed to Defense Position.",
+"cardType": "spell",
+"subType": "continuous",
+"monsterBackground": "",
+"monsterMechanic": "",
+"attribute": "",
+"level": null,
+"atk": null,
+"def": null,
+"limit": 1,
+"image": "card-pics/34646691.jpg"
+},
+{
+"name": "Des Koala",
+"description": "FLIP: Inflict 400 damage to your opponent for each card in their hand.",
+"cardType": "monster",
+"subType": "beast",
+"monsterBackground": "effect",
+"monsterMechanic": "",
+"attribute": "dark",
+"level": 3,
+"atk": 1100,
+"def": 1800,
+"limit": 1,
+"image": "card-pics/69579761.jpg"
 }
 ]
