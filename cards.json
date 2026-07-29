@@ -2587,7 +2587,7 @@
 "level": null,
 "atk": null,
 "def": null,
-"limit": 1,
+"limit": 0,
 "image": "card-pics/35346968.jpg"
 },
 {
@@ -7308,7 +7308,7 @@
 "level": null,
 "atk": null,
 "def": null,
-"limit": 1,
+"limit": 3,
 "image": "card-pics/34646691.jpg"
 },
 {
@@ -7562,5 +7562,61 @@
 "def": 2000,
 "limit": 3,
 "image": "card-pics/14943837.jpg"
+},
+{
+"name": "Dream Clown",
+"description": "When this card is changed from Attack Position to face-up Defense Position, select 1 monster your opponent controls and destroy it.",
+"cardType": "monster",
+"subType": "warrior",
+"monsterBackground": "effect",
+"monsterMechanic": "",
+"attribute": "earth",
+"level": 3,
+"atk": 1200,
+"def": 900,
+"limit": 3,
+"image": "card-pics/13215230.jpg"
+},
+{
+"name": "Cyber-Stein",
+"description": "You can pay 5000 LP; Special Summon 1 Fusion Monster from your Extra Deck in Attack Position.",
+"cardType": "monster",
+"subType": "machine",
+"monsterBackground": "effect",
+"monsterMechanic": "",
+"attribute": "dark",
+"level": 2,
+"atk": 700,
+"def": 500,
+"limit": 1,
+"image": "card-pics/69015963.jpg"
+},
+{
+"name": "Crass Clown",
+"description": "When this card is changed from Defense Position to Attack Position, return 1 monster on your opponent's side of the field to the owner's hand.",
+"cardType": "monster",
+"subType": "fiend",
+"monsterBackground": "effect",
+"monsterMechanic": "",
+"attribute": "dark",
+"level": 4,
+"atk": 1350,
+"def": 1400,
+"limit": 3,
+"image": "card-pics/93889755.jpg"
+},
+{
+"name": "Stealth Bird",
+"description": "Once per turn: You can change this card to face-down Defense Position. When this card is Flip Summoned: Inflict 1000 damage to your opponent.",
+"cardType": "monster",
+"subType": "winged-beast",
+"monsterBackground": "effect",
+"monsterMechanic": "",
+"attribute": "dark",
+"level": 3,
+"atk": 700,
+"def": 1700,
+"limit": 3,
+"image": "card-pics/3510565.jpg"
 }
 ]
