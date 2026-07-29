@@ -2097,7 +2097,7 @@
 "level": 3,
 "atk": 1200,
 "def": 400,
-"limit": 3,
+"limit": 1,
 "image": "card-pics/2460565.jpg"
 },
 {
@@ -2251,7 +2251,7 @@
 "level": 0,
 "atk": 0,
 "def": 0,
-"limit": 3,
+"limit": 2,
 "image": "card-pics/58775978.jpg"
 },
 {
@@ -2307,7 +2307,7 @@
 "level": 0,
 "atk": 0,
 "def": 0,
-"limit": 3,
+"limit": 0,
 "image": "card-pics/33782437.jpg"
 },
 {
@@ -2923,7 +2923,7 @@
 "level": null,
 "atk": null,
 "def": null,
-"limit": 3,
+"limit": 0,
 "image": "card-pics/12607053.jpg"
 },
 {
@@ -4340,7 +4340,7 @@
 "level": 1,
 "atk": 0,
 "def": 0,
-"limit": 3,
+"limit": 1,
 "image": "card-pics/18964575.jpg"
 },
 {
@@ -4452,7 +4452,7 @@
 "level": null,
 "atk": null,
 "def": null,
-"limit": 3,
+"limit": 1,
 "image": "card-pics/73915051.jpg"
 },
 {
@@ -5042,20 +5042,6 @@
 "def": 1400,
 "limit": 3,
 "image": "card-pics/65515667.jpg"
-},
-{
-"name": "Two-for-One Repair Job",
-"description": "Banish 1 DARK Machine monster from your GY; Special Summon 1 monster from your hand, Deck, or GY that mentions \"Engine Token\". If a face-up DARK Machine monster(s) you control is sent to the GY, except by battle, while this card is in your GY (except during the Damage Step): You can banish this card; Special Summon 1 \"Engine Token\" (Machine/EARTH/Level 1/ATK 200/DEF 200) in Attack Position. You can only use 1 \"Two-for-One Repair Job\" effect per turn, and only once that turn.",
-"cardType": "spell",
-"subType": "normal",
-"monsterBackground": "",
-"monsterMechanic": "",
-"attribute": "",
-"level": null,
-"atk": null,
-"def": null,
-"limit": 1,
-"image": "card-pics/44459942.jpg"
 },
 {
 "name": "Trap Reactor Y FI",
@@ -6020,7 +6006,7 @@
 "level": null,
 "atk": null,
 "def": null,
-"limit": 3,
+"limit": 1,
 "image": "card-pics/59744639.jpg"
 },
 {
@@ -6034,7 +6020,7 @@
 "level": null,
 "atk": null,
 "def": null,
-"limit": 3,
+"limit": 1,
 "image": "card-pics/83133491.jpg"
 },
 {
@@ -6062,7 +6048,7 @@
 "level": 1,
 "atk": 0,
 "def": 0,
-"limit": 3,
+"limit": 1,
 "image": "card-pics/3657444.jpg"
 },
 {
@@ -6118,7 +6104,7 @@
 "level": 2,
 "atk": 500,
 "def": 500,
-"limit": 3,
+"limit": 1,
 "image": "card-pics/58551308.jpg"
 },
 {
@@ -6132,7 +6118,7 @@
 "level": 1,
 "atk": 400,
 "def": 600,
-"limit": 3,
+"limit": 0,
 "image": "card-pics/35050257.jpg"
 },
 {
@@ -6146,7 +6132,7 @@
 "level": 1,
 "atk": 0,
 "def": 0,
-"limit": 3,
+"limit": 0,
 "image": "card-pics/19665973.jpg"
 },
 {
@@ -6230,7 +6216,7 @@
 "level": null,
 "atk": null,
 "def": null,
-"limit": 1,
+"limit": 0,
 "image": "card-pics/20899496.jpg"
 },
 {
@@ -7238,7 +7224,7 @@
 "level": 4,
 "atk": 1560,
 "def": 1450,
-"limit": 1,
+"limit": 0,
 "image": "card-pics/8814959.jpg"
 },
 {
@@ -7646,5 +7632,19 @@
 "def": 1000,
 "limit": 3,
 "image": "card-pics/76305638.jpg"
+},
+{
+"name": "Limiter Removal",
+"description": "Double the ATK of all Machine monsters you currently control, until the end of this turn. During the End Phase of this turn, destroy those monsters.",
+"cardType": "spell",
+"subType": "quick-play",
+"monsterBackground": "",
+"monsterMechanic": "",
+"attribute": "",
+"level": null,
+"atk": null,
+"def": null,
+"limit": 1,
+"image": "card-pics/23171610.jpg"
 }
 ]
