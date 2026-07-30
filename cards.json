@@ -5737,7 +5737,7 @@
 "monsterBackground": "effect",
 "monsterMechanic": "",
 "attribute": "light",
-"level": 4,
+"level": 5,
 "atk": 1900,
 "def": 1400,
 "limit": 1,
@@ -6563,7 +6563,7 @@
 "monsterBackground": "effect",
 "monsterMechanic": "",
 "attribute": "water",
-"level": 4,
+"level": 5,
 "atk": 2000,
 "def": 1400,
 "limit": 3,
@@ -7450,20 +7450,6 @@
 "def": 1000,
 "limit": 3,
 "image": "card-pics/91869203.jpg"
-},
-{
-"name": "Berserk Gorilla",
-"description": "If this card is in face-up Defense Position, destroy this card. This card must attack if able.",
-"cardType": "monster",
-"subType": "beast",
-"monsterBackground": "effect",
-"monsterMechanic": "",
-"attribute": "earth",
-"level": 4,
-"atk": 2000,
-"def": 1000,
-"limit": 3,
-"image": "card-pics/39168895.jpg"
 },
 {
 "name": "Byser Shock",
