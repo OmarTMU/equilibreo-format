@@ -2237,7 +2237,7 @@
 "level": 0,
 "atk": 0,
 "def": 0,
-"limit": 3,
+"limit": 1,
 "image": "card-pics/14315573.jpg"
 },
 {
@@ -2251,7 +2251,7 @@
 "level": 0,
 "atk": 0,
 "def": 0,
-"limit": 2,
+"limit": 0,
 "image": "card-pics/58775978.jpg"
 },
 {
@@ -2727,7 +2727,7 @@
 "level": null,
 "atk": null,
 "def": null,
-"limit": 1,
+"limit": 0,
 "image": "card-pics/72302403.jpg"
 },
 {
@@ -4144,7 +4144,7 @@
 "level": null,
 "atk": null,
 "def": null,
-"limit": 2,
+"limit": 3,
 "image": "card-pics/17814387.jpg"
 },
 {
@@ -6006,7 +6006,7 @@
 "level": null,
 "atk": null,
 "def": null,
-"limit": 1,
+"limit": 0,
 "image": "card-pics/59744639.jpg"
 },
 {
@@ -6048,7 +6048,7 @@
 "level": 1,
 "atk": 0,
 "def": 0,
-"limit": 1,
+"limit": 0,
 "image": "card-pics/3657444.jpg"
 },
 {
@@ -6608,7 +6608,7 @@
 "level": 4,
 "atk": 1400,
 "def": 1000,
-"limit": 3,
+"limit": 0,
 "image": "card-pics/50834074.jpg"
 },
 {
