@@ -879,7 +879,7 @@
 "level": 4,
 "atk": 1600,
 "def": 2000,
-"limit": 2,
+"limit": 1,
 "image": "card-pics/2525268.jpg"
 },
 {
@@ -2531,7 +2531,7 @@
 "level": 4,
 "atk": 1800,
 "def": 1800,
-"limit": 2,
+"limit": 1,
 "image": "card-pics/88901771.jpg"
 },
 {
@@ -5922,7 +5922,7 @@
 "level": 2,
 "atk": 500,
 "def": 200,
-"limit": 1,
+"limit": 0,
 "image": "card-pics/7802006.jpg"
 },
 {
@@ -7588,7 +7588,7 @@
 "level": 3,
 "atk": 700,
 "def": 1700,
-"limit": 3,
+"limit": 1,
 "image": "card-pics/3510565.jpg"
 },
 {
