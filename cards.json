@@ -123,7 +123,7 @@
 "level": 1,
 "atk": 300,
 "def": 300,
-"limit": 3,
+"limit": 2,
 "image": "card-pics/9076207.jpg"
 },
 {
@@ -627,7 +627,7 @@
 "level": 1,
 "atk": 300,
 "def": 300,
-"limit": 3,
+"limit": 2,
 "image": "card-pics/14618326.jpg"
 },
 {
@@ -7743,6 +7743,20 @@
 "atk": 0,
 "def": 2100,
 "limit": 3,
+"image": "card-pics/75780818.jpg"
+},
+{
+"name": "Baku the Beast Ninja",
+"description": "If this card is added to your hand, except by drawing it: You can Special Summon it. If this card is Special Summoned or flipped face-up: You can target 1 \"Ninja\" or \"Ninjitsu Art\" card from your GY or face-up Spell & Trap Zone, except \"Baku the Beast Ninja\"; return it to the hand. You can only use each effect of \"Baku the Beast Ninja\" once per turn.",
+"cardType": "monster",
+"subType": "beast",
+"monsterBackground": "effect",
+"monsterMechanic": "",
+"attribute": "wind",
+"level": 4,
+"atk": 1500,
+"def": 600,
+"limit": 2,
 "image": "card-pics/75780818.jpg"
 }
 ]
