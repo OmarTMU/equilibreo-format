@@ -223,6 +223,12 @@ body {
 
                     .deck-card, .card-ui {
                         position: relative;
+                        cursor: grab;
+                    }
+
+                    .card-ui:active,
+                    .deck-card:active {
+                        cursor: grabbing;
                     }
 
                 .card-slot {
