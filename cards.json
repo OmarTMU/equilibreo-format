@@ -8094,5 +8094,33 @@
 "def": 1100,
 "limit": 3,
 "image": "card-pics/2766877.jpg"
+},
+{
+"name": "Gachi Gachi Gantetsu",
+"description": "2 Level 2 monsters\nIf this face-up card would be destroyed, you can detach 1 Xyz Material from this card instead. Face-up monsters you control gain 200 ATK and DEF for each Xyz Material attached to this card.",
+"cardType": "monster",
+"subType": "rock",
+"monsterBackground": "xyz",
+"monsterMechanic": "",
+"attribute": "earth",
+"level": 2,
+"atk": 500,
+"def": 1800,
+"limit": 1,
+"image": "card-pics/10002346.jpg"
+},
+{
+"name": "Leviair the Sea Dragon",
+"description": "2 Level 3 monsters\nOnce per turn: You can detach 1 material from this card, then target 1 banished Level 4 or lower monster; Special Summon that target to your field.",
+"cardType": "monster",
+"subType": "aqua",
+"monsterBackground": "xyz",
+"monsterMechanic": "",
+"attribute": "wind",
+"level": 3,
+"atk": 1800,
+"def": 1600,
+"limit": 1,
+"image": "card-pics/95992081.jpg"
 }
 ]
