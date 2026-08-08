@@ -4746,7 +4746,7 @@
 "level": null,
 "atk": null,
 "def": null,
-"limit": 0,
+"limit": 3,
 "image": "card-pics/82422049.jpg"
 },
 {
@@ -4760,7 +4760,7 @@
 "level": null,
 "atk": null,
 "def": null,
-"limit": 0,
+"limit": 3,
 "image": "card-pics/8414337.jpg"
 },
 {
@@ -4774,7 +4774,7 @@
 "level": null,
 "atk": null,
 "def": null,
-"limit": 0,
+"limit": 3,
 "image": "card-pics/91822647.jpg"
 },
 {
@@ -4788,7 +4788,7 @@
 "level": null,
 "atk": null,
 "def": null,
-"limit": 0,
+"limit": 2,
 "image": "card-pics/83544697.jpg"
 },
 {
@@ -4802,7 +4802,7 @@
 "level": null,
 "atk": null,
 "def": null,
-"limit": 0,
+"limit": 1,
 "image": "card-pics/45778932.jpg"
 },
 {
@@ -4816,7 +4816,7 @@
 "level": 6,
 "atk": 2000,
 "def": 1000,
-"limit": 0,
+"limit": 1,
 "image": "card-pics/27944249.jpg"
 },
 {
@@ -4830,7 +4830,7 @@
 "level": 4,
 "atk": 1700,
 "def": 1100,
-"limit": 0,
+"limit": 3,
 "image": "card-pics/91449144.jpg"
 },
 {
@@ -4844,7 +4844,7 @@
 "level": 4,
 "atk": 1800,
 "def": 900,
-"limit": 0,
+"limit": 3,
 "image": "card-pics/9837195.jpg"
 },
 {
@@ -4858,7 +4858,7 @@
 "level": 3,
 "atk": 1000,
 "def": 1500,
-"limit": 0,
+"limit": 3,
 "image": "card-pics/71175527.jpg"
 },
 {
@@ -4872,7 +4872,7 @@
 "level": 1,
 "atk": 200,
 "def": 400,
-"limit": 0,
+"limit": 3,
 "image": "card-pics/91662792.jpg"
 },
 {
@@ -4886,7 +4886,7 @@
 "level": 1,
 "atk": 500,
 "def": 500,
-"limit": 0,
+"limit": 3,
 "image": "card-pics/65277087.jpg"
 },
 {
@@ -4900,7 +4900,7 @@
 "level": 2,
 "atk": 0,
 "def": 1800,
-"limit": 0,
+"limit": 3,
 "image": "card-pics/336369.jpg"
 },
 {
@@ -4914,7 +4914,7 @@
 "level": 2,
 "atk": 800,
 "def": 300,
-"limit": 0,
+"limit": 3,
 "image": "card-pics/42082363.jpg"
 },
 {
@@ -8066,5 +8066,33 @@
 "def": 1000,
 "limit": 2,
 "image": "card-pics/57617178.jpg"
+},
+{
+"name": "Daigusto Falcos",
+"description": "1 Tuner + 1 or more non-Tuner \"Gusto\" monsters\nWhen this card is Synchro Summoned: All \"Gusto\" monsters currently on the field gain 600 ATK.",
+"cardType": "monster",
+"subType": "psychic",
+"monsterBackground": "synchro",
+"monsterMechanic": "",
+"attribute": "wind",
+"level": 4,
+"atk": 1400,
+"def": 1200,
+"limit": 3,
+"image": "card-pics/34109611.jpg"
+},
+{
+"name": "Daigusto Phoenix",
+"description": "2 Level 2 monsters\nOnce per turn: You can detach 1 Xyz Material from this card to target 1 face-up WIND monster you control; this turn, it can attack twice during each Battle Phase.",
+"cardType": "monster",
+"subType": "pyro",
+"monsterBackground": "xyz",
+"monsterMechanic": "",
+"attribute": "wind",
+"level": 2,
+"atk": 1500,
+"def": 1100,
+"limit": 3,
+"image": "card-pics/2766877.jpg"
 }
 ]
