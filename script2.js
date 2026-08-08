@@ -484,7 +484,7 @@ const defMax = document.getElementById("def-max");
 
 const limitSelect = document.getElementById("limit-select");
 
-const monsterSubtypes = [ "", "aqua", "beast", "beast-warrior", "dinosaur", "dragon",
+const monsterSubtypes = [ "", "aqua", "beast", "beast-warrior", "cyberse", "dinosaur", "dragon",
     "fairy", "fiend", "fish", "insect", "machine", "psychic",
     "pyro", "reptile", "rock", "sea-serpent", "spellcaster",
     "thunder", "warrior", "winged-beast", "wyrm", "zombie"
@@ -1826,7 +1826,7 @@ document.addEventListener("click", (e) => {
 
 
     // fusion / xyz goes extra deck
-    if(card.monsterBackground === "fusion" || card.monsterBackground === "xyz"){
+    if(card.monsterBackground === "fusion" || card.monsterBackground === "xyz" || card.monsterBackground === "synchro"){
         addCardToDeck(card, "extra-deck-grid");
     }
     else{
@@ -2414,7 +2414,7 @@ if (targetSlot === draggedSlot) {
         // Fusion / xyz restriction
         if(
             destination === "main-deck-grid" &&
-            (card.monsterBackground === "fusion" || card.monsterBackground === "xyz")
+            (card.monsterBackground === "fusion" || card.monsterBackground === "xyz" || card.monsterBackground === "synchro")
         ){
             return;
         }
@@ -2422,7 +2422,7 @@ if (targetSlot === draggedSlot) {
         // normal monster restriction
         if(
             destination === "extra-deck-grid" &&
-            (card.monsterBackground !== "fusion" && card.monsterBackground !== "xyz")
+            (card.monsterBackground !== "fusion" && card.monsterBackground !== "xyz" || card.monsterBackground !== "synchro")
         ){
             return;
         }
