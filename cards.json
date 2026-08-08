@@ -4256,7 +4256,7 @@
 "level": 2,
 "atk": 1000,
 "def": 100,
-"limit": 3,
+"limit": 0,
 "image": "card-pics/22567609.jpg"
 },
 {
@@ -7056,7 +7056,7 @@
 "level": 2,
 "atk": 100,
 "def": 1200,
-"limit": 3,
+"limit": 1,
 "image": "card-pics/44789585.jpg"
 },
 {
@@ -8150,5 +8150,19 @@
 "def": 1500,
 "limit": 3,
 "image": "card-pics/51960178.jpg"
+},
+{
+"name": "Inspiration",
+"description": "Target 1 face-up monster you control; it gains 700 ATK until the end of this turn.",
+"cardType": "trap",
+"subType": "normal",
+"monsterBackground": "",
+"monsterMechanic": "",
+"attribute": "",
+"level": null,
+"atk": null,
+"def": null,
+"limit": 1,
+"image": "card-pics/25005816.jpg"
 }
 ]
