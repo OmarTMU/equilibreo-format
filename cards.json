@@ -7532,7 +7532,7 @@
 "level": 2,
 "atk": 400,
 "def": 1000,
-"limit": 0,
+"limit": 3,
 "image": "card-pics/50789693.jpg"
 },
 {
@@ -8318,5 +8318,19 @@
 "def": 1000,
 "limit": 1,
 "image": "card-pics/38572779.jpg"
+},
+{
+"name": "Schwarzschild Limit Dragon",
+"description": "If your opponent controls a monster with 2000 or more ATK, you can Special Summon this card (from your hand).",
+"cardType": "monster",
+"subType": "dragon",
+"monsterBackground": "effect",
+"monsterMechanic": "",
+"attribute": "dark",
+"level": 8,
+"atk": 2000,
+"def": 0,
+"limit": 1,
+"image": "card-pics/6930746.jpg"
 }
 ]
