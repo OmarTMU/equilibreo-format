@@ -277,7 +277,7 @@
 "level": null,
 "atk": null,
 "def": null,
-"limit": 0,
+"limit": 3,
 "image": "card-pics/55761792.jpg"
 },
 {
@@ -291,7 +291,7 @@
 "level": 8,
 "atk": 3000,
 "def": 2500,
-"limit": 0,
+"limit": 1,
 "image": "card-pics/5405694.jpg"
 },
 {
@@ -2153,7 +2153,7 @@
 "level": 3,
 "atk": 1400,
 "def": 1100,
-"limit": 3,
+"limit": 1,
 "image": "card-pics/39191307.jpg"
 },
 {
@@ -2307,7 +2307,7 @@
 "level": 0,
 "atk": 0,
 "def": 0,
-"limit": 1,
+"limit": 0,
 "image": "card-pics/33782437.jpg"
 },
 {
@@ -2937,7 +2937,7 @@
 "level": 4,
 "atk": 1100,
 "def": 1200,
-"limit": 3,
+"limit": 0,
 "image": "card-pics/5438492.jpg"
 },
 {
@@ -3678,7 +3678,7 @@
 "level": 4,
 "atk": 1400,
 "def": 1200,
-"limit": 3,
+"limit": 2,
 "image": "card-pics/60806437.jpg"
 },
 {
@@ -4158,7 +4158,7 @@
 "level": null,
 "atk": null,
 "def": null,
-"limit": 3,
+"limit": 0,
 "image": "card-pics/96355986.jpg"
 },
 {
@@ -4606,7 +4606,7 @@
 "level": 4,
 "atk": 1400,
 "def": 800,
-"limit": 3,
+"limit": 2,
 "image": "card-pics/95956346.jpg"
 },
 {
@@ -4634,7 +4634,7 @@
 "level": 4,
 "atk": 1400,
 "def": 900,
-"limit": 3,
+"limit": 2,
 "image": "card-pics/84834865.jpg"
 },
 {
@@ -6048,7 +6048,7 @@
 "level": 3,
 "atk": 300,
 "def": 300,
-"limit": 3,
+"limit": 1,
 "image": "card-pics/15341821.jpg"
 },
 {
@@ -6482,7 +6482,7 @@
 "level": 4,
 "atk": 1800,
 "def": 500,
-"limit": 3,
+"limit": 1,
 "image": "card-pics/44335251.jpg"
 },
 {
@@ -6958,7 +6958,7 @@
 "level": 4,
 "atk": 1600,
 "def": 400,
-"limit": 3,
+"limit": 0,
 "image": "card-pics/80555116.jpg"
 },
 {
@@ -6972,7 +6972,7 @@
 "level": 4,
 "atk": 1600,
 "def": 1200,
-"limit": 3,
+"limit": 0,
 "image": "card-pics/55099248.jpg"
 },
 {
@@ -6986,7 +6986,7 @@
 "level": 2,
 "atk": 1000,
 "def": 700,
-"limit": 3,
+"limit": 0,
 "image": "card-pics/98437424.jpg"
 },
 {
@@ -7000,7 +7000,7 @@
 "level": 3,
 "atk": 1200,
 "def": 700,
-"limit": 3,
+"limit": 0,
 "image": "card-pics/24694698.jpg"
 },
 {
@@ -7014,7 +7014,7 @@
 "level": 4,
 "atk": 1400,
 "def": 800,
-"limit": 3,
+"limit": 0,
 "image": "card-pics/96653775.jpg"
 },
 {
@@ -7028,7 +7028,7 @@
 "level": 1,
 "atk": 400,
 "def": 800,
-"limit": 3,
+"limit": 0,
 "image": "card-pics/11747708.jpg"
 },
 {
@@ -7042,7 +7042,7 @@
 "level": 1,
 "atk": 400,
 "def": 800,
-"limit": 3,
+"limit": 0,
 "image": "card-pics/60668166.jpg"
 },
 {
@@ -7056,7 +7056,7 @@
 "level": 2,
 "atk": 100,
 "def": 1200,
-"limit": 1,
+"limit": 0,
 "image": "card-pics/44789585.jpg"
 },
 {
@@ -7070,7 +7070,7 @@
 "level": 2,
 "atk": 600,
 "def": 1500,
-"limit": 3,
+"limit": 0,
 "image": "card-pics/70261145.jpg"
 },
 {
@@ -7084,7 +7084,7 @@
 "level": null,
 "atk": null,
 "def": null,
-"limit": 3,
+"limit": 0,
 "image": "card-pics/34813545.jpg"
 },
 {
@@ -7098,7 +7098,7 @@
 "level": 4,
 "atk": 1800,
 "def": 1500,
-"limit": 3,
+"limit": 0,
 "image": "card-pics/75252099.jpg"
 },
 {
@@ -7504,7 +7504,7 @@
 "level": 4,
 "atk": 1700,
 "def": 1000,
-"limit": 3,
+"limit": 1,
 "image": "card-pics/76305638.jpg"
 },
 {
@@ -7532,7 +7532,7 @@
 "level": 2,
 "atk": 400,
 "def": 1000,
-"limit": 3,
+"limit": 0,
 "image": "card-pics/50789693.jpg"
 },
 {
@@ -8178,5 +8178,145 @@
 "def": 2500,
 "limit": 1,
 "image": "card-pics/46565218.jpg"
+},
+{
+"name": "Grenosaurus",
+"description": "2 Level 3 monsters\nWhen this card destroys an opponent's monster by battle and sends it to the Graveyard: You can detach 1 Xyz Material from this card; inflict 1000 damage to your opponent.",
+"cardType": "monster",
+"subType": "dinosaur",
+"monsterBackground": "xyz",
+"monsterMechanic": "",
+"attribute": "fire",
+"level": 3,
+"atk": 2000,
+"def": 1900,
+"limit": 3,
+"image": "card-pics/47506081.jpg"
+},
+{
+"name": "Heroic Champion - Excalibur",
+"description": "2 Level 4 Warrior-Type monsters\nOnce per turn: You can detach 2 Xyz Materials from this card; this card's ATK becomes double its original ATK until your opponent's next End Phase.",
+"cardType": "monster",
+"subType": "warrior",
+"monsterBackground": "xyz",
+"monsterMechanic": "",
+"attribute": "light",
+"level": 4,
+"atk": 2000,
+"def": 2000,
+"limit": 1,
+"image": "card-pics/60645181.jpg"
+},
+{
+"name": "Number 10: Illumiknight",
+"description": "3 Level 4 monsters\nOnce per turn: You can detach 1 Xyz Material from this card; send 1 card from your hand to the Graveyard, and if you do, draw 1 card.",
+"cardType": "monster",
+"subType": "warrior",
+"monsterBackground": "xyz",
+"monsterMechanic": "",
+"attribute": "light",
+"level": 4,
+"atk": 2400,
+"def": 2400,
+"limit": 3,
+"image": "card-pics/11411223.jpg"
+},
+{
+"name": "Angmarl the Fiendish Monarch",
+"description": "When this card is Tribute Summoned: You can banish 1 Spell Card from your Graveyard; add 1 card with the same name as the banished Spell Card from your Deck to your hand.",
+"cardType": "monster",
+"subType": "fiend",
+"monsterBackground": "effect",
+"monsterMechanic": "",
+"attribute": "dark",
+"level": 6,
+"atk": 2400,
+"def": 1000,
+"limit": 3,
+"image": "card-pics/65612386.jpg"
+},
+{
+"name": "Artillery Catapult Turtle",
+"description": "You can Tribute 1 monster; Special Summon 1 \"Gaia The Fierce Knight\" monster, or 1 Level 5 Dragon monster, from your hand or Deck. You can only use this effect of \"Artillery Catapult Turtle\" once per turn.",
+"cardType": "monster",
+"subType": "aqua",
+"monsterBackground": "effect",
+"monsterMechanic": "",
+"attribute": "water",
+"level": 4,
+"atk": 1000,
+"def": 2000,
+"limit": 3,
+"image": "card-pics/7913375.jpg"
+},
+{
+"name": "Darknight Parshath",
+"description": "If this card destroys an opponent's monster by battle: You can banish 1 DARK monster from your Graveyard; draw 1 card. This card gains 100 ATK for each DARK monster in your Graveyard.",
+"cardType": "monster",
+"subType": "fairy",
+"monsterBackground": "effect",
+"monsterMechanic": "",
+"attribute": "dark",
+"level": 5,
+"atk": 1900,
+"def": 1400,
+"limit": 3,
+"image": "card-pics/76925842.jpg"
+},
+{
+"name": "8-Claws Scorpion",
+"description": "Once per turn, you can flip this card into face-down Defense Position. When this card attacks an opponent's face-down Defense Position monster, this card's ATK becomes 2400 during damage calculation only.",
+"cardType": "monster",
+"subType": "insect",
+"monsterBackground": "effect",
+"monsterMechanic": "",
+"attribute": "dark",
+"level": 2,
+"atk": 300,
+"def": 200,
+"limit": 3,
+"image": "card-pics/14261867.jpg"
+},
+{
+"name": "Absolute King - Megaplunder",
+"description": "",
+"cardType": "monster",
+"subType": "dinosaur",
+"monsterBackground": "normal",
+"monsterMechanic": "",
+"attribute": "earth",
+"level": 6,
+"atk": 2000,
+"def": 1500,
+"limit": 1,
+"image": "card-pics/27553701.jpg"
+},
+{
+"name": "Tyranno Infinity",
+"description": "The original ATK of this card is the number of your banished Dinosaur-Type monsters x 1000.",
+"cardType": "monster",
+"subType": "dinosaur",
+"monsterBackground": "effect",
+"monsterMechanic": "",
+"attribute": "earth",
+"level": 4,
+"atk": 0,
+"def": 0,
+"limit": 3,
+"image": "card-pics/83235263.jpg"
+},
+{
+"name": "Miscellaneousaurus",
+"description": "During either player's Main Phase: You can send this card from your hand to the Graveyard; during this Main Phase, Dinosaur-Type monsters you control are unaffected by your opponent's activated effects. You can banish any number of Dinosaur-Type monsters from your Graveyard, including this card; Special Summon 1 Dinosaur-Type monster from your Deck with a Level equal to the total number of monsters banished to activate this effect, but destroy it during the End Phase. You can only use this effect of \"Miscellaneousaurus\" once per turn.",
+"cardType": "monster",
+"subType": "dinosaur",
+"monsterBackground": "effect",
+"monsterMechanic": "",
+"attribute": "fire",
+"level": 4,
+"atk": 1800,
+"def": 1000,
+"limit": 1,
+"image": "card-pics/38572779.jpg"
 }
 ]
