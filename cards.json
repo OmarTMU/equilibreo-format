@@ -8332,5 +8332,61 @@
 "def": 0,
 "limit": 1,
 "image": "card-pics/6930746.jpg"
+},
+{
+"name": "Sol and Luna",
+"description": "Target 1 monster you control and 1 monster your opponent controls; apply the following effect on each monster, depending on its battle position.\n● Face-up: Change it to face-down Defense Position.\n● Face-down: Change it to face-up Defense Position.\nYou can only activate 1 \"Sol and Luna\" per turn.",
+"cardType": "spell",
+"subType": "quick-play",
+"monsterBackground": "",
+"monsterMechanic": "",
+"attribute": "",
+"level": null,
+"atk": null,
+"def": null,
+"limit": 1,
+"image": "card-pics/19739265.jpg"
+},
+{
+"name": "Lancer Lindwurm",
+"description": "If this card attacks a Defense Position monster, inflict piercing battle damage to your opponent.",
+"cardType": "monster",
+"subType": "dragon",
+"monsterBackground": "effect",
+"monsterMechanic": "",
+"attribute": "wind",
+"level": 4,
+"atk": 1800,
+"def": 1200,
+"limit": 3,
+"image": "card-pics/46272804.jpg"
+},
+{
+"name": "Samurai Sword Baron",
+"description": "Once per turn, you can select 1 Defense Position monster your opponent controls. Change it to face-up Attack Position.",
+"cardType": "monster",
+"subType": "warrior",
+"monsterBackground": "effect",
+"monsterMechanic": "",
+"attribute": "earth",
+"level": 4,
+"atk": 1600,
+"def": 1200,
+"limit": 3,
+"image": "card-pics/14344682.jpg"
+},
+{
+"name": "Damage Condenser",
+"description": "When you take battle damage: Discard 1 card; Special Summon 1 monster from your Deck with ATK less than or equal to the battle damage you took, in face-up Attack Position.",
+"cardType": "trap",
+"subType": "normal",
+"monsterBackground": "",
+"monsterMechanic": "",
+"attribute": "",
+"level": null,
+"atk": null,
+"def": null,
+"limit": 3,
+"image": "card-pics/28378427.jpg"
 }
 ]
