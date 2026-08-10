@@ -457,9 +457,10 @@ body {
             }
 
             .search-grid .card-slot {
+                margin-top:0.3vw;
                 display: flex;
                 flex-direction: column;
-                /*overflow: scroll;*/
+                overflow: scroll;
             }
 
             .search-grid .card-slot .card-ui {
