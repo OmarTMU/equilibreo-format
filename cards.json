@@ -4816,7 +4816,7 @@
 "level": 6,
 "atk": 2000,
 "def": 1000,
-"limit": 1,
+"limit": 0,
 "image": "card-pics/27944249.jpg"
 },
 {
@@ -7532,7 +7532,7 @@
 "level": 2,
 "atk": 400,
 "def": 1000,
-"limit": 3,
+"limit": 1,
 "image": "card-pics/50789693.jpg"
 },
 {
@@ -8376,17 +8376,31 @@
 "image": "card-pics/14344682.jpg"
 },
 {
-"name": "Damage Condenser",
-"description": "When you take battle damage: Discard 1 card; Special Summon 1 monster from your Deck with ATK less than or equal to the battle damage you took, in face-up Attack Position.",
-"cardType": "trap",
-"subType": "normal",
-"monsterBackground": "",
+"name": "Amazoness Tiger",
+"description": "You can only control 1 \"Amazoness Tiger\". This card gains 400 ATK for each \"Amazoness\" monster you control. Your opponent cannot attack any face-up \"Amazoness\" monsters, except this one.",
+"cardType": "monster",
+"subType": "beast",
+"monsterBackground": "effect",
 "monsterMechanic": "",
-"attribute": "",
-"level": null,
-"atk": null,
-"def": null,
+"attribute": "earth",
+"level": 4,
+"atk": 1100,
+"def": 1500,
 "limit": 3,
-"image": "card-pics/28378427.jpg"
+"image": "card-pics/10979723.jpg"
+},
+{
+"name": "Amazoness Paladin",
+"description": "This card gains 100 ATK for each \"Amazoness\" monster you control.",
+"cardType": "monster",
+"subType": "warrior",
+"monsterBackground": "effect",
+"monsterMechanic": "",
+"attribute": "earth",
+"level": 4,
+"atk": 1700,
+"def": 300,
+"limit": 2,
+"image": "card-pics/47480070.jpg"
 }
 ]
