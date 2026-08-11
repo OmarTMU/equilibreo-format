@@ -4984,7 +4984,7 @@
 "level": 4,
 "atk": 1850,
 "def": 800,
-"limit": 3,
+"limit": 1,
 "image": "card-pics/7359741.jpg"
 },
 {
@@ -6552,7 +6552,7 @@
 "level": null,
 "atk": null,
 "def": null,
-"limit": 3,
+"limit": 2,
 "image": "card-pics/39041729.jpg"
 },
 {
@@ -7532,7 +7532,7 @@
 "level": 2,
 "atk": 400,
 "def": 1000,
-"limit": 1,
+"limit": 3,
 "image": "card-pics/50789693.jpg"
 },
 {
@@ -8302,7 +8302,7 @@
 "level": 4,
 "atk": 0,
 "def": 0,
-"limit": 3,
+"limit": 1,
 "image": "card-pics/83235263.jpg"
 },
 {
@@ -8402,5 +8402,47 @@
 "def": 300,
 "limit": 2,
 "image": "card-pics/47480070.jpg"
+},
+{
+"name": "Peten the Dark Clown",
+"description": "When this card is sent to your Graveyard: You can banish this card from your Graveyard; Special Summon 1 \"Peten the Dark Clown\" from your hand or Deck.",
+"cardType": "monster",
+"subType": "spellcaster",
+"monsterBackground": "effect",
+"monsterMechanic": "",
+"attribute": "dark",
+"level": 3,
+"atk": 500,
+"def": 1200,
+"limit": 3,
+"image": "card-pics/52624755.jpg"
+},
+{
+"name": "Dark Grepher",
+"description": "You can Special Summon this card (from your hand) by discarding 1 Level 5 or higher DARK monster. Once per turn: You can discard 1 DARK monster; send 1 DARK monster from your Deck to the GY.",
+"cardType": "monster",
+"subType": "warrior",
+"monsterBackground": "effect",
+"monsterMechanic": "",
+"attribute": "dark",
+"level": 4,
+"atk": 1700,
+"def": 1600,
+"limit": 0,
+"image": "card-pics/14536035.jpg"
+},
+{
+"name": "Gaia, the Mid-Knight Sun",
+"description": "You can only use each effect of \"Gaia, the Mid-Knight Sun\" once per turn.\n● You can Tribute 1 other LIGHT monster; add 1 Level 4 DARK Warrior-Type monster from your Deck to your hand, then send 1 card from your hand to the Graveyard.\n● You can banish 1 DARK monster from your Graveyard, then target 1 monster on the field; it loses 500 ATK until the end of your opponent's turn.",
+"cardType": "monster",
+"subType": "warrior",
+"monsterBackground": "effect",
+"monsterMechanic": "",
+"attribute": "light",
+"level": 4,
+"atk": 1600,
+"def": 1200,
+"limit": 3,
+"image": "card-pics/40371092.jpg"
 }
 ]
