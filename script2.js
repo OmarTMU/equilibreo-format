@@ -2411,6 +2411,16 @@ if (targetSlot === draggedSlot) {
         console.log(card);
         console.log(card.monsterBackground);
 
+        const destinationSlots = deck.querySelectorAll(".card-slot");
+        const destinationCards = deck.querySelectorAll(".deck-card");
+
+        if (
+            destinationCards.length >= destinationSlots.length &&
+            draggedSlot?.closest(".deck-grid") !== deck
+        ) {
+            return;
+        }
+
         // Fusion / xyz restriction
         if(
             destination === "main-deck-grid" &&
@@ -2422,7 +2432,7 @@ if (targetSlot === draggedSlot) {
         // normal monster restriction
         if(
             destination === "extra-deck-grid" &&
-            (card.monsterBackground !== "fusion" && card.monsterBackground !== "xyz" || card.monsterBackground !== "synchro")
+            (card.monsterBackground !== "fusion" && card.monsterBackground !== "xyz" && card.monsterBackground !== "synchro")
         ){
             return;
         }
