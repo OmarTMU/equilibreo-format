@@ -445,7 +445,7 @@
 "level": 4,
 "atk": 1600,
 "def": 1000,
-"limit": 0,
+"limit": 1,
 "image": "card-pics/71413901.jpg"
 },
 {
@@ -4354,7 +4354,7 @@
 "level": null,
 "atk": null,
 "def": null,
-"limit": 3,
+"limit": 2,
 "image": "card-pics/23446369.jpg"
 },
 {
@@ -5824,7 +5824,7 @@
 "level": null,
 "atk": null,
 "def": null,
-"limit": 3,
+"limit": 0,
 "image": "card-pics/39910367.jpg"
 },
 {
@@ -6188,7 +6188,7 @@
 "level": null,
 "atk": null,
 "def": null,
-"limit": 1,
+"limit": 0,
 "image": "card-pics/24721709.jpg"
 },
 {
@@ -8640,5 +8640,19 @@
 "def": null,
 "limit": 3,
 "image": "card-pics/68334074.jpg"
+},
+{
+"name": "Rogue of Endymion",
+"description": "f this card is Normal or Special Summoned: Place 1 Spell Counter on it. You can remove 1 Spell Counter from this card and discard 1 Spellcaster monster; Set 1 Continuous Spell directly from your Deck, but for the rest of this turn you cannot activate it, or activate cards, or the effects of cards, with its name. You can only use each effect of \"Rogue of Endymion\" once per turn.",
+"cardType": "monster",
+"subType": "spellcaster",
+"monsterBackground": "effect",
+"monsterMechanic": "",
+"attribute": "fire",
+"level": 3,
+"atk": 1500,
+"def": 200,
+"limit": 3,
+"image": "card-pics/44640691.jpg"
 }
 ]
