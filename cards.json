@@ -459,7 +459,7 @@
 "level": 4,
 "atk": 1900,
 "def": 1000,
-"limit": 0,
+"limit": 1,
 "image": "card-pics/16719802.jpg"
 },
 {
@@ -879,7 +879,7 @@
 "level": 4,
 "atk": 1600,
 "def": 2000,
-"limit": 1,
+"limit": 2,
 "image": "card-pics/2525268.jpg"
 },
 {
@@ -1397,7 +1397,7 @@
 "level": 4,
 "atk": 1900,
 "def": 1300,
-"limit": 0,
+"limit": 1,
 "image": "card-pics/69884162.jpg"
 },
 {
@@ -2461,7 +2461,7 @@
 "level": 4,
 "atk": 1900,
 "def": 500,
-"limit": 0,
+"limit": 1,
 "image": "card-pics/37265642.jpg"
 },
 {
@@ -2545,7 +2545,7 @@
 "level": 4,
 "atk": 1900,
 "def": 1700,
-"limit": 0,
+"limit": 1,
 "image": "card-pics/73752131.jpg"
 },
 {
@@ -8542,5 +8542,103 @@
 "def": null,
 "limit": 3,
 "image": "card-pics/74095602.jpg"
+},
+{
+"name": "Photon Papilloperative",
+"description": "2 Level 4 monsters\nOnce per turn: You can detach 1 Xyz Material from this card, then target 1 Defense Position monster on the field; change it to face-up Attack Position, and if you do, it loses 600 ATK.",
+"cardType": "monster",
+"subType": "warrior",
+"monsterBackground": "xyz",
+"monsterMechanic": "",
+"attribute": "light",
+"level": 4,
+"atk": 2100,
+"def": 1800,
+"limit": 1,
+"image": "card-pics/28150174.jpg"
+},
+{
+"name": "Ape Magician",
+"description": "Cannot be Special Summoned. Once per turn, if this card is in face-up Attack Position: You can send 1 monster from your hand to the Graveyard to target 1 face-up Defense Position monster your opponent controls; take control of it until the End Phase. It cannot change its battle position this turn.",
+"cardType": "monster",
+"subType": "beast",
+"monsterBackground": "effect",
+"monsterMechanic": "",
+"attribute": "dark",
+"level": 3,
+"atk": 800,
+"def": 1200,
+"limit": 3,
+"image": "card-pics/31975743.jpg"
+},
+{
+"name": "Gale Dogra",
+"description": "You can pay 3000 Life Points to send 1 monster from your Extra Deck to the Graveyard.",
+"cardType": "monster",
+"subType": "insect",
+"monsterBackground": "effect",
+"monsterMechanic": "",
+"attribute": "earth",
+"level": 2,
+"atk": 650,
+"def": 600,
+"limit": 3,
+"image": "card-pics/16229315.jpg"
+},
+{
+"name": "Kabuki Dragon",
+"description": "Once per turn, before damage calculation, if your monster attacked an opponent's monster: You can change the battle position of that monster your opponent controls. Once per turn, before damage calculation, if an opponent's monster attacked your monster: You can change the battle position of that monster you control.",
+"cardType": "monster",
+"subType": "dragon",
+"monsterBackground": "effect",
+"monsterMechanic": "",
+"attribute": "light",
+"level": 6,
+"atk": 2300,
+"def": 2100,
+"limit": 1,
+"image": "card-pics/7541475.jpg"
+},
+{
+"name": "Time-Space Trap Hole",
+"description": "When your opponent Special Summons a monster(s) from the hand or Extra Deck: Shuffle that monster(s) into the Deck, then you lose 1000 LP for each returned monster.",
+"cardType": "trap",
+"subType": "normal",
+"monsterBackground": "",
+"monsterMechanic": "",
+"attribute": "",
+"level": null,
+"atk": null,
+"def": null,
+"limit": 1,
+"image": "card-pics/2055403.jpg"
+},
+{
+"name": "Infernal Dragon",
+"description": "Once per turn, during the End Phase, if this card attacked this turn: Destroy this card. When this card on the field is destroyed and sent to the GY: You can Tribute 1 monster; Special Summon this card from the GY.",
+"cardType": "monster",
+"subType": "dragon",
+"monsterBackground": "effect",
+"monsterMechanic": "",
+"attribute": "dark",
+"level": 4,
+"atk": 2000,
+"def": 0,
+"limit": 3,
+"image": "card-pics/47754278.jpg"
+},
+{
+"name": "Miracle Restoring",
+"description": "Remove 2 Spell Counters from your side of the field, then target 1 \"Dark Magician\" or \"Buster Blader\" in your Graveyard; Special Summon that target.",
+"cardType": "trap",
+"subType": "normal",
+"monsterBackground": "",
+"monsterMechanic": "",
+"attribute": "",
+"level": null,
+"atk": null,
+"def": null,
+"limit": 3,
+"image": "card-pics/68334074.jpg"
 }
 ]
