@@ -2957,9 +2957,7 @@ if (isSpellOrTrap) {
 
         <div class="card-info-divider"></div>
 
-        <div class="card-description">
-            ${description}
-        </div>
+        <div class="card-description">${description}</div>
     `;
 
 } else {
@@ -2988,9 +2986,7 @@ if (isSpellOrTrap) {
 
         <div class="card-info-divider"></div>
 
-        <div class="card-description">
-            ${description}
-        </div>
+        <div class="card-description">${description}</div>
     `;
 }
 

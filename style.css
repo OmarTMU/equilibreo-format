@@ -541,7 +541,7 @@ height:19%;
 #card-view {
 display: flex;
 flex-direction: row;
-width:42%;
+width:44%;
 overflow:visible;
 margin-right:0vw;
 height:100%;
@@ -596,6 +596,7 @@ background-color: white;
 .card-description {
     width: 100%;
     margin-top: 1vw;
+    white-space: pre-line;
 }
 
 p {
@@ -635,7 +636,7 @@ display: block;
                 padding-left:0.5vw;
                 padding-right:0.2vw;
                 border-radius: 0.5vw;;
-                width:30%;
+                width:28%;
                 height:100%;
                 
             }
@@ -800,7 +801,6 @@ margin-top: 0vw;
 
 #filter-rows-box {
 padding-top:1vw;
-border:solid;
 display:inline;
 width:100%;
 }
@@ -941,10 +941,9 @@ font-size: 3vw;
 }
 
 #limit-and-search-box-2 {
-padding-top:0.2vw;
 padding-left:0.5vw;
 width:100%;
-margin-bottom:0.5vw;
+margin-bottom:1vw;
 margin-left:0.5vw;
 }
 
@@ -960,7 +959,7 @@ font-size:2vw;
 
 #page-number {
 display:inline;
-margin-left:28%;
+margin-left:26.8%;
 font-size: 3vw;
 }
 
