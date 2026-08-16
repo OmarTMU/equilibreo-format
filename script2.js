@@ -2190,6 +2190,10 @@ document.addEventListener("mousemove", e => {
 
 document.addEventListener("mouseover", (e)=>{
 
+    if(window.innerWidth <= 450){
+        return;
+    }
+
     const card = e.target.closest(".card-ui, .deck-card");
 
     if(!card) return;
@@ -2918,7 +2922,44 @@ document.addEventListener("click", e => {
 
 
     // Show the description.
-    descBox.textContent = description;
+const name = card.dataset.name ?? "";
+const cardType = card.dataset.type ?? "";
+const subType = card.dataset.subtype ?? "";
+const background = card.dataset.background ?? "";
+const mechanic = card.dataset.mechanic ?? "";
+const attribute = card.dataset.attribute ?? "";
+const level = card.dataset.level ?? "";
+const atk = card.dataset.atk ?? "";
+const def = card.dataset.def ?? "";
+
+descBox.innerHTML = `
+    <div class="card-information">
+
+        <div class="card-info-row card-name-row">
+            <strong>${name}</strong>
+        </div>
+
+        <div class="card-info-row">
+            ${cardType ? `<span>${cardType}</span>` : ""}
+            ${subType ? `<span> | </span><span>${subType}</span>` : ""}
+            ${background ? `<span> | </span><span>${background}</span>` : ""}
+            ${mechanic ? `<span> | </span><span>${mechanic}</span>` : ""}
+        </div>
+
+        <div class="card-info-row">
+            ${attribute ? `<span>${attribute.toUpperCase()}</span>` : ""}
+            ${level ? `<span> | </span><span>Level ${level}</span>` : ""}
+            ${atk && def ? `<span> |  </span><strong><span>${atk}/${def}</span></strong>` : ""}
+        </div>
+
+    </div>
+
+    <div class="card-info-divider"></div>
+
+    <div class="card-description">
+        ${description}
+    </div>
+`;
 
 
     // Make sure the description is visible.

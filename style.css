@@ -555,19 +555,48 @@ height:100%;
 width:0%;
 }
 
+
 #card-desc {
 margin-top:0;
 margin-bottom:0;
 font-size:2vw;
 padding-left:1vw;
 padding-right:2vw;
-padding-top:0.28vw;
+padding-top:1vw;
 padding-bottom: 0.0vw;
 text-align: justify;
 display:flex;
+flex-direction: column;
 overflow: scroll;
 width:90%;
 height:auto;
+background-color: white;
+}
+
+.card-information {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 0.3vw;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.card-information span {
+    white-space: nowrap;
+}
+
+.card-info-divider {
+    width: 100%;
+    border-top: 1px solid black;
+    margin: 1vw 0;
+    margin-bottom: 0;
+}
+
+.card-description {
+    width: 100%;
+    margin-top: 1vw;
 }
 
 p {
@@ -945,7 +974,7 @@ width:20%;
 display: grid;
 grid-template-columns: repeat(10,9%);
 column-gap: 0.5vw;
-row-gap: 0.3vw;
+row-gap: 0.0vw;
 margin-top:1vw;
 margin-right:0.4vw;
 justify-content: center;
@@ -958,7 +987,7 @@ margin-top:0.1vw;
 display: flex;
 flex-direction: column;
 overflow: scroll;
-margin-bottom:2vw;
+margin-bottom:0.3vw;
 }
 
 .search-grid .card-slot .card-ui {
