@@ -2742,6 +2742,8 @@ function findCardByID(id){
 
 const deckbuilder = document.getElementById("deckbuilder");
 
+const minWidth = 450;
+
 const referenceViewportWidth = window.innerWidth;
 const referenceMainWidth = referenceViewportWidth * 0.80;
 const referenceMainHeight = window.innerHeight * 0.98;
@@ -2751,6 +2753,20 @@ function resizeDeckBuilder() {
 
     const viewportWidth = window.innerWidth;
 
+    // --------------------------------
+    // PHONE
+    // Stop the desktop resizing system.
+    // --------------------------------
+
+if (viewportWidth <= minWidth) {
+
+    deckbuilder.style.width = "100%";
+    deckbuilder.style.height = "auto";
+    deckbuilder.style.minHeight = "100vh";
+    deckbuilder.style.transform = "none";
+
+    return;
+}
 
     // --------------------------------
     // STAGE 1

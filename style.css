@@ -252,7 +252,7 @@ main {
                     padding-top:0vw;
                     padding-left:0.2vw;
                     margin-bottom:0.4vw;
-                    margin-top:0.7vw;
+                    margin-top:0.2vw;
                     font-size:0.8vw;
                     font-weight: bold;
                 }
@@ -267,7 +267,7 @@ main {
             #side-deck-section {
                 height:10%;
                 margin-left:0.1vw;
-                margin-top:0.3vw;
+                margin-top:1vw;
             }
 
                 .title-side-deck {
@@ -507,3 +507,205 @@ main {
             
                 z-index: 2;
             }
+
+
+@media (max-width: 444px) {
+
+body {
+display: flex;
+justify-content: center;
+background-image: url("background-pic.jpg");
+background-size: cover;
+background-position: center;
+background-repeat: no-repeat;
+background-attachment: fixed;
+}
+
+main {
+width: 100%;
+display: flex;
+flex-direction: column;
+overflow: visible;
+justify-content: center;
+}
+
+#left-side {
+width: 100%;
+display: flex;
+flex-direction: row;
+}
+
+#card-view {
+display: flex;
+flex-direction: row;
+width:30%;
+overflow:visible;
+margin-right:1.3vw;
+
+height:100%;
+}
+
+#display-card {
+    width:0%;
+}
+
+    #card-display-pic {
+width:0%;
+}
+
+#card-desc {
+margin-top:0;
+margin-bottom:0;
+font-size:2vw;
+padding-left:1vw;
+padding-right:2vw;
+padding-top:0.28vw;
+padding-bottom: 0.0vw;
+text-align: justify;
+display:flex;
+overflow: scroll;
+width:90%;
+height:auto;
+}
+
+p {
+background-color: white;
+}
+
+.card-pic {
+width:100%;
+aspect-ratio: 20/29;
+object-fit: cover;
+display: block;
+}
+
+            #deck-buttons {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                height:100%;
+                width:40%;
+            }
+
+            .deck-constructor-button {
+                width: 48%;
+                height: auto;
+                padding: 2%;
+                font-size: 2.2vw;
+                border-radius: 0.0vw;
+                background-color: white;
+            }
+
+            #auth-container {
+                display: flex;
+                flex-direction: column;
+                padding-left: 0.3vw;
+                background-color: rgba(228, 225, 239, 0.871);
+                margin-left:1vw;
+                padding-left:0.5vw;
+                padding-right:0.2vw;
+                border-radius: 0.5vw;;
+                width:30%;
+                
+            }
+                h3 {
+                    font-size:3vw;
+                    padding:0;
+                    padding-top:0.1vw;
+                    margin-bottom:0.4vw;
+                    margin-top:0.3vw;
+                    color:rgb(0, 0, 0);
+                    text-align:center;
+                }
+
+                .auth-label,
+.auth-box {
+    display: block;
+    margin-left:0.8vw;
+}
+
+                .auth-label {
+                    width:100%;
+                    font-size: 3vw;
+                    /*font-weight:bold;*/
+                }
+
+                #pass-label {
+                    margin-right: 0.2vw;
+                }
+
+                .auth-box {
+                    width:90%;
+                    font-size:3vw;
+                    margin-bottom:0.2vw;
+                    border-radius: 0.2vw;
+                    border-width: 0.01vw;
+                }
+
+                #light-dark-mode {
+                    display:inline;
+                    width:40%;
+                    font-size: 0.8vw;
+                    border-radius: 1vw;
+                    border-width: 1vw;
+                    background-color:rgb(255, 255, 255);
+                }
+
+                .auth-btn {
+                    width:94%;
+                    margin-top:0.2vw;
+                    margin-bottom: 0.2vw;
+                    font-size:2vw;
+                    background-color: rgb(255, 255, 255);
+                    border-color:rgb(193, 175, 175);
+                    border-radius: 0.3vw;
+                    margin-left:1vw;
+                }
+
+                #register-btn {
+                    width:94%;
+                }
+
+                #delete-account-btn {
+                    width:94%;
+                }
+
+                #error-msg {
+                    margin-top:0.1vw;
+                    font-size: 2vw;
+                    color:rgb(93, 0, 255);
+                    font-weight: bold;
+                    padding-bottom:1vw;
+                    padding-left:1vw;
+                }
+
+                .auth-buttons {
+                    width:100%;
+                }
+
+
+
+
+
+
+
+#deck-list {
+width:100%;
+display: flex;
+flex-direction: column;
+background-color:rgb(233, 212, 212);
+}
+
+
+
+
+#search-section {
+width:100%;
+display: flex;
+flex-direction: column;
+background-color:rgb(184, 237, 246);
+overflow: visible;
+
+}
+}
+/* media end */
