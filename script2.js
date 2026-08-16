@@ -3003,3 +3003,123 @@ if (isSpellOrTrap) {
     e.stopImmediatePropagation();
 
 }, true);
+
+document.addEventListener("dblclick", e => {
+
+    // Phone only
+    if (window.innerWidth > 450) {
+        return;
+    }
+
+    const card = e.target.closest(".deck-card, .card-ui");
+
+    if (!card) {
+        return;
+    }
+
+
+    // =========================================================
+    // CARD ALREADY IN DECK → REMOVE IT
+    // =========================================================
+
+    if (card.classList.contains("deck-card")) {
+
+        const slot = card.closest(".card-slot");
+
+        if (!slot) {
+            return;
+        }
+
+        const grid = slot.closest(".deck-grid");
+
+        // Remove the card
+        slot.innerHTML = "";
+
+        // Compress the remaining cards
+        if (grid) {
+            compressDeckGrid(grid);
+        }
+
+        deckChanged = true;
+
+        return;
+    }
+
+
+    // =========================================================
+    // CARD IN SEARCH → ADD IT
+    // =========================================================
+
+    if (card.classList.contains("card-ui")) {
+
+        const cardData = {
+            name: card.dataset.name,
+            image: card.dataset.image,
+            cardType: card.dataset.type,
+            subType: card.dataset.subtype,
+            monsterBackground: card.dataset.background,
+            monsterMechanic: card.dataset.mechanic,
+            attribute: card.dataset.attribute,
+            level: card.dataset.level,
+            atk: card.dataset.atk,
+            def: card.dataset.def,
+            description: decodeURIComponent(
+                card.dataset.desc ?? ""
+            ),
+            limit: card.dataset.limit
+        };
+
+
+        // Decide which deck the card belongs in
+        let destination;
+
+        if (
+            cardData.monsterBackground === "fusion" ||
+            cardData.monsterBackground === "xyz" ||
+            cardData.monsterBackground === "synchro"
+        ) {
+            destination = document.getElementById(
+                "extra-deck-grid"
+            );
+        } else {
+            destination = document.getElementById(
+                "main-deck-grid"
+            );
+        }
+
+
+        if (!destination) {
+            return;
+        }
+
+
+        // Find an empty slot
+        const targetSlot = [
+            ...destination.querySelectorAll(".card-slot")
+        ].find(slot => !slot.querySelector(".deck-card"));
+
+
+        if (!targetSlot) {
+            return;
+        }
+
+
+        // Check card limit
+        const currentCount =
+            getCardCountInDecks(cardData.name);
+
+        if (currentCount >= Number(cardData.limit)) {
+            return;
+        }
+
+
+        // Add card
+        insertCardIntoSlot(
+            cardData,
+            targetSlot
+        );
+
+        deckChanged = true;
+    }
+
+});
