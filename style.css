@@ -535,6 +535,7 @@ justify-content: flex-start;
 width: 100%;
 display: flex;
 flex-direction: row;
+height:15.6%;
 }
 
 #card-view {
@@ -560,7 +561,7 @@ width:0%;
 margin-top:0;
 margin-bottom:0;
 font-size:2vw;
-padding-left:1vw;
+padding-left:1.2vw;
 padding-right:2vw;
 padding-top:1vw;
 padding-bottom: 0.0vw;
@@ -637,6 +638,8 @@ display: block;
                 padding-right:0.2vw;
                 border-radius: 0.5vw;;
                 width:30%;
+                overflow: scroll;
+                height:100%;
                 
             }
                 h3 {
@@ -667,7 +670,7 @@ display: block;
 
                 .auth-box {
                     width:84%;
-                    font-size:3vw;
+                    font-size:2vw;
                     margin-bottom:0.2vw;
                     border-radius: 0.2vw;
                     border-width: 0.01vw;
@@ -683,7 +686,7 @@ display: block;
                 }
 
                 .auth-btn {
-                    width:94%;
+                    width:90%;
                     margin-top:0.2vw;
                     margin-bottom: 0.2vw;
                     font-size:2vw;
@@ -694,11 +697,11 @@ display: block;
                 }
 
                 #register-btn {
-                    width:94%;
+                    width:90%;
                 }
 
                 #delete-account-btn {
-                    width:94%;
+                    width:90%;
                 }
 
                 #error-msg {
