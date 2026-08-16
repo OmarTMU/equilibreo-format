@@ -685,19 +685,78 @@ display: block;
 
 
 
+                #deck-list {
+            width:100%;
+            margin-top:1%;
+        }
+
+            #main-deck-section {
+                height:65%;
+                width:100%;
+                margin-left:0.5vw;
+                margin-top:1vw;
+            }
+
+                .title-main-deck {
+                    height:2%;
+                    width:100%;
+                    padding-top:0.0vw;
+                    padding-left:0.3vw;
+                    margin-bottom:1.5vw;
+                    margin-top:0.2vw;
+                    font-size:2vw;
+                    font-weight: bold;
+                }
+
+                .main-deck-grid {
+                    display: grid;
+                    grid-template-columns: repeat(12,8%);
+                    
+                }
+
+            #extra-deck-section {
+                height:12%;
+                margin-left:0.5vw;
+            }
+
+                .title-extra-deck {
+                    height:10%;
+                    width:100%;
+                    padding-left:0.2vw;
+                    margin-bottom:1.5vw;
+                    font-size:2vw;
+                    font-weight: bold;
+                }
+
+                .extra-deck-grid, .side-deck-grid {
+                    display: grid;
+                    grid-template-columns: repeat(15,6.4%);
+                    column-gap: 0.2vw;
+                    margin-left:0.2vw;
+                }
+
+            #side-deck-section {
+                height:12%;
+                margin-left:0.5vw;
+            }
+
+                .title-side-deck {
+                    height:10%;
+                    width:100%;
+                    padding-left:0.2vw;
+                    margin-bottom:1.5vw;
+                    font-size:2vw;
+                    font-weight: bold;
+                }
 
 
 
 
-#deck-list {
-width:100%;
-display: flex;
-flex-direction: column;
-background-color:rgb(233, 212, 212);
+
+
+#column-gap {
+    height: 1px;
 }
-
-
-
 
 #search-section {
 width:100%;
@@ -705,6 +764,7 @@ display: flex;
 flex-direction: column;
 background-color:rgb(184, 237, 246);
 overflow: visible;
+margin-top: 0vw;
 }
 
 #filter-rows-box {
@@ -881,7 +941,7 @@ width:20%;
 
 .search-grid {
 display: grid;
-grid-template-columns: repeat(5,19%);
+grid-template-columns: repeat(10,9%);
 column-gap: 0.5vw;
 row-gap: 0.3vw;
 margin-top:1vw;
@@ -896,6 +956,7 @@ margin-top:0.1vw;
 display: flex;
 flex-direction: column;
 overflow: scroll;
+margin-bottom:2vw;
 }
 
 .search-grid .card-slot .card-ui {

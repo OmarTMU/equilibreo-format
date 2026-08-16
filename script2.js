@@ -2760,10 +2760,10 @@ function resizeDeckBuilder() {
 
 if (viewportWidth <= minWidth) {
 
-    deckbuilder.style.width = "100%";
-    deckbuilder.style.height = "auto";
-    deckbuilder.style.minHeight = "100vh";
-    deckbuilder.style.transform = "none";
+    deckbuilder.style.removeProperty("width");
+    deckbuilder.style.removeProperty("height");
+    deckbuilder.style.removeProperty("min-height");
+    deckbuilder.style.removeProperty("transform");
 
     return;
 }
