@@ -753,7 +753,7 @@
 "level": 0,
 "atk": 0,
 "def": 0,
-"limit": 2,
+"limit": 3,
 "image": "card-pics/16964437.jpg"
 },
 {
@@ -1243,7 +1243,7 @@
 "level": 8,
 "atk": 2500,
 "def": 2000,
-"limit": 1,
+"limit": 0,
 "image": "card-pics/33574806.jpg"
 },
 {
@@ -2601,7 +2601,7 @@
 "level": null,
 "atk": null,
 "def": null,
-"limit": 1,
+"limit": 0,
 "image": "card-pics/69389481.jpg"
 },
 {
@@ -4956,7 +4956,7 @@
 "level": 8,
 "atk": 2600,
 "def": 2100,
-"limit": 1,
+"limit": 0,
 "image": "card-pics/22061412.jpg"
 },
 {
@@ -6090,7 +6090,7 @@
 "level": 5,
 "atk": 2400,
 "def": 1200,
-"limit": 1,
+"limit": 0,
 "image": "card-pics/25460258.jpg"
 },
 {
@@ -6370,7 +6370,7 @@
 "level": 6,
 "atk": 1800,
 "def": 2200,
-"limit": 2,
+"limit": 1,
 "image": "card-pics/83107873.jpg"
 },
 {
@@ -6510,7 +6510,7 @@
 "level": 6,
 "atk": 2000,
 "def": 1600,
-"limit": 1,
+"limit": 3,
 "image": "card-pics/86239173.jpg"
 },
 {
@@ -7770,7 +7770,7 @@
 "level": 3,
 "atk": 1000,
 "def": 1600,
-"limit": 2,
+"limit": 1,
 "image": "card-pics/88696724.jpg"
 },
 {
@@ -8134,7 +8134,7 @@
 "level": 4,
 "atk": 2100,
 "def": 1600,
-"limit": 3,
+"limit": 1,
 "image": "card-pics/76372778.jpg"
 },
 {
@@ -8288,7 +8288,7 @@
 "level": 6,
 "atk": 2000,
 "def": 1500,
-"limit": 1,
+"limit": 3,
 "image": "card-pics/27553701.jpg"
 },
 {
@@ -8488,20 +8488,6 @@
 "image": "card-pics/16304628.jpg"
 },
 {
-"name": "Elemental HERO Grandmerge",
-"description": "2 \"HERO\" Normal Monsters\nMust be Fusion Summoned. Gains ATK/DEF equal to the combined original Levels of the materials used for its Fusion Summon x 300. When this card destroys an opponent's monster by battle: You can Tribute this card; Special Summon 1 \"Elemental HERO\" Fusion Monster from your Extra Deck, ignoring its Summoning conditions, but it cannot attack monsters with an equal or lower Level than it.",
-"cardType": "monster",
-"subType": "warrior",
-"monsterBackground": "fusion",
-"monsterMechanic": "",
-"attribute": "light",
-"level": 6,
-"atk": 0,
-"def": 0,
-"limit": 1,
-"image": "card-pics/36841733.jpg"
-},
-{
 "name": "Elemental HERO Nova Master",
 "description": "1 \"Elemental HERO\" monster + 1 FIRE monster\nMust be Fusion Summoned. If this card destroys an opponent's monster by battle: Draw 1 card.",
 "cardType": "monster",
@@ -8682,5 +8668,89 @@
 "def": null,
 "limit": 3,
 "image": "card-pics/911883.jpg"
+},
+{
+"name": "Jurrac Giganoto",
+"description": "1 Tuner + 1 or more non-Tuner Dinosaur-Type monsters\nAll face-up \"Jurrac\" monsters you control gain 200 ATK for each \"Jurrac\" monster in your Graveyard.",
+"cardType": "monster",
+"subType": "dinosaur",
+"monsterBackground": "synchro",
+"monsterMechanic": "",
+"attribute": "fire",
+"level": 7,
+"atk": 2100,
+"def": 1800,
+"limit": 3,
+"image": "card-pics/80032567.jpg"
+},
+{
+"name": "Jurrac Velo",
+"description": "When this face-up Attack Position card attacks or is attacked, and it is destroyed by battle and sent to the Graveyard, you can Special Summon 1 \"Jurrac\" monster with 1700 or less ATK from your Deck.",
+"cardType": "monster",
+"subType": "dinosaur",
+"monsterBackground": "effect",
+"monsterMechanic": "",
+"attribute": "fire",
+"level": 4,
+"atk": 1700,
+"def": 1000,
+"limit": 3,
+"image": "card-pics/59312550.jpg"
+},
+{
+"name": "Jurrac Guaiba",
+"description": "If this card destroys an opponent's monster by battle: You can Special Summon 1 \"Jurrac\" monster with 1700 or less ATK from your Deck, but it cannot declare an attack this turn.",
+"cardType": "monster",
+"subType": "dinosaur",
+"monsterBackground": "effect",
+"monsterMechanic": "",
+"attribute": "fire",
+"level": 4,
+"atk": 1700,
+"def": 400,
+"limit": 3,
+"image": "card-pics/11012887.jpg"
+},
+{
+"name": "Jurrac Aeolo",
+"description": "You can Tribute this card to select 1 Level 4 or lower \"Jurrac\" monster in your Graveyard, except \"Jurrac Aeolo\". Special Summon that monster from the Graveyard.",
+"cardType": "monster",
+"subType": "dinosaur",
+"monsterBackground": "effect",
+"monsterMechanic": "",
+"attribute": "fire",
+"level": 1,
+"atk": 200,
+"def": 200,
+"limit": 3,
+"image": "card-pics/80727721.jpg"
+},
+{
+"name": "Number 17: Leviathan Dragon",
+"description": "2 Level 3 monsters\nOnce per turn: You can detach 1 Xyz Material from this card; this card gains 500 ATK. If this card has no Xyz Material, it cannot attack your opponent directly.",
+"cardType": "monster",
+"subType": "dragon",
+"monsterBackground": "xyz",
+"monsterMechanic": "",
+"attribute": "water",
+"level": 3,
+"atk": 2000,
+"def": 0,
+"limit": 1,
+"image": "card-pics/69610924.jpg"
+},
+{
+"name": "Number 30: Acid Golem of Destruction",
+"description": "2 Level 3 monsters\nDuring your Standby Phase: Detach 1 Xyz Material from this card or take 2000 damage. You cannot Special Summon any monsters. While this card has no Xyz Materials, it cannot attack.",
+"cardType": "monster",
+"subType": "rock",
+"monsterBackground": "xyz",
+"monsterMechanic": "",
+"attribute": "water",
+"level": 3,
+"atk": 3000,
+"def": 3000,
+"limit": 1,
+"image": "card-pics/81330115.jpg"
 }
 ]
