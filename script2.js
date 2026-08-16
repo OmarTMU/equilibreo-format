@@ -2825,3 +2825,111 @@ if (viewportWidth <= minWidth) {
 window.addEventListener("resize", resizeDeckBuilder);
 
 resizeDeckBuilder();
+
+// ============================================================
+// PHONE CARD INTERACTION
+// ============================================================
+
+const PHONE_BREAKPOINT = 450;
+
+let phoneJustDragged = false;
+let phoneJustDraggedUntil = 0;
+
+
+// ------------------------------------------------------------
+// Remember when a real drag happened.
+// This prevents the click that can sometimes follow a drag
+// from being treated as a normal tap.
+// ------------------------------------------------------------
+
+document.addEventListener("dragstart", e => {
+
+    if (window.innerWidth > PHONE_BREAKPOINT) {
+        return;
+    }
+
+    const card = e.target.closest(".card-ui, .deck-card");
+
+    if (!card) {
+        return;
+    }
+
+    phoneJustDragged = true;
+    phoneJustDraggedUntil = performance.now() + 500;
+
+}, true);
+
+
+// ------------------------------------------------------------
+// PHONE TAP
+//
+// Capturing phase is intentional.
+// It allows this handler to stop existing click handlers
+// from adding the card when the user only taps it.
+// ------------------------------------------------------------
+
+document.addEventListener("click", e => {
+
+    // Desktop: do absolutely nothing.
+    if (window.innerWidth > PHONE_BREAKPOINT) {
+        return;
+    }
+
+
+    const card = e.target.closest(".card-ui, .deck-card");
+
+    if (!card) {
+        return;
+    }
+
+
+    // If this click happened immediately after a drag,
+    // don't treat it as a tap.
+    if (
+        phoneJustDragged &&
+        performance.now() < phoneJustDraggedUntil
+    ) {
+
+        phoneJustDragged = false;
+
+        e.preventDefault();
+        e.stopPropagation();
+        e.stopImmediatePropagation();
+
+        return;
+    }
+
+
+    phoneJustDragged = false;
+
+
+    // Get the description from the card.
+    const description = decodeURIComponent(
+        card.dataset.desc ?? ""
+    );
+
+
+    // Find the description display.
+    const descBox = document.getElementById("card-desc");
+
+    if (!descBox) {
+        return;
+    }
+
+
+    // Show the description.
+    descBox.textContent = description;
+
+
+    // Make sure the description is visible.
+    descBox.style.display = "flex";
+
+
+    // Stop the existing click handlers.
+    // This is what prevents tapping a search card
+    // from also adding it to the deck.
+    e.preventDefault();
+    e.stopPropagation();
+    e.stopImmediatePropagation();
+
+}, true);
