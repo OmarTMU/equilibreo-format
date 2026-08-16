@@ -2932,34 +2932,67 @@ const level = card.dataset.level ?? "";
 const atk = card.dataset.atk ?? "";
 const def = card.dataset.def ?? "";
 
-descBox.innerHTML = `
-    <div class="card-information">
+const normalizedCardType =
+    String(cardType ?? "").trim().toLowerCase();
 
-        <div class="card-info-row card-name-row">
-            <strong>${name}</strong>
+const isSpellOrTrap =
+    normalizedCardType === "spell" ||
+    normalizedCardType === "trap";
+
+if (isSpellOrTrap) {
+
+    descBox.innerHTML = `
+        <div class="card-information">
+
+            <div class="card-info-row card-name-row">
+                <strong>${name}</strong>
+            </div>
+
+            <div class="card-info-row">
+                ${cardType ? `<span>${cardType}</span>` : ""}
+                ${subType ? `<span> | </span><span>${subType}</span>` : ""}
+            </div>
+
         </div>
 
-        <div class="card-info-row">
-            ${cardType ? `<span>${cardType}</span>` : ""}
-            ${subType ? `<span> | </span><span>${subType}</span>` : ""}
-            ${background ? `<span> | </span><span>${background}</span>` : ""}
-            ${mechanic ? `<span> | </span><span>${mechanic}</span>` : ""}
+        <div class="card-info-divider"></div>
+
+        <div class="card-description">
+            ${description}
+        </div>
+    `;
+
+} else {
+
+    descBox.innerHTML = `
+        <div class="card-information">
+
+            <div class="card-info-row card-name-row">
+                <strong>${name}</strong>
+            </div>
+
+            <div class="card-info-row">
+                ${cardType ? `<span>${cardType}</span>` : ""}
+                ${subType ? `<span> | </span><span>${subType}</span>` : ""}
+                ${background ? `<span> | </span><span>${background}</span>` : ""}
+                ${mechanic ? `<span> | </span><span>${mechanic}</span>` : ""}
+            </div>
+
+            <div class="card-info-row">
+                ${attribute ? `<span>${attribute.toUpperCase()}</span>` : ""}
+                ${level ? `<span> | </span><span>Level ${level}</span>` : ""}
+                ${atk && def ? `<span> |  </span><strong><span>${atk}/${def}</span></strong>` : ""}
+            </div>
+
         </div>
 
-        <div class="card-info-row">
-            ${attribute ? `<span>${attribute.toUpperCase()}</span>` : ""}
-            ${level ? `<span> | </span><span>Level ${level}</span>` : ""}
-            ${atk && def ? `<span> |  </span><strong><span>${atk}/${def}</span></strong>` : ""}
+        <div class="card-info-divider"></div>
+
+        <div class="card-description">
+            ${description}
         </div>
-
-    </div>
-
-    <div class="card-info-divider"></div>
-
-    <div class="card-description">
-        ${description}
-    </div>
-`;
+    `;
+}
 
 
     // Make sure the description is visible.
