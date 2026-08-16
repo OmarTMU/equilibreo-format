@@ -543,8 +543,7 @@ display: flex;
 flex-direction: row;
 width:42%;
 overflow:visible;
-margin-right:0.6vw;
-
+margin-right:0vw;
 height:100%;
 }
 
@@ -632,7 +631,7 @@ display: block;
                 flex-direction: column;
                 padding-left: 0.3vw;
                 background-color: rgba(228, 225, 239, 0.871);
-                margin-left:1vw;
+                margin-left:0.6vw;
                 padding-left:0.5vw;
                 padding-right:0.2vw;
                 border-radius: 0.5vw;;
@@ -981,6 +980,7 @@ margin-right:0.4vw;
 justify-content: center;
 overflow:scroll;
 width:100%;
+margin-bottom:1vw;
 }
 
 .search-grid .card-slot {
