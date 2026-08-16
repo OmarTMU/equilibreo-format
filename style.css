@@ -9,14 +9,14 @@ body {
         background-repeat: no-repeat;
 }
 
-    main {
-        width:80%;
-        height: 98vh; /*  to make it whole page */
-        display: flex;
-        flex-direction: row;
-        overflow: hidden;
-        justify-content: center;
-    }
+main {
+    width: 80%;
+    height: 98vh;
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+    justify-content: center;
+}
 
         #left-side {
             width: 19%;
@@ -241,7 +241,7 @@ body {
 
             #extra-deck-section {
                 height:10%;
-                margin-top:2.6%;
+                margin-top:1.9%;
                 margin-bottom:0;
                 margin-left:0.1vw;
             }
@@ -267,6 +267,7 @@ body {
             #side-deck-section {
                 height:10%;
                 margin-left:0.1vw;
+                margin-top:0.3vw;
             }
 
                 .title-side-deck {
@@ -339,6 +340,7 @@ body {
 
                 .card-type-box {
                     width: 40%;
+                    font-size: 1vw;
                 }
 
                 .card-subtype-label {
@@ -348,10 +350,12 @@ body {
 
                 .card-subtype-box {
                     width: 40%;
+                    font-size: 1vw;
                 }
 
                 .card-mechanic-box {
                     width:40%;
+                    font-size: 1vw;
                 }
 
                 .att-select-label {
@@ -361,6 +365,7 @@ body {
 
                 .att-select-box {
                     width: 19%;
+                    font-size:1vw;
                 }
 
                 .level-label {
@@ -368,7 +373,7 @@ body {
                 }
 
                 .level-box {
-                    width: 12%;
+                    width: 10%;
                     font-size: 1vw;
                 }
 
@@ -433,16 +438,20 @@ body {
 
                 .limit-box {
                     display:inline;
+                    width:12%;
+                    font-size:1vw;
                 }
 
                 #page-number {
                     display:inline;
-                    margin-left:3.5vw;
+                    margin-left:17.2%;
+                    font-size: 1.2vw;
                 }
 
                 #format-select {
                     margin-left:5%;
                     font-size: 1vw;
+                    width:30%;
                 }
 
             .search-grid {
@@ -457,7 +466,7 @@ body {
             }
 
             .search-grid .card-slot {
-                margin-top:0.3vw;
+                margin-top:0.1vw;
                 display: flex;
                 flex-direction: column;
                 overflow: scroll;

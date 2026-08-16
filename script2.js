@@ -1772,7 +1772,7 @@ function renderPage() {
         if (!slots[index]) return;
 
         slots[index].innerHTML = `
-            <div class="card-ui" draggable="true"
+            <div class="card-ui" 
                  data-id="${card.id ?? getCardIDFromImage(card.image)}"
                  data-name="${card.name}"
                  data-image="${card.image ?? ""}"
@@ -1880,7 +1880,11 @@ function preloadCardImages(cards){
 
 }
 
+//let draggedSlot = null;
 let draggedSlot = null;
+let draggedCard = null;
+let lastDragX = 0;
+let lastDragY = 0;
 
 document.addEventListener("dragstart", e => {
 
@@ -1888,6 +1892,7 @@ document.addEventListener("dragstart", e => {
 
     if(!card) return;
 
+    draggedCard = card;
 
     const cardData = {
         name: card.dataset.name,
@@ -1935,6 +1940,13 @@ document.addEventListener("dragstart", e => {
 
 });
 
+document.addEventListener("dragover", e => {
+
+    lastDragX = e.clientX;
+    lastDragY = e.clientY;
+
+});
+
 function getCardCountInDecks(cardName){
 
     let count = 0;
@@ -1967,7 +1979,7 @@ function addCardToGrid(card, area){
             slot.innerHTML = `
 
             <div class="deck-card"
-                 draggable="true"
+                
                  data-id="${card.id ?? getCardIDFromImage(card.image)}"
                  data-name="${card.name}"
                  data-image="${card.image ?? ""}"
@@ -2286,9 +2298,17 @@ function addCardToDeck(card, deck){
 
 function insertCardIntoSlot(card, targetSlot){
 
+    if(!targetSlot){
+        return;
+    }
+
     const grid = targetSlot.closest(
         ".main-deck-grid, .extra-deck-grid, .side-deck-grid"
     );
+
+    if(!grid){
+        return;
+    }
 
     const slots = Array.from(
         grid.querySelectorAll(".card-slot")
@@ -2379,8 +2399,35 @@ function insertCardIntoSlot(card, targetSlot){
 
 }
 
-const decks = document.querySelectorAll(".deck-grid");
+const decks = document.querySelectorAll(
+    "#main-deck-grid, #extra-deck-grid, #side-deck-grid"
+);
 
+function compressDeckGrid(grid){
+
+    if(!grid) return;
+
+    const slots = Array.from(
+        grid.querySelectorAll(".card-slot")
+    );
+
+    const cards = Array.from(
+        grid.querySelectorAll(".deck-card")
+    );
+
+    slots.forEach(slot => {
+        slot.innerHTML = "";
+    });
+
+    cards.forEach((card, index) => {
+
+        if(slots[index]){
+            slots[index].appendChild(card);
+        }
+
+    });
+
+}
 
 decks.forEach(deck => {
 
@@ -2391,16 +2438,19 @@ decks.forEach(deck => {
     deck.addEventListener("drop", e=>{
 
 
-
         console.log("DROP FIRED ON:", deck.id);
 
         e.preventDefault();
 
         const targetSlot = e.target.closest(".card-slot");
 
-if (targetSlot === draggedSlot) {
-    return;
-}
+        if(!targetSlot){
+            return;
+        }
+
+        if(targetSlot === draggedSlot){
+            return;
+        }
 
         const card = JSON.parse(
             e.dataTransfer.getData("card")
@@ -2439,24 +2489,33 @@ if (targetSlot === draggedSlot) {
         const moving = e.dataTransfer.getData("moving");
 
 
-        // If moving an existing card, remove the old one first
-        if(moving === "true"){
-        
-            if(draggedSlot){
-        
-                draggedSlot.innerHTML = "";
-        
-            }
-        
+        // Count the card BEFORE removing the original.
+        //
+        // If we're moving an existing card, that original card
+        // shouldn't count against the limit.
+        let currentCount = getCardCountInDecks(card.name);
+
+        if(moving === "true" && draggedSlot){
+            currentCount--;
         }
-        
-        // Now check limit after removal
-        const currentCount = getCardCountInDecks(card.name);
-        
+
         if(currentCount >= Number(card.limit)){
             return;
         }
 
+
+        if(moving === "true" && draggedSlot){
+
+    const oldGrid = draggedSlot.closest(".deck-grid");
+
+    draggedSlot.innerHTML = "";
+
+    // If moving to another deck, compress the old deck.
+    if(oldGrid && oldGrid !== deck){
+        compressDeckGrid(oldGrid);
+    }
+
+    }
         // Add card to new location
 
 
@@ -2465,10 +2524,154 @@ if (targetSlot === draggedSlot) {
         }
 
         insertCardIntoSlot(card, targetSlot);
+        draggedSlot = null;
 
         });
 });
 
+document.addEventListener("dragover", e => {
+
+    e.preventDefault();
+
+});
+
+document.addEventListener("drop", e => {
+
+    const deckList = document.getElementById("deck-list");
+
+    if(!deckList){
+        return;
+    }
+
+    const rect = deckList.getBoundingClientRect();
+
+    const cardWidth = draggedCard.getBoundingClientRect().width;
+    const margin = cardWidth * 0.3;
+
+    const clearlyOutside =
+        e.clientX < rect.left - margin ||
+        e.clientX > rect.right + margin ||
+        e.clientY < rect.top - margin ||
+        e.clientY > rect.bottom + margin;
+
+    // Not far enough outside → do nothing.
+    if(!clearlyOutside){
+        return;
+    }
+
+    if(!draggedSlot){
+        return;
+    }
+
+    const oldGrid = draggedSlot.closest(".deck-grid");
+
+    if(!oldGrid){
+        draggedSlot = null;
+        draggedCard = null;
+        return;
+    }
+
+    draggedSlot.innerHTML = "";
+
+    compressDeckGrid(oldGrid);
+
+    deckChanged = true;
+
+    draggedSlot = null;
+    draggedCard = null;
+
+});
+
+/*
+document.addEventListener("dragend", e => {
+
+    if(!draggedSlot){
+        draggedCard = null;
+        return;
+    }
+
+    const deckList = document.getElementById("deck-list");
+
+    if(!deckList){
+        draggedSlot = null;
+        draggedCard = null;
+        return;
+    }
+
+    const rect = deckList.getBoundingClientRect();
+
+    const insideDeckList =
+        lastDragX >= rect.left &&
+        lastDragX <= rect.right &&
+        lastDragY >= rect.top &&
+        lastDragY <= rect.bottom;
+
+
+    // If released anywhere inside #deck-list,
+    // don't remove anything.
+    if(insideDeckList){
+
+        draggedSlot = null;
+        draggedCard = null;
+
+        return;
+    }
+
+
+    // Released completely outside #deck-list.
+    const oldGrid = draggedSlot.closest(".deck-grid");
+
+    if(!oldGrid){
+
+        draggedSlot = null;
+        draggedCard = null;
+
+        return;
+    }
+
+
+    // Remove the original card.
+    draggedSlot.innerHTML = "";
+
+
+    // Get all remaining cards.
+    const cards = Array.from(
+        oldGrid.querySelectorAll(".deck-card")
+    );
+
+
+    // Get all slots.
+    const slots = Array.from(
+        oldGrid.querySelectorAll(".card-slot")
+    );
+
+
+    // Clear every slot.
+    slots.forEach(slot => {
+        slot.innerHTML = "";
+    });
+
+
+    // Put remaining cards back in order.
+    cards.forEach((card, index) => {
+
+        if(slots[index]){
+
+            slots[index].appendChild(card);
+
+        }
+
+    });
+
+
+    deckChanged = true;
+
+
+    draggedSlot = null;
+    draggedCard = null;
+
+});
+*/
 
 document.addEventListener("contextmenu", e => {
 
@@ -2519,6 +2722,7 @@ document.addEventListener("contextmenu", e => {
 });
 
 
+
 loadCards();
 
 function findCardByID(id){
@@ -2536,3 +2740,72 @@ function findCardByID(id){
 
 }
 
+const deckbuilder = document.getElementById("deckbuilder");
+
+const referenceViewportWidth = window.innerWidth;
+const referenceMainWidth = referenceViewportWidth * 0.80;
+const referenceMainHeight = window.innerHeight * 0.98;
+
+
+function resizeDeckBuilder() {
+
+    const viewportWidth = window.innerWidth;
+
+
+    // --------------------------------
+    // STAGE 1
+    // Original layout: 80% width
+    // --------------------------------
+
+    if(viewportWidth >= referenceViewportWidth){
+
+        deckbuilder.style.width = "80%";
+        deckbuilder.style.height = "98vh";
+
+        return;
+    }
+
+
+    // --------------------------------
+    // STAGE 2
+    // Keep the original physical width.
+    // Side space gradually disappears.
+    // --------------------------------
+
+    if(viewportWidth >= referenceMainWidth){
+
+        deckbuilder.style.width =
+            `${referenceMainWidth}px`;
+
+        deckbuilder.style.height =
+            `${referenceMainHeight}px`;
+
+        return;
+    }
+
+
+    // --------------------------------
+    // STAGE 3
+    // Main has reached 100% width.
+    //
+    // Width stays 100vw.
+    // Height shrinks proportionally.
+    // --------------------------------
+
+    const scale =
+        viewportWidth / referenceMainWidth;
+
+    const newHeight =
+        referenceMainHeight * scale;
+
+    deckbuilder.style.width = "100vw";
+
+    deckbuilder.style.height =
+        `${newHeight}px`;
+
+}
+
+
+window.addEventListener("resize", resizeDeckBuilder);
+
+resizeDeckBuilder();
