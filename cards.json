@@ -8668,5 +8668,19 @@
 "def": null,
 "limit": 3,
 "image": "card-pics/22283204.jpg"
+},
+{
+"name": "Unexpected Dai",
+"description": "If you control no monsters: Special Summon 1 Level 4 or lower Normal Monster from the Deck.",
+"cardType": "spell",
+"subType": "normal",
+"monsterBackground": "",
+"monsterMechanic": "",
+"attribute": "",
+"level": null,
+"atk": null,
+"def": null,
+"limit": 3,
+"image": "card-pics/911883.jpg"
 }
 ]
