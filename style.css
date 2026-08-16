@@ -541,9 +541,9 @@ height:19%;
 #card-view {
 display: flex;
 flex-direction: row;
-width:40%;
+width:42%;
 overflow:visible;
-margin-right:1.3vw;
+margin-right:0.6vw;
 
 height:100%;
 }
@@ -615,7 +615,7 @@ display: block;
                 flex-direction: row;
                 flex-wrap: wrap;
                 height:100%;
-                width:30%;
+                width:28%;
             }
 
             .deck-constructor-button {
