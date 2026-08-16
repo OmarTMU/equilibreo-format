@@ -635,7 +635,7 @@ display: block;
                 }
 
                 .auth-box {
-                    width:90%;
+                    width:84%;
                     font-size:3vw;
                     margin-bottom:0.2vw;
                     border-radius: 0.2vw;
@@ -909,11 +909,11 @@ position: relative;
 
 .limit-badge {
 position: absolute;
-top: 1vw;
-left: 1vw;
+top: 0.5vw;
+left: 0.5vw;
 
-width: 5vw;
-height: 5vw;
+width: 2vw;
+height: 2vw;
 
 background: black;
 color: white;
@@ -929,7 +929,7 @@ align-items: center;
 
 font-style: normal;
 font-weight: normal;
-font-size: 5vw;
+font-size: 2vw;
 
 z-index: 2;
 }
