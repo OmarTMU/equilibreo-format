@@ -2083,7 +2083,7 @@
 "level": 4,
 "atk": 1600,
 "def": 1800,
-"limit": 3,
+"limit": 1,
 "image": "card-pics/80304126.jpg"
 },
 {
@@ -8823,5 +8823,18 @@
 "def": 1800,
 "limit": 3,
 "image": "card-pics/58147549.jpg"
+},
+{
+"name": "Phantom Magician",
+"description": "When this card is destroyed by battle and sent to the Graveyard: You can Special Summon 1 \"HERO\" monster with 1000 or less ATK from your Deck in face-up Defense Position.",
+"subType": "spellcaster",
+"monsterBackground": "effect",
+"monsterMechanic": "",
+"attribute": "dark",
+"level": 3,
+"atk": 600,
+"def": 700,
+"limit": 3,
+"image": "card-pics/24103628.jpg"
 }
 ]
