@@ -1145,7 +1145,7 @@
 "level": 4,
 "atk": 1200,
 "def": 1800,
-"limit": 3,
+"limit": 1,
 "image": "card-pics/63060238.jpg"
 },
 {
@@ -1187,7 +1187,7 @@
 "level": 4,
 "atk": 2100,
 "def": 400,
-"limit": 3,
+"limit": 1,
 "image": "card-pics/80908502.jpg"
 },
 {
@@ -1243,7 +1243,7 @@
 "level": 8,
 "atk": 2500,
 "def": 2000,
-"limit": 0,
+"limit": 1,
 "image": "card-pics/33574806.jpg"
 },
 {
@@ -1369,7 +1369,7 @@
 "level": 5,
 "atk": 1600,
 "def": 1800,
-"limit": 3,
+"limit": 1,
 "image": "card-pics/89252153.jpg"
 },
 {
@@ -1383,7 +1383,7 @@
 "level": 7,
 "atk": 2500,
 "def": 2000,
-"limit": 3,
+"limit": 0,
 "image": "card-pics/89943723.jpg"
 },
 {
@@ -4956,7 +4956,7 @@
 "level": 8,
 "atk": 2600,
 "def": 2100,
-"limit": 0,
+"limit": 1,
 "image": "card-pics/22061412.jpg"
 },
 {
@@ -6622,7 +6622,7 @@
 "level": 7,
 "atk": 2500,
 "def": 2000,
-"limit": 1,
+"limit": 0,
 "image": "card-pics/64655485.jpg"
 },
 {
@@ -6636,7 +6636,7 @@
 "level": null,
 "atk": null,
 "def": null,
-"limit": 3,
+"limit": 0,
 "image": "card-pics/35255456.jpg"
 },
 {
@@ -7544,6 +7544,7 @@
 "monsterMechanic": "",
 "attribute": "light",
 "level": 2,
+
 "atk": 1600,
 "def": 1000,
 "limit": 1,
@@ -8752,5 +8753,75 @@
 "def": 3000,
 "limit": 1,
 "image": "card-pics/81330115.jpg"
+},
+{
+"name": "Elemental HERO Solid Soldier",
+"description": "When this card is Normal Summoned: You can Special Summon 1 Level 4 or lower \"HERO\" monster from your hand. If this card is sent from the Monster Zone to the GY by a Spell effect: You can target 1 \"HERO\" monster in your GY, except \"Elemental HERO Solid Soldier\"; Special Summon it in Defense Position. You can only use this effect of \"Elemental HERO Solid Soldier\" once per turn.",
+"cardType": "monster",
+"subType": "warrior",
+"monsterBackground": "effect",
+"monsterMechanic": "",
+"attribute": "earth",
+"level": 4,
+"atk": 1300,
+"def": 1100,
+"limit": 3,
+"image": "card-pics/45195443.jpg"
+},
+{
+"name": "Elemental HERO Shadow Mist",
+"description": "If this card is Special Summoned: You can add 1 \"Change\" Quick-Play Spell Card from your Deck to your hand. If this card is sent to the GY: You can add 1 \"HERO\" monster from your Deck to your hand, except \"Elemental HERO Shadow Mist\". You can only use 1 \"Elemental HERO Shadow Mist\" effect per turn, and only once that turn.",
+"cardType": "monster",
+"subType": "warrior",
+"monsterBackground": "effect",
+"monsterMechanic": "",
+"attribute": "dark",
+"level": 4,
+"atk": 1000,
+"def": 1500,
+"limit": 1,
+"image": "card-pics/50720316.jpg"
+},
+{
+"name": "Mask Change II",
+"description": "Discard 1 card, then target 1 face-up monster you control that has a Level; send it to the Graveyard, also, after that, if it left the field by this effect, Special Summon from your Extra Deck, 1 \"Masked HERO\" monster with the same Attribute, but a higher Level than, the Attribute/Level the monster had when it was on the field (its original Attribute/Level, if face-down. This Special Summon is treated as a Special Summon with \"Mask Change\"). You can only activate 1 \"Mask Change II\" per turn.",
+"cardType": "spell",
+"subType": "quick-play",
+"monsterBackground": "",
+"monsterMechanic": "",
+"attribute": "",
+"level": null,
+"atk": null,
+"def": null,
+"limit": 3,
+"image": "card-pics/93600443.jpg"
+},
+{
+"name": "Elemental HERO Grandmerge",
+"description": "2 \"HERO\" Normal Monsters\nMust be Fusion Summoned. Gains ATK/DEF equal to the combined original Levels of the materials used for its Fusion Summon x 300. When this card destroys an opponent's monster by battle: You can Tribute this card; Special Summon 1 \"Elemental HERO\" Fusion Monster from your Extra Deck, ignoring its Summoning conditions, but it cannot attack monsters with an equal or lower Level than it.",
+"cardType": "monster",
+"subType": "warrior",
+"monsterBackground": "fusion",
+"monsterMechanic": "",
+"attribute": "light",
+"level": 6,
+"atk": 0,
+"def": 0,
+"limit": 3,
+"image": "card-pics/36841733.jpg"
+},
+{
+"name": "Masked HERO Goka",
+"description": "Must be Special Summoned with \"Mask Change\". Gains 100 ATK for each \"HERO\" monster in your GY.",
+"cardType": "monster",
+"subType": "warrior",
+"monsterBackground": "fusion",
+"monsterMechanic": "",
+"attribute": "fire",
+"level": 6,
+"atk": 2200,
+"def": 1800,
+"limit": 3,
+"image": "card-pics/58147549.jpg"
 }
 ]
