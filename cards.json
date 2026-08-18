@@ -8851,5 +8851,47 @@
 "def": 800,
 "limit": 3,
 "image": "card-pics/12986807.jpg"
+},
+{
+"name": "Lyrilusc - Assembled Nightingale",
+"description": "2 or more Level 1 monsters\nThis card gains 200 ATK for each Xyz Material attached to it. This card can attack directly. While this card has Xyz Material, it can attack a number of times each Battle Phase, up to the number of Xyz Materials attached to it. Once per turn, during either player's turn: You can detach 1 Xyz Material from this card; until the end of this turn, \"Lyrilusc\" monsters you control cannot be destroyed by battle or card effects, also you take no battle damage.",
+"cardType": "monster",
+"subType": "winged-beast",
+"monsterBackground": "xyz",
+"monsterMechanic": "",
+"attribute": "wind",
+"level": 1,
+"atk": 0,
+"def": 0,
+"limit": 3,
+"image": "card-pics/48608796.jpg"
+},
+{
+"name": "Twin Photon Lizard",
+"description": "2 \"Photon\" monsters\nYou can Tribute this card; Special Summon, from your Graveyard, both of the Fusion Material Monsters used for the Fusion Summon of this card.",
+"cardType": "monster",
+"subType": "dragon",
+"monsterBackground": "fusion",
+"monsterMechanic": "",
+"attribute": "light",
+"level": 6,
+"atk": 2400,
+"def": 1000,
+"limit": 3,
+"image": "card-pics/29455728.jpg"
+},
+{
+"name": "Elder Entity Norden",
+"description": "1 Synchro or Xyz Monster + 1 Synchro or Xyz Monster\nWhen this card is Special Summoned: You can target 1 Level 4 or lower monster in your Graveyard; Special Summon it, but its effects are negated, also banish it when this card leaves the field.",
+"cardType": "monster",
+"subType": "fairy",
+"monsterBackground": "fusion",
+"monsterMechanic": "",
+"attribute": "water",
+"level": 4,
+"atk": 2000,
+"def": 2200,
+"limit": 3,
+"image": "card-pics/17412721.jpg"
 }
 ]

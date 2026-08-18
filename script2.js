@@ -486,7 +486,7 @@ const limitSelect = document.getElementById("limit-select");
 
 const monsterSubtypes = [ "", "aqua", "beast", "beast-warrior", "cyberse", "dinosaur", "dragon",
     "fairy", "fiend", "fish", "insect", "machine", "psychic",
-    "pyro", "reptile", "rock", "sea-serpent", "spellcaster",
+    "plant", "pyro", "reptile", "rock", "sea-serpent", "spellcaster",
     "thunder", "warrior", "winged-beast", "wyrm", "zombie"
 ];
 const spellSubtypes = ["", "normal", "continuous", "quick-play", "field", "equip", "ritual"];
