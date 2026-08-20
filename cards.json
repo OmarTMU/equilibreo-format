@@ -781,7 +781,7 @@
 "level": 7,
 "atk": 2500,
 "def": 2100,
-"limit": 1,
+"limit": 3,
 "image": "card-pics/46986414.jpg"
 }, 
 {
@@ -6202,7 +6202,7 @@
 "level": null,
 "atk": null,
 "def": null,
-"limit": 1,
+"limit": 3,
 "image": "card-pics/36045450.jpg"
 },
 {
@@ -8893,5 +8893,47 @@
 "def": 2200,
 "limit": 3,
 "image": "card-pics/17412721.jpg"
+},
+{
+"name": "Allure Palace",
+"description": "Spellcaster monsters you control gain 500 ATK/DEF.",
+"cardType": "spell",
+"subType": "field",
+"monsterBackground": "",
+"monsterMechanic": "",
+"attribute": "",
+"level": null,
+"atk": null,
+"def": null,
+"limit": 2,
+"image": "card-pics/31322640.jpg"
+},
+{
+"name": "Magician's Robe",
+"description": "During your opponent's turn (Quick Effect): You can discard 1 Spell/Trap; Special Summon 1 \"Dark Magician\" from your Deck. During your opponent's turn, if you activate a Spell/Trap Card or effect while this card is in your GY (except during the Damage Step): You can Special Summon this card, but banish it when it leaves the field. You can only use each effect of \"Magician's Robe\" once per turn.",
+"cardType": "monster",
+"subType": "spellcaster",
+"monsterBackground": "effect",
+"monsterMechanic": "",
+"attribute": "dark",
+"level": 2,
+"atk": 700,
+"def": 2000,
+"limit": 0,
+"image": "card-pics/71696014.jpg"
+},
+{
+"name": "Magician's Rod",
+"description": "When this card is Normal Summoned: You can add 1 Spell/Trap from your Deck to your hand, that specifically lists the card \"Dark Magician\" in its text. During your opponent's turn, if you activate a Spell/Trap Card or effect while this card is in your GY (except during the Damage Step): You can Tribute 1 Spellcaster monster; add this card to your hand. You can only use each effect of \"Magician's Rod\" once per turn.",
+"cardType": "monster",
+"subType": "spellcaster",
+"monsterBackground": "effect",
+"monsterMechanic": "",
+"attribute": "dark",
+"level": 3,
+"atk": 1600,
+"def": 100,
+"limit": 3,
+"image": "card-pics/7084129.jpg"
 }
 ]
